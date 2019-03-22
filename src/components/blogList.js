@@ -1,5 +1,7 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import { Link } from 'gatsby'
+
+import './blogList.scss'
 
 const BlogList = ({ data }) => {
   let blog = data.allMarkdownRemark.edges
@@ -7,7 +9,7 @@ const BlogList = ({ data }) => {
   return (
     <main>
       <small>
-        <h5 style={{ marginBottom: `0.5em` }}> Latest Posts</h5>
+        <h5>Latest Posts</h5>
       </small>
 
       <div>
@@ -19,7 +21,7 @@ const BlogList = ({ data }) => {
           return (
             <div key={id} className="blog-list">
               <Link to={slug}>
-                <h1>{title}</h1>
+                <h2>{title}</h2>
               </Link>
               <div className="blog-list__meta">
                 <small>{date}</small>
