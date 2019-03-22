@@ -1,8 +1,10 @@
-import React from "react"
+import React from 'react'
+
+import './header.scss'
 
 const Header = () => (
   <header>
-    <h1>header</h1>
+    <h1 className="title">header</h1>
   </header>
 )
 
