@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -13,6 +14,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    // markdown file are in that directory (/src/pages/)
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: { name: `pages`, path: `${__dirname}/src/pages/` },
+    },
+    // transforming markdown in html
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
