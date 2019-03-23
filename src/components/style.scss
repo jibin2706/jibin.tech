@@ -1,0 +1,17 @@
+$light-primary: #f1f1f1;
+$light-font: #333333;
+
+$dark-primary: #212121;
+$dark-font: #f1f1f1;
+
+body.light-mode {
+  background-color: $light-primary;
+  color: $light-font;
+  transition: background-color 1s ease;
+}
+
+body.dark-mode {
+  background-color: $dark-primary;
+  color: $dark-font;
+  transition: background-color 1s ease;
+}

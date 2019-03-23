@@ -8,7 +8,7 @@ const BlogList = ({ data }) => {
 
   return (
     <main>
-      <div style={{ width: '800px', margin: 'auto' }}>
+      <div style={{ maxWidth: '800px', margin: 'auto' }}>
         <small>
           <h5>Latest Posts</h5>
         </small>
