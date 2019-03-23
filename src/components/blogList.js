@@ -8,29 +8,31 @@ const BlogList = ({ data }) => {
 
   return (
     <main>
-      <small>
-        <h5>Latest Posts</h5>
-      </small>
+      <div style={{ width: '800px', margin: 'auto' }}>
+        <small>
+          <h5>Latest Posts</h5>
+        </small>
 
-      <div>
-        {blog.map(({ node }) => {
-          let { id, timeToRead, excerpt, frontmatter, fields } = node
-          let { title, date } = frontmatter
-          let { slug } = fields
+        <div>
+          {blog.map(({ node }) => {
+            let { id, timeToRead, excerpt, frontmatter, fields } = node
+            let { title, date } = frontmatter
+            let { slug } = fields
 
-          return (
-            <div key={id} className="blog-list">
-              <Link to={slug}>
-                <h2>{title}</h2>
-              </Link>
-              <div className="blog-list__meta">
-                <small>{date}</small>
-                <small>{timeToRead} mins read</small>
+            return (
+              <div key={id} className="blog-list">
+                <Link to={slug}>
+                  <h2>{title}</h2>
+                </Link>
+                <div className="blog-list__meta">
+                  <small>{date}</small>
+                  <small>{timeToRead} mins read</small>
+                </div>
+                <p>{excerpt}</p>
               </div>
-              <p>{excerpt}</p>
-            </div>
-          )
-        })}
+            )
+          })}
+        </div>
       </div>
     </main>
   )
