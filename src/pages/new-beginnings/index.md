@@ -1,5 +1,5 @@
 ---
-title: "How to connect NodeMCU to Firebase Database"
+title: "New Beginnings"
 date: 2017-07-12T17:12:33.962Z
 path: "/hello-world"
 ---

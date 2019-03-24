@@ -28,7 +28,7 @@ const BlogList = ({ data }) => {
                   <small>{date}</small>
                   <small>{timeToRead} mins read</small>
                 </div>
-                <p>{excerpt}</p>
+                <p className="excerpt">{excerpt}</p>
               </div>
             )
           })}

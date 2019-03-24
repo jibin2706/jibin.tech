@@ -8,10 +8,53 @@ body.light-mode {
   background-color: $light-primary;
   color: $light-font;
   transition: background-color 1s ease;
+
+  .blog-list {
+    h2 {
+      color: $light-font;
+    }
+    .blog-list__meta {
+      color: lighten($color: $light-font, $amount: 10);
+    }
+    .excerpt {
+      color: lighten($color: $light-font, $amount: 20);
+    }
+  }
+
+  footer {
+    .social a {
+      color: $light-font;
+    }
+    .footer-info p {
+      color: $light-font;
+      opacity: 0.5;
+    }
+  }
 }
 
 body.dark-mode {
   background-color: $dark-primary;
   color: $dark-font;
   transition: background-color 1s ease;
+
+  .blog-list {
+    h2 {
+      color: $dark-font;
+    }
+    .blog-list__meta {
+      color: darken($color: $dark-font, $amount: 10);
+    }
+    .excerpt {
+      color: darken($color: $dark-font, $amount: 20);
+    }
+  }
+  footer {
+    .social a {
+      color: $dark-font;
+    }
+    .footer-info p {
+      color: $dark-font;
+      opacity: 0.5;
+    }
+  }
 }
