@@ -19,3 +19,11 @@ footer {
     opacity: 0.5;
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .social {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
