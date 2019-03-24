@@ -9,6 +9,12 @@ body.light-mode {
   color: $light-font;
   transition: background-color 1s ease;
 
+  header {
+    a {
+      color: $light-font;
+    }
+  }
+
   .blog-list {
     h2 {
       color: $light-font;
@@ -36,6 +42,12 @@ body.dark-mode {
   background-color: $dark-primary;
   color: $dark-font;
   transition: background-color 1s ease;
+
+  header {
+    a {
+      color: $dark-font;
+    }
+  }
 
   .blog-list {
     h2 {
