@@ -8,7 +8,7 @@ const BlogList = ({ data }) => {
 
   return (
     <main>
-      <div style={{ width: '800px', margin: 'auto' }}>
+      <div style={{ maxWidth: '800px', margin: 'auto', padding: '16px' }}>
         <small>
           <h5>Latest Posts</h5>
         </small>
@@ -28,7 +28,7 @@ const BlogList = ({ data }) => {
                   <small>{date}</small>
                   <small>{timeToRead} mins read</small>
                 </div>
-                <p>{excerpt}</p>
+                <p className="excerpt">{excerpt}</p>
               </div>
             )
           })}

@@ -1,0 +1,72 @@
+$light-primary: #f1f1f1;
+$light-font: #333333;
+
+$dark-primary: #212121;
+$dark-font: #f1f1f1;
+
+body.light-mode {
+  background-color: $light-primary;
+  color: $light-font;
+  transition: background-color 1s ease;
+
+  header {
+    a {
+      color: $light-font;
+    }
+  }
+
+  .blog-list {
+    h2 {
+      color: $light-font;
+    }
+    .blog-list__meta {
+      color: lighten($color: $light-font, $amount: 10);
+    }
+    .excerpt {
+      color: lighten($color: $light-font, $amount: 20);
+    }
+  }
+
+  footer {
+    .social a {
+      color: $light-font;
+    }
+    .footer-info p {
+      color: $light-font;
+      opacity: 0.5;
+    }
+  }
+}
+
+body.dark-mode {
+  background-color: $dark-primary;
+  color: $dark-font;
+  transition: background-color 1s ease;
+
+  header {
+    a {
+      color: $dark-font;
+    }
+  }
+
+  .blog-list {
+    h2 {
+      color: $dark-font;
+    }
+    .blog-list__meta {
+      color: darken($color: $dark-font, $amount: 10);
+    }
+    .excerpt {
+      color: darken($color: $dark-font, $amount: 20);
+    }
+  }
+  footer {
+    .social a {
+      color: $dark-font;
+    }
+    .footer-info p {
+      color: $dark-font;
+      opacity: 0.5;
+    }
+  }
+}
