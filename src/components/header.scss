@@ -21,3 +21,13 @@
   top: 0;
   margin: 8px;
 }
+
+@media only screen and (max-width: 480px) {
+  #header {
+    .title {
+      font-size: 32px;
+      text-align: initial;
+      padding: 0 16px;
+    }
+  }
+}
