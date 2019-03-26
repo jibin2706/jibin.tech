@@ -19,7 +19,11 @@ main {
   }
 
   .blog-list__meta small {
+    font-family: 'Aleo', serif;
     margin-right: 32px;
-    font-weight: 600;
+  }
+
+  .excerpt {
+    font-family: 'Aleo', serif;
   }
 }

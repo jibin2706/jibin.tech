@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,900');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,900');
+@import url('https://fonts.googleapis.com/css?family=Aleo');
 
 .blog {
-  max-width: 800px;
+  max-width: 650px;
   margin: 0 auto;
   font-family: 'Raleway', sans-serif;
   padding: 16px;
-  
+
   .blog-title {
     text-align: center;
     h1 {
@@ -13,13 +14,15 @@
       font-weight: 900;
     }
   }
-  
+
   .blog-meta {
     display: flex;
     justify-content: space-around;
   }
 
   .blog-body {
+    line-height: 1.75;
+    font-family: 'Aleo', sans-serif;
     margin-top: 32px;
   }
 }
@@ -42,12 +45,13 @@
 @media only screen and (max-width: 900px) {
   .social-bar {
     position: initial;
-    
+
     .info {
       display: initial;
       margin: 32px;
       font-weight: 900;
     }
+
     .share {
       display: initial;
       width: 50px;
