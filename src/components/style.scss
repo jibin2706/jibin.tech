@@ -11,7 +11,7 @@ body.light-mode {
 
   header {
     a {
-      color: $light-font;
+      color: #ff9900;
     }
   }
 
@@ -32,8 +32,7 @@ body.light-mode {
       color: $light-font;
     }
     .footer-info p {
-      color: $light-font;
-      opacity: 0.5;
+      color: lighten($color: $light-font, $amount: 20);
     }
   }
 }
@@ -45,7 +44,7 @@ body.dark-mode {
 
   header {
     a {
-      color: $dark-font;
+      color: #ff9900;
     }
   }
 
@@ -65,8 +64,7 @@ body.dark-mode {
       color: $dark-font;
     }
     .footer-info p {
-      color: $dark-font;
-      opacity: 0.5;
+      color: darken($color: $dark-font, $amount: 50);
     }
   }
 }
