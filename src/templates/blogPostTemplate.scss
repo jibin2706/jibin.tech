@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Aleo');
 
 .blog {
-  max-width: 650px;
+  max-width: 680px;
   margin: 0 auto;
   font-family: 'Raleway', sans-serif;
   padding: 16px;
@@ -47,15 +47,15 @@
     position: initial;
 
     .info {
+      font-family: 'Aleo', serif;
       display: initial;
-      margin: 32px;
       font-weight: 900;
     }
 
     .share {
       display: initial;
-      width: 50px;
-      margin-left: 32px;
+      width: 30px;
+      margin-right: 16px;
     }
   }
 }
