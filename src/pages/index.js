@@ -1,8 +1,8 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import BlogList from "../components/blogList"
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import BlogList from '../components/blogList'
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -25,6 +25,7 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "Do MMMM,YYYY")
+            info
           }
           fields {
             slug

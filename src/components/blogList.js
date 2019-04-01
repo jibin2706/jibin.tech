@@ -15,8 +15,8 @@ const BlogList = ({ data }) => {
 
         <div>
           {blog.map(({ node }) => {
-            let { id, timeToRead, excerpt, frontmatter, fields } = node
-            let { title, date } = frontmatter
+            let { id, timeToRead, frontmatter, fields } = node
+            let { title, date, info } = frontmatter
             let { slug } = fields
 
             return (
@@ -28,7 +28,7 @@ const BlogList = ({ data }) => {
                   <small>{date}</small>
                   <small>{timeToRead} mins read</small>
                 </div>
-                <p className="excerpt">{excerpt}</p>
+                <p className="excerpt">{info}</p>
               </div>
             )
           })}
