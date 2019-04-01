@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,900');
-@import url('https://fonts.googleapis.com/css?family=Aleo');
+@import url('https://fonts.googleapis.com/css?family=Muli');
 
 .blog {
   max-width: 680px;
@@ -22,7 +22,8 @@
 
   .blog-body {
     line-height: 1.75;
-    font-family: 'Aleo', sans-serif;
+    font-size: 20px;
+    font-family: 'Muli', sans-serif;
     margin-top: 32px;
   }
 }
