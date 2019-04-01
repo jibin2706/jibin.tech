@@ -1,21 +1,11 @@
 ---
-title: "New Beginnings"
-date: 2017-07-12T17:12:33.962Z
-path: "/hello-world"
+title: 'New Beginnings'
+date: 2019-04-02
+path: '/new-beginnings'
+info: 'Introduction to the blog'
 ---
 
-### New Beginnings
+Hey, Jibin Thomas here. This post is just an introduction about myself.
+I'm currently in the final year of Bachelor of Science in Information Technology from Mumbai University. I have started my personal blog to write about my experience while coding. I'm very passionate about web development and have recently started learning native Android app development in Java. I will mainly be writing about things that I encounter during working on some fun projects.
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum distinctio laboriosam facilis, sequi nobis nulla aut maxime ut exercitationem recusandae. Asperiores iusto minima quidem cupiditate labore quia, harum explicabo?
-Facilis, illum amet eum voluptatum eveniet exercitationem natus dolorum iure impedit, quaerat hic laboriosam minima necessitatibus itaque consectetur expedita deleniti suscipit! Commodi ex officiis repudiandae impedit consequuntur quo excepturi quisquam!
-Ipsum aliquid itaque reprehenderit atque officia? Vel debitis corporis ea dignissimos quibusdam, enim quod? Corrupti illo molestiae excepturi esse eligendi harum cupiditate, repellat, atque animi rem molestias consectetur modi doloribus.
-Optio, quasi. Cumque neque et saepe blanditiis nesciunt, commodi iure nemo fugiat id dolor, incidunt quam impedit. Deleniti porro perspiciatis similique repellendus doloribus corrupti incidunt aliquam, iste ea quia omnis.
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum distinctio laboriosam facilis, sequi nobis nulla aut maxime ut exercitationem recusandae. Asperiores iusto minima quidem cupiditate labore quia, harum explicabo?
-Facilis, illum amet eum voluptatum eveniet exercitationem natus dolorum iure impedit, quaerat hic laboriosam minima necessitatibus itaque consectetur expedita deleniti suscipit! Commodi ex officiis repudiandae impedit consequuntur quo excepturi quisquam!
-Ipsum aliquid itaque reprehenderit atque officia? Vel debitis corporis ea dignissimos quibusdam, enim quod? Corrupti illo molestiae excepturi esse eligendi harum cupiditate, repellat, atque animi rem molestias consectetur modi doloribus.
-Optio, quasi. Cumque neque et saepe blanditiis nesciunt, commodi iure nemo fugiat id dolor, incidunt quam impedit. Deleniti porro perspiciatis similique repellendus doloribus corrupti incidunt aliquam, iste ea quia omnis.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum distinctio laboriosam facilis, sequi nobis nulla aut maxime ut exercitationem recusandae. Asperiores iusto minima quidem cupiditate labore quia, harum explicabo?
-Facilis, illum amet eum voluptatum eveniet exercitationem natus dolorum iure impedit, quaerat hic laboriosam minima necessitatibus itaque consectetur expedita deleniti suscipit! Commodi ex officiis repudiandae impedit consequuntur quo excepturi quisquam!
-Ipsum aliquid itaque reprehenderit atque officia? Vel debitis corporis ea dignissimos quibusdam, enim quod? Corrupti illo molestiae excepturi esse eligendi harum cupiditate, repellat, atque animi rem molestias consectetur modi doloribus.
-Optio, quasi. Cumque neque et saepe blanditiis nesciunt, commodi iure nemo fugiat id dolor, incidunt quam impedit. Deleniti porro perspiciatis similique repellendus doloribus corrupti incidunt aliquam, iste ea quia omnis.
+Check out my [portfolio](https://jibin.tech/) made using Gatsby.js. Also, this blog is also made using Gatsby.js you can grab the template at [Github](https://github.com/jibin2706/gatsby-blog-template)
