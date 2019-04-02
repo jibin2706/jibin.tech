@@ -1,11 +1,13 @@
 module.exports = {
   siteMetadata: {
     title: `Blog | Jibin Thomas`,
+    siteUrl: `https://blog.jibin.tech`,
     description: `Blog by Jibin Thomas`,
     author: `@jibin2706`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
