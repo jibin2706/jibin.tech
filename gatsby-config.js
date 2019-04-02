@@ -1,11 +1,13 @@
 module.exports = {
   siteMetadata: {
     title: `Gatsby Blog Template`,
+    siteUrl: `https://www.example.com`,
     description: `Simple blog template`,
     author: `@jibin2706`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
