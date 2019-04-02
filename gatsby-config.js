@@ -45,7 +45,7 @@ module.exports = {
       options: {
         trackingId: 'UA-133322442-4',
         // Puts tracking script in the head instead of the body
-        head: false,
+        head: true,
       },
     },
     // using images in markdown file
