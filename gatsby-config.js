@@ -37,7 +37,15 @@ module.exports = {
         include_favicon: true,
       },
     },
-
+    // google Analytics
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-133322442-4',
+        // Puts tracking script in the head instead of the body
+        head: false,
+      },
+    },
     // using images in markdown file
     {
       resolve: `gatsby-transformer-remark`,
