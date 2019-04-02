@@ -7,16 +7,17 @@ import './blogPostTemplate.scss'
 import facebookIcon from '../images/facebook.svg'
 import twitterIcon from '../images/twitter.svg'
 import linkIcon from '../images/social-normal.svg'
+import SEO from '../components/seo'
 
 export default ({ data }) => {
   const post = data.markdownRemark
 
   let { timeToRead, frontmatter } = post
-  let { title, date } = frontmatter
-  console.log(data)
+  let { title, date, info } = frontmatter
 
   return (
     <Layout>
+      <SEO title={title} keywords={[`blog`, `Jibin Thomas`, title, info]} />
       <main className="blog">
         <div className="blog-title">
           <h1>{title}</h1>

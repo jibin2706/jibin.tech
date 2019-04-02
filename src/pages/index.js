@@ -6,7 +6,7 @@ import BlogList from '../components/blogList'
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Blog | Jibin Thomas" keywords={[`blog`, `Jibin Thomas`]} />
 
     <BlogList data={data} />
   </Layout>
