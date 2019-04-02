@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Switch from 'react-switch'
 import useDarkMode from 'use-dark-mode'
 
@@ -6,6 +6,12 @@ import './toggleButton.scss'
 
 function ToggleDarkButton() {
   const darkMode = useDarkMode(false)
+  useEffect(() => {
+    const color = darkMode.value ? '#212121' : '#f1f1f1'
+    document
+      .querySelector('meta[name="theme-color"]')
+      .setAttribute('content', color)
+  })
 
   return (
     <label>
