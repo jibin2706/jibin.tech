@@ -27,13 +27,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Blog by Jibin Thomas`,
+        short_name: `Blog`,
         start_url: `/`,
-        background_color: `#F99F18`,
-        theme_color: `#F99F18`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        background_color: `#F1F1F1`,
+        theme_color: `#F1F1F1`,
+        display: `standalone`,
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+        include_favicon: true,
       },
     },
 
@@ -57,6 +58,6 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
+    'gatsby-plugin-offline',
   ],
 }
