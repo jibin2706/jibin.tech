@@ -1,10 +1,9 @@
 ---
-title: "New Beginnings"
+title: 'New Beginnings'
 date: 2017-07-12T17:12:33.962Z
-path: "/hello-world"
+path: '/hello-world'
+info: 'some information about the post'
 ---
-
-### New Beginnings
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum distinctio laboriosam facilis, sequi nobis nulla aut maxime ut exercitationem recusandae. Asperiores iusto minima quidem cupiditate labore quia, harum explicabo?
 Facilis, illum amet eum voluptatum eveniet exercitationem natus dolorum iure impedit, quaerat hic laboriosam minima necessitatibus itaque consectetur expedita deleniti suscipit! Commodi ex officiis repudiandae impedit consequuntur quo excepturi quisquam!

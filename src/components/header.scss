@@ -1,5 +1,9 @@
 #header {
-  margin-bottom: 16px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 
   a {
     text-decoration: none;
@@ -7,27 +11,16 @@
 }
 
 .title {
-  text-align: center;
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
-  font-size: 40px !important;
+  font-size: 40px;
   margin: 0;
-  position: relative;
-}
-
-.toggle-button {
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin: 8px;
 }
 
 @media only screen and (max-width: 480px) {
   #header {
     .title {
-      font-size: 32px;
-      text-align: initial;
-      padding: 0 16px;
+      font-size: 36px;
     }
   }
 }
