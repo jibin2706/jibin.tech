@@ -14,18 +14,18 @@ function ToggleDarkButton() {
   })
 
   return (
-    <label>
-      <Switch
-        onChange={darkMode.toggle}
-        checked={darkMode.value}
-        offColor="#212121"
-        onColor="#F1F1F1"
-        onHandleColor="#212121"
-        offHandleColor="#F1F1F1"
-        uncheckedIcon={false}
-        checkedIcon={false}
-      />
-    </label>
+    <Switch
+      aria-label="Dark and light toggle button"
+      aria-labelledby="Dark and light toggle button"
+      onChange={darkMode.toggle}
+      checked={darkMode.value}
+      offColor="#212121"
+      onColor="#F1F1F1"
+      onHandleColor="#212121"
+      offHandleColor="#F1F1F1"
+      uncheckedIcon={false}
+      checkedIcon={false}
+    />
   )
 }
 export default ToggleDarkButton
