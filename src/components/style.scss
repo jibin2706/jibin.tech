@@ -1,13 +1,13 @@
 $light-primary: #f1f1f1;
-$light-font: #333333;
+$light-font: #222222;
 
-$dark-primary: #212121;
+$dark-primary: #282c35;
 $dark-font: #f1f1f1;
 
 body.light-mode {
   background-color: $light-primary;
   color: $light-font;
-  transition: background-color 1s ease;
+  transition: background-color 0.2s ease-in;
   line-height: 1.7;
   header {
     a {
@@ -25,6 +25,12 @@ body.light-mode {
     .excerpt {
       color: lighten($color: $light-font, $amount: 20);
     }
+
+    .blog {
+      a {
+        color: slateblue;
+      }
+    }
   }
 
   footer {
@@ -32,16 +38,16 @@ body.light-mode {
       color: $light-font;
     }
     .footer-info p {
-      color: $light-font;
-      opacity: 0.5;
+      color: lighten($color: $light-font, $amount: 20);
     }
   }
 }
 
+// dark theme
 body.dark-mode {
   background-color: $dark-primary;
   color: $dark-font;
-  transition: background-color 1s ease;
+  transition: background-color 0.2s ease-in;
 
   header {
     a {
@@ -60,13 +66,22 @@ body.dark-mode {
       color: darken($color: $dark-font, $amount: 20);
     }
   }
+
+  .blog {
+    a {
+      color: cornflowerblue;
+    }
+  }
+
   footer {
+    hr {
+      background: $light-primary;
+    }
     .social a {
       color: $dark-font;
     }
     .footer-info p {
-      color: $dark-font;
-      opacity: 0.5;
+      color: darken($color: $dark-font, $amount: 40);
     }
   }
 }
