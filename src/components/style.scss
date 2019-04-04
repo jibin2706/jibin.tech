@@ -1,17 +1,19 @@
 $light-primary: #f1f1f1;
 $light-font: #333333;
 
-$dark-primary: #212121;
+$dark-primary: #282c35;
 $dark-font: #f1f1f1;
+
+$primary-dark: #ee5500;
 
 body.light-mode {
   background-color: $light-primary;
   color: $light-font;
-  transition: background-color 1s ease;
+  transition: background-color 0.2s ease;
   line-height: 1.7;
   header {
     a {
-      color: #ff9900;
+      color: $primary-dark;
     }
   }
 
@@ -27,6 +29,12 @@ body.light-mode {
     }
   }
 
+  .blog {
+    a {
+      color: slateblue;
+    }
+  }
+
   footer {
     .social a {
       color: $light-font;
@@ -37,14 +45,15 @@ body.light-mode {
   }
 }
 
+// dark theme
 body.dark-mode {
   background-color: $dark-primary;
   color: $dark-font;
-  transition: background-color 1s ease;
+  transition: background-color 0.2s ease;
 
   header {
     a {
-      color: #ff9900;
+      color: lighten($color: $primary-dark, $amount: 20);
     }
   }
 
@@ -59,12 +68,22 @@ body.dark-mode {
       color: darken($color: $dark-font, $amount: 20);
     }
   }
+
+  .blog {
+    a {
+      color: cornflowerblue;
+    }
+  }
+
   footer {
+    hr {
+      background: $light-primary;
+    }
     .social a {
       color: $dark-font;
     }
     .footer-info p {
-      color: darken($color: $dark-font, $amount: 50);
+      color: darken($color: $dark-font, $amount: 40);
     }
   }
 }
