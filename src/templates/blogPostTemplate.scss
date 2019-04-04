@@ -2,60 +2,29 @@
 @import url('https://fonts.googleapis.com/css?family=Aleo');
 
 .blog {
-  max-width: 680px;
-  margin: 0 auto;
   font-family: 'Raleway', sans-serif;
-  padding: 16px;
 
   .blog-title {
-    text-align: center;
     h1 {
       font-family: 'Raleway', sans-serif;
       font-weight: 900;
+      margin: 16px 0;
     }
   }
 
-  .blog-meta {
-    display: flex;
-    justify-content: space-around;
+  .blog-meta span {
+    margin-right: 50px;
+    font-family: 'Aleo', sans-serif;
   }
 
   .blog-body {
     line-height: 1.75;
+    font-size: 20px;
     font-family: 'Aleo', sans-serif;
     margin-top: 32px;
   }
-}
 
-.social-bar {
-  position: fixed;
-  top: 50%;
-  margin: 16px;
-
-  .info {
-    display: none;
-  }
-
-  .share {
-    display: block;
-    width: 30px;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .social-bar {
-    position: initial;
-
-    .info {
-      font-family: 'Aleo', serif;
-      display: initial;
-      font-weight: 900;
-    }
-
-    .share {
-      display: initial;
-      width: 30px;
-      margin-right: 16px;
-    }
+  a {
+    text-decoration: none;
   }
 }

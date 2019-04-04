@@ -4,9 +4,7 @@ import Layout from '../components/layout'
 
 import './blogPostTemplate.scss'
 
-import facebookIcon from '../images/facebook.svg'
-import twitterIcon from '../images/twitter.svg'
-import linkIcon from '../images/social-normal.svg'
+import SEO from '../components/seo'
 
 export default ({ data }) => {
   const post = data.markdownRemark
@@ -17,14 +15,15 @@ export default ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={title} keywords={[`add keyword`]} />
       <main className="blog">
         <div className="blog-title">
           <h1>{title}</h1>
         </div>
 
         <div className="blog-meta">
-          <h6 className="date">{date}</h6>
-          <h6 className="time">{timeToRead} mins read</h6>
+          <span className="date">{date}</span>
+          <span className="time">{timeToRead} mins read</span>
         </div>
 
         <div
@@ -32,22 +31,6 @@ export default ({ data }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </main>
-
-      {/* social media sharing */}
-      <div className="social-bar">
-        <p className="info">Share this post</p>
-        <div>
-          <a href="http://">
-            <img className="share" src={facebookIcon} alt="facebook" />
-          </a>
-          <a href="http://">
-            <img className="share" src={twitterIcon} alt="twitter" />
-          </a>
-          <a href="http://">
-            <img className="share" src={linkIcon} alt="link" />
-          </a>
-        </div>
-      </div>
     </Layout>
   )
 }
