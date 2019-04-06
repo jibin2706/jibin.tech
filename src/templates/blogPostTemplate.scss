@@ -16,7 +16,7 @@
 
   .blog-body {
     line-height: 1.75;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Muli', sans-serif;
     margin-top: 32px;
 
@@ -24,8 +24,11 @@
       text-decoration: none;
     }
   }
+}
 
-  a {
-    text-decoration: none;
-  }
+.code-line {
+  display: block;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid #ee5500;
 }

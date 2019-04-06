@@ -15,21 +15,21 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title={title} keywords={[`blog`, `Jibin Thomas`, title, info]} />
-      <main className="blog">
-        <div className="blog-title">
+      <article className="blog">
+        <header className="blog-title">
           <h1>{title}</h1>
-        </div>
+        </header>
 
         <div className="blog-meta">
           <span className="date">{date}</span>
           <span className="time">{timeToRead} mins read</span>
         </div>
 
-        <div
+        <main
           className="blog-body"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
-      </main>
+      </article>
     </Layout>
   )
 }

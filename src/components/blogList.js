@@ -20,7 +20,7 @@ const BlogList = ({ data }) => {
             let { slug } = fields
 
             return (
-              <div key={id} className="blog-list">
+              <section key={id} className="blog-list">
                 <Link to={slug}>
                   <h2>{title}</h2>
                 </Link>
@@ -29,7 +29,7 @@ const BlogList = ({ data }) => {
                   <small>{timeToRead} mins read</small>
                 </div>
                 <p className="excerpt">{info}</p>
-              </div>
+              </section>
             )
           })}
         </div>
