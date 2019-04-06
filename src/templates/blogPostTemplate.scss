@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,900');
-@import url('https://fonts.googleapis.com/css?family=Muli');
-
 .blog {
   font-family: 'Raleway', sans-serif;
 
@@ -27,37 +24,8 @@
       text-decoration: none;
     }
   }
-}
 
-.social-bar {
-  position: fixed;
-  top: 50%;
-  margin: 16px;
-
-  .info {
-    display: none;
-  }
-
-  .share {
-    display: block;
-    width: 30px;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .social-bar {
-    position: initial;
-
-    .info {
-      font-family: 'Aleo', serif;
-      display: initial;
-      font-weight: 900;
-    }
-
-    .share {
-      display: initial;
-      width: 30px;
-      margin-right: 16px;
-    }
+  a {
+    text-decoration: none;
   }
 }
