@@ -59,8 +59,21 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 650,
+              maxWidth: 800,
+              quality: 80,
+              withWebp: true,
               tracedSVG: true,
+            },
+          },
+          // code highlighting
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-js',
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
             },
           },
         ],
