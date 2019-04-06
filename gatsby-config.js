@@ -65,6 +65,22 @@ module.exports = {
         ],
       },
     },
+    // google fonts plugin
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Raleway`,
+            variants: [`400`, `900`],
+          },
+          {
+            family: `Muli`,
+            variants: [`400`, `700`],
+          },
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     'gatsby-plugin-offline',
