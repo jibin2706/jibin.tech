@@ -20,15 +20,55 @@
     font-family: 'Muli', sans-serif;
     margin-top: 32px;
 
+    h1,
+    h2,
+    h3 {
+      font-family: 'Raleway', sans-serif;
+    }
+
+    blockquote {
+      font-family: Georgia, serif;
+      font-size: 1em;
+      margin: 0 auto;
+      padding: 1rem;
+
+      h1 {
+        font-size: 4rem;
+      }
+
+      em {
+        font-style: italic;
+        position: relative;
+        margin-bottom: 0;
+
+        &::before {
+          position: absolute;
+          content: '“';
+          font-size: 8rem;
+          top: 0px;
+          left: 0;
+          opacity: 0.2;
+        }
+      }
+
+      cite {
+        display: block;
+        text-align: end;
+        &::before {
+          content: '\2014';
+        }
+      }
+    }
+
     a {
       text-decoration: none;
     }
-  }
-}
 
-.code-line {
-  display: block;
-  padding-right: 1em;
-  padding-left: 0.75em;
-  border-left: 0.25em solid #ee5500;
+    .code-line {
+      display: block;
+      padding-right: 1em;
+      padding-left: 0.75em;
+      border-left: 3px solid #ee5500;
+    }
+  }
 }
