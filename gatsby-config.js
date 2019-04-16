@@ -7,6 +7,8 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    // for creating custom url for blog posts
+    `gatsby-plugin-slug`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,
     {
