@@ -1,7 +1,6 @@
 ---
 title: 'New Beginnings'
 date: 2019-04-02
-slug: '/new-beginnings'
 info: 'Introduction to the blog'
 ---
 
