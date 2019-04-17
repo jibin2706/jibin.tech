@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Jibin Thomas <jibin.thomas2706@gmail.com>",
   "dependencies": {
-    "gatsby": "^2.2.5",
+    "gatsby": "^2.3.24",
     "gatsby-image": "^2.0.34",
     "gatsby-plugin-google-analytics": "^2.0.18",
     "gatsby-plugin-manifest": "^2.0.26",
