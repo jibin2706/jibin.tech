@@ -1,6 +1,6 @@
 ---
 title: 'Hosting static sites on gh-pages with custom domains'
-date: 2019-04-20
+date: 2019-04-17
 slug: '/custom-domain-on-gh-pages'
 info: 'Simple steps for deploying static sites with custom domain on Github'
 ---
