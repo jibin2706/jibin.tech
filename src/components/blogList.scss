@@ -5,26 +5,27 @@ main {
 }
 
 .blog-list {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  margin-bottom: 48px;
+  font-family: 'PT serif', serif;
+  margin-bottom: 36px;
 
   a {
     text-decoration: none;
   }
 
   h2 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 900;
-    margin: 8px 0;
+    font-family: 'Raleway', serif;
+    margin: 8px 0 0 0;
   }
 
   .blog-list__meta small {
-    font-family: 'Muli', sans-serif;
+    font-family: 'PT Serif', serif;
+    font-size: 15px;
     margin-right: 32px;
   }
 
   .excerpt {
-    font-family: 'Muli', sans-serif;
+    font-family: 'PT Serif', serif;
+    font-size: 18px;
+    margin: 0;
   }
 }

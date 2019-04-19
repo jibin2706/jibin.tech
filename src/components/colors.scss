@@ -1,10 +1,11 @@
-$light-primary: #f1f1f1;
-$light-font: #333333;
+$light-font: #444444;
+$dark-primary: #222222;
 
-$dark-primary: #282c35;
-$dark-font: #f1f1f1;
+$light-primary: #ffffff;
+$dark-font: #eeeeee;
 
-$primary-dark: #ee5500;
+$primary-light: #ff5722;
+$primary-dark: #ff9800;
 
 body.light-mode {
   background-color: $light-primary;
@@ -13,19 +14,19 @@ body.light-mode {
   line-height: 1.7;
   header {
     a {
-      color: $primary-dark;
+      color: $light-font;
     }
   }
 
   .blog-list {
     h2 {
-      color: $light-font;
+      color: $primary-light;
     }
     .blog-list__meta {
       color: lighten($color: $light-font, $amount: 10);
     }
     .excerpt {
-      color: lighten($color: $light-font, $amount: 20);
+      color: lighten($color: $light-font, $amount: 0);
     }
   }
 
@@ -50,22 +51,23 @@ body.dark-mode {
   background-color: $dark-primary;
   color: $dark-font;
   transition: background-color 0.2s ease;
+  line-height: 1.7;
 
   header {
     a {
-      color: lighten($color: $primary-dark, $amount: 20);
+      color: $dark-font;
     }
   }
 
   .blog-list {
     h2 {
-      color: $dark-font;
+      color: $primary-dark;
     }
     .blog-list__meta {
-      color: darken($color: $dark-font, $amount: 10);
+      color: darken($color: $dark-font, $amount: 20);
     }
     .excerpt {
-      color: darken($color: $dark-font, $amount: 20);
+      color: darken($color: $dark-font, $amount: 0);
     }
   }
 

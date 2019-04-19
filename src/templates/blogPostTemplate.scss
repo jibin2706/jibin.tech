@@ -1,9 +1,9 @@
 .blog {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'PT serif', sans-serif;
 
   .blog-title {
     h1 {
-      font-family: 'Raleway', sans-serif;
+      font-family: 'PT serif', sans-serif;
       font-weight: 900;
       margin: 16px 0;
     }
@@ -11,26 +11,27 @@
 
   .blog-meta span {
     margin-right: 50px;
-    font-family: 'Muli', sans-serif;
+    font-family: 'PT serif', sans-serif;
   }
 
   .blog-body {
     line-height: 1.75;
     font-size: 18px;
-    font-family: 'Muli', sans-serif;
+    font-family: 'PT serif', sans-serif;
     margin-top: 32px;
 
     h1,
     h2,
     h3 {
       font-family: 'Raleway', sans-serif;
+      margin: 8px 0;
     }
 
     blockquote {
-      font-family: Georgia, serif;
+      font-family: 'Georgia', serif;
       font-size: 1em;
       margin: 0 auto;
-      padding: 1rem;
+      padding: 2rem 1rem;
 
       h1 {
         font-size: 4rem;
