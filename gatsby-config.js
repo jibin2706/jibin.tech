@@ -60,7 +60,7 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 800,
-              quality: 80,
+              quality: 100,
               withWebp: true,
               tracedSVG: true,
             },
@@ -86,10 +86,10 @@ module.exports = {
         fonts: [
           {
             family: `Raleway`,
-            variants: [`400`, `900`],
+            variants: [`900`],
           },
           {
-            family: `Muli`,
+            family: `PT Serif`,
             variants: [`400`, `700`],
           },
         ],
