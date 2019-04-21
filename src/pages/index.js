@@ -4,6 +4,9 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import BlogList from '../components/blogList'
 
+import '../components/layout.css'
+import '../components/colors.scss'
+
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Blog | Jibin Thomas" keywords={[`blog`, `Jibin Thomas`]} />
