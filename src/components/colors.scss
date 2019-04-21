@@ -41,7 +41,7 @@ body.light-mode {
       color: $light-font;
     }
     .footer-info p {
-      color: lighten($color: $light-font, $amount: 20);
+      color: lighten($color: $light-font, $amount: 10);
     }
   }
 }
@@ -85,7 +85,7 @@ body.dark-mode {
       color: $dark-font;
     }
     .footer-info p {
-      color: darken($color: $dark-font, $amount: 40);
+      color: darken($color: $dark-font, $amount: 20);
     }
   }
 }
