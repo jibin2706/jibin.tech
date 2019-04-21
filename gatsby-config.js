@@ -16,7 +16,70 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-
+    // rss feed at /rss.xml
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        // this base query will be merged with any queries in each feed
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                const siteUrl = site.siteMetadata.siteUrl
+                const postText = `
+                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at blog.jibin.tech . You can read it online by <a href="${siteUrl +
+                  edge.node.fields.slug}">clicking here</a>.)</div>
+              `
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [
+                    { 'content:encoded': edge.node.html + postText },
+                  ],
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  limit: 1000,
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                  
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      fields { slug }
+                      frontmatter {
+                        title
+                        date
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/rss.xml',
+            title: "Jibin Thomas' Personal Blog RSS Feed",
+          },
+        ],
+      },
+    },
     // markdown file are in that directory (/src/pages/)
     {
       resolve: `gatsby-source-filesystem`,
