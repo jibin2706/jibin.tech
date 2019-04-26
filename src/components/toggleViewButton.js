@@ -15,8 +15,7 @@ function ToggleDarkButton() {
 
   return (
     <Switch
-      aria-label="Dark and light toggle button"
-      aria-labelledby="Dark and light toggle button"
+      aria-hidden="true"
       onChange={darkMode.toggle}
       checked={darkMode.value}
       offColor="#212121"
