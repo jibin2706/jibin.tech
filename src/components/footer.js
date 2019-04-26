@@ -1,5 +1,5 @@
 import React from 'react'
-import instagram from '../images/4372354761555590083.svg'
+import instagram from '../images/instagram.svg'
 import github from '../images/github.svg'
 import rss from '../images/rss.svg'
 import twitter from '../images/twitter.svg'
