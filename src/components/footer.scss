@@ -4,9 +4,11 @@ footer {
   text-align: center;
 
   .social {
-    a {
-      text-decoration: none;
-      padding: 0 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    img {
+      max-width: 48px;
+      margin: 0 16px 8px 16px;
     }
   }
 }
@@ -21,7 +23,12 @@ footer {
 @media only screen and (max-width: 480px) {
   .social {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+
+    img {
+      width: 36px;
+      margin: 0;
+    }
   }
 }
