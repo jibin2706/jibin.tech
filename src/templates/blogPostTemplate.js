@@ -14,7 +14,11 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={title} keywords={[`blog`, `Jibin Thomas`, title, info]} />
+      <SEO
+        title={title}
+        keywords={[`blog`, `Jibin Thomas`, title]}
+        description={info}
+      />
       <article className="blog">
         <header className="blog-title">
           <h1>{title}</h1>
@@ -42,6 +46,7 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "Do MMMM,YYYY")
+        info
       }
     }
   }
