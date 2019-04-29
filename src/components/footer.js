@@ -24,7 +24,7 @@ function Footer() {
         <a href="https://github.com/jibin2706">
           <img src={github} alt="github" />
         </a>
-        <a href="./rss.xml">
+        <a href="https://blog.jibin.tech/rss.xml">
           <img src={rss} alt="rss" />
         </a>
       </div>

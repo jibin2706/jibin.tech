@@ -3,7 +3,7 @@ module.exports = {
     title: `Blog | Jibin Thomas`,
     siteUrl: `https://blog.jibin.tech`,
     description: `Blog by Jibin Thomas`,
-    author: `@jibin2706`,
+    author: `@real_jibin`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
