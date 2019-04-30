@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 
 import './blogPostTemplate.scss'
 
+import Bio from '../components/Bio'
 import SEO from '../components/seo'
 
 export default ({ data, pageContext }) => {
@@ -20,6 +21,7 @@ export default ({ data, pageContext }) => {
         keywords={[`blog`, `Jibin Thomas`, title]}
         description={info}
       />
+      <Bio isHomePage={false} />
       <article className="blog">
         <header className="blog-title">
           <h1>{title}</h1>
