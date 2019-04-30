@@ -11,16 +11,6 @@
 }
 
 .title {
-  font-family: 'Raleway', sans-serif;
   font-weight: 900;
-  font-size: 40px;
   margin: 0;
-}
-
-@media only screen and (max-width: 480px) {
-  #header {
-    .title {
-      font-size: 36px;
-    }
-  }
 }

@@ -142,20 +142,11 @@ module.exports = {
         ],
       },
     },
-    // google fonts plugin
+    // typography plugin
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-typography`,
       options: {
-        fonts: [
-          {
-            family: `Raleway`,
-            variants: [`900`],
-          },
-          {
-            family: `PT Serif`,
-            variants: [`400`, `700`],
-          },
-        ],
+        pathToConfigModule: `src/utils/typography`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

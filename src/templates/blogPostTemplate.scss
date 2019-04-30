@@ -1,44 +1,30 @@
 .blog {
-  font-family: 'PT serif', sans-serif;
-
   .blog-title {
     h1 {
-      font-family: 'PT serif', sans-serif;
-      font-weight: 900;
       margin: 16px 0;
     }
   }
 
   .blog-meta span {
     margin-right: 50px;
-    font-family: 'PT serif', sans-serif;
   }
 
   .blog-body {
-    line-height: 1.75;
-    font-size: 18px;
-    font-family: 'PT serif', sans-serif;
     margin-top: 32px;
 
     h1,
     h2,
     h3 {
-      font-family: 'Raleway', sans-serif;
       margin: 8px 0;
     }
 
     blockquote {
       font-family: 'Georgia', serif;
-      font-size: 1em;
+      // font-size: 1em;
       margin: 0 auto;
       padding: 2rem 1rem;
 
-      h1 {
-        font-size: 4rem;
-      }
-
       em {
-        font-style: italic;
         position: relative;
         margin-bottom: 0;
 
@@ -64,12 +50,45 @@
     a {
       text-decoration: none;
     }
+    a {
+      text-decoration: underline !important;
+      text-decoration-color: white;
+      margin-bottom: 16px;
+      &:hover {
+        text-decoration: none !important;
+      }
+    }
 
     .code-line {
       display: block;
       padding-right: 1em;
       padding-left: 0.75em;
       border-left: 3px solid #ee5500;
+    }
+  }
+}
+
+.read-more {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  a {
+    text-decoration: underline !important;
+    text-decoration-color: white;
+    margin-bottom: 16px;
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+
+  .previous {
+    &::before {
+      content: '🡄 ';
+    }
+  }
+  .next {
+    &::after {
+      content: '  🡆';
     }
   }
 }

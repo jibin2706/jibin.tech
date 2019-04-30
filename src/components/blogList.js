@@ -9,10 +9,6 @@ const BlogList = ({ data }) => {
   return (
     <main>
       <div>
-        <small>
-          <h5>Latest Posts</h5>
-        </small>
-
         <div>
           {blog.map(({ node }) => {
             let { id, timeToRead, frontmatter, fields } = node
