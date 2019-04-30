@@ -63,7 +63,7 @@
       display: block;
       padding-right: 1em;
       padding-left: 0.75em;
-      border-left: 3px solid #ee5500;
+      border-left: 3px solid slateblue;
     }
   }
 }
@@ -78,17 +78,6 @@
     margin-bottom: 16px;
     &:hover {
       text-decoration: none !important;
-    }
-  }
-
-  .previous {
-    &::before {
-      content: '🡄 ';
-    }
-  }
-  .next {
-    &::after {
-      content: '  🡆';
     }
   }
 }
