@@ -40,7 +40,7 @@ In this post, we will be using NodeMCU devkit and Firebase for turning on and of
 Tools > Board > NodeMCU 1.o
 </div>
 
-4. To use firebase database in NodeMCU you need to download the firebase-arduino library which abstracts the REST API of the firebase. Download [Download firebase-arduino](https://github.com/FirebaseExtended/firebase-arduino.git)
+4. To use firebase database in NodeMCU you need to download the firebase-arduino library which abstracts the REST API of the firebase. [Download firebase-arduino](https://github.com/FirebaseExtended/firebase-arduino.git)
 
 5. Include the downloaded zip file on Arduino IDE.
 <div class="code-line">
@@ -72,7 +72,7 @@ Sketch > Include library > Add .zip > Select zip file
 You need to create a macro for your database URL and firebase secret which you had copied in Step 8.
 
 <div class="code-line">
-#define FIREBASE_HOST "yourfirebasedatabase.firebaseio.com"
+#define FIREBASE_HOST "yourfirebasedatabase.firebaseio.com" <br/>
 #define FIREBASE_AUTH "*****"
 </div>
 
