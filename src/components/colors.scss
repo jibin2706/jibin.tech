@@ -1,81 +1,89 @@
-$light-font: #444444;
-$dark-primary: #222222;
-
-$light-primary: #ffffff;
-$dark-font: #eeeeee;
-
-$primary-light: #ff5722;
-$primary-dark: #ff9800;
-
+// light mode
 body.light-mode {
-  background-color: $light-primary;
-  color: $light-font;
+  $bg: #ffffff;
+  $primary: #1e90ff;
+  $font-color: #444444;
+  $link-color: #1e90ff;
+
+  background-color: $bg;
+  color: $font-color;
   transition: background-color 0.2s ease;
-  line-height: 1.7;
+
   header {
     a {
-      color: $light-font;
+      color: $font-color;
+    }
+
+    .blog-header {
+      color: $primary;
     }
   }
 
   .blog-list {
     h2 {
-      color: $primary-light;
+      color: $primary;
     }
     .blog-list__meta {
-      color: lighten($color: $light-font, $amount: 10);
+      color: lighten($color: $font-color, $amount: 10);
     }
     .excerpt {
-      color: lighten($color: $light-font, $amount: 0);
+      color: lighten($color: $font-color, $amount: 0);
     }
   }
 
   .blog,
   .read-more {
     a {
-      color: slateblue;
+      color: $link-color;
     }
   }
 
   footer {
     .social a {
-      color: $light-font;
+      color: $font-color;
     }
     .footer-info p {
-      color: lighten($color: $light-font, $amount: 10);
+      color: lighten($color: $font-color, $amount: 10);
     }
   }
 }
 
 // dark theme
 body.dark-mode {
-  background-color: $dark-primary;
-  color: $dark-font;
+  $bg: #222222;
+  $primary: #00bbff;
+  $font-color: #eeeeee;
+  $link-color: #00bbff;
+  background-color: $bg;
+  color: $font-color;
   transition: background-color 0.2s ease;
-  line-height: 1.7;
 
   header {
     a {
-      color: $dark-font;
+      color: $font-color;
+    }
+
+    .blog-header {
+      color: $primary;
     }
   }
 
   .blog-list {
     h2 {
-      color: $primary-dark;
+      color: $primary;
     }
     .blog-list__meta {
-      color: darken($color: $dark-font, $amount: 20);
+      color: darken($color: $font-color, $amount: 20);
     }
     .excerpt {
-      color: darken($color: $dark-font, $amount: 0);
+      color: darken($color: $font-color, $amount: 0);
     }
   }
 
   .blog,
   .read-more {
     a {
-      color: cornflowerblue;
+      color: $link-color;
 
       &:hover {
         text-decoration: underline;
@@ -84,13 +92,13 @@ body.dark-mode {
   }
   footer {
     hr {
-      background: $light-primary;
+      background: $font-color;
     }
     .social a {
-      color: $dark-font;
+      color: $font-color;
     }
     .footer-info p {
-      color: darken($color: $dark-font, $amount: 20);
+      color: darken($color: $font-color, $amount: 20);
     }
   }
 }
