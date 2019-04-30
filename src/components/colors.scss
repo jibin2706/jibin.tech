@@ -30,7 +30,8 @@ body.light-mode {
     }
   }
 
-  .blog {
+  .blog,
+  .read-more {
     a {
       color: slateblue;
     }
@@ -71,12 +72,16 @@ body.dark-mode {
     }
   }
 
-  .blog {
+  .blog,
+  .read-more {
     a {
       color: cornflowerblue;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
-
   footer {
     hr {
       background: $light-primary;
