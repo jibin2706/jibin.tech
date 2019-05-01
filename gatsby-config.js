@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Blog | Jibin Thomas`,
+    title: `Blog by Jibin Thomas`,
     siteUrl: `https://blog.jibin.tech`,
-    description: `Blog by Jibin Thomas`,
+    description: `I mainly write about stuffs that I come across while programming`,
     author: `@real_jibin`,
   },
   plugins: [
