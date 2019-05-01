@@ -7,14 +7,22 @@ footer {
     font-family: Georgia, 'Times New Roman', Times, serif;
 
     img {
-      max-width: 48px;
+      max-width: 24px;
       margin: 0 16px 8px 16px;
+      transition: 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+      &:hover {
+        transform: scale(1.7);
+        transition: 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
     }
   }
 }
 
 .footer-info {
   p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
     margin: 8px;
     color: #1f1f1f;
   }
@@ -25,10 +33,5 @@ footer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
-    img {
-      width: 36px;
-      margin: 0;
-    }
   }
 }

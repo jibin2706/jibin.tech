@@ -3,7 +3,6 @@ import instagram from '../images/instagram.svg'
 import github from '../images/github.svg'
 import rss from '../images/rss.svg'
 import twitter from '../images/twitter.svg'
-import linkedin from '../images/linkedin.svg'
 
 import './footer.scss'
 
@@ -14,9 +13,6 @@ function Footer() {
       <div className="social">
         <a href="https://twitter.com/real_jibin">
           <img src={twitter} alt="twitter" />
-        </a>
-        <a href="https://www.linkedin.com/in/jibin-thomas-4b3496142/">
-          <img src={linkedin} alt="linkedin" />
         </a>
         <a href="https://www.instagram.com/jibin2706/">
           <img src={instagram} alt="instagram" />

@@ -94,8 +94,15 @@ body.dark-mode {
     hr {
       background: $font-color;
     }
-    .social a {
-      color: $font-color;
+
+    .social {
+      img {
+        filter: invert(1);
+      }
+
+      a {
+        color: $font-color;
+      }
     }
     .footer-info p {
       color: darken($color: $font-color, $amount: 20);
