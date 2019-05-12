@@ -41,12 +41,12 @@ export default ({ data, pageContext }) => {
       <section className="read-more">
         {previous && (
           <Link className="previous" to={previous.fields.slug}>
-            🠜 {previous.frontmatter.title}
+            ← {previous.frontmatter.title}
           </Link>
         )}
         {next && (
           <Link className="next" to={next.fields.slug}>
-            {next.frontmatter.title} 🠞
+            {next.frontmatter.title} →
           </Link>
         )}
       </section>
