@@ -9,6 +9,10 @@ body.light-mode {
   color: $font-color;
   transition: background-color 0.2s ease;
 
+  a {
+    color: $link-color;
+  }
+
   header {
     a {
       color: $font-color;
@@ -28,13 +32,6 @@ body.light-mode {
     }
     .excerpt {
       color: lighten($color: $font-color, $amount: 0);
-    }
-  }
-
-  .blog,
-  .read-more {
-    a {
-      color: $link-color;
     }
   }
 
@@ -58,6 +55,10 @@ body.dark-mode {
   color: $font-color;
   transition: background-color 0.2s ease;
 
+  a {
+    color: $link-color;
+  }
+
   header {
     a {
       color: $font-color;
@@ -80,16 +81,6 @@ body.dark-mode {
     }
   }
 
-  .blog,
-  .read-more {
-    a {
-      color: $link-color;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
   footer {
     hr {
       background: $font-color;

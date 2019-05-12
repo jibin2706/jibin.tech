@@ -50,12 +50,8 @@
     }
 
     a {
-      text-decoration: none;
-    }
-    a {
       text-decoration: underline !important;
-      text-decoration-color: white;
-      margin-bottom: 16px;
+
       &:hover {
         text-decoration: none !important;
       }
@@ -65,7 +61,7 @@
       display: block;
       padding-right: 1em;
       padding-left: 0.75em;
-      border-left: 3px solid slateblue;
+      border-left: 3px solid #1e90ff;
     }
   }
 }
@@ -75,11 +71,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   a {
-    text-decoration: underline !important;
-    text-decoration-color: white;
-    margin-bottom: 16px;
-    &:hover {
-      text-decoration: none !important;
-    }
+    text-decoration: none;
+    margin: 32px 0 0 0;
   }
 }
