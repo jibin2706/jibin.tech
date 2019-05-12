@@ -1,13 +1,20 @@
 .blog {
-  .blog-title {
-    h1 {
-      margin: 16px 0;
+  .blog-header {
+    .blog-title {
+      margin: 8px 0;
+    }
+
+    .blog-info {
+      margin: 8px 0;
+      font-weight: 500;
+      font-size: 18px;
     }
   }
 
   .blog-meta span {
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 500;
     margin-right: 50px;
   }
 

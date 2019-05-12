@@ -26,7 +26,7 @@ export const query = graphql`
           timeToRead
           frontmatter {
             title
-            date(formatString: "Do MMMM,YYYY")
+            date(formatString: "MMMM D, YYYY")
             info
           }
           fields {

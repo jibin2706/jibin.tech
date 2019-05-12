@@ -12,11 +12,13 @@ main {
   }
 
   h2 {
-    margin: 8px 0 0 0;
+    margin: 0;
   }
 
   .blog-list__meta small {
-    margin-right: 32px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 14px;
   }
 
   .excerpt {

@@ -25,8 +25,7 @@ const BlogList = ({ data }) => {
                     <h2>{title}</h2>
                   </Link>
                   <div className="blog-list__meta">
-                    <small>{date}</small>
-                    <small>{timeToRead} mins read</small>
+                    <small>Posted on {date}</small>
                   </div>
                   <p className="excerpt">{info}</p>
                 </section>

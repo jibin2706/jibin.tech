@@ -35,6 +35,12 @@ body.light-mode {
     }
   }
 
+  .blog-header {
+    .blog-info {
+      color: lighten($color: $font-color, $amount: 15);
+    }
+  }
+
   footer {
     .social a {
       color: $font-color;

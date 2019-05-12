@@ -23,8 +23,9 @@ export default ({ data, pageContext }) => {
       />
       <Bio isHomePage={false} />
       <article className="blog">
-        <header className="blog-title">
-          <h1>{title}</h1>
+        <header className="blog-header">
+          <h1 className="blog-title">{title}</h1>
+          <h2 className="blog-info">{info}</h2>
         </header>
 
         <div className="blog-meta">
@@ -61,7 +62,7 @@ export const query = graphql`
       timeToRead
       frontmatter {
         title
-        date(formatString: "Do MMMM,YYYY")
+        date(formatString: "MMMM D, YYYY")
         info
       }
     }
