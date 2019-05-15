@@ -1,0 +1,27 @@
+main {
+  h5 {
+    margin: 0;
+  }
+}
+
+.blog-list {
+  margin-bottom: 36px;
+
+  a {
+    text-decoration: none;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  .blog-list__meta small {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 14px;
+  }
+
+  .excerpt {
+    margin: 0;
+  }
+}
