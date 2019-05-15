@@ -2,11 +2,13 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import BlogList from '../components/blogList'
+import BlogList from '../templates/blogList'
+
+import '../components/globals.scss'
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Blog | Jibin Thomas" keywords={[`blog`, `Jibin Thomas`]} />
 
     <BlogList data={data} />
   </Layout>
@@ -24,7 +26,7 @@ export const query = graphql`
           timeToRead
           frontmatter {
             title
-            date(formatString: "Do MMMM,YYYY")
+            date(formatString: "MMMM D, YYYY")
             info
           }
           fields {
