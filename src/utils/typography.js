@@ -8,7 +8,7 @@ const typography = new Typography({
   googleFonts: [
     {
       name: 'PT Serif',
-      styles: ['400'],
+      styles: ['400', '700'],
     },
     {
       name: 'Montserrat',
