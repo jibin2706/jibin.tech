@@ -17,13 +17,13 @@ Go to your repository, which you want to host.
 
 ![Github Settings Menu](settings.png)
 
-In the settings panel enable the source to the branch which you want to host. It can be your master branch or gh-pages branch.
+In the settings panel, enable the source to the branch which you want to host. It can be your master branch or gh-pages branch.
 You can put the files that need to be hosted in that branch and it should contain an index.html file.
 It will now provide a link with a github.io domain.
 
 ![Setting up custom domain](custom-domain-settings.png)
 
-But what about custom domain?
+But what about the custom domain?
 Yes, for that you need to create a new file **CNAME** in the repository containing your domain name.
 
 ![CNAME file](cname.png)
