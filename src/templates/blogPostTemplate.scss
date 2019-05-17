@@ -17,59 +17,63 @@
     font-weight: 500;
     margin-right: 50px;
   }
+}
 
-  .blog-body {
-    margin-top: 32px;
+.blog-body {
+  margin-top: 32px;
 
-    h1,
-    h2,
-    h3 {
-      margin: 8px 0;
-    }
+  h1,
+  h2,
+  h3 {
+    margin: 8px 0;
+  }
 
-    blockquote {
-      font-family: 'Georgia', serif;
-      // font-size: 1em;
-      margin: 0 auto;
-      padding: 2rem 1rem;
+  li {
+    margin: 8px;
+  }
 
-      em {
-        position: relative;
-        margin-bottom: 0;
+  blockquote {
+    font-family: 'Georgia', serif;
+    // font-size: 1em;
+    margin: 0 auto;
+    padding: 2rem 1rem;
 
-        &::before {
-          position: absolute;
-          content: '“';
-          font-size: 8rem;
-          top: 0px;
-          left: 0;
-          opacity: 0.2;
-        }
-      }
+    em {
+      position: relative;
+      margin-bottom: 0;
 
-      cite {
-        display: block;
-        text-align: end;
-        &::before {
-          content: '\2014';
-        }
+      &::before {
+        position: absolute;
+        content: '“';
+        font-size: 8rem;
+        top: 0px;
+        left: 0;
+        opacity: 0.2;
       }
     }
 
-    a {
-      text-decoration: underline !important;
-
-      &:hover {
-        text-decoration: none !important;
-      }
-    }
-
-    .code-line {
+    cite {
       display: block;
-      padding-right: 1em;
-      padding-left: 0.75em;
-      border-left: 3px solid #1e90ff;
+      text-align: end;
+      &::before {
+        content: '\2014';
+      }
     }
+  }
+
+  a {
+    text-decoration: underline !important;
+
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+
+  .code-line {
+    display: block;
+    padding-right: 1em;
+    padding-left: 0.75em;
+    border-left: 3px solid #1e90ff;
   }
 }
 
