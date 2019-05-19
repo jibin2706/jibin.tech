@@ -18,13 +18,13 @@ This post demonstrates how to use Razorpay Android SDK to implement payments in 
 
 There are many reasons to use RazorPay instead of some other payment gateways. Some of those reasoning being
 
-1. No setup or maintenance fee
-2. Testing in private mode
-3. Support for all the platforms
-4. Various payment options such as UPI, credit or debit card, mobile wallets, etc
-5. Intuitive Design for payment
-6. Good Documentation
-7. Multiple currency transactions
+- No setup or maintenance fee
+- Testing in private mode
+- Support for all the platforms
+- Various payment options such as UPI, credit or debit card, mobile wallets, etc
+- Intuitive Design for payment
+- Good Documentation
+- Multiple currency transactions
 
 ## Getting started
 

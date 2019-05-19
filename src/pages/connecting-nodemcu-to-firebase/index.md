@@ -9,12 +9,7 @@ info: 'Getting started with Internet of Things'
 
 <center><small>Photo by Tim Käbel on Unsplash</small></center>
 
-<blockquote>
-   <em>
-      The Internet will disappear. There will be so many IP addresses, so many devices, sensors, things that you are wearing, things that you are interacting with, that you won't even sense it. It will be part of your presence all the time. Imagine you walk into a room, and the room is dynamic. And with your permission and all of that, you are interacting with the things going on in the room.
-   </em>
-   <cite>Eric Schmidt</cite>
-</blockquote>
+> The Internet will disappear. There will be so many IP addresses, so many devices, sensors, things that you are wearing, things that you are interacting with, that you won't even sense it. It will be part of your presence all the time. Imagine you walk into a room, and the room is dynamic. And with your permission and all of that, you are interacting with the things going on in the room. <cite>Eric Schmidt</cite>
 
 Nowadays many devices that we use day to day are connected to the internet like Television, smart speakers, refrigerators, etc. These devices extend their primary functions and allow it to interact with other devices on the internet and allow them to be controlled remotely.
 
