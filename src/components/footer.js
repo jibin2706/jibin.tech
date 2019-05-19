@@ -12,7 +12,7 @@ function Footer() {
       <hr style={{ maxWidth: '800px', margin: '16px auto' }} />
       <div className="social">
         <a href="https://twitter.com/real_jibin">
-          <img src={twitter} alt="twitter" />
+          <img src={twitter} alt="follow me on twitter" />
         </a>
         <a href="https://www.instagram.com/jibin2706/">
           <img src={instagram} alt="instagram" />
