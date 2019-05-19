@@ -30,6 +30,14 @@ export default ({ data, pageContext }) => {
 
         <div className="blog-meta">
           <span className="date">{date}</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="8"
+            height="8"
+            viewBox="0 0 24 24"
+          >
+            <circle cx="12" cy="12" r="12" />
+          </svg>
           <span className="time">{timeToRead} mins read</span>
         </div>
 
