@@ -12,7 +12,7 @@ const typography = new Typography({
     },
     {
       name: 'Montserrat',
-      styles: ['500', '700', '900'],
+      styles: ['700', '900'],
     },
   ],
 })
