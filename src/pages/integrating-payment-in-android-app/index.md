@@ -39,101 +39,101 @@ There are many reasons to use RazorPay instead of some other payment gateways. S
 
     **Note: The minimum Android SDK version is 19 although it can be changed**
 
-    ```
-     repositories {
-         mavenCentral()
-     }
-     dependencies {
-         implementation 'com.razorpay:checkout:1.5.2'
-     }
-    ```
+```
+ repositories {
+     mavenCentral()
+ }
+ dependencies {
+     implementation 'com.razorpay:checkout:1.5.2'
+ }
+```
 
 4.  Add the Razorpay API key generated in the second step in the Android Manifest
 
-    ```xml
-     <meta-data
-             android:name="com.razorpay.ApiKey"
-             android:value="YOUR_API_KEY" />
-    ```
+```xml
+ <meta-data
+         android:name="com.razorpay.ApiKey"
+         android:value="YOUR_API_KEY" />
+```
 
 5.  Implementing PaymentResultListener / PaymentResultWithDataListener interface <br/>
     If you want the payment details such as payment id, email and mobile number of the user, and various options that are passed to the checkout object like the amount, merchant name, description, etc at the end of the transaction you should use PaymentResultWithDataListener if not then PaymentResultListener should suffice.
 
     **onPaymentSuccess** and **onPaymentError** are abstract methods that must be implemented and called when the transaction is successful or failed respectively.
 
-    ```java
-    // PaymentResultListener
-    public class MerchantActivity extends Activity implements PaymentResultListener {
-      // ...
-      @Override
-      public void onPaymentSuccess(String razorpayPaymentID) {
-         // Add your logic here for a successful payment response
-      }
+```java
+// PaymentResultListener
+public class MerchantActivity extends Activity implements PaymentResultListener {
+  // ...
+  @Override
+  public void onPaymentSuccess(String razorpayPaymentID) {
+     // Add your logic here for a successful payment response
+  }
 
-      @Override
-      public void onPaymentError(int code, String response) {
-        //  Add your logic here for a failed payment response
-      }
+  @Override
+  public void onPaymentError(int code, String response) {
+    //  Add your logic here for a failed payment response
+  }
+}
+```
+
+```java
+// PaymentResultWithDataListener
+// It contains PaymentData object in the onPaymentSuccess method
+public class PaymentActivity extends Activity implements PaymentResultWithDataListener {
+    @Override
+    public void onPaymentSuccess(String razorpayPaymentID, PaymentData paymentData) {
+        Toast.makeText(getApplicationContext(), "success", Toast.LENGTH_SHORT).show();
+        ...
+  }
+
+    @Override
+    public void onPaymentError(int i, String s, PaymentData paymentData) {
+        Toast.makeText(getApplicationContext(), "failure" + s, Toast.LENGTH_SHORT).show();
+        ...
     }
-    ```
-
-    ```java
-    // PaymentResultWithDataListener
-    // It contains PaymentData object in the onPaymentSuccess method
-    public class PaymentActivity extends Activity implements PaymentResultWithDataListener {
-        @Override
-        public void onPaymentSuccess(String razorpayPaymentID, PaymentData paymentData) {
-            Toast.makeText(getApplicationContext(), "success", Toast.LENGTH_SHORT).show();
-            ...
-      }
-
-        @Override
-        public void onPaymentError(int i, String s, PaymentData paymentData) {
-            Toast.makeText(getApplicationContext(), "failure" + s, Toast.LENGTH_SHORT).show();
-            ...
-        }
-    }
-    ```
+}
+```
 
 6.  This step is optional and will help faster rendering of the checkout page on slower network connections. You can preload the checkout Activity in any of the previous activities.
 
-    ```java
-    public class SomeEarlierMerchantActivity extends Activity {
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
+```java
+public class SomeEarlierMerchantActivity extends Activity {
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-            // Preload payment resources
-            Checkout.preload(getApplicationContext());
-         }
+        // Preload payment resources
+        Checkout.preload(getApplicationContext());
      }
-    ```
+ }
+```
 
 7.  For initiating the payment, an instance of a Checkout object with payment details and options as a JSONObject object should be passed. <br />
     **Note: The JSONObject object must contain name, currency & amount values.**
 
-    ```java
-    public void startPayment() {
-        Checkout checkout = new Checkout();
-        final Activity activity = this;
+```java
+public void startPayment() {
+    Checkout checkout = new Checkout();
+    final Activity activity = this;
 
-        try {
-        JSONObject options = new JSONObject();
+    try {
+    JSONObject options = new JSONObject();
 
-        options.put("name", "Merchant Name");
-        options.put("description", "Description of the order");
-        options.put("currency", "INR");
-        /**
-         * Amount is always passed in PAISE
-         * Eg: "500" = Rs 5.00
-         */
-        options.put("amount", "500");
+    options.put("name", "Merchant Name");
+    options.put("description", "Description of the order");
+    options.put("currency", "INR");
+    /**
+     * Amount is always passed in PAISE
+     * Eg: "500" = Rs 5.00
+     */
+    options.put("amount", "500");
 
-        checkout.open(activity, options);
-           } catch(Exception e) {
-               Log.e(TAG, "Error in starting Razorpay Checkout", e);
-           }
-    }
-    ```
+    checkout.open(activity, options);
+       } catch(Exception e) {
+           Log.e(TAG, "Error in starting Razorpay Checkout", e);
+       }
+}
+```
 
 Hurray! Now you can accept payments.
 
