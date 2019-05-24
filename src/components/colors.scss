@@ -28,7 +28,7 @@ body.light-mode {
       color: $primary;
     }
     .blog-list__meta {
-      color: lighten($color: $font-color, $amount: 10);
+      color: lighten($color: $font-color, $amount: 15);
     }
     .excerpt {
       color: lighten($color: $font-color, $amount: 0);
@@ -38,6 +38,15 @@ body.light-mode {
   .blog-header {
     .blog-info {
       color: lighten($color: $font-color, $amount: 15);
+    }
+  }
+
+  .blog {
+    .blog-meta {
+      color: lighten($color: $font-color, $amount: 15);
+      svg {
+        fill: #666666;
+      }
     }
   }
 
@@ -84,6 +93,21 @@ body.dark-mode {
     }
     .excerpt {
       color: darken($color: $font-color, $amount: 0);
+    }
+  }
+
+  .blog-header {
+    .blog-info {
+      color: darken($color: $font-color, $amount: 20);
+    }
+  }
+
+  .blog {
+    .blog-meta {
+      color: darken($color: $font-color, $amount: 20);
+      svg {
+        fill: #cccccc;
+      }
     }
   }
 
