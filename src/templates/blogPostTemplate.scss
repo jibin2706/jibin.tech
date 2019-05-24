@@ -1,11 +1,11 @@
 .blog {
   .blog-header {
     .blog-title {
-      margin: 8px 0;
+      margin: 1rem 0;
     }
 
     .blog-info {
-      margin: 8px 0;
+      margin: 0.5rem 0;
       line-height: 1.5;
       font-weight: 600;
       font-size: 0.9rem;
@@ -17,7 +17,6 @@
     align-items: center;
     svg {
       margin-right: 1rem;
-      fill: #444444;
     }
     span {
       font-family: 'Montserrat', sans-serif;
@@ -34,13 +33,13 @@
   h1,
   h2,
   h3 {
-    margin: 0 0 0.5rem 0;
+    margin: 3rem 0 1rem 0;
     font-family: 'PT Serif', Georgia, serif;
   }
 
   p {
     line-height: 1.7;
-    margin-bottom: 1rem;
+    margin-bottom: 1.75rem;
   }
 
   ul li {
@@ -94,13 +93,18 @@
   }
 }
 
+.blog-footer {
+  margin-top: 2rem;
+}
+
 .read-more {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 3rem;
   a {
     text-decoration: none;
-    margin: 32px 0 0 0;
+    margin: 1rem 0 0 0;
   }
 }
 
