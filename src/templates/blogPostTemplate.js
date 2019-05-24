@@ -8,11 +8,18 @@ import Bio from '../components/Bio'
 import SEO from '../components/seo'
 
 export default ({ data, pageContext }) => {
+  const GITHUB_USERNAME = 'jibin2706'
+  const GITHUB_REPO_NAME = 'blog.jibin.tech'
+  const GITHUB_BRANCH = 'develop'
+
   const post = data.markdownRemark
 
   let { timeToRead, frontmatter } = post
+  let { slug } = post.fields
   let { title, date, info } = frontmatter
   let { previous, next } = pageContext
+
+  const githubEditUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/${GITHUB_BRANCH}/src/pages${slug}index.md`
 
   return (
     <Layout>
@@ -47,6 +54,10 @@ export default ({ data, pageContext }) => {
         />
       </article>
 
+      <div className="blog-footer">
+        <a href={githubEditUrl}>Edit on Github</a>
+      </div>
+
       <section className="read-more">
         {previous && (
           <Link className="previous" to={previous.fields.slug}>
@@ -68,6 +79,9 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       timeToRead
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "MMMM D, YYYY")
