@@ -1,1 +1,1 @@
-require('prismjs/themes/prism-twilight.css')
+require('./src/utils/syntax-highlighting.css')
