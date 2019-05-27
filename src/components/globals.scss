@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700,900|PT+Serif:400,700&display=swap');
+
+h1,
+h2,
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-family: 'PT serif', Georgia serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+// light mode
+body.light-mode {
+  $primary: #0b69a3;
+  $secondary: #f5f7fa;
+  $black: #1f2933;
+  $grey: #3e4c59;
+  $light-grey: #52606d;
+
+  background-color: $secondary;
+  color: $black;
+  transition: background-color 0.2s ease;
+
+  a {
+    color: $primary;
+  }
+
+  // blog list page
+  #index-header h1 {
+    color: $black;
+  }
+
+  .blog-list {
+    .blog-title {
+      color: $primary;
+    }
+    .blog-meta {
+      color: $light-grey;
+    }
+    .excerpt {
+      color: $grey;
+    }
+  }
+
+  // blog page
+  #blog-header h1 {
+    color: $primary;
+  }
+
+  .blog {
+    .blog-title {
+      color: $black;
+    }
+
+    .blog-info {
+      color: $grey;
+    }
+
+    .blog-meta {
+      color: $grey;
+      svg {
+        fill: $grey;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: $grey;
+    }
+
+    p,
+    li {
+      color: $light-grey;
+    }
+  }
+
+  // footer
+  footer p {
+    color: $grey;
+  }
+}
+
+// dark theme
+body.dark-mode {
+  $primary: #40c3f7;
+  $secondary: #1f2933;
+  $white: #f5f7fa;
+  $dark-white: #e4e7eb;
+  $darker-white: #cbd2d9;
+
+  background-color: $secondary;
+  color: $white;
+  transition: background-color 0.2s ease;
+
+  a {
+    color: $primary;
+  }
+
+  // blog list page
+  #index-header h1 {
+    color: $dark-white;
+  }
+
+  .blog-list {
+    .blog-title {
+      color: $primary;
+    }
+    .blog-meta {
+      color: $dark-white;
+    }
+    .excerpt {
+      color: $white;
+    }
+  }
+
+  // blog page
+  #blog-header h1 {
+    color: $primary;
+  }
+
+  .blog {
+    .blog-title {
+      color: $white;
+    }
+
+    .blog-info {
+      color: $dark-white;
+    }
+
+    .blog-meta {
+      color: $dark-white;
+      svg {
+        fill: $dark-white;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: $dark-white;
+    }
+
+    p,
+    li {
+      color: $darker-white;
+    }
+  }
+
+  // footer
+  footer {
+    hr {
+      background: $white;
+    }
+
+    p {
+      color: $dark-white;
+    }
+
+    .social {
+      img {
+        filter: invert(1);
+      }
+
+      a {
+        // color: $font-color;
+      }
+    }
+  }
+}
