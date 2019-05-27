@@ -13,9 +13,9 @@ const Bio = ({ isHomePage }) => {
 }
 
 const IndexHeader = () => (
-  <header id="header">
+  <header id="index-header">
     <Link to="/">
-      <h1 className="title index-header">Jibin Thomas</h1>
+      <h1 className="title">Jibin Thomas</h1>
     </Link>
     <span className="toggle-button">
       <ToggleDarkButton />
@@ -24,9 +24,9 @@ const IndexHeader = () => (
 )
 
 const BlogHeader = () => (
-  <header id="header">
+  <header id="blog-header">
     <Link to="/">
-      <h1 className="title blog-header">Jibin Thomas</h1>
+      <h1 className="title">Jibin Thomas</h1>
     </Link>
     <span className="toggle-button">
       <ToggleDarkButton />

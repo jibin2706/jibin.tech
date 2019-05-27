@@ -29,6 +29,7 @@
 
 .blog-body {
   margin-top: 1rem;
+  line-height: 1.7;
 
   h1,
   h2,
@@ -38,7 +39,6 @@
   }
 
   p {
-    line-height: 1.7;
     margin-bottom: 1.75rem;
   }
 
@@ -47,8 +47,7 @@
   }
 
   li {
-    margin: 0;
-    line-height: 1.7;
+    margin-bottom: 1rem;
   }
 
   blockquote {
@@ -56,6 +55,7 @@
     font-style: italic;
     line-height: 2;
     margin: 0 auto;
+    margin-bottom: 1rem;
     padding: 0.5rem;
     position: relative;
 
@@ -77,19 +77,12 @@
     }
   }
 
-  a {
-    text-decoration: underline !important;
-
-    &:hover {
-      text-decoration: none !important;
-    }
-  }
-
   .code-line {
     display: block;
     padding-right: 1em;
     padding-left: 0.75em;
-    border-left: 3px solid #1e90ff;
+    border-left: 3px solid #0b69a3;
+    margin-bottom: 1rem;
   }
 }
 

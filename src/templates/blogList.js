@@ -22,9 +22,9 @@ const BlogList = ({ data }) => {
               return (
                 <section key={id} className="blog-list">
                   <Link to={slug}>
-                    <h2>{title}</h2>
+                    <h2 className="blog-title">{title}</h2>
                   </Link>
-                  <div className="blog-list__meta">
+                  <div className="blog-meta">
                     <small>Posted on {date}</small>
                   </div>
                   <p className="excerpt">{info}</p>

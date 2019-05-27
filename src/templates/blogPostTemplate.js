@@ -36,7 +36,7 @@ export default ({ data, pageContext }) => {
         </header>
 
         <div className="blog-meta">
-          <span className="date">{date}</span>
+          <span>{date}</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="8"
@@ -45,7 +45,7 @@ export default ({ data, pageContext }) => {
           >
             <circle cx="12" cy="12" r="12" />
           </svg>
-          <span className="time">{timeToRead} mins read</span>
+          <span>{timeToRead} mins read</span>
         </div>
 
         <main
