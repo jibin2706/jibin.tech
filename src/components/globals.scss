@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:700,900|PT+Serif:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600,900|Open+Sans&display=swap');
 
 h1,
 h2,
 h3 {
   font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
 }
 
 p {
-  font-family: 'PT serif', Georgia serif;
+  font-family: 'Open Sans', Georgia, serif;
 }
 
 a {

@@ -35,7 +35,7 @@
   h2,
   h3 {
     margin: 3rem 0 1rem 0;
-    font-family: 'PT Serif', Georgia, serif;
+    font-family: 'Open Sans', Georgia, serif;
   }
 
   p {
@@ -47,7 +47,8 @@
   }
 
   li {
-    margin-bottom: 1rem;
+    font-family: 'Open Sans', Georgia, serif;
+    margin-bottom: 0rem;
   }
 
   blockquote {
@@ -87,10 +88,12 @@
 }
 
 .blog-footer {
+  font-family: 'Montserrat', sans-serif;
   margin-top: 2rem;
 }
 
 .read-more {
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
