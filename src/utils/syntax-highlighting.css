@@ -220,5 +220,10 @@ pre[data-line] {
     position: relative;
     right: 50%;
     width: 100vw;
+    border-radius: 0;
+  }
+
+  pre[class*='language-'] {
+    border-radius: 0;
   }
 }

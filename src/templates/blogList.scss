@@ -7,15 +7,11 @@ main {
 .blog-list {
   margin-bottom: 36px;
 
-  a {
-    text-decoration: none;
-  }
-
   h2 {
     margin: 0;
   }
 
-  .blog-list__meta small {
+  .blog-meta small {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
   }
