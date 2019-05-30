@@ -26,7 +26,7 @@ const IndexHeader = () => (
 const BlogHeader = () => (
   <header id="blog-header">
     <Link to="/">
-      <h1 className="title">Jibin Thomas</h1>
+      <h2 className="title">Jibin Thomas</h2>
     </Link>
     <span className="toggle-button">
       <ToggleDarkButton />
