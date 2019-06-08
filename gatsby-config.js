@@ -139,6 +139,8 @@ module.exports = {
               noInlineHighlight: false,
             },
           },
+          // copying gif and other files
+          'gatsby-remark-copy-linked-files',
         ],
       },
     },
