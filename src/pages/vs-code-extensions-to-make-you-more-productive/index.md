@@ -21,9 +21,15 @@ These listed plugins will help you be more productive.
 
 This extension comes bundled with VSCode, so installation is not required. Creating repetitive markup can be ineffective. This extension helps generate skeleton markup with the help of some shortcuts.
 
+![emmet](emmet.gif)
+
 Pretty powerful right? Check the documentation and examples [here](https://docs.emmet.io/).
 
+
+
 ### [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+
+![auto rename tag](auto_rename_tag.gif)
 
 It enables you automatically rename paired HTML tags, so no more searching for that distant ending tag. It also works with JSX. If you are coding HTML, then this extension is a must-have.
 
@@ -50,7 +56,7 @@ This extension allows quick switching between your projects from the editor itse
 
 ### [Bracker Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
 
-![Bracket](brackets.PNG)
+![Bracket](brackets.png)
 
 Finding matching brackets can be confusing😕? But not while using this extension.
 It colors matching brackets to avoid confusion. This extension is highly recommended for all developers because what programming language does not have brackets?
