@@ -18,10 +18,10 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
 
   span {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
     margin-right: 1rem;
   }
 }
@@ -91,11 +91,6 @@
   }
 }
 
-.blog-footer {
-  font-family: 'Montserrat', sans-serif;
-  margin-top: 2rem;
-}
-
 .read-more {
   font-family: 'Montserrat', sans-serif;
   display: flex;
@@ -103,11 +98,27 @@
   justify-content: space-between;
   margin-top: 3rem;
   a {
-    text-decoration: none;
     margin: 1rem 0 0 0;
   }
 }
 
+//
+// button styles
+//
+.btn {
+  text-align: center;
+  padding: 12px 20px;
+  border: 2px solid;
+  text-decoration: none;
+}
+
+.btn--full {
+  width: 100%;
+}
+
+//
+// media query
+//
 @media screen and (max-width: 450px) {
   html {
     font-size: 16px;

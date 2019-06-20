@@ -32,6 +32,8 @@ export default ({ data, pageContext }) => {
             <span>Published {date}</span>
             <span> | </span>
             <span>Reading Time: {timeToRead} mins</span>
+            <span> | </span>
+            <a href={githubEditUrl}>Edit on Github</a>
           </div>
           <h2 className="blog__info">{info}</h2>
         </header>
@@ -43,18 +45,14 @@ export default ({ data, pageContext }) => {
         />
       </article>
 
-      <div className="blog-footer">
-        <a href={githubEditUrl}>Edit on Github</a>
-      </div>
-
       <section className="read-more">
         {previous && (
-          <Link className="previous" to={previous.fields.slug}>
+          <Link className="btn btn--full" to={previous.fields.slug}>
             ← {previous.frontmatter.title}
           </Link>
         )}
         {next && (
-          <Link className="next" to={next.fields.slug}>
+          <Link className="btn btn--full" to={next.fields.slug}>
             {next.frontmatter.title} →
           </Link>
         )}
