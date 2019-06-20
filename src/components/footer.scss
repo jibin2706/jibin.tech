@@ -1,17 +1,22 @@
-footer {
-  font-size: 16px;
+.footer {
+  padding: 3rem 0;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.social a {
-  margin: 0 0.5rem;
-  text-transform: uppercase;
+.footer__social {
+  padding-bottom: 2rem;
 }
 
-.footer-info {
-  p {
-    font-size: 14px;
-    margin: 8px;
-  }
+.footer__social a {
+  margin: 0.5rem;
+  text-transform: capitalize;
+}
+
+.footer__copyright {
+  margin: 8px;
+}
+
+.footer__end {
+  font-size: 0.8rem;
 }
