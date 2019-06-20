@@ -40,16 +40,16 @@ body.light-mode {
     color: $black;
   }
 
-  .blog-list {
-    .blog-title {
-      color: $primary;
-    }
-    .blog-meta {
-      color: $light-grey;
-    }
-    .excerpt {
-      color: $grey;
-    }
+  .blog__list__title {
+    color: $primary;
+  }
+
+  .blog__list__meta {
+    color: $light-grey;
+  }
+
+  .blog__list__info {
+    color: $grey;
   }
 
   // blog page
@@ -78,7 +78,7 @@ body.light-mode {
   }
 
   // footer
-  footer p {
+  footer {
     color: $grey;
   }
 }
@@ -107,16 +107,16 @@ body.dark-mode {
     color: $dark-white;
   }
 
-  .blog-list {
-    .blog-title {
-      color: $primary;
-    }
-    .blog-meta {
-      color: $dark-white;
-    }
-    .excerpt {
-      color: $white;
-    }
+  .blog__list__title {
+    color: $primary;
+  }
+
+  .blog__list__meta {
+    color: $dark-white;
+  }
+
+  .blog__list__info {
+    color: $white;
   }
 
   // blog page
@@ -150,8 +150,6 @@ body.dark-mode {
 
   // footer
   footer {
-    p {
-      color: $dark-white;
-    }
+    color: $dark-white;
   }
 }

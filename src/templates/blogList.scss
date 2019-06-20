@@ -1,25 +1,19 @@
-main {
-  h5 {
-    margin: 0;
-  }
-}
-
-.blog-list {
+.blog__list {
   padding: 0.5rem 0;
   &:not(:last-of-type) {
     border-bottom: 1px solid rgba($color: #000, $alpha: 0.1);
   }
+}
 
-  .blog-title {
-    margin: 0;
-  }
+.blog__list__title {
+  margin: 0;
+}
 
-  .blog-meta {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0.5rem 0;
-  }
+.blog__list__meta {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0.5rem 0;
+}
 
-  .excerpt {
-    margin-top: 1rem;
-  }
+.blog__list__info {
+  margin-top: 1rem;
 }
