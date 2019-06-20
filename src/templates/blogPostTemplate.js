@@ -23,34 +23,23 @@ export default ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO
-        title={title}
-        keywords={[`blog`, `Jibin Thomas`, title]}
-        description={info}
-      />
+      <SEO title={title} description={info} />
       <Bio isHomePage={false} />
       <article className="blog">
-        <header className="blog-header">
-          <h1 className="blog-title">{title}</h1>
-          <h2 className="blog-info">{info}</h2>
+        <header>
+          <h1 className="blog__title">{title}</h1>
+          <div className="blog__meta">
+            <span>Published {date}</span>
+            <span> | </span>
+            <span>Reading Time: {timeToRead} mins</span>
+          </div>
+          <h2 className="blog__info">{info}</h2>
         </header>
-
-        <div className="blog-meta">
-          <span>{date}</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="8"
-            height="8"
-            viewBox="0 0 24 24"
-          >
-            <circle cx="12" cy="12" r="12" />
-          </svg>
-          <span>{timeToRead} mins read</span>
-        </div>
 
         <main
           className="blog-body"
           dangerouslySetInnerHTML={{ __html: post.html }}
+          style={{ maxWidth: '680px', margin: 'auto' }}
         />
       </article>
 
