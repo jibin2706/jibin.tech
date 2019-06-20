@@ -9,7 +9,7 @@ import '../components/globals.scss'
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Blog | Jibin Thomas" keywords={[`blog`, `Jibin Thomas`]} />
+    <SEO title="Blog by Jibin Thomas | Front-End Developer and a Causal Blogger" />
 
     <BlogList data={data} />
   </Layout>
