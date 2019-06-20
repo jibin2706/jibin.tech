@@ -5,18 +5,21 @@ main {
 }
 
 .blog-list {
-  margin-bottom: 36px;
+  padding: 0.5rem 0;
+  &:not(:last-of-type) {
+    border-bottom: 1px solid rgba($color: #000, $alpha: 0.1);
+  }
 
-  h2 {
+  .blog-title {
     margin: 0;
   }
 
-  .blog-meta small {
+  .blog-meta {
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    margin: 0.5rem 0;
   }
 
   .excerpt {
-    margin: 0;
+    margin-top: 1rem;
   }
 }

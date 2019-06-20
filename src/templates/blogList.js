@@ -15,18 +15,18 @@ const BlogList = ({ data }) => {
         <div>
           <div>
             {blog.map(({ node }) => {
-              let { id, timeToRead, frontmatter, fields } = node
+              let { id, frontmatter, fields } = node
               let { title, date, info } = frontmatter
               let { slug } = fields
 
               return (
                 <section key={id} className="blog-list">
+                  <div className="blog-meta">
+                    <small>{date}</small>
+                  </div>
                   <Link to={slug}>
                     <h2 className="blog-title">{title}</h2>
                   </Link>
-                  <div className="blog-meta">
-                    <small>Posted on {date}</small>
-                  </div>
                   <p className="excerpt">{info}</p>
                 </section>
               )
