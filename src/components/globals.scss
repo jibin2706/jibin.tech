@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:600,900|Open+Sans:400,700&display=swap');
 
+// global defaults
 h1,
 h2,
 h3 {
@@ -13,6 +14,20 @@ p {
 
 a {
   text-decoration: none;
+}
+
+// button styles
+.btn {
+  text-align: center;
+  padding: 12px 20px;
+  border: 2px solid;
+  text-decoration: none;
+  transition: all 0.1s linear;
+  border-radius: 3px;
+}
+
+.btn--full {
+  width: 100%;
 }
 
 // light mode
@@ -29,6 +44,12 @@ body.light-mode {
 
   a {
     color: $primary;
+  }
+
+  .btn:hover {
+    color: $secondary;
+    background: $primary;
+    transition: all 0.1s linear;
   }
 
   .code-line {
@@ -96,6 +117,12 @@ body.dark-mode {
 
   a {
     color: $primary;
+  }
+
+  .btn:hover {
+    color: $secondary;
+    background: $primary;
+    transition: all 0.1s linear;
   }
 
   .code-line {
