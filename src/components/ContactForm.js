@@ -6,6 +6,7 @@ function Contact() {
   return (
     <form
       className="contact-form"
+      name="contact"
       method="POST"
       netlify-honeypot="bot-field"
       data-netlify="true"
@@ -16,6 +17,7 @@ function Contact() {
           Don’t fill this out if you're human: <input name="bot-field" />
         </label>
       </p>
+      <input type="hidden" name="form-name" value="contact" />
       <label>
         <span className="contact-form__label">Full Name</span>
         <input type="text" name="name" required />
