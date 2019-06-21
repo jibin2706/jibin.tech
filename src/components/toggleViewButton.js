@@ -14,7 +14,7 @@ function ToggleDarkButton() {
   })
 
   return (
-    <label aria-hidden="true">
+    <label className="toggle-button__label" aria-hidden="true">
       <Toggle
         defaultChecked={darkMode.value}
         onChange={darkMode.toggle}

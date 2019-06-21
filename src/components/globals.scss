@@ -8,7 +8,10 @@ h3 {
   font-weight: 900;
 }
 
-p {
+p,
+input,
+select,
+textarea {
   font-family: 'Open Sans', Georgia, serif;
 }
 
@@ -22,8 +25,11 @@ a {
   padding: 12px 20px;
   border: 2px solid;
   text-decoration: none;
+  background: transparent;
   transition: all 0.1s linear;
   border-radius: 3px;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
 }
 
 .btn--full {
@@ -46,9 +52,14 @@ body.light-mode {
     color: $primary;
   }
 
-  .btn:hover {
+  .btn {
+    color: $black;
+    border-color: $black;
+  }
+
+  .btn--hover:hover {
     color: $secondary;
-    background: $primary;
+    background: $black;
     transition: all 0.1s linear;
   }
 
@@ -98,6 +109,13 @@ body.light-mode {
     color: $light-grey;
   }
 
+  // contact page
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    border: 2px solid $grey;
+  }
+
   // footer
   footer {
     color: $grey;
@@ -108,8 +126,8 @@ body.light-mode {
 body.dark-mode {
   $primary: #40c3f7;
   $secondary: #1f2933;
-  $white: #e4e7eb;
-  $dark-white: #cec5dd;
+  $white: #cbd2d9;
+  $dark-white: #e4e7eb;
 
   background-color: $secondary;
   color: $white;
@@ -119,9 +137,18 @@ body.dark-mode {
     color: $primary;
   }
 
-  .btn:hover {
+  ::placeholder {
+    color: $dark-white;
+  }
+
+  .btn {
+    color: $white;
+    border-color: $white;
+  }
+
+  .btn--hover:hover {
     color: $secondary;
-    background: $primary;
+    background: $white;
     transition: all 0.1s linear;
   }
 
@@ -172,6 +199,15 @@ body.dark-mode {
 
   p,
   li {
+    color: $dark-white;
+  }
+
+  // contact page
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    border: 2px solid $white;
+    caret-color: $white;
     color: $dark-white;
   }
 
