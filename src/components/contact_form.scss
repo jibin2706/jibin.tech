@@ -1,0 +1,27 @@
+.contact-form label {
+  display: block;
+  margin: 2rem 0;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  background: transparent;
+  border-radius: 3px;
+  max-width: 100%;
+  width: 500px;
+  padding: 0.5rem;
+}
+
+.contact-form textarea {
+  resize: none;
+  min-height: 200px;
+}
+
+.contact-form__label {
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
