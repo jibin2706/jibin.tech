@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import Bio from '../components/Bio'
-
 import './blogList.scss'
 
 const BlogList = ({ data }) => {
@@ -10,7 +8,6 @@ const BlogList = ({ data }) => {
 
   return (
     <>
-      <Bio isHomePage={true} />
       <main>
         {blog.map(({ node }) => {
           let { id, frontmatter, fields } = node

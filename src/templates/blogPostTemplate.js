@@ -4,7 +4,6 @@ import Layout from '../components/layout'
 
 import './blogPostTemplate.scss'
 
-import Bio from '../components/Bio'
 import SEO from '../components/seo'
 
 export default ({ data, pageContext }) => {
@@ -24,7 +23,6 @@ export default ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title={title} description={info} />
-      <Bio isHomePage={false} />
       <article className="blog">
         <header>
           <h1 className="blog__title">{title}</h1>
@@ -47,12 +45,12 @@ export default ({ data, pageContext }) => {
 
       <section className="read-more">
         {previous && (
-          <Link className="btn btn--full" to={previous.fields.slug}>
+          <Link className="btn btn--full btn--hover" to={previous.fields.slug}>
             ← {previous.frontmatter.title}
           </Link>
         )}
         {next && (
-          <Link className="btn btn--full" to={next.fields.slug}>
+          <Link className="btn btn--full btn--hover" to={next.fields.slug}>
             {next.frontmatter.title} →
           </Link>
         )}

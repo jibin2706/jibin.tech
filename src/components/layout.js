@@ -1,6 +1,8 @@
 import React from 'react'
 
-import Footer from './footer'
+import Header from './Header'
+import Navigation from './Navigation'
+import Footer from './Footer'
 
 const Layout = ({ children }) => (
   <div
@@ -11,6 +13,8 @@ const Layout = ({ children }) => (
       overflow: 'hidden',
     }}
   >
+    <Header />
+    <Navigation />
     <div>{children}</div>
     <Footer />
   </div>

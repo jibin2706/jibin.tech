@@ -68,7 +68,7 @@ body.light-mode {
   }
 
   // blog list page
-  #index-header h1 {
+  .header__title {
     color: $black;
   }
 
@@ -156,11 +156,12 @@ body.dark-mode {
     background: #141414;
   }
 
-  // blog list page
-  #index-header h2 {
+  // header
+  .header__title {
     color: $dark-white;
   }
 
+  // blog list page
   .blog__list__title {
     color: $primary;
   }
@@ -174,10 +175,6 @@ body.dark-mode {
   }
 
   // blog page
-  #blog-header h2 {
-    color: $primary;
-  }
-
   .blog__title {
     color: $white;
   }

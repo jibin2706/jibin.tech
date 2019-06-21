@@ -1,5 +1,4 @@
-#blog-header,
-#index-header {
+.header {
   margin-bottom: 0.5rem;
   display: flex;
   justify-content: space-between;
@@ -11,7 +10,7 @@
   }
 }
 
-.title {
+.header__title {
   font-weight: 900;
   font-size: 1.8rem;
   margin: 0;
