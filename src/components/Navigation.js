@@ -1,16 +1,17 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import './navigation.scss'
 
 function Navigation() {
   return (
     <nav className="nav">
-      <a className="nav__item" href="/">
+      <Link className="nav__item" to="/">
         Home
-      </a>
-      <a className="nav__item" href="contact">
+      </Link>
+      <Link className="nav__item" to="/contact">
         Contact
-      </a>
+      </Link>
     </nav>
   )
 }
