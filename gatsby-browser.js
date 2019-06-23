@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from './src/components/layout'
 require('./src/utils/syntax-highlighting.css')
 
-const transitionDelay = 250
+const transitionDelay = 100
 
 export const wrapPageElement = ({ element, props }) => {
   return <Layout {...props}>{element}</Layout>
