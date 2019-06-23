@@ -41,6 +41,7 @@ a {
 }
 
 .btn--full {
+  font-weight: bold;
   width: 100%;
 }
 
@@ -80,8 +81,12 @@ body.light-mode {
     color: $black;
   }
 
+  .blog__list:not(:last-of-type) {
+    border-bottom: 1px solid rgba($color: $black, $alpha: 0.2);
+  }
+
   .blog__list__title {
-    color: $primary;
+    color: $grey;
   }
 
   .blog__list__meta {
@@ -89,7 +94,7 @@ body.light-mode {
   }
 
   .blog__list__info {
-    color: $grey;
+    color: $light-grey;
   }
 
   // blog page
@@ -134,8 +139,8 @@ body.light-mode {
 body.dark-mode {
   $primary: #40c3f7;
   $secondary: #1f2933;
-  $white: #cbd2d9;
-  $dark-white: #e4e7eb;
+  $white: #e4e7eb;
+  $dark-white: #9aa5b1;
 
   background-color: $secondary;
   color: $white;
@@ -166,12 +171,16 @@ body.dark-mode {
 
   // header
   .header__title {
-    color: $dark-white;
+    color: $white;
   }
 
   // blog list page
+  .blog__list:not(:last-of-type) {
+    border-bottom: 1px solid rgba($color: $white, $alpha: 0.2);
+  }
+
   .blog__list__title {
-    color: $primary;
+    color: $white;
   }
 
   .blog__list__meta {
@@ -179,7 +188,7 @@ body.dark-mode {
   }
 
   .blog__list__info {
-    color: $white;
+    color: $dark-white;
   }
 
   // blog page
@@ -211,8 +220,8 @@ body.dark-mode {
   .contact-form input,
   .contact-form textarea,
   .contact-form select {
-    border: 2px solid $white;
-    caret-color: $white;
+    border: 2px solid $dark-white;
+    caret-color: $dark-white;
     color: $dark-white;
   }
 
