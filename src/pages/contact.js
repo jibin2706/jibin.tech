@@ -9,7 +9,7 @@ import ContactForm from '../components/ContactForm'
 const Contact = props => (
   <>
     <SEO title="Contact Jibin Thomas - Front-End Developer and a Causal Blogger" />
-    <div style={{ maxWidth: '600px' }}>
+    <div style={{ maxWidth: '600px', marginTop: '2rem' }}>
       <h1>Hi👋, it’s nice to meet you.</h1>
       <p>
         You have any projects that I could help with? Then feel free to reach
