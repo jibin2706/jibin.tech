@@ -1,10 +1,12 @@
 import React from 'react'
+import { PoseGroup } from 'react-pose'
 
 import Header from './Header'
 import Navigation from './Navigation'
 import Footer from './Footer'
+import Transition from './Transition'
 
-const Layout = ({ children }) => (
+const Layout = ({ children, location }) => (
   <div
     style={{
       maxWidth: '800px',
@@ -15,7 +17,11 @@ const Layout = ({ children }) => (
   >
     <Header />
     <Navigation />
-    <div>{children}</div>
+    <PoseGroup>
+      <Transition key={location.pathname}>
+        <div>{children}</div>
+      </Transition>
+    </PoseGroup>
     <Footer />
   </div>
 )

@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 import '../components/layout.css'
@@ -7,8 +6,8 @@ import '../components/globals.scss'
 
 import ContactForm from '../components/ContactForm'
 
-const Contact = () => (
-  <Layout>
+const Contact = props => (
+  <>
     <SEO title="Contact Jibin Thomas - Front-End Developer and a Causal Blogger" />
     <div style={{ maxWidth: '600px' }}>
       <h1>Hi👋, it’s nice to meet you.</h1>
@@ -19,7 +18,7 @@ const Contact = () => (
 
       <ContactForm />
     </div>
-  </Layout>
+  </>
 )
 
 export default Contact

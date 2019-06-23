@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import Layout from '../components/layout'
 
 import './blogPostTemplate.scss'
 
@@ -21,7 +20,7 @@ export default ({ data, pageContext }) => {
   const githubEditUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/${GITHUB_BRANCH}/src/pages${slug}index.md`
 
   return (
-    <Layout>
+    <>
       <SEO title={title} description={info} />
       <article className="blog">
         <header>
@@ -55,7 +54,7 @@ export default ({ data, pageContext }) => {
           </Link>
         )}
       </section>
-    </Layout>
+    </>
   )
 }
 
