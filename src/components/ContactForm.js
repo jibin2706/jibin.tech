@@ -12,7 +12,7 @@ function Contact() {
       data-netlify="true"
       action="/success"
     >
-      <p class="hidden">
+      <p className="hidden">
         <label>
           Don’t fill this out if you're human: <input name="bot-field" />
         </label>
