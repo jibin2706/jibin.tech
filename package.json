@@ -27,7 +27,6 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-pose": "^4.0.8",
     "react-toggle": "^4.0.2",
     "use-dark-mode": "^2.3.1"
   },

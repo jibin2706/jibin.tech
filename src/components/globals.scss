@@ -45,6 +45,34 @@ a {
   width: 100%;
 }
 
+// contact page
+.contact {
+  max-width: 600px;
+  margin-top: 2rem;
+  animation: translate-up 500ms;
+}
+
+// keyframes
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes translate-up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
 // light mode
 body.light-mode {
   $primary: #0b69a3;

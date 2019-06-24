@@ -1,25 +1,10 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import posed, { PoseGroup } from 'react-pose'
 
 import './blogPostTemplate.scss'
 
 import SEO from '../components/seo'
-
-const PostTransition = posed.div({
-  enter: {
-    delay: 100,
-    opacity: 1,
-    y: -20,
-    transition: { duration: 500 },
-    beforeChildren: true,
-  },
-  exit: {
-    opacity: 0,
-    beforeChildren: true,
-    y: 0,
-  },
-})
+import Layout from '../components/layout'
 
 export default ({ data, pageContext, ...props }) => {
   const GITHUB_USERNAME = 'jibin2706'
@@ -35,29 +20,27 @@ export default ({ data, pageContext, ...props }) => {
   const githubEditUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/${GITHUB_BRANCH}/src/pages${slug}index.md`
 
   return (
-    <>
+    <Layout>
       <SEO title={title} description={info} />
-      <PoseGroup>
-        <PostTransition className="blog" key={props.location.pathname}>
-          <header>
-            <h1 className="blog__title">{title}</h1>
-            <div className="blog__meta">
-              <span>Published {date}</span>
-              <span> | </span>
-              <span>Reading Time: {timeToRead} mins</span>
-              <span> | </span>
-              <a href={githubEditUrl}>Edit on Github</a>
-            </div>
-            <h2 className="blog__info">{info}</h2>
-          </header>
+      <div className="blog">
+        <header>
+          <h1 className="blog__title">{title}</h1>
+          <div className="blog__meta">
+            <span>Published {date}</span>
+            <span> | </span>
+            <span>Reading Time: {timeToRead} mins</span>
+            <span> | </span>
+            <a href={githubEditUrl}>Edit on Github</a>
+          </div>
+          <h2 className="blog__info">{info}</h2>
+        </header>
 
-          <main
-            className="blog-body"
-            dangerouslySetInnerHTML={{ __html: post.html }}
-            style={{ maxWidth: '680px', margin: 'auto' }}
-          />
-        </PostTransition>
-      </PoseGroup>
+        <main
+          className="blog-body"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+          style={{ maxWidth: '680px', margin: 'auto' }}
+        />
+      </div>
 
       <section className="read-more">
         {previous && (
@@ -71,7 +54,7 @@ export default ({ data, pageContext, ...props }) => {
           </Link>
         )}
       </section>
-    </>
+    </Layout>
   )
 }
 

@@ -10,9 +10,7 @@ import ContactForm from '../components/ContactForm'
 const Contact = () => (
   <Layout>
     <SEO title="Contact Jibin Thomas - Front-End Developer and a Causal Blogger" />
-    <div
-      style={{ maxWidth: '600px', marginTop: '2rem', animation: 'fade 0.2s' }}
-    >
+    <main className="contact">
       <h1>Hi👋, it’s nice to meet you.</h1>
       <p>
         You have any projects that I could help with? Then feel free to reach
@@ -20,7 +18,7 @@ const Contact = () => (
       </p>
 
       <ContactForm />
-    </div>
+    </main>
   </Layout>
 )
 
