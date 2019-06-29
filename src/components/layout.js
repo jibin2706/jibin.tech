@@ -7,7 +7,7 @@ import Footer from './Footer'
 const Layout = ({ children }) => (
   <div
     style={{
-      maxWidth: '800px',
+      maxWidth: '700px',
       margin: 'auto',
       padding: '1rem',
       overflow: 'hidden',

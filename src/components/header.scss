@@ -1,17 +1,11 @@
 .header {
-  margin-bottom: 0.5rem;
+  height: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-
-  a {
-    text-decoration: none;
-  }
 }
 
 .header__title {
-  font-weight: 900;
-  font-size: 1.8rem;
   margin: 0;
 }

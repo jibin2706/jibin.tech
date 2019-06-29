@@ -1,14 +1,10 @@
 .nav {
   font-family: 'Open Sans', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
 .nav__item {
   text-transform: uppercase;
-}
-
-.nav__item:not(:first-child) {
-  margin-left: 2rem;
+  padding: 0rem 1rem;
 }
