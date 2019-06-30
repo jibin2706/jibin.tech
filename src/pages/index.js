@@ -1,17 +1,20 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import SEO from '../components/seo'
+import SEO from '../components/SEO'
 import Layout from '../components/layout'
 import BlogList from '../templates/blogList'
 
 import '../components/layout.css'
 import '../components/globals.scss'
 
-const IndexPage = ({ data, ...props }) => (
+const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Blog by Jibin Thomas | Front-End Developer and a Causal Blogger" />
+    <SEO
+      title="Blog — Jibin Thomas - Front-End Web Developer"
+      description="I write about programming which includes topics from JavaScript, CSS, Flutter, IoT and more. "
+    />
 
-    <BlogList data={data} location={props.location} />
+    <BlogList data={data} />
   </Layout>
 )
 

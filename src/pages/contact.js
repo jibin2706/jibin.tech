@@ -1,5 +1,5 @@
 import React from 'react'
-import SEO from '../components/seo'
+import SEO from '../components/SEO'
 
 import '../components/layout.css'
 import '../components/globals.scss'
@@ -9,7 +9,10 @@ import ContactForm from '../components/ContactForm'
 
 const Contact = () => (
   <Layout>
-    <SEO title="Contact Jibin Thomas - Front-End Developer and a Causal Blogger" />
+    <SEO
+      title="Contact Jibin Thomas - Front-End Web Developer"
+      description="You can contact him via email at jibin.thomas2706@gmail.com. He is available for freelancing."
+    />
     <main className="contact">
       <h1>Hi👋, it’s nice to meet you.</h1>
       <p>

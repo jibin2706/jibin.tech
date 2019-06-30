@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby'
 
 import './blogPostTemplate.scss'
 
-import SEO from '../components/seo'
+import SEO from '../components/SEO'
 import Layout from '../components/layout'
 
 export default ({ data, pageContext, ...props }) => {
