@@ -1,3 +1,5 @@
+@import '../styles/colors';
+
 .main__list {
   animation: translate-up 500ms ease;
 }
@@ -12,9 +14,49 @@
 
 .blog__list__meta {
   font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
   margin: 0.5rem 0;
 }
 
 .blog__list__info {
   margin-top: 1rem;
+}
+
+// light mode
+body.light-mode {
+  .blog__list:not(:last-of-type) {
+    border-bottom: 1px solid $light-grey;
+  }
+
+  .blog__list__title {
+    color: $darker-grey;
+  }
+
+  .blog__list__meta {
+    color: $grey;
+  }
+
+  .blog__list__info {
+    color: $dark-grey;
+  }
+}
+
+// dark mode
+body.dark-mode {
+  // blog list page
+  .blog__list:not(:last-of-type) {
+    border-bottom: 1px solid $darker-grey;
+  }
+
+  .blog__list__title {
+    color: $lighter-grey;
+  }
+
+  .blog__list__meta {
+    color: $light-grey;
+  }
+
+  .blog__list__info {
+    color: $light-grey;
+  }
 }

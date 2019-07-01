@@ -1,3 +1,5 @@
+@import '../styles/colors';
+
 .blog {
   padding: 2rem 0;
   animation: translate-up 1s;
@@ -102,11 +104,40 @@
   }
 }
 
-//
-// media query
-//
-@media screen and (max-width: 450px) {
-  html {
-    font-size: 16px;
+// light mode
+body.light-mode {
+  .blog__title {
+    color: $darker-grey;
+  }
+
+  .blog__info {
+    color: $darker-grey;
+  }
+
+  .blog__meta {
+    color: $grey;
+  }
+
+  .code-line {
+    background: $lighter-grey;
+  }
+}
+
+// dark mode
+body.dark-mode {
+  .blog__title {
+    color: $lighter-grey;
+  }
+
+  .blog__info {
+    color: $light-grey;
+  }
+
+  .blog__meta {
+    color: $light-grey;
+  }
+
+  .code-line {
+    background: $darker-grey;
   }
 }

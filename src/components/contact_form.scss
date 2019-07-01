@@ -1,3 +1,6 @@
+@import '../styles/colors';
+@import '../styles/animation';
+
 .contact-form label {
   display: block;
   margin: 2rem 0;
@@ -24,4 +27,41 @@
   text-transform: uppercase;
   font-size: 0.8rem;
   font-weight: 600;
+}
+
+.contact {
+  max-width: 600px;
+  margin-top: 2rem;
+  animation: translate-up 500ms;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  border: 2px solid $grey;
+}
+
+// light mode
+body.light-mode {
+  .contact-form__label {
+    color: $dark-grey;
+  }
+}
+
+// dark mode
+body.dark-mode {
+  .contact-form__label {
+    color: $light-grey;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    caret-color: $light-grey;
+    color: $light-grey;
+  }
+
+  ::placeholder {
+    color: $grey;
+  }
 }

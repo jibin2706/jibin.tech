@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin:700|Open+Sans:400,700&display=swap');
 
-// global defaults
+@import '../styles/colors';
+@import '../styles/animation';
+
 h1,
 h2,
 h3 {
@@ -22,7 +24,7 @@ a {
 a:focus > h2,
 a:active,
 a:active > h2 {
-  outline: 2px solid #da127d;
+  outline: 2px solid $primary;
 }
 
 .hidden {
@@ -51,213 +53,83 @@ a:active > h2 {
   width: 100%;
 }
 
-// contact page
-.contact {
-  max-width: 600px;
-  margin-top: 2rem;
-  animation: translate-up 500ms;
-}
-
-// keyframes
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes translate-up {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
 // light mode
 body.light-mode {
-  $primary: #0b69a3;
-  $secondary: #f5f7fa;
-  $black: #1f2933;
-  $grey: #3e4c59;
-  $light-grey: #52606d;
-
-  background-color: $secondary;
-  color: $black;
+  background-color: $lightest-grey;
+  color: $darkest-grey;
   transition: background-color 0.2s ease;
 
   a {
     color: $primary;
   }
 
-  .btn {
-    color: $black;
-    border-color: $black;
-  }
-
-  .btn--hover:hover {
-    color: $secondary;
-    background: $black;
-    transition: all 0.1s linear;
-  }
-
-  .code-line {
-    background: #eeeeee;
-  }
-
-  // blog list page
-  .blog__list:not(:last-of-type) {
-    border-bottom: 1px solid rgba($color: $black, $alpha: 0.2);
-  }
-
-  .blog__list__title {
-    color: $grey;
-  }
-
-  .blog__list__meta {
-    color: $light-grey;
-  }
-
-  .blog__list__info {
-    color: $light-grey;
-  }
-
-  // blog page
-  .blog__title {
-    color: $black;
-  }
-
-  .blog__info {
-    color: $grey;
-  }
-
-  .blog__meta {
-    color: $light-grey;
-  }
-
   h1,
   h2,
   h3,
   h4 {
-    color: $grey;
+    color: $darkest-grey;
   }
 
   p,
   li {
-    color: $light-grey;
+    color: $darker-grey;
   }
 
-  // contact page
-  .contact-form input,
-  .contact-form textarea,
-  .contact-form select {
-    border: 2px solid $grey;
+  .btn {
+    color: $darkest-grey;
+    border-color: $darkest-grey;
   }
 
-  // footer
-  footer {
-    color: $grey;
+  .btn--hover:hover,
+  .btn--hover:focus {
+    outline: none;
+    color: $lightest-grey;
+    border-color: $primary-darker;
+    background: $primary-darker;
+    transition: all 0.1s linear;
   }
 }
 
 // dark theme
 body.dark-mode {
-  $primary: #40c3f7;
-  $secondary: #1f2933;
-  $white: #e4e7eb;
-  $dark-white: #9aa5b1;
-
-  background-color: $secondary;
-  color: $white;
+  background-color: $darkest-grey;
+  color: $lightest-grey;
   transition: background-color 0.2s ease;
 
   a {
-    color: $primary;
-  }
-
-  ::placeholder {
-    color: $dark-white;
-  }
-
-  .btn {
-    color: $white;
-    border-color: $white;
-  }
-
-  .btn--hover:hover {
-    color: $secondary;
-    background: $white;
-    transition: all 0.1s linear;
-  }
-
-  .code-line {
-    background: #141414;
-  }
-
-  // header
-  .header__title {
-    filter: invert(0.9);
-    margin: 0;
-  }
-
-  // blog list page
-  .blog__list:not(:last-of-type) {
-    border-bottom: 1px solid rgba($color: $white, $alpha: 0.2);
-  }
-
-  .blog__list__title {
-    color: $white;
-  }
-
-  .blog__list__meta {
-    color: $dark-white;
-  }
-
-  .blog__list__info {
-    color: $dark-white;
-  }
-
-  // blog page
-  .blog__title {
-    color: $white;
-  }
-
-  .blog__info {
-    color: $dark-white;
-  }
-
-  .blog__meta {
-    color: $dark-white;
+    color: $primary-lighter;
   }
 
   h1,
   h2,
   h3,
   h4 {
-    color: $dark-white;
+    color: $lighter-grey;
   }
 
   p,
   li {
-    color: $dark-white;
+    color: $light-grey;
   }
 
-  // contact page
-  .contact-form input,
-  .contact-form textarea,
-  .contact-form select {
-    border: 2px solid $dark-white;
-    caret-color: $dark-white;
-    color: $dark-white;
+  .btn {
+    color: $light-grey;
+    border-color: $grey;
   }
 
-  // footer
-  footer {
-    color: $dark-white;
+  .btn--hover:hover,
+  .btn--hover:focus {
+    outline: none;
+    color: $darkest-grey;
+    background: $primary-lighter;
+    border-color: $primary-lighter;
+    transition: all 0.1s linear;
+  }
+}
+
+// media query
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 16px;
   }
 }

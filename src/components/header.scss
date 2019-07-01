@@ -9,3 +9,10 @@
 .header__title {
   margin: 0;
 }
+
+body.dark-mode {
+  .header__title {
+    filter: invert(0.9);
+    margin: 0;
+  }
+}
