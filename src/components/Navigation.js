@@ -9,7 +9,7 @@ function Navigation() {
       <Link className="nav__item" to="/">
         Home
       </Link>
-      <Link className="nav__item" to="/contact">
+      <Link className="nav__item" to="/contact/">
         Contact
       </Link>
     </nav>

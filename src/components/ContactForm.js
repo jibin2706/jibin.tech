@@ -44,7 +44,7 @@ function Contact() {
         />
       </label>
 
-      <button className="btn">Send Email</button>
+      <button className="btn btn--hover">Send Email</button>
     </form>
   )
 }
