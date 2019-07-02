@@ -6,5 +6,8 @@
 
 .nav__item {
   text-transform: uppercase;
-  padding: 0rem 1rem;
+}
+
+.nav__item:not(:first-child) {
+  margin: 0rem 2rem;
 }

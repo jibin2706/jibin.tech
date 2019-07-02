@@ -33,6 +33,7 @@ export default ({ data, pageContext, ...props }) => {
             <a href={githubEditUrl}>Edit on Github</a>
           </div>
           <h2 className="blog__info">{info}</h2>
+          <hr className="blog__divider" />
         </header>
 
         <main
