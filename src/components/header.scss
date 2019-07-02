@@ -1,3 +1,5 @@
+@import '../styles/colors';
+
 .header {
   height: 4rem;
   display: flex;
@@ -7,12 +9,13 @@
 }
 
 .header__title {
+  color: $darker-grey;
   margin: 0;
+  font-size: 2rem;
 }
 
 body.dark-mode {
   .header__title {
-    filter: invert(0.9);
-    margin: 0;
+    color: $light-grey;
   }
 }

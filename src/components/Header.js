@@ -2,13 +2,12 @@ import React from 'react'
 import { Link } from 'gatsby'
 import ToggleDarkButton from './toggleViewButton'
 
-import Logo from '../images/logo.png'
 import './header.scss'
 
 const Header = () => (
   <header className="header">
     <Link to="/">
-      <img src={Logo} alt="home page" className="header__title" />
+      <h1 className="header__title">Jibin Thomas</h1>
     </Link>
     <span className="toggle-button">
       <ToggleDarkButton />
