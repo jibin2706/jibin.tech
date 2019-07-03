@@ -3,6 +3,11 @@
 @import '../styles/colors';
 @import '../styles/animation';
 
+::selection {
+  color: white;
+  background: $primary;
+}
+
 h1,
 h2,
 h3 {
@@ -12,7 +17,9 @@ h3 {
 p,
 input,
 select,
-textarea {
+textarea,
+td,
+th {
   font-family: 'Open Sans', Georgia, serif;
 }
 
@@ -71,7 +78,9 @@ body.light-mode {
   }
 
   p,
-  li {
+  li,
+  td,
+  th {
     color: $darker-grey;
   }
 
@@ -107,8 +116,14 @@ body.dark-mode {
     color: $lighter-grey;
   }
 
+  hr {
+    background: $grey;
+  }
+
   p,
-  li {
+  li,
+  td,
+  th {
     color: $light-grey;
   }
 
