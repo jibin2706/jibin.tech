@@ -11,8 +11,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: ["/success"]
-      }
+        exclude: ['/success'],
+      },
     },
     `gatsby-plugin-sass`,
     {
@@ -86,10 +86,10 @@ module.exports = {
         ],
       },
     },
-    // markdown file are in that directory (/src/pages/)
+    // markdown file are in that directory (/content/)
     {
       resolve: `gatsby-source-filesystem`,
-      options: { name: `pages`, path: `${__dirname}/src/pages/` },
+      options: { name: `blog`, path: `${__dirname}/content/blog` },
     },
     // transforming markdown in html
     `gatsby-transformer-remark`,
