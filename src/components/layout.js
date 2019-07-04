@@ -4,6 +4,8 @@ import Header from './Header'
 import Navigation from './Navigation'
 import Footer from './Footer'
 
+import '../styles/layout.css'
+
 const Layout = ({ children }) => (
   <div
     style={{

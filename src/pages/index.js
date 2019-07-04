@@ -4,8 +4,7 @@ import SEO from '../components/SEO'
 import Layout from '../components/layout'
 import BlogList from '../templates/blogList'
 
-import '../components/layout.css'
-import '../components/globals.scss'
+import '../styles/globals.scss'
 
 const IndexPage = ({ data }) => (
   <Layout>
