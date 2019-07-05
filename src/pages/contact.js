@@ -10,8 +10,9 @@ const Contact = () => (
   <Layout>
     <SEO
       title="Contact Jibin Thomas - Front-End Web Developer"
-      description="You can contact him via email at jibin.thomas2706@gmail.com. He is available for freelancing."
+      description="He is a Front-End Web developer from Mumbai. You can reach out to him at jibin.thomas2706@gmail.com"
     />
+    
     <main className="contact">
       <h1>Hi👋, it’s nice to meet you.</h1>
       <p>
