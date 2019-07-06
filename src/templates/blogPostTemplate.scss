@@ -46,17 +46,13 @@
     font-family: 'Open Sans', Georgia, serif;
   }
 
-  p {
-    margin-bottom: 1.75rem;
-  }
-
   img {
     display: block;
     margin: auto;
   }
 
-  ul li {
-    line-height: 2;
+  li > p {
+    margin: 0;
   }
 
   li {
