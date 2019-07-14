@@ -2,6 +2,7 @@
 title: 'Visual Studio Code extensions to make you more productive'
 date: 2019-06-05
 info: 'Seven VSCode extension that will help you to be more productive while coding'
+tags: ['workflow']
 ---
 
 ![Payment](featured_image.jpg)
@@ -24,8 +25,6 @@ This extension comes bundled with VSCode, so installation is not required. Creat
 ![emmet](emmet.gif)
 
 Pretty powerful right? Check the documentation and examples [here](https://docs.emmet.io/).
-
-
 
 ### [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
 

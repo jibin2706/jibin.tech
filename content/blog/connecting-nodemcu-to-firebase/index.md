@@ -1,8 +1,8 @@
 ---
 title: 'How to get started with IoT using NodeMCU Devkit and Firebase database'
 date: 2019-04-25
-slug: '/getting-started-with-iot-using-nodemcu-and-firebase'
 info: 'Getting started with Internet of Things'
+tags: ['firebase', 'iot']
 ---
 
 ![NodeMCU connected to breadboard](featured-image.jpg)
@@ -22,27 +22,28 @@ In this post, we will be using NodeMCU devkit and Firebase for turning on and of
 1. We will be using Arduino IDE for writing code and flash the code to the device. Download the latest version of the IDE [here](https://www.arduino.cc/en/main/software).
 
 2. Since we are using NodeMCU which is not officially supported by Arduino IDE, we have to add the JSON file of the device. In Arduino IDE add this URL in
-<div class="code-line">
-   Open File > Preferences > Additional Board Manager URLs
-   <span style="text-decoration: underline">
-      http://arduino.esp8266.com/stable/package_esp8266com_index.json
-   </span>
-</div>
+   <div class="code-line">
+      Open File > Preferences > Additional Board Manager URLs
+      <span style="text-decoration: underline">
+         http://arduino.esp8266.com/stable/package_esp8266com_index.json
+      </span>
+   </div>
 
+3) Select your Board from
 
-3. Select your Board from
-<div class="code-line">
-Tools > Board > NodeMCU 1.o
-</div>
+   <div class="code-line">
+   Tools > Board > NodeMCU 1.o
+   </div>
 
-4. To use firebase database in NodeMCU you need to download the firebase-arduino library which abstracts the REST API of the firebase. [Download firebase-arduino](https://github.com/FirebaseExtended/firebase-arduino.git)
+4) To use firebase database in NodeMCU you need to download the firebase-arduino library which abstracts the REST API of the firebase. [Download firebase-arduino](https://github.com/FirebaseExtended/firebase-arduino.git)
 
-5. Include the downloaded zip file on Arduino IDE.
-<div class="code-line">
-Sketch > Include library > Add .zip > Select zip file
-</div>
+5) Include the downloaded zip file on Arduino IDE.
 
-6. You also need to install the ArduinoJson library which can be downloaded from Arduino IDE itself.
+   <div class="code-line">
+   Sketch > Include library > Add .zip > Select zip file
+   </div>
+
+6) You also need to install the ArduinoJson library which can be downloaded from Arduino IDE itself.
    <br>
    Note: The library version should not be 6.x.x use the latest 5.x.x
    <div class="code-line">
@@ -61,10 +62,10 @@ Sketch > Include library > Add .zip > Select zip file
 
 ![Firebase database node](database-node.png)
 
-
 ## Configuring Arduino IDE and firebase database to work together
+
 10. Now all the setup procedures are done let's start coding. <br>
-You need to create a macro for your database URL and firebase secret which you had copied in Step 8.
+    You need to create a macro for your database URL and firebase secret which you had copied in Step 8.
 
 <div class="code-line">
 #define FIREBASE_HOST "yourfirebasedatabase.firebaseio.com" <br/>
@@ -124,10 +125,11 @@ void loop()
 
 ![Connection of led with nodemcu](circuit-diagram.png)
 
-12.  Upload your code from Arduino IDE.
-<div class="code-line">
-Sketch > Upload
-</div>
+12. Upload your code from Arduino IDE.
+
+    <div class="code-line">
+    Sketch > Upload
+    </div>
 
 13. Now try changing the database value to true and false the led should now start turn on and off. Additionally, you can extend this project by creating a web app that will toggle the LED instead of manually changing the value in the database.
 

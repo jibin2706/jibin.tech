@@ -2,6 +2,7 @@
 title: 'New Beginnings'
 date: 2019-04-02
 info: 'Introduction to the blog'
+tags: ['general']
 ---
 
 Hey, Jibin Thomas here. This post is just an introduction about myself.
