@@ -1,7 +1,6 @@
 import React from 'react'
 import SEO from '../components/SEO'
 
-import '../styles/globals.scss'
 import '../styles/contact.scss'
 
 import Layout from '../components/layout'
@@ -12,7 +11,7 @@ const Contact = () => (
       title="Contact Jibin Thomas - Front-End Web Developer"
       description="He is a Front-End Web developer from Mumbai. You can reach out to him at jibin.thomas2706@gmail.com"
     />
-    
+
     <main className="contact">
       <h1>Hi👋, it’s nice to meet you.</h1>
       <p>
