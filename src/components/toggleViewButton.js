@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react'
-import Toggle from 'react-toggle'
 import useDarkMode from 'use-dark-mode'
 
 import './toggleButton.scss'
 
-function ToggleDarkButton() {
+function ToggleThemeButton() {
   const darkMode = useDarkMode(false)
   useEffect(() => {
     const color = darkMode.value ? '#1f2933' : '#0b69a3'
@@ -14,14 +13,41 @@ function ToggleDarkButton() {
   })
 
   return (
-    <label className="toggle-button__label" aria-hidden="true">
-      <Toggle
-        defaultChecked={darkMode.value}
-        onChange={darkMode.toggle}
-        icons={false}
-      />
-    </label>
+    <button
+      role="switch"
+      defaultChecked={darkMode.value}
+      onClick={darkMode.toggle}
+      aria-hidden="true"
+      className="toggle-button"
+    >
+      {darkMode.value ? (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 129 129"
+          fill="#ffffff"
+        >
+          <path d="m64.5,92.6c15.5,0 28-12.6 28-28s-12.6-28-28-28-28,12.6-28,28 12.5,28 28,28zm0-47.9c11,0 19.9,8.9 19.9,19.9 0,11-8.9,19.9-19.9,19.9s-19.9-8.9-19.9-19.9c0-11 8.9-19.9 19.9-19.9z" />
+          <path d="m68.6,23.6v-12.9c0-2.3-1.8-4.1-4.1-4.1s-4.1,1.8-4.1,4.1v12.9c0,2.3 1.8,4.1 4.1,4.1s4.1-1.8 4.1-4.1z" />
+          <path d="m60.4,105.6v12.9c0,2.3 1.8,4.1 4.1,4.1s4.1-1.8 4.1-4.1v-12.9c0-2.3-1.8-4.1-4.1-4.1s-4.1,1.8-4.1,4.1z" />
+          <path d="m96.4,38.5l9.1-9.1c1.6-1.6 1.6-4.2 0-5.8-1.6-1.6-4.2-1.6-5.8,0l-9.1,9.1c-1.6,1.6-1.6,4.2 0,5.8 0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2z" />
+          <path d="m23.5,105.6c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l9.1-9.1c1.6-1.6 1.6-4.2 0-5.8-1.6-1.6-4.2-1.6-5.8,0l-9.1,9.1c-1.6,1.6-1.6,4.2 0,5.8z" />
+          <path d="m122.5,64.6c0-2.3-1.8-4.1-4.1-4.1h-12.9c-2.3,0-4.1,1.8-4.1,4.1 0,2.3 1.8,4.1 4.1,4.1h12.9c2.2,1.42109e-14 4.1-1.8 4.1-4.1z" />
+          <path d="m10.6,68.7h12.9c2.3,0 4.1-1.8 4.1-4.1 0-2.3-1.8-4.1-4.1-4.1h-12.9c-2.3,0-4.1,1.8-4.1,4.1 0,2.3 1.9,4.1 4.1,4.1z" />
+          <path d="m102.6,106.8c1,0 2.1-0.4 2.9-1.2 1.6-1.6 1.6-4.2 0-5.8l-9.1-9.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l9.1,9.1c0.8,0.8 1.9,1.2 2.9,1.2z" />
+          <path d="m38.4,38.5c1.6-1.6 1.6-4.2 0-5.8l-9.1-9.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l9.1,9.1c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2z" />
+        </svg>
+      ) : (
+        <svg
+          id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 472.618 472.618"
+          fill="#323f4b"
+        >
+          <path d="M380.525,337.291c-135.427,0-245.302-109.773-245.302-245.302c0-32.502,6.338-63.575,17.991-91.988 C63.372,36.286,0,124.39,0,227.315c0,135.427,109.875,245.302,245.302,245.302c102.923,0,191.029-63.472,227.316-153.315 C444.201,330.954,413.129,337.291,380.525,337.291z" />
+        </svg>
+      )}
+    </button>
   )
 }
 
-export default ToggleDarkButton
+export default ToggleThemeButton

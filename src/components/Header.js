@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import ToggleDarkButton from './toggleViewButton'
+import Navigation from './Navigation'
 
 import './header.scss'
 
@@ -9,9 +9,7 @@ const Header = () => (
     <Link to="/">
       <h1 className="header__title">Jibin Thomas</h1>
     </Link>
-    <span className="toggle-button">
-      <ToggleDarkButton />
-    </span>
+    <Navigation />
   </header>
 )
 

@@ -1,11 +1,12 @@
 @import '../styles/colors';
 
 .header {
-  height: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 0rem;
 }
 
 .header__title {
@@ -14,8 +15,23 @@
   font-size: 2rem;
 }
 
+.header__logo {
+  width: 3rem;
+  height: auto;
+}
+
+.header__logo__line {
+  fill: $darker-grey;
+}
+
 body.dark-mode {
-  .header__title {
-    color: $light-grey;
+  .header__logo__line {
+    fill: $lighter-grey;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
   }
 }
