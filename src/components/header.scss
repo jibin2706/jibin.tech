@@ -9,23 +9,17 @@
   padding: 1rem 0rem;
 }
 
-.header__title {
-  color: $darker-grey;
-  margin: 0;
-  font-size: 2rem;
-}
-
 .header__logo {
-  width: 3rem;
+  width: 14rem;
   height: auto;
 }
 
-.header__logo__line {
+.header__logo {
   fill: $darker-grey;
 }
 
 body.dark-mode {
-  .header__logo__line {
+  .header__logo {
     fill: $lighter-grey;
   }
 }
@@ -33,5 +27,9 @@ body.dark-mode {
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
+  }
+
+  .header__logo {
+    width: 18rem;
   }
 }
