@@ -10,8 +10,7 @@ const IndexPage = ({ data }) => (
       title="Blog — Jibin Thomas - Front-End Web Developer"
       description="I write about programming which includes topics from JavaScript, CSS, Flutter, IoT and more. "
     />
-
-    <BlogList data={data} />
+    <BlogList data={data} templateTitle="Articles" />
   </Layout>
 )
 

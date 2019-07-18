@@ -15,7 +15,7 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <SEO title="Blogs post tags" description="description" />
+      <SEO title={`Filter Blog post by ${tag}`} description="" />
       <BlogList data={data} templateTitle={`#${tag}`} />
     </Layout>
   )
