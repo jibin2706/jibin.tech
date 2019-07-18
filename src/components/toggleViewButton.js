@@ -18,6 +18,7 @@ function ToggleThemeButton() {
       defaultChecked={darkMode.value}
       onClick={darkMode.toggle}
       aria-hidden="true"
+      aria-checked={darkMode.value}
       className="toggle-button"
     >
       {darkMode.value ? (

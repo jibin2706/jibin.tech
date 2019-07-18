@@ -5,6 +5,7 @@ import Footer from './Footer'
 
 const Layout = ({ children }) => (
   <>
+    <Header />
     <div
       style={{
         maxWidth: '700px',
@@ -13,7 +14,6 @@ const Layout = ({ children }) => (
         overflow: 'hidden',
       }}
     >
-      <Header />
       <div>{children}</div>
       <Footer />
     </div>

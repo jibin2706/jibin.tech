@@ -7,6 +7,7 @@ const BlogList = ({ data }) => {
   let blog = data.allMarkdownRemark.edges
   return (
     <>
+      <h1 className="main__list__header">Latest Articles</h1>
       <main className="main__list">
         {blog.map(({ node }) => {
           let { id, frontmatter, fields } = node

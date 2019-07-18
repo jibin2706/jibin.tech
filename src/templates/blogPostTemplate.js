@@ -14,7 +14,7 @@ export default ({ data, pageContext, ...props }) => {
   const post = data.markdownRemark
   let { timeToRead, frontmatter } = post
   let { slug } = post.fields
-  let { title, date, info } = frontmatter
+  let { title, date, info, tags } = frontmatter
   let { previous, next } = pageContext
 
   const githubEditUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/${GITHUB_BRANCH}/src/pages${slug}index.md`
@@ -31,6 +31,12 @@ export default ({ data, pageContext, ...props }) => {
             <span>Reading Time: {timeToRead} mins</span>
             <span> | </span>
             <a href={githubEditUrl}>Edit on Github</a>
+            <span> | </span>
+            <span>
+              {tags.map(tag => (
+                <Link to={`/tags/${tag}`}>#{tag} </Link>
+              ))}
+            </span>
           </div>
           <h2 className="blog__info">{info}</h2>
           <hr className="blog__divider" />
@@ -71,6 +77,7 @@ export const query = graphql`
         title
         date(formatString: "MMMM D, YYYY")
         info
+        tags
       }
     }
   }
