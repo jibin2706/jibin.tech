@@ -8,14 +8,18 @@ import SEO from '../components/SEO'
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
+  const { totalCount } = data.allMarkdownRemark
+
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? '' : 's'
   } tagged with "${tag}"`
 
   return (
     <Layout>
-      <SEO title={`Filter Blog post by ${tag}`} description="" />
+      <SEO
+        title={`Filter blog posts by ${tag}`}
+        description="Filtered blog post according to tags"
+      />
       <BlogList data={data} templateTitle={`#${tag}`} />
     </Layout>
   )
@@ -56,6 +60,7 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
+          id
           timeToRead
           frontmatter {
             title
