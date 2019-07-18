@@ -11,7 +11,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: ['/success'],
+        exclude: ['/success', '/tags/*'],
       },
     },
     `gatsby-plugin-sass`,
