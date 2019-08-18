@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin:700|Open+Sans:400,700&display=swap');
-
 @import '../styles/colors';
 @import '../styles/animation';
 
@@ -32,16 +30,9 @@
 h1,
 h2,
 h3 {
-  font-family: 'Cabin', sans-serif;
-}
-
-p,
-input,
-select,
-textarea,
-td,
-th {
-  font-family: 'Open Sans', Georgia, serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 400;
 }
 
 a {
@@ -72,7 +63,6 @@ a:active > h2 {
   background: transparent;
   transition: all 0.1s linear;
   border-radius: 3px;
-  font-family: 'Open Sans', sans-serif;
   cursor: pointer;
 }
 

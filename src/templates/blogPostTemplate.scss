@@ -12,7 +12,6 @@
 .blog__info {
   margin: 1rem 0;
   line-height: 1.5;
-  font-family: 'Open Sans', Georgia, serif;
   font-weight: 400;
   font-size: 0.9rem;
 }
@@ -21,7 +20,6 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
 
   span {
@@ -43,7 +41,7 @@
   h2,
   h3 {
     margin: 3rem 0 1rem 0;
-    font-family: 'Open Sans', Georgia, serif;
+    font-weight: 700;
   }
 
   img {
@@ -56,7 +54,6 @@
   }
 
   li {
-    font-family: 'Open Sans', Georgia, serif;
     margin-bottom: 0rem;
   }
 
@@ -92,7 +89,8 @@
     padding: 1rem;
     border-left: 3px solid $accent-pink;
     margin-bottom: 1rem;
-    font-family: monospace;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 0.8rem;
   }
 }
 
