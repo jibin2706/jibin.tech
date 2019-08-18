@@ -9,27 +9,13 @@
   padding: 1rem;
 }
 
-.header__logo {
-  width: 14rem;
-  height: auto;
-}
-
-.header__logo {
-  fill: $darker-grey;
-}
-
-body.dark-mode {
-  .header__logo {
-    fill: $lighter-grey;
-  }
+.header__title {
+  margin: 0;
+  color: $darker-grey;
 }
 
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
-  }
-
-  .header__logo {
-    width: 18rem;
   }
 }
