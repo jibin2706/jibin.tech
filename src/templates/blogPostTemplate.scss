@@ -54,7 +54,7 @@
   }
 
   li {
-    margin-bottom: 0rem;
+    margin-bottom: 0.5rem;
   }
 
   blockquote {
@@ -87,8 +87,8 @@
   .code-line {
     display: block;
     padding: 1rem;
-    border-left: 3px solid $accent-pink;
-    margin-bottom: 1rem;
+    border-left: 3px solid $primary-light;
+    margin: 1rem 0;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     font-size: 0.8rem;
   }
@@ -121,10 +121,6 @@ body.light-mode {
   .blog__divider {
     background: $primary-darker;
   }
-
-  .code-line {
-    background: $lighter-grey;
-  }
 }
 
 // dark mode
@@ -143,9 +139,5 @@ body.dark-mode {
 
   .blog__divider {
     background: $primary-lighter;
-  }
-
-  .code-line {
-    background: $darker-grey;
   }
 }
