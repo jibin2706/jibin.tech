@@ -6,7 +6,7 @@ import './toggleButton.scss'
 function ToggleThemeButton() {
   const darkMode = useDarkMode(false)
   useEffect(() => {
-    const color = darkMode.value ? '#1f2933' : '#0b69a3'
+    const color = darkMode.value ? '#222222' : '#0b69a3'
     document
       .querySelector('meta[name="theme-color"]')
       .setAttribute('content', color)
