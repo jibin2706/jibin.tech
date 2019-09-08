@@ -145,11 +145,11 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: 'language-js',
+              classPrefix: 'language-',
               inlineCodeMarker: null,
               aliases: {},
-              showLineNumbers: false,
-              noInlineHighlight: false,
+              showLineNumbers: true,
+              noInlineHighlight: true,
             },
           },
           // copying gif and other files
