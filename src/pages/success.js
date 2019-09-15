@@ -1,6 +1,6 @@
 import React from 'react'
 
-import SEO from '../components/SEO'
+import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import Mail from '../images/mail.svg'
 
@@ -9,7 +9,9 @@ import '../styles/success.scss'
 function Success() {
   return (
     <Layout>
-      <SEO title="Message Sent successfully" />
+      <Helmet>
+        <title>Message Sent successfully</title>
+      </Helmet>
       <div className="message-success">
         <img className="message-success__image" src={Mail} alt="message send" />
         <h1>I got your message!</h1>

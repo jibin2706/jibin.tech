@@ -14,14 +14,23 @@ export default ({ data, pageContext, ...props }) => {
   const post = data.markdownRemark
   let { timeToRead, frontmatter } = post
   let { slug } = post.fields
-  let { title, date, info, tags } = frontmatter
+  let { title, date, info, tags, image } = frontmatter
   let { previous, next } = pageContext
 
   const githubEditUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/${GITHUB_BRANCH}/src/pages${slug}index.md`
 
+  const imageURL = image && image.publicURL
+
   return (
     <Layout>
-      <SEO title={title} description={info} />
+      <SEO
+        title={title}
+        description={info}
+        type="article"
+        imagePath={imageURL}
+        slug={slug}
+      />
+
       <div className="blog">
         <header>
           <h1 className="blog__title">{title}</h1>
@@ -34,7 +43,9 @@ export default ({ data, pageContext, ...props }) => {
             <span> | </span>
             <span>
               {tags.map(tag => (
-                <Link to={`/tags/${tag}`}>#{tag} </Link>
+                <Link key={tag} to={`/tags/${tag}`}>
+                  #{tag}
+                </Link>
               ))}
             </span>
           </div>
@@ -77,6 +88,9 @@ export const query = graphql`
         title
         date(formatString: "MMMM D, YYYY")
         info
+        image {
+          publicURL
+        }
         tags
       }
     }

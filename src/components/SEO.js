@@ -10,89 +10,82 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, keywords, title, type, imagePath, slug }) {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
             title
+            siteUrl
             description
-            author
+            author {
+              name
+            }
+            social {
+              twitter
+            }
           }
         }
       }
     `
   )
 
+  const siteUrl = site.siteMetadata.siteUrl
   const metaDescription = description || site.siteMetadata.description
+  const metaTwitterAuthor = site.siteMetadata.social.twitter
+  const metaImagePath = imagePath || '/icons/icon-256x256.png'
+  const metaUrl = slug && siteUrl + slug
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
-        )
-        .concat(meta)}
-    />
+    >
+      {/* General tags */}
+      <title>{title}</title>
+      <meta name="description" content={metaDescription} />
+      <meta name="image" content={siteUrl + metaImagePath} />
+      {slug && <link rel="canonical" href={metaUrl} />}
+
+      {/* OpenGraph tags */}
+      <meta property="og:title" content={title} />
+      <meta property="og:url" content={metaUrl} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:image" content={siteUrl + metaImagePath} />
+      <meta property="og:type" content={type} />
+
+      {/* Twitter Card tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content={metaTwitterAuthor} />
+      <meta name="twitter:site" content={metaTwitterAuthor} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:image" content={siteUrl + metaImagePath} />
+    </Helmet>
   )
 }
 
 SEO.defaultProps = {
   lang: `en`,
-  meta: [],
-  keywords: ["Web Development","Freelancer", "Front-End Developer", "javascript","CSS", "blog"],
+  type: 'website',
+  keywords: [
+    'Web Development',
+    'Freelancer',
+    'Front-End Developer',
+    'javascript',
+    'CSS',
+    'blog',
+  ],
 }
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
-  meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['website', 'article']),
 }
 
 export default SEO
