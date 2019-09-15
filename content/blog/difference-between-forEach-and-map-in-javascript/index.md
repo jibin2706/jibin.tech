@@ -2,6 +2,7 @@
 title: 'Difference between forEach and map in javascript'
 date: 2019-08-24
 info: 'When you should use forEach/map array methods'
+image: 'featured-image.jpg'
 tags: ['web', 'javascript']
 ---
 

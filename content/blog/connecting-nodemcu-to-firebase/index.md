@@ -2,6 +2,7 @@
 title: 'How to get started with IoT using NodeMCU Devkit and Firebase database'
 date: 2019-04-25
 info: 'Getting started with Internet of Things'
+image: 'featured-image.jpg'
 tags: ['firebase', 'iot']
 ---
 

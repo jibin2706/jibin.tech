@@ -2,6 +2,7 @@
 title: 'Hosting static sites on gh-pages with custom domains'
 date: 2019-04-17
 info: 'Simple steps for deploying static sites with custom domain on Github'
+image: 'featured-image.jpg'
 tags: ['web']
 ---
 

@@ -2,6 +2,7 @@
 title: 'Using locally hosted fonts on your website'
 date: 2019-07-07
 info: 'Simple steps to host custom fonts locally and use them on your website'
+image: 'featured-image.jpg'
 tags: ['web', 'css']
 ---
 

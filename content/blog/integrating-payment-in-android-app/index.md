@@ -2,6 +2,7 @@
 title: 'Integrating payment in your Android Application'
 date: 2019-05-17
 info: 'Easy steps to add payment support in your android application using Razorpay'
+image: 'featured-image.jpg'
 tags: ['android']
 ---
 

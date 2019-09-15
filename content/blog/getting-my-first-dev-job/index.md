@@ -2,6 +2,7 @@
 title: 'Getting my first developer job'
 date: 2019-07-18
 info: 'I am starting as a Junior Front-End Developer at The Souled Store'
+image: 'retail-store.jpg'
 tags: ['general']
 ---
 

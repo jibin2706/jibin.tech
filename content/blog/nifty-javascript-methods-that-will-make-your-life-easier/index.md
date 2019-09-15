@@ -2,6 +2,7 @@
 title: 'Nifty Javascript methods that will make your life easier'
 date: 2019-07-02
 info: 'Ten javascript methods discussed'
+image: 'featured-image.png'
 tags: ['web', 'javascript']
 ---
 

@@ -2,6 +2,7 @@
 title: 'Different ways to get your react project started'
 date: 2019-09-12
 info: 'Ways to start building your react application based on what you want to achieve'
+image: 'featured-image.png'
 tags: ['web', 'javascript']
 ---
 

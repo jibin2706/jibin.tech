@@ -2,6 +2,7 @@
 title: 'Visual Studio Code extensions to make you more productive'
 date: 2019-06-05
 info: 'Seven VSCode extension that will help you to be more productive while coding'
+image: 'featured_image.jpg'
 tags: ['workflow']
 ---
 
