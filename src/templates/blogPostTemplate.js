@@ -63,12 +63,36 @@ export default ({ data, pageContext, ...props }) => {
       <section className="read-more">
         {previous && (
           <Link className="btn btn--full btn--hover" to={previous.fields.slug}>
-            ← {previous.frontmatter.title}
+            <svg
+              fill="currentColor"
+              height="1em"
+              width="1em"
+              viewBox="0 0 40 40"
+              style={{
+                verticalAlign: 'sub',
+              }}
+            >
+              <path d="M33.4 18.4v3.2H13l9.3 9.4-2.3 2.4L6.6 20 20 6.6 22.3 9 13 18.4h20.4z" />
+            </svg>
+            &nbsp;
+            {previous.frontmatter.title}
           </Link>
         )}
         {next && (
           <Link className="btn btn--full btn--hover" to={next.fields.slug}>
-            {next.frontmatter.title} →
+            {next.frontmatter.title}
+            &nbsp;
+            <svg
+              fill="currentColor"
+              height="1em"
+              width="1em"
+              viewBox="0 0 40 40"
+              style={{
+                verticalAlign: 'sub',
+              }}
+            >
+              <path d="M20 6.6L33.4 20 20 33.4 17.7 31l9.3-9.4H6.6v-3.2H27L17.7 9z" />
+            </svg>
           </Link>
         )}
       </section>
