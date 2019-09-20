@@ -7,6 +7,7 @@ tags: ['web', 'javascript']
 ---
 
 ![Javascipt book](featured-image.jpg)
+
 In javascript, we can iterate through an array by using the map and forEach method (Yes, you can use a for loop also!). There are some differences between the map and forEach methods.
 
 You might in a situation where you don't know which method (Array.prototype.forEach() / Array.prototype.map()) to use on the array. It depends on whether you need to create a new array or want to use the existing array.

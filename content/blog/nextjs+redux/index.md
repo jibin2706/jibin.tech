@@ -7,6 +7,7 @@ tags: ['web', 'javascript']
 ---
 
 ![Next.js + Redux](featured-image.png)
+
 Integrating redux and nextjs requires some extra steps because you have to create a redux instance on every page, which is not the case in single-page applications. So, we need to create a wrapper that initializes redux store on all the pages.
 
 There is a package called [next-redux-wrapper](https://github.com/kirill-konshin/next-redux-wrapper), but for some reason, it wasn't working for me. So, I created a wrapper instead of relying on other packages.
