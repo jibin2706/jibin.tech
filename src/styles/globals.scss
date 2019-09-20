@@ -96,17 +96,17 @@ body.light-mode {
   }
 
   .btn {
-    color: $darkest-grey;
-    border-color: $darkest-grey;
+    color: $darker-grey;
+    border-color: $darker-grey;
   }
 
   .btn--hover:hover,
   .btn--hover:focus {
     outline: none;
     color: $lightest-grey;
-    border-color: $primary-darker;
-    background: $primary-darker;
-    transition: all 0.1s linear;
+    border-color: $primary;
+    background: $primary;
+    transition: all 0.3s ease;
   }
 }
 
