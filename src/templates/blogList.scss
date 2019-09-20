@@ -83,3 +83,15 @@ body.dark-mode {
     padding: 2rem 0;
   }
 }
+
+@media (max-width: 550px) {
+  .blog__list__title {
+    font-size: 1.5rem;
+  }
+
+  .main__list__header {
+    font-size: 2rem;
+    padding: 1rem 0;
+  }
+}
+

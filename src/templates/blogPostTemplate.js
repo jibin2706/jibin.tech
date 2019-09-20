@@ -35,21 +35,18 @@ export default ({ data, pageContext, ...props }) => {
         <header>
           <h1 className="blog__title">{title}</h1>
           <div className="blog__meta">
-            <span>Published {date}</span>
-            <span> | </span>
-            <span>Reading Time: {timeToRead} mins</span>
-            <span> | </span>
-            <a href={githubEditUrl}>Edit on Github</a>
-            <span> | </span>
-            <span>
-              {tags.map(tag => (
-                <Link key={tag} to={`/tags/${tag}`}>
-                  #{tag}
-                </Link>
-              ))}
-            </span>
+            <span> {date}</span>
+            <span> {timeToRead} mins read</span>
+            
           </div>
           <h2 className="blog__info">{info}</h2>
+          <div className="blog__tags">
+            {tags.map(tag => (
+              <Link key={tag} to={`/tags/${tag}`}>
+                #{tag} &nbsp;
+              </Link>
+            ))}
+          </div>
           <hr className="blog__divider" />
         </header>
 
