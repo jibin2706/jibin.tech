@@ -5,6 +5,7 @@ import './blogPostTemplate.scss'
 
 import SEO from '../components/SEO'
 import Layout from '../components/layout'
+import SocialShare from '../components/SocialShare'
 
 export default ({ data, pageContext, ...props }) => {
   const GITHUB_USERNAME = 'jibin2706'
@@ -37,7 +38,6 @@ export default ({ data, pageContext, ...props }) => {
           <div className="blog__meta">
             <span> {date}</span>
             <span> {timeToRead} mins read</span>
-            
           </div>
           <h2 className="blog__info">{info}</h2>
           <div className="blog__tags">
@@ -50,12 +50,29 @@ export default ({ data, pageContext, ...props }) => {
           <hr className="blog__divider" />
         </header>
 
+        <SocialShare
+          title={title}
+          slug={slug}
+          body={info}
+          hashtags={tags}
+          showHeader={false}
+        />
+
         <main
           className="blog-body"
           dangerouslySetInnerHTML={{ __html: post.html }}
           style={{ maxWidth: '680px', margin: 'auto' }}
         />
       </div>
+
+      <hr />
+      <SocialShare
+        title={title}
+        slug={slug}
+        body={info}
+        hashtags={tags}
+        showHeader={true}
+      />
 
       <section className="read-more">
         {previous && (

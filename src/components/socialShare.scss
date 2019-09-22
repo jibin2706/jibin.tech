@@ -1,0 +1,65 @@
+$twitter: #1da1f2;
+$facebook: #3b5998;
+$mail: #ea4335;
+
+.share-post__header {
+  display: block;
+  margin: 1rem 0;
+}
+
+.share-post__buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.share-post__buttons .btn {
+  flex: 1;
+  margin: 0 0.2rem;
+  padding: 0.4rem 0;
+  transition: 0.2s ease-in;
+  svg {
+    fill: white;
+    display: block;
+    margin: auto;
+  }
+}
+
+.btn-twitter {
+  background: $twitter;
+  border: 2px solid $twitter !important;
+  &:hover {
+    background: white;
+    svg {
+      fill: $twitter;
+    }
+  }
+}
+
+.btn-facebook {
+  background: $facebook;
+  border: 2px solid $facebook !important;
+  &:hover {
+    background: white;
+    svg {
+      fill: $facebook;
+    }
+  }
+}
+
+.btn-mail {
+  background: $mail;
+  border: 2px solid $mail !important;
+  &:hover {
+    background: white;
+    svg {
+      fill: $mail;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .share-post__buttons .btn {
+    margin: 0 0.2rem;
+    padding: 0.2rem 0;
+  }
+}
