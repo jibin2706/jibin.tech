@@ -32,7 +32,7 @@ export default ({ data, pageContext, ...props }) => {
         slug={slug}
       />
 
-      <div className="blog">
+      <article className="blog">
         <header>
           <h1 className="blog__title">{title}</h1>
           <div className="blog__meta">
@@ -61,9 +61,9 @@ export default ({ data, pageContext, ...props }) => {
         <main
           className="blog-body"
           dangerouslySetInnerHTML={{ __html: post.html }}
-          style={{ maxWidth: '680px', margin: 'auto' }}
+          style={{ maxWidth: '720px', margin: 'auto' }}
         />
-      </div>
+      </article>
 
       <hr />
       <SocialShare

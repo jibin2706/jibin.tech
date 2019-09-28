@@ -13,7 +13,7 @@
 }
 
 .blog__list {
-  padding: 0.5rem 0;
+  padding: 1rem 0;
 }
 
 .blog__list__title {
@@ -26,17 +26,13 @@
 }
 
 .blog__list__info {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 // light mode
 body.light-mode {
   .main__list__header {
     color: $dark-grey;
-  }
-
-  .blog__list:not(:last-of-type) {
-    border-bottom: 1px solid $light-grey;
   }
 
   .blog__list__title {
@@ -56,10 +52,6 @@ body.light-mode {
 body.dark-mode {
   .main__list__header {
     color: $light-grey;
-  }
-
-  .blog__list:not(:last-of-type) {
-    border-bottom: 1px solid $darker-grey;
   }
 
   .blog__list__title {
@@ -94,4 +86,3 @@ body.dark-mode {
     padding: 1rem 0;
   }
 }
-

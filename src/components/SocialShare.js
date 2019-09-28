@@ -8,10 +8,10 @@ function SocialShare({ slug, title, body, hashtags, showHeader }) {
   return (
     <section className="share-post">
       {showHeader && (
-        <em className="share-post__header">
+        <p className="share-post__header">
           Liked the article? Share it with your friends. I highly apperciate it
           :)
-        </em>
+        </p>
       )}
       <div className="share-post__buttons">
         <a

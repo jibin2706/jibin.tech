@@ -8,7 +8,7 @@ const Layout = ({ children }) => (
     <Header />
     <div
       style={{
-        maxWidth: '700px',
+        maxWidth: '800px',
         margin: 'auto',
         padding: '1rem',
         overflow: 'hidden',

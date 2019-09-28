@@ -1,21 +1,26 @@
 @import '../styles/colors';
 @import '../styles/animation';
+@import url('https://fonts.googleapis.com/css?family=Assistant:400,600,700,800&display=swap');
 
 ::selection {
   color: white;
   background: $primary;
 }
 
+html {
+  font-size: 20px;
+}
+
 body {
   border-top: 5px solid $primary;
+  font-family: Assistant, sans-serif;
 }
 
 h1,
 h2,
 h3 {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  font-weight: 400;
+  font-family: Assistant, sans-serif;
+  font-weight: 700;
 }
 
 a {
