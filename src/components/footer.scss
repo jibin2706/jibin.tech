@@ -1,10 +1,19 @@
+@import '../styles/colors';
+
 .footer {
   padding: 3rem 0;
   text-align: center;
 }
 
 .footer__social {
-  padding-bottom: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.footer__social svg {
+  width: 24px;
+  &:hover {
+    fill: currentColor;
+  }
 }
 
 .footer__social a {
@@ -18,4 +27,18 @@
 
 .footer__end {
   font-size: 0.8rem;
+}
+
+body.light-mode {
+  .footer__social svg {
+    width: 24px;
+    fill: $dark-grey;
+  }
+}
+
+body.dark-mode {
+  .footer__social svg {
+    width: 24px;
+    fill: $light-grey;
+  }
 }
