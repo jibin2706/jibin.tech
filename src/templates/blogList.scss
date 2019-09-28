@@ -8,7 +8,7 @@
   font-size: 4rem;
   text-transform: uppercase;
   text-align: center;
-  padding: 3rem 0rem;
+  padding: 1rem 0rem;
   margin: 0;
 }
 
@@ -37,6 +37,9 @@ body.light-mode {
 
   .blog__list__title {
     color: $primary-darker;
+    &:hover {
+      color: $primary;
+    }
   }
 
   .blog__list__meta {
@@ -56,6 +59,9 @@ body.dark-mode {
 
   .blog__list__title {
     color: $primary-lighter;
+    &:hover {
+      color: $primary-light;
+    }
   }
 
   .blog__list__meta {
@@ -72,7 +78,7 @@ body.dark-mode {
   .main__list__header {
     font-size: 3rem;
     text-align: left;
-    padding: 2rem 0;
+    padding: 0;
   }
 }
 

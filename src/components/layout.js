@@ -10,7 +10,7 @@ const Layout = ({ children }) => (
       style={{
         maxWidth: '800px',
         margin: 'auto',
-        padding: '1rem',
+        padding: '0 1rem',
         overflow: 'hidden',
       }}
     >
