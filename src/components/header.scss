@@ -14,8 +14,17 @@
   color: $darker-grey;
 }
 
+.brand-logo {
+  width: 100px;
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
+  }
+
+  .brand-logo {
+    margin-bottom: 1rem;
   }
 }
