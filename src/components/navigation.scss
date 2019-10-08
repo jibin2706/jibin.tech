@@ -11,5 +11,13 @@
 }
 
 .nav__item {
-  padding: 0.5rem 1rem;
+  padding: 0.2rem;
+  margin: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .nav__item {
+    margin: 0 0.5rem;
+    font-size: 1.1rem;
+  }
 }
