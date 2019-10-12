@@ -1,12 +1,23 @@
 @import 'colors';
 
 .tag__item {
+  color: $darker-grey;
+  border: 2px solid $darker-grey;
+  border-radius: 3px;
   font-weight: 600;
   display: inline-block;
   padding: 0.2rem;
   margin: 0.5rem;
-  background: $light-grey;
-  color: $lightest-grey;
   word-break: break-all;
   list-style: none;
+}
+
+.tag__item:hover,
+.tag__item:focus {
+  a {
+    color: $darkest-grey;
+  }
+  
+  border-color: $primary-light;
+  background: $primary-light; 
 }
