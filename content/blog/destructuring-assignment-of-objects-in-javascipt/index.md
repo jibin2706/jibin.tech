@@ -1,6 +1,6 @@
 ---
 title: 'Destructuring javascript objects into custom variables names and default values'
-date: 2019-10-17
+date: 2019-10-19
 info: 'With object destructuring syntax in ES6, it makes it more straightforward to get values from an object.'
 image: 'featured-image.png'
 tags: ['web', 'js']
