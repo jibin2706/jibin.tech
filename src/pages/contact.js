@@ -66,7 +66,7 @@ function ContactForm() {
         />
       </label>
 
-      <button className="btn btn--hover">Send Email</button>
+      <button className="btn btn--hover">SUBMIT</button>
     </form>
   )
 }

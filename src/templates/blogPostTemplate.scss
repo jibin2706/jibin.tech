@@ -45,6 +45,8 @@
     margin: 4rem 0 1rem 1rem;
     font-weight: 600;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
   }
 
   p {
@@ -99,6 +101,11 @@
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     font-size: 0.8rem;
   }
+}
+
+.anchor svg {
+  width: 20px;
+  margin-right: 0.5rem;
 }
 
 .read-more {

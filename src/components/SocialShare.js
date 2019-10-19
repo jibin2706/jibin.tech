@@ -18,6 +18,7 @@ function SocialShare({ slug, title, body, hashtags, showHeader }) {
           className="btn btn-twitter"
           href={`https://twitter.com/intent/tweet?url=${url}&text=${title}&hashtags=${hashtags}`}
           target="_blank"
+          rel="noopener noreferrer"
         >
           <Twitter />
         </a>
@@ -25,6 +26,7 @@ function SocialShare({ slug, title, body, hashtags, showHeader }) {
           className="btn btn-facebook"
           href={`https://www.facebook.com/sharer.php?u=${url}`}
           target="_blank"
+          rel="noopener noreferrer"
         >
           <Facebook />
         </a>
@@ -32,6 +34,7 @@ function SocialShare({ slug, title, body, hashtags, showHeader }) {
           className="btn btn-mail"
           href={`mailto:?subject=${title}&body=${body}`}
           target="_blank"
+          rel="noopener noreferrer"
         >
           <Email />
         </a>
