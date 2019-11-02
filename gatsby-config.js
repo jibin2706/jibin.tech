@@ -19,6 +19,13 @@ module.exports = {
         exclude: ['/success', '/tags/*'],
       },
     },
+    // robots.txt generation
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        configFile: 'robots-txt.config.js',
+      },
+    },
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
