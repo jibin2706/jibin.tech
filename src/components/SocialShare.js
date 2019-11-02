@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import './socialShare.scss'
 
 function SocialShare({ slug, title, body, hashtags, showHeader }) {
-  const url = `https://blog.jibin.tech/${slug}`
+  const url = `https://blog.jibin.tech${slug}`
   return (
     <section className="share-post">
       {showHeader && (
@@ -32,7 +32,7 @@ function SocialShare({ slug, title, body, hashtags, showHeader }) {
         </a>
         <a
           className="btn btn-mail"
-          href={`mailto:?subject=${title}&body=${body}`}
+          href={`mailto:?subject=${title}&body=${body} ${url}`}
           target="_blank"
           rel="noopener noreferrer"
         >
