@@ -7,7 +7,14 @@ const BlogList = ({ data, templateTitle }) => {
   let blog = data.allMarkdownRemark.edges
   return (
     <>
-      <h1 className="main__list__header">{templateTitle}</h1>
+      {templateTitle === 'Articles' ? (
+        <h1 style={{ fontSize: '1.2rem', fontWeight: 400, margin: 0 }}>
+          I write about random stuff that I come across while developing for the
+          🕸 (web!)
+        </h1>
+      ) : (
+        <h1 className="main__list__header">{templateTitle}</h1>
+      )}
       <main className="main__list">
         {blog.map(({ node }) => {
           let { id, frontmatter, fields } = node

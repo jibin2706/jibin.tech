@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Blog — Jibin Thomas`,
     siteUrl: `https://blog.jibin.tech`,
-    description: `I mainly write about stuffs that I come across while programming`,
+    description: `I mainly write about web technologies like react, javascript, css and random stuffs that I come across while programming`,
     author: {
       name: `Jibin Thomas`,
     },
