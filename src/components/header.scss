@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: auto;
   padding: 3rem;
 }
@@ -15,7 +15,7 @@
 }
 
 .brand-logo {
-  width: 100px;
+  width: 80px;
   margin: 0;
 }
 
@@ -26,5 +26,11 @@
 
   .brand-logo {
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 2rem;
   }
 }
