@@ -14,6 +14,7 @@ const BlogList = ({ data, templateTitle }) => {
             fontWeight: 400,
             margin: 0,
             lineHeight: 1.4,
+            margin: '2rem 0',
           }}
         >
           I write about random stuff that I come across while developing for the

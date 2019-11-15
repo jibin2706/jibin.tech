@@ -5,8 +5,7 @@
   justify-content: space-between;
   align-items: center;
   max-width: 1000px;
-  margin: auto;
-  padding: 3rem;
+  margin: 3rem auto;
 }
 
 .header__title {
@@ -31,6 +30,6 @@
 
 @media (max-width: 768px) {
   .header {
-    padding: 2rem;
+    margin: 2rem;
   }
 }
