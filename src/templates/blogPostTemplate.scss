@@ -38,7 +38,6 @@
 
 .blog-body {
   margin-top: 1rem;
-  line-height: 1.7;
 
   h1,
   h2,
@@ -124,8 +123,7 @@
 
 @media (max-width: 550px) {
   .blog__title {
-    margin: 0.5rem 0;
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
 
