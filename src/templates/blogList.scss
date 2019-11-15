@@ -13,7 +13,7 @@
 }
 
 .blog__list {
-  padding: 1rem 0;
+  margin-bottom: 4rem;
 }
 
 .blog__list__title {
@@ -24,11 +24,13 @@
 
 .blog__list__meta {
   text-transform: uppercase;
-  margin: 0.5rem 0;
+  margin: 0.2rem 0;
 }
 
 .blog__list__info {
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
 }
 
 // light mode
@@ -85,6 +87,10 @@ body.dark-mode {
 }
 
 @media (max-width: 550px) {
+  .blog__list {
+    margin-bottom: 3rem;
+  }
+
   .blog__list__title {
     font-size: 1.5rem;
   }
