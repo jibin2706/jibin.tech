@@ -1,12 +1,8 @@
 @import '../styles/colors';
 
 .footer {
-  padding: 5rem 0 0 0;
+  margin: 6rem 0 2rem;
   text-align: center;
-}
-
-.footer__social {
-  padding-bottom: 0.5rem;
 }
 
 .footer__social svg {
@@ -22,11 +18,12 @@
 }
 
 .footer__copyright {
-  margin: 8px;
+  margin: 0.5rem 0;
 }
 
 .footer__end {
   font-size: 0.8rem;
+  margin: 0.5rem 0;
 }
 
 body.light-mode {

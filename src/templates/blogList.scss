@@ -13,13 +13,13 @@
 }
 
 .blog__list {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .blog__list__title {
   margin: 0;
   display: inline-block;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 
 .blog__list__meta {
@@ -87,10 +87,6 @@ body.dark-mode {
 }
 
 @media (max-width: 550px) {
-  .blog__list {
-    margin-bottom: 3rem;
-  }
-
   .blog__list__title {
     font-size: 1.5rem;
   }
