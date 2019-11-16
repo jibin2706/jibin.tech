@@ -39,7 +39,9 @@ function Footer() {
       </section>
 
       <section>
-        <p className="footer__copyright">Ⓒ - Coded by hand and headaches</p>
+        <p className="footer__copyright">
+          &copy; - Coded by hand and headaches
+        </p>
         <p className="footer__end">
           This site is built with <a href="https://gatsbyjs.org/">Gatsby.js </a>{' '}
           and hosted on <a href="https://netlify.com/">Netlify</a>. The source
