@@ -43,6 +43,21 @@ a:active > h2 {
   padding: 0;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-25 {
+  width: 25%;
+}
 // button styles
 .btn {
   text-align: center;
@@ -80,7 +95,8 @@ body.light-mode {
   p,
   li,
   td,
-  th {
+  th,
+  figure {
     color: $darker-grey;
   }
 

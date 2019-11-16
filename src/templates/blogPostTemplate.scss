@@ -121,6 +121,18 @@
   }
 }
 
+@media (min-width: 768px) {
+  .figure--left {
+    float: left;
+    margin-right: 1rem;
+  }
+
+  .figure--right {
+    float: right;
+    margin-left: 1rem;
+  }
+}
+
 @media (max-width: 550px) {
   .blog__title {
     font-size: 1.75rem;
