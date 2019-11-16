@@ -64,7 +64,7 @@ Yes, we can sometimes achieve the same result from both the functions. But when 
 
 The forEach method should be used when you want to execute some function on each element in the array, and don't expect anything to return.
 
-### Some other differences
+### Some Other Differences
 
 1. You cannot chain methods in forEach unlikely map method, where to can chain other methods like the filter, reduce, etc.
 

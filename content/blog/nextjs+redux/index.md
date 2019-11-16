@@ -31,7 +31,7 @@ _Optional package_
 npm install redux-devtools-extension
 ```
 
-### Configuring redux in nextjs
+### Configuring Redux in Nextjs
 
 Next.js initializes page using the App component, and we will be overriding it to initialize redux store in \_app.js.
 with-redux-store.js is a higher-order component that will be used in \_app.js page.

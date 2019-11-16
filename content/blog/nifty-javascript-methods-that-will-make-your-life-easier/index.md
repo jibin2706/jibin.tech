@@ -93,7 +93,7 @@ const human = {
 Object.keys(human) // ["name", "age"]
 ```
 
-## Object.values()
+### Object.values()
 
 Returns an array of all the values of the object
 
@@ -106,7 +106,7 @@ const human = {
 Object.values(human) // ["ABC", 30]
 ```
 
-## Object.entries()
+### Object.entries()
 
 Returns an array with key and its value in array pair
 
@@ -119,7 +119,7 @@ const human = {
 Object.keys(human) // [["name", "ABC"], ["age", 30]]
 ```
 
-## Object.freeze()
+### Object.freeze()
 
 freeze() method disables the object's properties to be modified or added or deleted.
 
@@ -139,7 +139,7 @@ human.occupation = 'Developer'
 console.log(human) // { name: "ABC", age: 30 }
 ```
 
-## Object.seal()
+### Object.seal()
 
 Unlike Object.freeze() method, Object.seal() allow existing properties to modified but you cannot delete or add new properties.
 

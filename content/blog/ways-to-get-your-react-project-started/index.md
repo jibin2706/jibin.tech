@@ -14,7 +14,7 @@ If will want a quick example/demo online sites like codepen or codesandbox will 
 
 There are many more open-source starter configurations for react, but create-react-app, gatsby, and nextjs are most popular among those.
 
-### create-react-app
+### CRA (create-react-app)
 
 Facebook has created [create-react-app](https://github.com/facebook/create-react-app) package to make it easy to build react apps without Webpack or babel configurations. Once you need more customization to webpack configuration you can eject, which will give you more control. A lot of useful features come out of the box like autoprefixed CSS, integration of service worker for PWA's and many more.
 
@@ -43,7 +43,7 @@ It also has the ability for static site generation, but gatsby is more suitable 
 
 Setting up the react environment from scratch can be very consuming, but you will have complete control of what packages are being installed and can modify them as per the requirements. Installing packages, configuring webpack/parcel can be difficult for beginners.
 
-Here a post on [how to configure webpack for react](https://blog.logrocket.com/versatile-webpack-configurations-for-your-react-application-e6ebf6615cc/). 
+Here a post on [how to configure webpack for react](https://blog.logrocket.com/versatile-webpack-configurations-for-your-react-application-e6ebf6615cc/).
 
 **Setup Difficulty**: Hard <br />
 **Easy of use**: Hard <br />
