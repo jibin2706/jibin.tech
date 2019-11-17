@@ -20,7 +20,7 @@ export default ({ data, pageContext, ...props }) => {
 
   const githubEditUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/${GITHUB_BRANCH}/src/pages${slug}index.md`
 
-  const imageURL = image && image.publicURL
+  const imageURL = (image && image.publicURL) || ''
 
   return (
     <Layout>
@@ -30,6 +30,23 @@ export default ({ data, pageContext, ...props }) => {
         type="article"
         imagePath={imageURL}
         slug={slug}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: `{
+            "@context": "http://schema.org",
+            "@type": "Article",
+            "headline": "${title}",
+            "datePublished": "${date}",
+            "author": {
+              "@type": "Person",
+              "name": "Jibin Thomas"
+            },
+            "image": "${'https://blog.jibin.tech' + imageURL}"
+          }`,
+        }}
       />
 
       <article className="blog">
