@@ -10,11 +10,11 @@ const BlogList = ({ data, templateTitle }) => {
       {templateTitle === 'Articles' ? (
         <h1
           style={{
-            fontSize: '1.2rem',
+            fontSize: '1.1rem',
             fontWeight: 400,
             margin: 0,
             lineHeight: 1.4,
-            margin: '2rem 0',
+            margin: '1rem 0',
           }}
         >
           I write about random stuff that I come across while developing for the

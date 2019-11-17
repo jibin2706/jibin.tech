@@ -87,8 +87,21 @@ body.dark-mode {
 }
 
 @media (max-width: 550px) {
+  .blog__list__meta {
+    margin: 0rem 0;
+  }
+
   .blog__list__title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  .blog__list__info {
+    font-size: 1rem;
+    margin: 0.2rem 0;
+  }
+
+  .blog__list {
+    margin-bottom: 2.5rem;
   }
 
   .main__list__header {
