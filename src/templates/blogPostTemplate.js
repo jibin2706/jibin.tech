@@ -67,13 +67,13 @@ export default ({ data, pageContext, ...props }) => {
           <hr className="blog__divider" />
         </header>
 
-        <SocialShare
+        {/* <SocialShare
           title={title}
           slug={slug}
           body={info}
           hashtags={tags}
           showHeader={false}
-        />
+        /> */}
 
         <main
           className="blog-body"
