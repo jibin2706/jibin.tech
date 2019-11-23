@@ -142,7 +142,6 @@ module.exports = {
               maxWidth: 800,
               quality: 100,
               withWebp: true,
-              tracedSVG: true,
             },
           },
           // adding id to headers in markdown
