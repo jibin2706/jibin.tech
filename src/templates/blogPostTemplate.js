@@ -7,10 +7,10 @@ import SEO from '../components/SEO'
 import Layout from '../components/layout'
 import SocialShare from '../components/SocialShare'
 
-export default ({ data, pageContext, ...props }) => {
-  const GITHUB_USERNAME = 'jibin2706'
-  const GITHUB_REPO_NAME = 'blog.jibin.tech'
-  const GITHUB_BRANCH = 'develop'
+export default ({ data, pageContext }) => {
+  // const GITHUB_USERNAME = 'jibin2706'
+  // const GITHUB_REPO_NAME = 'blog.jibin.tech'
+  // const GITHUB_BRANCH = 'develop'
 
   const post = data.markdownRemark
   let { timeToRead, frontmatter } = post
@@ -18,7 +18,7 @@ export default ({ data, pageContext, ...props }) => {
   let { title, date, info, tags, image } = frontmatter
   let { previous, next } = pageContext
 
-  const githubEditUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/${GITHUB_BRANCH}/src/pages${slug}index.md`
+  // const githubEditUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/${GITHUB_BRANCH}/src/pages${slug}index.md`
 
   const imageURL = (image && image.publicURL) || ''
 

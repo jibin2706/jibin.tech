@@ -12,7 +12,6 @@ const BlogList = ({ data, templateTitle }) => {
           style={{
             fontSize: '1.1rem',
             fontWeight: 400,
-            margin: 0,
             lineHeight: 1.4,
             margin: '1rem 0',
           }}

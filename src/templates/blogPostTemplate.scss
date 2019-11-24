@@ -100,6 +100,13 @@
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     font-size: 0.8rem;
   }
+
+  .info-bar {
+    display: block;
+    padding: 1rem;
+    border-left: 3px solid $primary-light;
+    margin: 1rem 0;
+  }
 }
 
 .anchor svg {
@@ -160,6 +167,10 @@ body.light-mode {
   .blog__divider {
     background: $primary-darker;
   }
+
+  .info-bar {
+    background: $lighter-grey;
+  }
 }
 
 // dark mode
@@ -183,5 +194,9 @@ body.dark-mode {
 
   .blog__divider {
     background: $primary-lighter;
+  }
+
+  .info-bar {
+    background: $dark-grey;
   }
 }

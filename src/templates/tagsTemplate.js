@@ -8,11 +8,11 @@ import SEO from '../components/SEO'
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
-  const { totalCount } = data.allMarkdownRemark
+  // const { totalCount } = data.allMarkdownRemark
 
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? '' : 's'
-  } tagged with "${tag}"`
+  // const tagHeader = `${totalCount} post${
+  //   totalCount === 1 ? '' : 's'
+  // } tagged with "${tag}"`
 
   return (
     <Layout>
