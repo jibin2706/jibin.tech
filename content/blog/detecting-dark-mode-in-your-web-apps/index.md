@@ -64,8 +64,8 @@ The syntax for using it will be
 
 @media (prefers-color-scheme: dark) {
   .selector {
-    background: white;
-    color: black;
+    background: black;
+    color: white;
   }
 }
 ```
