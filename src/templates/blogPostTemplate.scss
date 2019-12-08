@@ -26,7 +26,14 @@
   font-size: 0.9rem;
 
   span {
-    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+  }
+
+  svg {
+    margin-right: 8px;
+    width: 16px;
   }
 }
 
@@ -185,6 +192,10 @@ body.dark-mode {
 
   .blog__meta {
     color: $light-grey;
+    svg {
+      color: $light-grey;
+
+    }
   }
 
   .anchor svg {
