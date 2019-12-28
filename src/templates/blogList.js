@@ -8,24 +8,21 @@ const BlogList = ({ data, templateTitle }) => {
   return (
     <>
       {templateTitle === 'Articles' ? (
-        <h1
-          style={{
-            fontSize: '1.1rem',
-            fontWeight: 400,
-            lineHeight: 1.4,
-            margin: '1rem 0',
-          }}
-        >
-          I write about random stuff that I come across while developing for the
-          🕸 (web!)
+        <h1 className="main__list__header">
+          Articles
+          <span>
+            I write about random stuff that I come across while developing for
+            the web.
+          </span>
         </h1>
       ) : (
         <h1 className="main__list__header">{templateTitle}</h1>
       )}
+
       <main className="main__list">
         {blog.map(({ node }) => {
           let { id, frontmatter, fields } = node
-          let { title, date, info } = frontmatter
+          let { title, date, info, tags } = frontmatter
           let { slug } = fields
 
           return (
@@ -37,6 +34,13 @@ const BlogList = ({ data, templateTitle }) => {
                 <h2 className="blog__list__title">{title}</h2>
               </Link>
               <p className="blog__list__info">{info}</p>
+              {templateTitle === 'Articles' && (
+                <p className="blog__list__tags">
+                  {tags.map(tag => (
+                    <span key={tag}>#{tag}</span>
+                  ))}
+                </p>
+              )}
             </article>
           )
         })}

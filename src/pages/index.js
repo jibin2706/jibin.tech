@@ -25,8 +25,9 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date(formatString: "MMMM D, YYYY")
+            date(formatString: "MMM DD, YYYY")
             info
+            tags
           }
           fields {
             slug
