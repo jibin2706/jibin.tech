@@ -13,6 +13,7 @@ _This post is for total beginners who haven't heard or used any version control 
 Git is the most popular version control system out there. And there is a high chance you will be using it in your software development jobs as well. So it is essential to learn git if you are a developer. For me, it is something that took me very little time to learn but provided me a lot of value.
 
 For those, you don't know what git is <br />
+
 <div class="code-line">
     Git is a free and open-source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 </div>
@@ -25,7 +26,7 @@ How many of you keep/ had to keep your projects like this or similar to this pat
 
 ![Project structure without git](project-structure.png)
 
-Hahaha, I was one of them until I learned how to use git. You don't need to know everything about git when starting to use it in your projects. You can do a lot of powerful stuff using git, but when you start, you need 4-5 commands and learn as situations arise. 
+Hahaha, I was one of them until I learned how to use git. You don't need to know everything about git when starting to use it in your projects. You can do a lot of powerful stuff using git, but when you start, you need 4-5 commands and learn as situations arise.
 
 If you have not installed git, then go ahead and install it. Follow the instructions in this post about [installing git](https://git-scm.com/book/en/v1/Getting-Started-Installing-Git).
 
@@ -57,7 +58,7 @@ git init
 <br />
 
 **git add**
-<br/>
+<br />
 It adds the changed files to the staging area. You can add multiple files and folders all together at once by appending their path after the git add command.
 You can also use "." as a wildcard to add all the changed files to the staging area.
 
@@ -69,7 +70,7 @@ git add .
 
 <br />
 
-**git status** 
+**git status**
 <br />
 It gives information about the status of the files in your git repository. Whether the files have been added, updated, removed, renamed, and the staged files.
 

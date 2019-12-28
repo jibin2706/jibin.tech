@@ -45,7 +45,7 @@ In this post, we will be using NodeMCU devkit and Firebase for turning on and of
    </div>
 
 6) You also need to install the ArduinoJson library which can be downloaded from Arduino IDE itself.
-   <br>
+   <br />
    Note: The library version should not be 6.x.x use the latest 5.x.x
    <div class="code-line">
    Sketch > Include library > Manage Libraries > Search for ArduinoJson by Benoit Blanchon
@@ -65,15 +65,15 @@ In this post, we will be using NodeMCU devkit and Firebase for turning on and of
 
 ## Configuring Arduino IDE and firebase database to work together
 
-10. Now all the setup procedures are done let's start coding. <br>
+10. Now all the setup procedures are done let's start coding. <br />
     You need to create a macro for your database URL and firebase secret which you had copied in Step 8.
 
 <div class="code-line">
-#define FIREBASE_HOST "yourfirebasedatabase.firebaseio.com" <br/>
+#define FIREBASE_HOST "yourfirebasedatabase.firebaseio.com" <br />
 #define FIREBASE_AUTH "*****"
 </div>
 
-<br>
+<br />
 For simplicity, we will write a simple code for turning on and off led remotely
 
 ```cpp

@@ -58,7 +58,7 @@ There are many reasons to use RazorPay instead of some other payment gateways. S
          android:value="YOUR_API_KEY" />
 ```
 
-5.  Implementing PaymentResultListener / PaymentResultWithDataListener interface <br/>
+5.  Implementing PaymentResultListener / PaymentResultWithDataListener interface <br />
     If you want the payment details such as payment id, email and mobile number of the user, and various options that are passed to the checkout object like the amount, merchant name, description, etc at the end of the transaction you should use PaymentResultWithDataListener if not then PaymentResultListener should suffice.
 
     **onPaymentSuccess** and **onPaymentError** are abstract methods that must be implemented and called when the transaction is successful or failed respectively.
