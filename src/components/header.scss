@@ -1,12 +1,23 @@
 @import '../styles/colors';
 
 .header {
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  margin: 1rem 0 1.5rem;
+}
+
+.header--scroll {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 0.5rem;
+  margin: auto;
+  max-width: 800px;
 }
 
 .header__title {
@@ -15,23 +26,27 @@
 }
 
 .brand-logo {
-  width: 80px;
   margin: 0;
+  vertical-align: middle;
+  width: 2rem;
 }
 
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-  }
-
+@media (min-width: 768px) {
   .brand-logo {
-    margin-bottom: 0.5rem;
-    width: 60px;
+    width: 2.5rem;
   }
 }
 
-@media (max-width: 768px) {
+// light mode
+body.light-mode {
   .header {
-    margin: 2rem 0 1rem;
+    background: $white;
+  }
+}
+
+// dark mode
+body.dark-mode {
+  .header {
+    background: $darkest-grey;
   }
 }

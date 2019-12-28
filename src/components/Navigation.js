@@ -8,7 +8,7 @@ function Navigation() {
   return (
     <nav className="nav">
       <Link className="nav__item" to="/">
-        Home
+        Blog
       </Link>
       <Link className="nav__item" to="/contact/">
         Contact

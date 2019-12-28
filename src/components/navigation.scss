@@ -2,21 +2,26 @@
 
 .nav {
   font-size: 1rem;
+  font-weight: 600;
   display: flex;
   align-items: center;
 }
 
 .nav__item {
+  margin-left: 1.5rem;
   text-transform: uppercase;
 }
 
-.nav__item {
-  padding: 0.2rem;
-  margin: 0 1rem;
+// light mode
+body.light-mode {
+  .nav__item {
+    color: $grey-700;
+  }
 }
 
-@media (max-width: 768px) {
+// dark mode
+body.dark-mode {
   .nav__item {
-    margin: 0 0.5rem;
+    color: $grey-300;
   }
 }
