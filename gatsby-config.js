@@ -36,7 +36,7 @@ module.exports = {
     },
     // rss feed at /rss.xml
     {
-      resolve: `gatsby-plugin-feed`,
+      resolve: `gatsby-plugin-feed-mdx`,
       options: {
         // this base query will be merged with any queries in each feed
         query: `
@@ -53,8 +53,8 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
                 const siteUrl = site.siteMetadata.siteUrl
                 const postText = `
                 <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at blog.jibin.tech . You can read it online by <a href="${siteUrl +
@@ -73,7 +73,7 @@ module.exports = {
             },
             query: `
               {
-                allMarkdownRemark(
+                allMdx(
                   limit: 1000,
                   sort: { order: DESC, fields: [frontmatter___date] },
                   
@@ -127,11 +127,12 @@ module.exports = {
         head: true,
       },
     },
-    // transforming markdown in html
+    // transforming mdx to html
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
           // using images in markdown file
           {
             resolve: `gatsby-remark-images`,

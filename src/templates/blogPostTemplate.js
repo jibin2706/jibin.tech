@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import './blogPostTemplate.scss'
 
@@ -12,8 +13,8 @@ export default ({ data, pageContext }) => {
   // const GITHUB_REPO_NAME = 'blog.jibin.tech'
   // const GITHUB_BRANCH = 'develop'
 
-  const post = data.markdownRemark
-  let { timeToRead, frontmatter } = post
+  const post = data.mdx
+  let { frontmatter } = post
   let { slug } = post.fields
   let { title, date, info, tags, image } = frontmatter
   let { previous, next } = pageContext
@@ -63,16 +64,6 @@ export default ({ data, pageContext }) => {
               </svg>
               {date}{' '}
             </span>
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M23 5v13.883L22 19V3c-3.895.119-7.505.762-10.002 2.316C9.502 3.762 5.896 3.119 2 3v16l-1-.117V5H0v15h9.057c1.479 0 1.641 1 2.941 1 1.304 0 1.461-1 2.942-1H24V5h-1zM11 18.645c-1.946-.772-4.137-1.269-7-1.484V5.11c2.352.197 4.996.675 7 1.922v11.613zm9-1.484c-2.863.215-5.054.712-7 1.484V7.032c2.004-1.247 4.648-1.725 7-1.922v12.051z"></path>
-              </svg>{' '}
-              {timeToRead} mins read
-            </span>
           </div>
           <h2 className="blog__info">{info}</h2>
           <div className="blog__tags">
@@ -93,11 +84,15 @@ export default ({ data, pageContext }) => {
           showHeader={false}
         /> */}
 
+        {/* <main
+          
+        /> */}
         <main
           className="blog-body"
-          dangerouslySetInnerHTML={{ __html: post.html }}
           style={{ maxWidth: '720px', margin: 'auto' }}
-        />
+        >
+          <MDXRenderer className="blog-body">{post.body}</MDXRenderer>
+        </main>
       </article>
 
       <hr />
@@ -151,9 +146,8 @@ export default ({ data, pageContext }) => {
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      timeToRead
+    mdx(fields: { slug: { eq: $slug } }) {
+      body
       fields {
         slug
       }
