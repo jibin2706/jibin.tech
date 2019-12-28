@@ -8,20 +8,27 @@
 }
 
 .nav__item {
+  font-size: 16px;
   margin-left: 1.5rem;
   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .nav__item {
+    font-size: 18px;
+  }
 }
 
 // light mode
 body.light-mode {
   .nav__item {
-    color: $grey-700;
+    color: $grey-600;
   }
 }
 
 // dark mode
 body.dark-mode {
   .nav__item {
-    color: $grey-300;
+    color: $grey-400;
   }
 }

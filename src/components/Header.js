@@ -10,17 +10,17 @@ function Header() {
   const header = useRef()
 
   useEffect(() => {
-    window.addEventListener(
-      'scroll',
-      throttle(function(e) {
-        console.log(document.body.getBoundingClientRect())
-        if (document.body.getBoundingClientRect().y < -10) {
-          header.current && header.current.classList.add('header--scroll')
-        } else {
-          header.current && header.current.classList.remove('header--scroll')
-        }
-      }, 250)
-    )
+    // window.addEventListener(
+    //   'scroll',
+    //   throttle(function(e) {
+    //     console.log(document.body.getBoundingClientRect())
+    //     if (document.body.getBoundingClientRect().y < -50) {
+    //       header.current && header.current.classList.add('header--scroll')
+    //     } else {
+    //       header.current && header.current.classList.remove('header--scroll')
+    //     }
+    //   }, 200)
+    // )
   }, [])
 
   return (
