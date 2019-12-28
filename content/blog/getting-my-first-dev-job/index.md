@@ -8,7 +8,7 @@ tags: ['general']
 
 ![The Souled Store retail store](retail-store.jpg)
 
-<center><small>Retail outlet in Bandra</center></small>
+<center><small>Retail outlet in Bandra</small></center>
 
 I'm excited to announce that, I will be joining as a Junior Front-End Developer at [The Souled Store](https://thesouledstore.com). It is an e-commerce platform, where you can buy different brand merchandise and fashion products. And they are also expanding to retail outlets.
 
