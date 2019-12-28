@@ -72,32 +72,6 @@ The syntax for using it will be
 
 ### Easter egg
 
-<style>
-    .preference {
-        background: red;
-        padding: 0.5rem;
-    }
-
-    @media (prefers-color-scheme: light) {
-        .preference {
-            background: green;
-        }
-    }
-
-    @media (prefers-color-scheme: no-preference) {
-        .preference {
-            background: yellow;
-        }
-    }
-
-    @media (prefers-color-scheme: dark) {
-        .preference {
-            background: blue;
-        }
-    }
-
-</style>
-
 <p class="preference">
     Depending on the color preference of your system, the background will be set.
 </p>

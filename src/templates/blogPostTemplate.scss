@@ -214,3 +214,27 @@ body.dark-mode {
     background: $dark-grey;
   }
 }
+
+// deteching dark mode
+.preference {
+  background: red;
+  padding: 0.5rem;
+}
+
+@media (prefers-color-scheme: light) {
+  .preference {
+    background: green;
+  }
+}
+
+@media (prefers-color-scheme: no-preference) {
+  .preference {
+    background: yellow;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .preference {
+    background: blue;
+  }
+}
