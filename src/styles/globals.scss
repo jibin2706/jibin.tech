@@ -80,7 +80,7 @@ a:active > h2 {
 
 // light mode
 body.light-mode {
-  background-color: $lightest-grey;
+  background-color: $white;
   color: $darkest-grey;
   transition: background-color 0.2s ease;
 
@@ -112,7 +112,7 @@ body.light-mode {
   .btn--hover:hover,
   .btn--hover:focus {
     outline: none;
-    color: $lightest-grey;
+    color: $grey-100;
     border-color: $primary;
     background: $primary;
     transition: all 0.3s ease;
@@ -122,7 +122,7 @@ body.light-mode {
 // dark theme
 body.dark-mode {
   background-color: $darkest-grey;
-  color: $lightest-grey;
+  color: $white;
   transition: background-color 0.2s ease;
 
   a {
@@ -132,8 +132,9 @@ body.dark-mode {
   h1,
   h2,
   h3,
-  h4 {
-    color: $lighter-grey;
+  h4,
+  strong {
+    color: $grey-200;
   }
 
   hr {
@@ -144,7 +145,7 @@ body.dark-mode {
   li,
   td,
   th {
-    color: $light-grey;
+    color: $grey-400;
   }
 
   .btn {

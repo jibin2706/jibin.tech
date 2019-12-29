@@ -22,14 +22,12 @@
 
 body.light-mode {
   .tag__item {
-    background: $light-grey;
-    color: $lightest-grey;
+    background: $grey-300;
   }
 }
 
 body.dark-mode {
   .tag__item {
-    background: $darker-grey;
-    color: $lightest-grey;
+    background: $grey-800;
   }
 }
