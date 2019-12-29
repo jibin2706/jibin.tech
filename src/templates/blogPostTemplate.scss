@@ -16,6 +16,7 @@
   font-weight: 400;
   font-weight: 300;
   font-size: 1.2rem;
+  line-height: 1.25;
 }
 
 .blog__meta {
@@ -44,6 +45,7 @@
 
 .blog-body {
   margin-top: 1rem;
+  // line-height: 1.75;
 
   h1,
   h2,
@@ -138,6 +140,11 @@
 }
 
 @media (min-width: 768px) {
+  .blog-body {
+    margin-top: 1rem;
+    line-height: 1.75;
+  }
+
   .figure--left {
     float: left;
     margin-right: 1rem;

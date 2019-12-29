@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { Link } from 'gatsby'
-import { throttle } from 'lodash'
+// import { throttle } from 'lodash'
 import Navigation from './Navigation'
 import Logo from '../images/Logo.png'
 
