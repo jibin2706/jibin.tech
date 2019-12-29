@@ -91,8 +91,9 @@ body.light-mode {
   h1,
   h2,
   h3,
-  h4 {
-    color: $darkest-grey;
+  h4,
+  strong {
+    color: $grey-900;
   }
 
   p,
@@ -100,7 +101,7 @@ body.light-mode {
   td,
   th,
   figure {
-    color: $darker-grey;
+    color: $grey-800;
   }
 
   .btn {

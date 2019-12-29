@@ -54,7 +54,7 @@
 // light mode
 body.light-mode {
   .main__list__header {
-    color: $dark-grey;
+    color: $grey-800;
   }
 
   .blog__list__title {
@@ -64,12 +64,13 @@ body.light-mode {
     }
   }
 
-  .blog__list__meta {
-    color: $grey;
+  .blog__list__meta,
+  .blog__list__tags {
+    color: $grey-700;
   }
 
   .blog__list__info {
-    color: $dark-grey;
+    color: $grey-800;
   }
 }
 
