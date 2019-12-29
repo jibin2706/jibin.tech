@@ -1,0 +1,58 @@
+@import '../../styles/colors';
+
+.quote {
+  font-family: 'Georgia', serif;
+  font-size: 1.25rem;
+  margin: 0 0 4rem;
+  position: relative;
+
+  .cite {
+    font-family: 'Assistant', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    float: right;
+
+    &:before {
+      content: '\2015';
+    }
+  }
+
+  &:after {
+    content: '\201D';
+    opacity: 0.5;
+    font-size: 6em;
+    font-style: italic;
+    position: absolute;
+    top: -3rem;
+    right: 0;
+    z-index: -1;
+  }
+}
+
+body.light-mode {
+  .quote {
+    color: $grey-900;
+
+    .cite {
+      color: $grey-500;
+    }
+
+    &:after {
+      color: $grey-500;
+    }
+  }
+}
+
+body.dark-mode {
+  .quote {
+    color: $grey-300;
+
+    .cite {
+      color: $grey-500;
+    }
+
+    &:after {
+      color: $grey-500;
+    }
+  }
+}

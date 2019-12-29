@@ -56,6 +56,10 @@
     align-items: center;
   }
 
+  h4 {
+    margin-bottom: 0.5rem;
+  }
+
   p {
     margin-bottom: 2rem;
   }
@@ -77,19 +81,7 @@
     font-family: 'Georgia', serif;
     font-style: italic;
     line-height: 1.75;
-    margin: 0 auto;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
     position: relative;
-
-    &::before {
-      position: absolute;
-      content: '“';
-      font-size: 6rem;
-      top: 0;
-      left: 0;
-      opacity: 0.2;
-    }
 
     cite {
       display: block;
