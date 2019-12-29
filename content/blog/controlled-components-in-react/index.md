@@ -49,14 +49,15 @@ Although, you could use just the input field directly without initializing a sta
 ```
 
 **Controlled components**: Where the form input elements (input, textarea) triggers the onChange event handler when the user interacts with it. On which the onChange event handler sets a state which gets passed as props to the value attribute.
-    
+
 For the most part, you should rely on this approach, which the React documentation recommends. Unless you want to quickly create something, and want the ability to integrate with non-react code.
 
 ### Where you might want to use controlled inputs?
+
 Some of the use cases of controlled that I can think of are:
+
 1.  Instant form validations (Eg. comparing confirm password with password field)
 2.  Dynamic inputs (Eg. Changing user input to uppercase )
 3.  Instant preview (Eg. Creating markdown preview from the user input)
 
 All the above cases can be achieved using vanilla javascript, but controlling it by the state provides a simple and elegant way to do so. Having easy access to the input values allows you to develop interactive forms with a great user and developer experience.
-
