@@ -11,7 +11,10 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
     // sitemap generation
     {
       resolve: `gatsby-plugin-sitemap`,
@@ -26,7 +29,6 @@ module.exports = {
         configFile: 'robots-txt.config.js',
       },
     },
-    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -103,8 +105,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: { name: `blog`, path: `${__dirname}/content/blog` },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
