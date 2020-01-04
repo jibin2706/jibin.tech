@@ -13,10 +13,9 @@
 
 .blog__info {
   margin: 1rem 0;
-  font-weight: 400;
   font-weight: 300;
-  font-size: 1.2rem;
-  line-height: 1.25;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .blog__meta {
@@ -45,24 +44,40 @@
 
 .blog-body {
   margin-top: 1rem;
-  // line-height: 1.75;
+  line-height: 1.62;
 
   h1,
   h2,
   h3 {
-    margin: 4rem 0 1rem 0;
+    margin: 4rem 0 0 0;
     font-weight: 600;
-    line-height: 1.25;
     display: flex;
     align-items: center;
   }
 
   h4 {
-    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
   }
 
   p {
-    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  h1 + p,
+  h2 + p,
+  h3 + p {
+    margin-top: 1rem;
+  }
+
+  h4 + p {
+    margin-top: 0.5rem;
+  }
+
+  p + ul,
+  p + ol {
+    margin-top: 0.5rem;
   }
 
   img {
@@ -75,12 +90,14 @@
   }
 
   li {
-    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
   }
 
   ul > li {
     list-style: none;
   }
+
   ul > li::before {
     content: '»';
     display: block;
@@ -91,46 +108,12 @@
     text-align: right;
   }
 
-  blockquote {
-    font-family: 'Georgia', serif;
-    font-style: italic;
-    line-height: 1.75;
-    position: relative;
-
-    cite {
-      display: block;
-      text-align: end;
-      &::before {
-        content: '\2014';
-      }
-    }
+  ol > li {
+    margin-top: 1rem;
   }
 
-  // hr {
-  //   height: 0;
-  //   width: 10rem;
-  //   border: 0;
-  //   border-bottom: 1px solid rgba(0, 0, 0, 1);
-  //   margin: 2rem auto;
-  // }
-
-  /*hr::after {
-    content: "* *";
-    display: block;
-    position: relative;
-    bottom: 1.5em;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 2rem;
-}*/
-
-  .code-line {
-    display: block;
-    padding: 1rem;
-    border-left: 3px solid $primary-light;
-    margin: 1rem 0;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    font-size: 0.8rem;
+  hr {
+    margin: 1rem auto;
   }
 
   .info-bar {
@@ -138,6 +121,10 @@
     padding: 1rem;
     border-left: 3px solid $primary-light;
     margin: 1rem 0;
+  }
+
+  .gatsby-resp-image-wrapper {
+    margin-top: 1rem;
   }
 
   .gatsby-highlight {
@@ -164,6 +151,10 @@
 }
 
 @media (min-width: 768px) {
+  .blog__info {
+    font-size: 1.25rem;
+  }
+
   .blog-body {
     margin-top: 1rem;
     line-height: 1.75;
