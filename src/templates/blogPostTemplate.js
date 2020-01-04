@@ -105,13 +105,13 @@ export default ({ data, pageContext }) => {
       </article>
 
       <hr />
-      <SocialShare
+      {/* <SocialShare
         title={title}
         slug={slug}
         body={info}
         hashtags={tags}
         showHeader={true}
-      />
+      /> */}
 
       <section className="read-more">
         {previous && (
