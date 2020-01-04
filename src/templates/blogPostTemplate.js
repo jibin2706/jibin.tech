@@ -52,19 +52,28 @@ export default ({ data, pageContext }) => {
 
       <article className="blog">
         <header>
-          <h1 className="blog__title">{title}</h1>
           <div className="blog__meta">
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 viewBox="0 0 24 24"
-                fill="currentColor"
               >
-                <path d="M20 20h-4v-4h4v4zm-6-10h-4v4h4v-4zm6 0h-4v4h4v-4zM8 16H4v4h4v-4zm6 0h-4v4h4v-4zm-6-6H4v4h4v-4zm16-8v22H0V2h3v1c0 1.103.897 2 2 2s2-.897 2-2V2h10v1c0 1.103.897 2 2 2s2-.897 2-2V2h3zm-2 6H2v14h20V8zm-2-7a1 1 0 10-2 0v2a1 1 0 102 0V1zM6 3a1 1 0 11-2 0V1a1 1 0 112 0v2z"></path>
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                <path d="M16 2L16 6"></path>
+                <path d="M8 2L8 6"></path>
+                <path d="M3 10L21 10"></path>
               </svg>
               {date}{' '}
             </span>
           </div>
+          <h1 className="blog__title">{title}</h1>
           <h2 className="blog__info">{info}</h2>
           <div className="blog__tags">
             {tags.map(tag => (
@@ -153,7 +162,7 @@ export const query = graphql`
       }
       frontmatter {
         title
-        date(formatString: "MMMM D, YYYY")
+        date(formatString: "MMM DD, YYYY")
         info
         image {
           publicURL
