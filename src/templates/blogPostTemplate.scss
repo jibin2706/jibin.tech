@@ -78,6 +78,19 @@
     margin-bottom: 0.5rem;
   }
 
+  ul > li {
+    list-style: none;
+  }
+  ul > li::before {
+    content: '»';
+    display: block;
+    height: 0;
+    width: 2em;
+    margin-left: -2.5em;
+    font-weight: bolder;
+    text-align: right;
+  }
+
   blockquote {
     font-family: 'Georgia', serif;
     font-style: italic;
@@ -92,6 +105,24 @@
       }
     }
   }
+
+  // hr {
+  //   height: 0;
+  //   width: 10rem;
+  //   border: 0;
+  //   border-bottom: 1px solid rgba(0, 0, 0, 1);
+  //   margin: 2rem auto;
+  // }
+
+  /*hr::after {
+    content: "* *";
+    display: block;
+    position: relative;
+    bottom: 1.5em;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+}*/
 
   .code-line {
     display: block;
