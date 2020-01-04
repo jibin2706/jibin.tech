@@ -13,13 +13,7 @@ const Contact = () => (
     />
 
     <main className="contact">
-      <h1>
-        Hi
-        <span role="img" aria-labelledby="Hi">
-          👋
-        </span>
-        , it’s nice to meet you.
-      </h1>
+      <h1>Hello, it’s nice to meet you.</h1>
       <p>
         You have any projects that I could help with? Then feel free to reach
         out to me by filling the form. I’ll get back to you quickly.

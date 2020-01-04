@@ -30,13 +30,13 @@
 body.light-mode {
   .footer__social svg {
     width: 24px;
-    fill: $dark-grey;
+    fill: $grey-700;
   }
 }
 
 body.dark-mode {
   .footer__social svg {
     width: 24px;
-    fill: $light-grey;
+    fill: $grey-500;
   }
 }
