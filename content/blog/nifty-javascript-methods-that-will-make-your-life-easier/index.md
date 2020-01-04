@@ -76,7 +76,11 @@ Array.from('hello') // [ "h", "e", "l", "l", "o" ]
 const set = new Set(['foo', 'bar', 'baz', 'foo'])
 Array.from(set) // [ "foo", "bar", "baz" ]
 
-const map = new Map([[1, 2], [2, 4], [4, 8]])
+const map = new Map([
+  [1, 2],
+  [2, 4],
+  [4, 8],
+])
 Array.from(map) // [[1, 2], [2, 4], [4, 8]]
 ```
 
@@ -121,8 +125,7 @@ Object.keys(human) // [["name", "ABC"], ["age", 30]]
 
 ### Object.freeze()
 
-freeze() method disables the object's properties to be modified or added or deleted.
-
+freeze() method disables the object's properties to be modified or added or deleted. <br />
 **Note: In strict mode, this results in an error if you try to modify, add or delete properties/values.**
 
 ```js

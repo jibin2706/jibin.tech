@@ -6,6 +6,8 @@ image: 'featured-image.png'
 tags: ['web', 'javascript']
 ---
 
+import Codeline from '../../../src/components/blog/Codeline.js'
+
 ![Nextjs + Redux](featured-image.png)
 
 Next.js provides a particular function called **getInitialProps**, which allows you to pass objects to the pages before rendering it. These objects are mostly from API requests. Since the getInitialProps method runs both on server and client, it offers a great way of making your website isomorphic. It means that you get the benefits of both SSR and SPA.
@@ -45,9 +47,9 @@ index.getInitialProps({reduxStore}) {
 
 Here's the [source code](https://github.com/jibin2706/nextjs-redux) if you want to try it out in your machine.
 
-<div class="code-line">
-git clone https://github.com/jibin2706/nextjs-redux.git<br />
-cd nextjs-redux <br />
-npm install <br />
-npm run dev<br />
-</div>
+<Codeline>
+    git clone https://github.com/jibin2706/nextjs-redux.git<br />
+    cd nextjs-redux <br />
+    npm install <br />
+    npm run dev<br />
+</Codeline>

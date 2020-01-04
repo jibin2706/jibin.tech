@@ -40,7 +40,7 @@ Lately, many mobile manufacturers have been using AMOLED screens, which also hel
 
 ### Implementing in CSS
 
-**What if I say that you can implement dark mode with built-in CSS?**
+#### What if I say that you can implement dark mode with built-in CSS?
 
 Yes, with media queries. It can do a lot more than responsive designs.
 

@@ -8,7 +8,7 @@ tags: ['workflow']
 
 ![Payment](featured_image.jpg)
 
-<center><small>Photo by Damian Zaleski on Unsplash</small></center><br />
+<center><small>Photo by Damian Zaleski on Unsplash</small></center>
 
 As a web developer, I spent most of my time in the code editor, terminal, and in the browser. So having a good code editor will help increase productivity.
 

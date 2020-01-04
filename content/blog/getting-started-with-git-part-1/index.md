@@ -6,6 +6,8 @@ image: 'featured-image.jpg'
 tags: ['workflow']
 ---
 
+import Defination from '../../../src/components/blog/Defination.js'
+
 ![git history](featured-image.jpg)
 
 _This post is for total beginners who haven't heard or used any version control system or git._
@@ -14,9 +16,9 @@ Git is the most popular version control system out there. And there is a high ch
 
 For those, you don't know what git is <br />
 
-<div class="code-line">
+<Defination>
     Git is a free and open-source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
-</div>
+</Defination>
 
 In simpler terms, it helps to manage different versions of your code efficiently and also improves collaboration when working with many people efficiently.
 
@@ -44,8 +46,8 @@ The basic Git workflow goes something like this:
 
 ### Commands
 
-**git init**
-<br />
+#### git init
+
 This command initializes the directory in which it executes as a git repository. Mostly, you will be running "git init" as the first command except when the project is already initialized.
 
 It adds a .git folder into that directory. Git directory stores all the changes, commit history and all other stuff so don't delete or modify any content within it.
@@ -57,8 +59,8 @@ git init
 
 <br />
 
-**git add**
-<br />
+#### git add
+
 It adds the changed files to the staging area. You can add multiple files and folders all together at once by appending their path after the git add command.
 You can also use "." as a wildcard to add all the changed files to the staging area.
 
@@ -68,18 +70,14 @@ git add index.html contact.html
 git add .
 ```
 
-<br />
+#### git status
 
-**git status**
-<br />
 It gives information about the status of the files in your git repository. Whether the files have been added, updated, removed, renamed, and the staged files.
 
 Tip: check the git status command before you commit
 
-<br />
+#### git commit
 
-**git commit**
-<br />
 It permanently stores the changes made to the files in the staging area. You can relate to it as a checkpoint in a game.
 
 Once you commit the changes, you can revert to this checkpoint anytime you want.
@@ -90,13 +88,10 @@ You can use -m flag to write your commit message inline.
 git commit -m "initial commit."
 ```
 
-<br />
+#### git log
 
-**git log**
-<br />
 It gives you the commit history with all the previous commit messages.
 
-<br />
 <hr/>
 
 Start using these commands in your projects. At first you might struggle with it, but eventually, it will become second nature for you.

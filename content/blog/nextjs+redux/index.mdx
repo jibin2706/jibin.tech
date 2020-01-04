@@ -6,6 +6,9 @@ image: 'featured-image.png'
 tags: ['web', 'javascript']
 ---
 
+import Codeline from '../../../src/components/blog/Codeline.js'
+
+
 ![Next.js + Redux](featured-image.png)
 
 Integrating redux and nextjs requires some extra steps because you have to create a redux instance on every page, which is not the case in single-page applications. So, we need to create a wrapper that initializes redux store on all the pages.
@@ -159,9 +162,9 @@ index.getInitialProps = ({ reduxStore }) => {
 
 Here's the source code if you want to try it out in your machine.
 
-<div class="code-line">
- git clone https://github.com/jibin2706/nextjs-redux.git<br />
- cd next-redux-example <br />
- npm install <br />
- npm run dev<br />
-</div>
+<Codeline>
+  git clone https://github.com/jibin2706/nextjs-redux.git<br />
+  cd next-redux-example <br />
+  npm install <br />
+  npm run dev<br />
+</Codeline>

@@ -10,13 +10,13 @@ tags: ['android']
 
 There might be instances when you want to accept payment from the users and the best way to do it by integrating a payment service provider. There are more than 900 payment providers in the world. Some of the more popular ones are PayPal, Stripe, Paytm, etc. For small business owners and startups, relying on off-the-shelf payment service will serve better in terms of security, time, and money instead of developing their own.
 
-## What are payment service providers?
+### What are payment service providers?
 
 According to Wikipedia, a payment service provider (PSP) offers shops online services for accepting electronic payments by a variety of payment methods including credit card, bank-based payments such as direct debit, bank transfer, and real-time bank transfer based on online banking. Typically, they use a software as a service model and form a single payment gateway for their clients (merchants) to multiple payment methods.
 
 This post demonstrates how to use Razorpay Android SDK to implement payments in your android app.
 
-## Why RazorPay instead of other payment gateways?
+### Why RazorPay instead of other payment gateways?
 
 There are many reasons to use RazorPay instead of some other payment gateways. Some of those reasoning being
 
@@ -28,14 +28,15 @@ There are many reasons to use RazorPay instead of some other payment gateways. S
 - Good Documentation
 - Multiple currency transactions
 
-## Getting started
+### Getting started
 
 1.  You need to first create an account on Razorpay. If it already exists then login to [Razorpay](https://razorpay.com/)
 
 2.  From the Settings option from the dashboard, you can find the API key.
 
     **Note: Don't disclose this API key**
-    ![Razorpay Dashboard](dashboard.png)
+
+![Razorpay Dashboard](dashboard.png)
 
 3.  Razorpay dependency should be added to build.gradle file. It will then download the required packages need for the payment.
 
@@ -58,8 +59,9 @@ There are many reasons to use RazorPay instead of some other payment gateways. S
          android:value="YOUR_API_KEY" />
 ```
 
-5.  Implementing PaymentResultListener / PaymentResultWithDataListener interface <br />
-    If you want the payment details such as payment id, email and mobile number of the user, and various options that are passed to the checkout object like the amount, merchant name, description, etc at the end of the transaction you should use PaymentResultWithDataListener if not then PaymentResultListener should suffice.
+5.  Implementing PaymentResultListener / PaymentResultWithDataListener interface
+
+    If you want the payment details such as payment id, email and mobile number of the user, and various options that are passed to the checkout object like the amount, merchant name, description, etc at the end of the transaction you should use PaymentResultWithDataListener if not then PaymentResultListener should suffice. <br /><br />
 
     **onPaymentSuccess** and **onPaymentError** are abstract methods that must be implemented and called when the transaction is successful or failed respectively.
 

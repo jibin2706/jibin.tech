@@ -13,7 +13,7 @@ Even my blog and portfolio sites are hosting using gh-pages.
 
 **This post will provide you instructions for hosting sites in gh-pages with custom domains.**
 
-## Configuring CNAME on Github Repository
+### Configuring CNAME on Github Repository
 
 Go to your repository, which you want to host.
 
@@ -30,7 +30,7 @@ Yes, for that you need to create a new file **CNAME** in the repository containi
 
 ![CNAME file](cname.png)
 
-## Setting up DNS records
+### Setting up DNS records
 
 You need to add A records of Github pages servers on your DNS provider. (This can be done from where you bought your domain name).
 

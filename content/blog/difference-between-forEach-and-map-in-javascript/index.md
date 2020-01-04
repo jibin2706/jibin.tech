@@ -16,9 +16,9 @@ There are a couple of similarities between these two methods like they do not mu
 
 The syntax of forEach and map methods are quite similar. They both take a callback function with three parameters -
 
-1. current value
-2. index of the array
-3. the array itself
+- current value
+- index of the array
+- the array itself
 
 Let's understand it with some examples -
 
@@ -88,6 +88,5 @@ array
 
 ### References
 
-**[Array.prototype.forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)**
-
-**[Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)**
+- **[Array.prototype.forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)**
+- **[Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)**
