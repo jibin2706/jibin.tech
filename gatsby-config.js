@@ -15,7 +15,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-netlify`,
     // sitemap generation
     {
       resolve: `gatsby-plugin-sitemap`,
