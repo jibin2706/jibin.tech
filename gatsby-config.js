@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/blog`,
   siteMetadata: {
     title: `Blog — Jibin Thomas`,
     siteUrl: `https://blog.jibin.tech`,
