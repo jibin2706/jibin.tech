@@ -1,5 +1,5 @@
 module.exports = {
-  host: 'https://jibin.com/blog',
-  sitemap: 'https://jibin.com/blog/sitemap.xml',
+  host: 'https://blog.jibin.com',
+  sitemap: 'https://blog.jibin.com/sitemap.xml',
   policy: [{ userAgent: '*', disallow: '/tags/*' }],
 }
