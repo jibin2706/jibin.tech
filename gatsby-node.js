@@ -15,7 +15,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 }
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
   return graphql(`
     {
       allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -37,6 +37,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     createBlogPages(posts, createPage)
     createTagPages(posts, createPage)
+    createRedirectFile(createRedirect)
   })
 }
 
@@ -83,5 +84,14 @@ function createTagPages(posts, createPage) {
         tag,
       },
     })
+  })
+}
+
+function createRedirectFile(createRedirect) {
+  createRedirect({
+    fromPath: 'https://blog.jibin.tech/me',
+    toPath: 'https://jibin.tech',
+    isPermanent: true,
+    force: true,
   })
 }
