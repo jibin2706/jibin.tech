@@ -4,14 +4,11 @@ import PropTypes from 'prop-types'
 import './socialShare.scss'
 
 function SocialShare({ slug, title, body, hashtags, showHeader }) {
-  const url = `https://blog.jibin.tech${slug}`
+  const url = `https://jibin.tech${slug}`
   return (
     <section className="share-post">
       {showHeader && (
-        <p className="share-post__header">
-          Liked the article? Share it with your friends. I highly apperciate it
-          :)
-        </p>
+        <p className="share-post__header">Liked the article? Share it with your friends. I highly apperciate it :)</p>
       )}
       <div className="share-post__buttons">
         <a
