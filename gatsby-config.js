@@ -108,8 +108,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Blog by Jibin Thomas`,
-        short_name: `Blog`,
+        name: `Jibin Thomas`,
+        short_name: `Jibin Thomas`,
         start_url: `/`,
         background_color: `#F1F1F1`,
         theme_color: `#F1F1F1`,
