@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: `/blog`,
   siteMetadata: {
     title: `Blog — Jibin Thomas`,
     siteUrl: `https://blog.jibin.tech`,
@@ -69,9 +68,7 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [
-                    { 'content:encoded': edge.node.html + postText },
-                  ],
+                  custom_elements: [{ 'content:encoded': edge.node.html + postText }],
                 })
               })
             },

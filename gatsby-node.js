@@ -89,8 +89,22 @@ function createTagPages(posts, createPage) {
 
 function createRedirectFile(createRedirect) {
   createRedirect({
-    fromPath: 'https://blog.jibin.tech/me',
-    toPath: 'https://jibin.tech',
+    fromPath: 'https://blog.jibin.tech/',
+    toPath: 'https://jibin.tech/blog',
+    isPermanent: true,
+    force: true,
+  })
+
+  createRedirect({
+    fromPath: 'https://blog.jibin.tech/contact/',
+    toPath: 'https://jibin.tech/contact/',
+    isPermanent: true,
+    force: true,
+  })
+
+  createRedirect({
+    fromPath: 'https://blog.jibin.tech/tags/',
+    toPath: 'https://jibin.tech/tags/',
     isPermanent: true,
     force: true,
   })
