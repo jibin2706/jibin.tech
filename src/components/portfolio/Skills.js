@@ -6,7 +6,6 @@ import javascript from '../../images/tech/javascript.svg'
 import react from '../../images/tech/react.svg'
 import sass from '../../images/tech/sass.svg'
 import python from '../../images/tech/python.svg'
-import java from '../../images/tech/java.svg'
 
 import './skills.scss'
 
