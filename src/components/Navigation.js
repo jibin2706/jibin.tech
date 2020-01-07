@@ -8,6 +8,9 @@ function Navigation() {
   return (
     <nav className="nav">
       <Link className="nav__item" to="/">
+        About
+      </Link>
+      <Link className="nav__item" to="/blog">
         Blog
       </Link>
       <Link className="nav__item" to="/contact/">

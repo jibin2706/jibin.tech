@@ -1,0 +1,92 @@
+@import '../styles/colors';
+
+.portfolio {
+  padding: 0 1.5rem;
+}
+
+.portfolio__header {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 4rem 0 0;
+  text-align: center;
+}
+
+.portfolio__sub-header {
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.portfolio__section {
+  margin-top: 10rem;
+}
+
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__heading {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+
+.hero__sub-heading {
+  font-weight: 300;
+  margin: 0.5rem 0 0;
+}
+
+@media (min-width: 768px) {
+  .portfolio__header {
+    font-size: 2rem;
+  }
+
+  .portfolio__sub-header {
+    font-size: 1.5rem;
+  }
+
+  .hero__sub-heading {
+    line-height: 1.5;
+  }
+}
+
+body.light-mode {
+  .portfolio__header {
+    color: $grey-800;
+  }
+
+  .portfolio__sub-header {
+    color: $grey-700;
+  }
+
+  .hero__heading {
+    color: $grey-800;
+  }
+
+  .hero__sub-heading {
+    color: $grey-700;
+  }
+}
+
+body.dark-mode {
+  .portfolio__header {
+    color: $grey-400;
+  }
+
+  .portfolio__sub-header {
+    color: $grey-400;
+  }
+
+  .hero__heading {
+    color: $grey-200;
+  }
+
+  .hero__sub-heading {
+    color: $grey-400;
+  }
+}

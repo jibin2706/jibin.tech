@@ -1,0 +1,35 @@
+@import '../../styles/colors';
+
+.project-container {
+  margin-top: 2rem;
+}
+
+.project-header {
+  margin-bottom: 0;
+  letter-spacing: normal;
+}
+
+.project-stack {
+  font-weight: 300;
+  margin: 0.5rem 0 0.5rem;
+}
+
+body.light-mode {
+  .project-header {
+    color: $grey-800;
+  }
+
+  .project-stack {
+    color: $grey-700;
+  }
+}
+
+body.dark-mode {
+  .project-header {
+    color: $grey-300;
+  }
+
+  .project-stack {
+    color: $grey-400;
+  }
+}

@@ -1,0 +1,20 @@
+.skills__img {
+  filter: grayscale(0.5);
+  margin: 0;
+  max-width: 80px;
+  width: 100%;
+}
+
+.g-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3rem;
+  justify-items: center;
+  margin-top: 3rem;
+}
+
+@media (min-width: 550px) {
+  .g-3 {
+    grid-gap: 0;
+  }
+}

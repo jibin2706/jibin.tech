@@ -1,0 +1,23 @@
+@import '../../styles/colors';
+
+.post {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.date {
+  font-weight: 300;
+}
+
+body.light-mode {
+  .date {
+    color: $grey-800;
+  }
+}
+
+body.dark-mode {
+  .date {
+    color: $grey-300;
+  }
+}
