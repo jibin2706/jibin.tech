@@ -111,7 +111,7 @@ function createRedirectFile(createRedirect) {
 
   createRedirect({
     fromPath: 'https://blog.jibin.tech/*',
-    toPath: 'https://jibin.tech/blog/:splat',
+    toPath: 'https://jibin.tech/:splat',
     isPermanent: true,
     force: true,
   })
