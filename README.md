@@ -5,4 +5,9 @@
 or
 
     ``` npm run build ``` to develop the production build. The source files will be in the public directory.
+    
+### Production Links
+[Portfolio - jibin.tech](https://jibin.tech)
+
+[Blog - jibin.tech/blog](https://jibin.tech/blog)
 
