@@ -1,6 +1,6 @@
 @import '../styles/colors';
 @import '../styles/animation';
-@import url('https://fonts.googleapis.com/css?family=Assistant:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Overpass:300,400,600,700&display=swap');
 
 ::selection {
   color: white;
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: Assistant, sans-serif;
+  font-family: Overpass, sans-serif;
   line-height: 1.5;
 }
 
@@ -20,7 +20,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: Assistant, sans-serif;
+  font-family: Overpass, sans-serif;
   font-weight: 600;
   line-height: 1.25;
 }
