@@ -37,6 +37,7 @@
 }
 
 .hero__sub-heading {
+  font-size: 1.25rem;
   font-weight: 300;
   margin: 0.5rem 0 0;
 }
@@ -50,43 +51,47 @@
     font-size: 1.5rem;
   }
 
+  .hero__heading {
+    font-size: 2rem;
+  }
+
   .hero__sub-heading {
-    line-height: 1.5;
+    font-size: 1.5rem;
   }
 }
 
 body.light-mode {
   .portfolio__header {
-    color: $grey-800;
+    color: $grey-900;
   }
 
   .portfolio__sub-header {
-    color: $grey-700;
-  }
-
-  .hero__heading {
     color: $grey-800;
   }
 
+  .hero__heading {
+    color: $grey-900;
+  }
+
   .hero__sub-heading {
-    color: $grey-700;
+    color: $grey-800;
   }
 }
 
 body.dark-mode {
   .portfolio__header {
-    color: $grey-400;
-  }
-
-  .portfolio__sub-header {
-    color: $grey-400;
-  }
-
-  .hero__heading {
     color: $grey-200;
   }
 
+  .portfolio__sub-header {
+    color: $grey-300;
+  }
+
+  .hero__heading {
+    color: $grey-100;
+  }
+
   .hero__sub-heading {
-    color: $grey-400;
+    color: $grey-200;
   }
 }

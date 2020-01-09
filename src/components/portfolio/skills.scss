@@ -3,6 +3,11 @@
   margin: 0;
   max-width: 80px;
   width: 100%;
+  transition: filter 0.3s ease;
+}
+
+.skills__img:hover {
+  filter: none;
 }
 
 .g-3 {
