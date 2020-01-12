@@ -9,6 +9,7 @@
   margin: 0.5rem 0 0;
   font-size: 1.75rem;
   letter-spacing: -0.2px;
+  font-weight: 700;
 }
 
 .blog__info {
@@ -51,6 +52,10 @@
 .blog-body {
   margin-top: 1rem;
   line-height: 1.62;
+
+  a {
+    text-decoration: underline;
+  }
 
   h1,
   h2,
