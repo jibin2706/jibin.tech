@@ -2,11 +2,10 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
-import './blogPostTemplate.scss'
-
-import SEO from '../components/SEO'
 import Layout from '../components/layout'
-import SocialShare from '../components/SocialShare'
+import SEO from '../components/SEO'
+
+import './blogPostTemplate.scss'
 
 export default ({ data, pageContext }) => {
   // const GITHUB_USERNAME = 'jibin2706'
@@ -25,13 +24,7 @@ export default ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO
-        title={title}
-        description={info}
-        type="article"
-        imagePath={imageURL}
-        slug={slug}
-      />
+      <SEO title={title} description={info} type="article" imagePath={imageURL} slug={slug} />
 
       <script
         type="application/ld+json"
@@ -85,67 +78,24 @@ export default ({ data, pageContext }) => {
           <hr className="blog__divider" />
         </header>
 
-        {/* <SocialShare
-          title={title}
-          slug={slug}
-          body={info}
-          hashtags={tags}
-          showHeader={false}
-        /> */}
-
-        {/* <main
-          
-        /> */}
-        <main
-          className="blog-body"
-          style={{ maxWidth: '720px', margin: 'auto' }}
-        >
+        <main className="blog-body" style={{ maxWidth: '720px', margin: 'auto' }}>
           <MDXRenderer className="blog-body">{post.body}</MDXRenderer>
         </main>
       </article>
 
-      <hr />
-      {/* <SocialShare
-        title={title}
-        slug={slug}
-        body={info}
-        hashtags={tags}
-        showHeader={true}
-      /> */}
+      <hr className="blog__divider" />
 
       <section className="read-more">
         {previous && (
           <Link className="btn btn--full btn--hover" to={previous.fields.slug}>
-            <svg
-              fill="currentColor"
-              height="1em"
-              width="1em"
-              viewBox="0 0 40 40"
-              style={{
-                verticalAlign: 'sub',
-              }}
-            >
-              <path d="M33.4 18.4v3.2H13l9.3 9.4-2.3 2.4L6.6 20 20 6.6 22.3 9 13 18.4h20.4z" />
-            </svg>
-            &nbsp;
+            « &nbsp;
             {previous.frontmatter.title}
           </Link>
         )}
         {next && (
           <Link className="btn btn--full btn--hover" to={next.fields.slug}>
             {next.frontmatter.title}
-            &nbsp;
-            <svg
-              fill="currentColor"
-              height="1em"
-              width="1em"
-              viewBox="0 0 40 40"
-              style={{
-                verticalAlign: 'sub',
-              }}
-            >
-              <path d="M20 6.6L33.4 20 20 33.4 17.7 31l9.3-9.4H6.6v-3.2H27L17.7 9z" />
-            </svg>
+            &nbsp; »
           </Link>
         )}
       </section>

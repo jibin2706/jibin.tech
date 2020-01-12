@@ -43,7 +43,7 @@
 }
 
 .blog__divider {
-  height: 3px;
+  height: 2px;
   width: 20%;
   margin: 1rem auto;
 }
@@ -186,7 +186,7 @@
 // light mode
 body.light-mode {
   .blog__title {
-    color: $primary-darker;
+    color: $grey-900;
   }
 
   .blog__info {
@@ -203,7 +203,7 @@ body.light-mode {
   }
 
   .blog__divider {
-    background: $primary-darker;
+    background: $grey-700;
   }
 
   .info-bar {
@@ -214,7 +214,7 @@ body.light-mode {
 // dark mode
 body.dark-mode {
   .blog__title {
-    color: $primary-lighter;
+    color: $grey-100;
   }
 
   .blog__info {
@@ -231,7 +231,7 @@ body.dark-mode {
   }
 
   .blog__divider {
-    background: $primary-lighter;
+    background: $grey-600;
   }
 
   .info-bar {
