@@ -1,13 +1,13 @@
 @import '../../styles/colors';
 
 .post {
-  display: flex;
-  flex-direction: column;
   margin-bottom: 2rem;
   font-size: 1.125rem;
+  font-weight: 700;
 }
 
 .date {
+  display: block;
   font-weight: 300;
   font-size: 1rem;
 }

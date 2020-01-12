@@ -54,7 +54,7 @@ function PostTemplate({ title, url, date }) {
       <Link to={url} className="link">
         {title}
       </Link>
-      <span className="date"> {date}</span>
+      <span className="date">Posted on {date}</span>
     </p>
   )
 }
