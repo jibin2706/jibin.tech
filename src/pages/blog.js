@@ -7,8 +7,8 @@ import BlogList from '../templates/blogList'
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO
-      title="Blog — Jibin Thomas - Front-End Web Developer"
-      description="I write about programming which includes topics from JavaScript, CSS, Flutter, IoT and more. "
+      title="Blog Posts by Jibin Thomas"
+      description="I write about programming which includes topics from JavaScript, CSS, IoT and more. "
     />
     <BlogList data={data} templateTitle="Articles" />
   </Layout>

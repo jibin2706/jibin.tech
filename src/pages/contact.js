@@ -9,14 +9,14 @@ const Contact = () => (
   <Layout>
     <SEO
       title="Contact Jibin Thomas - Front-End Web Developer"
-      description="He is a Front-End Web developer from Mumbai. You can reach out to him at jibin.thomas2706@gmail.com"
+      description="He is available for freelancing contract work. You can reach out to him at jibin.thomas2706@gmail.com"
     />
 
     <main className="contact">
       <h1>Hello, it’s nice to meet you.</h1>
       <p>
-        You have any projects that I could help with? Then feel free to reach
-        out to me by filling the form. I’ll get back to you quickly.
+        You have any projects that I could help with? Then feel free to reach out to me by filling the form. I’ll get
+        back to you quickly.
       </p>
 
       <ContactForm />
@@ -57,13 +57,7 @@ function ContactForm() {
 
       <label>
         <span className="contact-form__label">Message</span>
-        <textarea
-          row="20"
-          cols="50"
-          placeholder="Your message"
-          name="message"
-          required
-        />
+        <textarea row="20" cols="50" placeholder="Your message" name="message" required />
       </label>
 
       <button className="btn btn--hover">SUBMIT</button>

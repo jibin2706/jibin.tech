@@ -7,8 +7,8 @@ function index() {
   return (
     <Layout>
       <SEO
-        title="Jibin Thomas - Front-End Web Developer"
-        description="I write about programming which includes topics from JavaScript, CSS, Flutter, IoT and more. "
+        title="Jibin Thomas — Front-End Developer and Casual Blogger"
+        description="Jibin Thomas is a Front-End Web developer based in Mumbai, India. You can reach out to him at jibin.thomas2706@gmail.com. "
       />
       <Portfolio />
     </Layout>
