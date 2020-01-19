@@ -2,6 +2,7 @@
 
 .portfolio {
   padding: 0 0.5rem;
+  animation: translate-up 1s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .portfolio__header {

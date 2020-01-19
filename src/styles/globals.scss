@@ -88,7 +88,7 @@ a:active > h2 {
 body.light-mode {
   background-color: $white;
   color: $darkest-grey;
-  transition: background-color 0.2s ease;
+  transition: background-color 200ms cubic-bezier(0.39, 0.575, 0.565, 1);
 
   a {
     color: $primary;
@@ -129,7 +129,7 @@ body.light-mode {
 body.dark-mode {
   background-color: $darkest-grey;
   color: $white;
-  transition: background-color 0.2s ease;
+  transition: background-color 200ms cubic-bezier(0.39, 0.575, 0.565, 1);
 
   a {
     color: $primary-lighter;

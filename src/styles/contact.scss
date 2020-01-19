@@ -32,7 +32,7 @@
 .contact {
   max-width: 600px;
   margin-top: 2rem;
-  animation: translate-up 500ms;
+  animation: translate-up 1s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .contact-form input,

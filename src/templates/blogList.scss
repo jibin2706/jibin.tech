@@ -1,7 +1,7 @@
 @import '../styles/colors';
 
-.main__list {
-  animation: translate-up 500ms ease;
+.blog-list {
+  animation: translate-up 1s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .main__list__header {
@@ -22,7 +22,7 @@
 }
 
 .blog__list {
-  margin-bottom: 2.5rem;
+  margin-bottom: 4rem;
 }
 
 .blog__list__title {
@@ -108,7 +108,7 @@ body.dark-mode {
   }
 
   .blog__list__title {
-    font-size: 1.4rem;
+    font-size: 1.375rem;
   }
 
   .blog__list__info {
