@@ -34,7 +34,7 @@ function SEO({ description, lang, keywords, title, type, imagePath, slug }) {
   const siteUrl = site.siteMetadata.siteUrl
   const metaDescription = description || site.siteMetadata.description
   const metaTwitterAuthor = site.siteMetadata.social.twitter
-  const metaImagePath = imagePath || '/icons/icon-256x256.png'
+  const metaImagePath = imagePath || '/icons/icon-512x512.png'
   const metaUrl = slug && siteUrl + slug
 
   return (
@@ -57,7 +57,11 @@ function SEO({ description, lang, keywords, title, type, imagePath, slug }) {
       <meta property="og:type" content={type} />
 
       {/* Twitter Card tags */}
-      <meta name="twitter:card" content="summary_large_image" />
+      {metaImagePath === '/icons/icon-512x512.png' ? (
+        <meta name="twitter:card" content="summary" />
+      ) : (
+        <meta name="twitter:card" content="summary_large_image" />
+      )}
       <meta name="twitter:creator" content={metaTwitterAuthor} />
       <meta name="twitter:site" content={metaTwitterAuthor} />
       <meta name="twitter:title" content={title} />
@@ -70,14 +74,7 @@ function SEO({ description, lang, keywords, title, type, imagePath, slug }) {
 SEO.defaultProps = {
   lang: `en`,
   type: 'website',
-  keywords: [
-    'Web Development',
-    'Freelancer',
-    'Front-End Developer',
-    'javascript',
-    'CSS',
-    'blog',
-  ],
+  keywords: ['Web Development', 'Freelancer', 'Front-End Developer', 'javascript', 'CSS', 'blog'],
 }
 
 SEO.propTypes = {
