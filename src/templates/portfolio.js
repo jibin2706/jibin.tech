@@ -5,6 +5,7 @@ import Projects from '../components/portfolio/Projects'
 import LatestPosts from '../components/portfolio/LatestPosts'
 
 import './portfolio.scss'
+import { Link } from 'gatsby'
 
 function portfolio() {
   return (
@@ -12,12 +13,12 @@ function portfolio() {
       <section className="hero">
         <h1 className="hero__heading">Hi, I'm Jibin Thomas</h1>
         <h2 className="hero__sub-heading">
-          I’m a front-end developer, directed towards developing good looking websites with a primary focus on
-          performance and future maintainability.
+          I’m a <Link to="/uses">front-end developer</Link>, directed towards developing good looking websites with a
+          primary focus on performance and future maintainability.
         </h2>
       </section>
 
-      <Skills />
+      {/* <Skills /> */}
       <Projects />
       <LatestPosts />
     </main>
