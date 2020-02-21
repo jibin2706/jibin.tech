@@ -53,11 +53,10 @@ export default ({ data, pageContext }) => {
           <div className="blog__tags">
             {tags.map(tag => (
               <Link key={tag} to={`/tags/${tag}`}>
-                #{tag} &nbsp;
+                {tag}
               </Link>
             ))}
           </div>
-          <hr className="blog__divider" />
         </header>
 
         <main className="blog-body" style={{ maxWidth: '720px', margin: 'auto' }}>

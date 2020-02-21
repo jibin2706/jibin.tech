@@ -41,6 +41,14 @@
 
 .blog__tags {
   margin-top: 0.5rem;
+
+  a {
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    letter-spacing: 0.5px;
+  }
 }
 
 .blog__divider {
@@ -202,6 +210,11 @@ body.light-mode {
     color: $grey-600;
   }
 
+  .blog__tags > a {
+    background: $grey-300;
+    color: $grey-700;
+  }
+
   .anchor svg {
     visibility: visible;
     fill: $light-grey;
@@ -227,6 +240,11 @@ body.dark-mode {
   }
 
   .blog__meta {
+    color: $grey-500;
+  }
+
+  .blog__tags > a {
+    background: $grey-800;
     color: $grey-500;
   }
 
