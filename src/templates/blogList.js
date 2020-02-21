@@ -30,13 +30,13 @@ const BlogList = ({ data, templateTitle }) => {
                 </div>
                 <h2 className="blog__list__title">{title}</h2>
                 <p className="blog__list__info">{info}</p>
-                {templateTitle === 'Articles' && (
+                {/* {templateTitle === 'Articles' && (
                   <p className="blog__list__tags">
                     {tags.map(tag => (
                       <span key={tag}>#{tag}</span>
                     ))}
                   </p>
-                )}
+                )} */}
               </article>
             </Link>
           )
