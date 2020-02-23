@@ -59,7 +59,7 @@ export default ({ data, pageContext }) => {
           </div>
         </header>
 
-        <main className="blog-body" style={{ maxWidth: '720px', margin: 'auto' }}>
+        <main className="blog-body" style={{ maxWidth: '800px', margin: 'auto' }}>
           <MDXRenderer className="blog-body">{post.body}</MDXRenderer>
         </main>
       </article>

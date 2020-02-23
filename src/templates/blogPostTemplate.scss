@@ -7,7 +7,7 @@
 
 .blog__title {
   margin: 0.5rem 0 0;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   letter-spacing: -0.2px;
   font-weight: 700;
 }
@@ -23,7 +23,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: 14px;
   margin-top: 0.5rem;
   text-transform: uppercase;
 
@@ -170,6 +170,14 @@
 }
 
 @media (min-width: 768px) {
+  .blog__title {
+    font-size: 1.5rem;
+  }
+
+  .blog__meta {
+    font-size: 16px;
+  }
+
   .blog__info {
     font-size: 1.25rem;
   }
@@ -187,12 +195,6 @@
   .figure--right {
     float: right;
     margin-left: 1rem;
-  }
-}
-
-@media (max-width: 550px) {
-  .blog__title {
-    font-size: 1.5rem;
   }
 }
 
