@@ -7,13 +7,13 @@ import './navigation.scss'
 function Navigation() {
   return (
     <nav className="nav">
-      <Link className="nav__item" to="/">
+      <Link className="nav__item" activeClassName="nav__item--active" to="/">
         About
       </Link>
-      <Link className="nav__item" to="/blog">
+      <Link className="nav__item" activeClassName="nav__item--active" to="/blog">
         Blog
       </Link>
-      <Link className="nav__item" to="/contact/">
+      <Link className="nav__item" activeClassName="nav__item--active" to="/contact/">
         Contact
       </Link>
       <ToggleThemeButton />

@@ -21,7 +21,10 @@
 }
 
 .blog__list {
-  margin-bottom: 3rem;
+  border-radius: 0.25rem;
+  margin-bottom: 2.5rem;
+  padding: 0.25rem;
+  transition: background 0.25s ease-in;
 }
 
 .blog__list__title {
@@ -57,6 +60,14 @@ body.light-mode {
     color: $grey-800;
   }
 
+  .main__list > a:focus,
+  .main__list > a:active {
+    outline: none;
+    & > .blog__list {
+      background: $grey-300;
+    }
+  }
+
   .blog__list__title {
     color: $primary-darker;
     &:hover {
@@ -78,6 +89,14 @@ body.light-mode {
 body.dark-mode {
   .main__list__header {
     color: $light-grey;
+  }
+
+  .main__list > a:focus,
+  .main__list > a:active {
+    outline: none;
+    & > .blog__list {
+      background: $grey-800;
+    }
   }
 
   .blog__list__title {

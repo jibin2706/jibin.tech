@@ -9,8 +9,17 @@
 
 .nav__item {
   font-size: 16px;
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   text-transform: uppercase;
+  padding: 0.25rem;
+}
+
+.nav__item:focus,
+.nav__item:hover,
+.nav__item--active {
+  border-radius: 0.25rem;
+  outline: none;
+  transition: background 0.2s ease;
 }
 
 @media (min-width: 768px) {
@@ -24,11 +33,23 @@ body.light-mode {
   .nav__item {
     color: $grey-600;
   }
+
+  .nav__item:focus,
+  .nav__item:hover,
+  .nav__item--active {
+    background: $grey-300;
+  }
 }
 
 // dark mode
 body.dark-mode {
   .nav__item {
     color: $grey-400;
+  }
+
+  .nav__item:focus,
+  .nav__item:hover,
+  .nav__item--active {
+    background: $grey-700;
   }
 }

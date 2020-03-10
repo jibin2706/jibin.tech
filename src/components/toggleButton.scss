@@ -1,10 +1,11 @@
 @import '../styles/colors';
 
 .toggle-button {
+  cursor: pointer;
   width: 24px;
   height: 24px;
   background: transparent;
   border: 0;
   padding: 0;
-  margin-left: 1.5rem;
+  margin-left: 1rem;
 }

@@ -8,6 +8,7 @@
 }
 
 html {
+  -webkit-tap-highlight-color: transparent;
   font-size: 18px;
 }
 
@@ -30,10 +31,8 @@ a {
 }
 
 *:focus,
-a:focus > h2,
-a:active,
-a:active > h2 {
-  outline: 2px solid $primary;
+a:active {
+  outline: 1px solid $primary;
 }
 
 .hidden {

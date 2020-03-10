@@ -25,12 +25,12 @@
   align-items: center;
   font-size: 14px;
   margin-top: 0.5rem;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 
-  span {
+  span:not(:first-child) {
     display: flex;
     align-items: center;
-    margin-right: 2rem;
+    margin: 0 0.25rem;
   }
 
   svg {
