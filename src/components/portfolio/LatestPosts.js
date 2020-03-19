@@ -9,6 +9,12 @@ function LatestPosts() {
       <h2 className="portfolio__header">Latest Posts</h2>
       <h3 className="portfolio__sub-header">I write some stuff that I learn</h3>
       <div className="blog__container">
+        <PostTemplate
+          title="Next.js + Redux without disabling prerendering"
+          url="preserve-prerendering-in-nextjs-when-using-redux/"
+          date="Feb 02, 2020"
+        />
+
         <PostTemplate title="2019 In Review" url="/2019-in-review/" date="Dec 30, 2019" />
 
         <PostTemplate title="Dark mode for the web" url="/detecting-dark-mode-in-your-web-apps/" date="Nov 24, 2019" />
