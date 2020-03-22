@@ -10,7 +10,7 @@ function Navigation() {
       <Link className="nav__item" activeClassName="nav__item--active" to="/">
         About
       </Link>
-      <Link className="nav__item" activeClassName="nav__item--active" to="/blog">
+      <Link className="nav__item" activeClassName="nav__item--active" to="/blog/">
         Blog
       </Link>
       <Link className="nav__item" activeClassName="nav__item--active" to="/contact/">

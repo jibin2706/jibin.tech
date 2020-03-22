@@ -47,7 +47,7 @@ function LatestPosts() {
 
         <p>
           Read more such
-          <Link to="/blog"> post here</Link>
+          <Link to="/blog/"> post here</Link>
         </p>
       </div>
     </section>
