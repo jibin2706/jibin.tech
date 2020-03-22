@@ -16,6 +16,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-netlify`,
+    `gatsby-transformer-json`,
     // sitemap generation
     {
       resolve: `gatsby-plugin-sitemap`,
@@ -97,7 +98,11 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: { name: `blog`, path: `${__dirname}/content/blog` },
     },
-
+    // json data
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: { name: `data`, path: `${__dirname}/src/data/` },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
