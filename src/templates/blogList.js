@@ -23,8 +23,8 @@ const BlogList = ({ data, templateTitle }) => {
           let { slug } = fields
 
           return (
-            <Link to={slug}>
-              <article key={id} className="blog__list">
+            <Link to={slug} key={id}>
+              <article className="blog__list">
                 <div className="blog__list__meta">
                   <small>{date}</small>
                 </div>
