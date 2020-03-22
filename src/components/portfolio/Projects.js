@@ -1,45 +1,49 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
 import './projects.scss'
 
 function Projects() {
+  const data = useStaticQuery(graphql`
+    query {
+      allProjectsJson {
+        edges {
+          node {
+            title
+            stack
+            source_link
+            project_link
+            description
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <section className="portfolio__section projects">
       <h2 className="portfolio__header">Projects</h2>
       <h3 className="portfolio__sub-header">Some fun projects that I have developed</h3>
-      <div className="project-container">
-        <h3 className="project-header">COVID-19 Dashboard</h3>
-        <h4 className="project-stack">Tech Stack - Next.js (React.js), SCSS Modules</h4>
-        <div>
-          <a className="project-links" href="https://github.com/jibin2706/jibin.tech">
-            Source Code
-          </a>
-          <a className="project-links" href="https://covid-dashboard.now.sh/">
-            Link
-          </a>
+
+      {data.allProjectsJson.edges.map(project => (
+        <div className="project-container">
+          <h3 className="project-header">{project.node.title}</h3>
+          <h4 className="project-stack">Tech Stack - {project.node.stack}</h4>
+          {project.node.description && <p dangerouslySetInnerHTML={{ __html: project.node.description }} />}
+          <div>
+            {project.node.source_link && (
+              <a className="project-links" href={project.node.source_link}>
+                Source Code
+              </a>
+            )}
+            {project.node.project_link && (
+              <a className="project-links" href={project.node.project_link}>
+                Source Code
+              </a>
+            )}
+          </div>
         </div>
-      </div>
-
-      <div className="project-container">
-        <h3 className="project-header">Portfolio + Blog</h3>
-        <h4 className="project-stack">Tech Stack - Gatsby (React.js), SCSS</h4>
-        <a className="project-links" href="https://github.com/jibin2706/jibin.tech">
-          Source Code
-        </a>
-      </div>
-
-      <div className="project-container">
-        <h3 className="project-header">Backslash Fest Website</h3>
-        <h4 className="project-stack">Tech Stack - HTML5, CSS3, jQuery</h4>
-        <a className="project-links" href="https://github.com/jibin2706/backslash">
-          Source Code
-        </a>
-      </div>
-
-      <div className="project-container">
-        <h3 className="project-header">Park Finder</h3>
-        <h4 className="project-stack">Tech Stack - Java (Native Android App), Firebase</h4>
-      </div>
+      ))}
     </section>
   )
 }
