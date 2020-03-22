@@ -6,14 +6,15 @@
 }
 
 .portfolio__header {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-weight: 700;
   margin: 4rem 0 0;
+  text-transform: uppercase;
   text-align: center;
 }
 
 .portfolio__sub-header {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 400;
   margin-top: 0.25rem;
   text-align: center;
@@ -62,11 +63,11 @@
 
 @media (min-width: 768px) {
   .portfolio__header {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .portfolio__sub-header {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
 
   .hero__heading {

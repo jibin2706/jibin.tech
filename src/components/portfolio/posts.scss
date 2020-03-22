@@ -1,9 +1,14 @@
 @import '../../styles/colors';
 
 .post {
-  margin-bottom: 2rem;
+  display: inline-block;
+  margin-bottom: 2.5rem;
+}
+
+.post__title {
   font-size: 1.125rem;
   font-weight: 700;
+  margin: 0.25rem 0;
 }
 
 .date {
@@ -13,13 +18,25 @@
 }
 
 body.light-mode {
-  .date {
-    color: $grey-800;
+  .post__title {
+    color: $primary-darker;
+    &:hover {
+      color: $primary;
+    }
   }
 }
 
 body.dark-mode {
-  .date {
-    color: $grey-300;
+  .post__title {
+    color: $primary-lighter;
+    &:hover {
+      color: $primary-light;
+    }
+  }
+}
+
+@media (min-width: 550px) {
+  .post__title {
+    font-size: 1.25rem;
   }
 }

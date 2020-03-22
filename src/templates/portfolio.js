@@ -1,10 +1,9 @@
 import React from 'react'
-
+import { Link } from 'gatsby'
 import Projects from '../components/portfolio/Projects'
-import LatestPosts from '../components/portfolio/LatestPosts'
+import FeaturedPosts from '../components/portfolio/FeaturedPosts'
 
 import './portfolio.scss'
-import { Link } from 'gatsby'
 
 function portfolio() {
   return (
@@ -38,7 +37,7 @@ function portfolio() {
       </section>
 
       <Projects />
-      <LatestPosts />
+      <FeaturedPosts />
     </main>
   )
 }
