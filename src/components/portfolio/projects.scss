@@ -39,3 +39,9 @@ body.dark-mode {
     color: $grey-400;
   }
 }
+
+@media (min-width: 550px) {
+  .project-header {
+    font-size: 1.25rem;
+  }
+}
