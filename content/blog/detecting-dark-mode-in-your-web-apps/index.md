@@ -4,6 +4,7 @@ date: 2019-11-24
 info: 'Enable dark mode for your users using prefers-color-scheme media query'
 image: 'featured-image.jpg'
 tags: ['web', 'css']
+featured: true
 ---
 
 Back in the 1970s, when there was no GUI, all you had was a black terminal to interact with the computer. Even with the rise of www, the web pages contained mainly black text with a white background.
