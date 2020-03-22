@@ -20,7 +20,23 @@
 }
 
 .portfolio__section {
-  margin-top: 10rem;
+  margin-top: 5rem;
+}
+
+.hero__social {
+  margin-top: 1rem;
+}
+
+.hero__social > a {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.hero__social svg {
+  width: 1.2rem;
+  &:hover {
+    fill: currentColor;
+  }
 }
 
 .hero {
@@ -78,6 +94,10 @@ body.light-mode {
   .hero__sub-heading {
     color: $grey-800;
   }
+
+  .hero__social svg {
+    fill: $grey-700;
+  }
 }
 
 body.dark-mode {
@@ -95,5 +115,9 @@ body.dark-mode {
 
   .hero__sub-heading {
     color: $grey-200;
+  }
+
+  .hero__social svg {
+    fill: $grey-400;
   }
 }

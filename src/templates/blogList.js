@@ -19,7 +19,7 @@ const BlogList = ({ data, templateTitle }) => {
       <main className="main__list">
         {blog.map(({ node }) => {
           let { id, frontmatter, fields } = node
-          let { title, date, info, tags } = frontmatter
+          let { title, date, info } = frontmatter
           let { slug } = fields
 
           return (

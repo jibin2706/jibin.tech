@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Skills from '../components/portfolio/Skills'
 import Projects from '../components/portfolio/Projects'
 import LatestPosts from '../components/portfolio/LatestPosts'
 
@@ -38,7 +37,6 @@ function portfolio() {
         </section>
       </section>
 
-      {/* <Skills /> */}
       <Projects />
       <LatestPosts />
     </main>
