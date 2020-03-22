@@ -38,7 +38,7 @@ function Projects() {
             )}
             {project.node.project_link && (
               <a className="project-links" href={project.node.project_link}>
-                Source Code
+                Link
               </a>
             )}
           </div>
