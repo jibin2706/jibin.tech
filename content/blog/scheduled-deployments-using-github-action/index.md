@@ -17,7 +17,7 @@ Check this [Github repo](https://github.com/sdras/awesome-actions), which has ex
 
 It's been a while since GitHub actions where announced, but I didn't have any use case to implement it any of my projects, until now 😅.
 
-I had built a static site that shows COVID-19 stats, but most of the data it showcased was retrieved at build time rather than runtime. I didn't want the client to call more than 200 REST API calls (because the endpoint of all the countries where different). So, I needed to build and deploy the project after a definite time to make sure the stats data were not stale.
+I had built a [static site](https://covid-dashboard.now.sh) that shows COVID-19 stats, but most of the data it showcased was retrieved at build time rather than runtime. I didn't want the client to call more than 200 REST API calls (because the endpoint of all the countries where different). So, I needed to build and deploy the project after a definite time to make sure the stats data were not stale.
 
 ### Implementing Scheduled Builds
 
