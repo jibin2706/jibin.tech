@@ -11,7 +11,7 @@ import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
 function SEO({ description, lang, keywords, title, type, imagePath, slug }) {
-  const { site } = useStaticQuery(
+  const { site, allFile } = useStaticQuery(
     graphql`
       query {
         site {
@@ -27,6 +27,14 @@ function SEO({ description, lang, keywords, title, type, imagePath, slug }) {
             }
           }
         }
+        allFile(filter: { name: { eq: "Logo-Square" } }) {
+          edges {
+            node {
+              publicURL
+              name
+            }
+          }
+        }
       }
     `
   )
@@ -34,7 +42,7 @@ function SEO({ description, lang, keywords, title, type, imagePath, slug }) {
   const siteUrl = site.siteMetadata.siteUrl
   const metaDescription = description || site.siteMetadata.description
   const metaTwitterAuthor = site.siteMetadata.social.twitter
-  const metaImagePath = imagePath || '/icons/icon-512x512.png'
+  const metaImagePath = imagePath || allFile.edges[0].node.publicURL
   const metaUrl = slug && siteUrl + slug
 
   return (
@@ -57,7 +65,7 @@ function SEO({ description, lang, keywords, title, type, imagePath, slug }) {
       <meta property="og:type" content={type} />
 
       {/* Twitter Card tags */}
-      {metaImagePath === '/icons/icon-512x512.png' ? (
+      {!imagePath ? (
         <meta name="twitter:card" content="summary" />
       ) : (
         <meta name="twitter:card" content="summary_large_image" />
