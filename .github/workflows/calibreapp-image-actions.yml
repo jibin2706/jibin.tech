@@ -1,9 +1,5 @@
 name: Compress images
 on: push
-with:
-    jpegQuality: "100"
-    pngQuality: "100"
-    webpQuality: "100"
 jobs:
   build:
     name: calibreapp/image-actions
@@ -16,3 +12,6 @@ jobs:
         uses: calibreapp/image-actions@master
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
+          jpegQuality: "100"
+          pngQuality: "100"
+          webpQuality: "100"
