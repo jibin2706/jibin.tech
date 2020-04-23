@@ -4,27 +4,27 @@
     "stack": "Next.js (React.js), SCSS Modules",
     "source_link": "https://github.com/jibin2706/covid-dashboard",
     "project_link": "https://covid-dashboard.now.sh/",
-    "description": ""
+    "description": "Static website to show stats of people affected with COVID-19 across the world."
   },
   {
     "title": "Portfolio + Blog",
-    "stack": "Gatsby (React.js), SCSS",
+    "stack": "Gatsby (React.js), SCSS, Markdown",
     "source_link": "https://github.com/jibin2706/jibin.tech",
     "project_link": "https://jibin.tech",
-    "description": ""
+    "description": "This project is the website that you are using right now. It has gone through a couple of design iteration, nothing fancy."
+  },
+  {
+    "title": "Park Finder",
+    "stack": "Java (Android App), Firebase (realtime database), C++ (micro-controller programming).",
+    "source_link": "",
+    "project_link": "",
+    "description": "This was my final year project. It's an IoT project using the NodeMCU micro-controller kit which detects if there is a car present in a particular parking space, and saves the status in the database. The Android app uses the data along with Google Maps API to plot markers showing free space across different locations."
   },
   {
     "title": "Backslash Fest Website",
     "stack": "HTML5, CSS3, jQuery",
     "source_link": "https://github.com/jibin2706/backslash",
     "project_link": "",
-    "description": ""
-  },
-  {
-    "title": "Park Finder",
-    "stack": "Java (Native Android App), Firebase",
-    "source_link": "",
-    "project_link": "",
-    "description": ""
+    "description": "Made this website for our college fest in 2018."
   }
 ]
