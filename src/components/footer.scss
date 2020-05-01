@@ -1,7 +1,8 @@
 @import '../styles/colors';
 
 .footer {
-  margin: 6rem 1rem 2rem 1rem;
+  margin: 6rem 0 0 0;
+  padding: 3rem 1rem;
   text-align: center;
 }
 
@@ -27,12 +28,22 @@
 }
 
 body.light-mode {
+  .footer {
+    background: $grey-100;
+    border-top: 1px solid rgba($color: $black, $alpha: 0.1);
+  }
+
   .footer__social svg {
     fill: $grey-700;
   }
 }
 
 body.dark-mode {
+  .footer {
+    background: #2c2c2c;
+    border-top: 1px solid rgba($color: $white, $alpha: 0.1);
+  }
+
   .footer__social svg {
     fill: $grey-400;
   }
