@@ -19,7 +19,7 @@
   left: 0;
   opacity: 0;
   transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.5s ease;
-  transform: translateX(-100vw);
+  transform: translateX(100vw);
   width: 100vw;
   z-index: 10;
 
@@ -39,19 +39,19 @@
 
 .nav__item {
   font-size: 16px;
+  font-weight: 700;
   margin-left: 1rem;
   text-transform: uppercase;
   padding: 0.25rem;
 }
 
 #nav-mobile .nav__item {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  margin: 0 0 1rem 0;
 }
 
 .nav__item:focus,
-.nav__item:hover,
-.nav__item--active {
+.nav__item:hover {
   border-radius: 0.25rem;
   outline: none;
   transition: background 0.2s ease;
@@ -75,20 +75,19 @@
 // light mode
 body.light-mode {
   #nav-mobile {
-    background: $grey-100;
+    background: $white;
   }
 
   .hamburger .bar {
-    background-color: $grey-500;
+    background-color: $grey-700;
   }
 
   .nav__item {
-    color: $grey-600;
+    color: $grey-700;
   }
 
   .nav__item:focus,
-  .nav__item:hover,
-  .nav__item--active {
+  .nav__item:hover {
     background: $grey-200;
   }
 }
@@ -108,8 +107,7 @@ body.dark-mode {
   }
 
   .nav__item:focus,
-  .nav__item:hover,
-  .nav__item--active {
+  .nav__item:hover {
     background: $grey-700;
   }
 }
@@ -136,7 +134,7 @@ body.dark-mode {
 
 .hamburger {
   top: 30px;
-  width: 25px;
+  width: 12px;
   height: 25px;
   position: relative;
 }
@@ -148,7 +146,7 @@ body.dark-mode {
   padding: 0;
   position: absolute;
   transition: all 0.4s ease-in-out;
-  width: 25px;
+  width: 20px;
 }
 
 .bar1 {
@@ -170,8 +168,8 @@ body.dark-mode {
 
 .checkbox1:checked + label > .hamburger > .bar1 {
   transform: rotate(45deg);
-  transform-origin: 6%;
-  width: 35px;
+  transform-origin: 0;
+  width: 30px;
 }
 
 .checkbox1:checked + label > .hamburger > .bar2 {
@@ -185,7 +183,7 @@ body.dark-mode {
 }
 
 .checkbox1:checked + label > .hamburger > .bar4 {
-  transform-origin: 6%;
+  transform-origin: 0;
   transform: rotate(-45deg);
-  width: 35px;
+  width: 30px;
 }
