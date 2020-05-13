@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
@@ -25,11 +26,11 @@ export default ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title={title} description={info} type="article" imagePath={imageURL} slug={slug} />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: `{
+      <Helmet>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `{
             "@context": "http://schema.org",
             "@type": "Article",
             "headline": "${title}",
@@ -40,8 +41,9 @@ export default ({ data, pageContext }) => {
             },
             "image": "${'https://blog.jibin.tech' + imageURL}"
           }`,
-        }}
-      />
+          }}
+        />
+      </Helmet>
 
       <article className="blog">
         <header>
@@ -51,7 +53,7 @@ export default ({ data, pageContext }) => {
           <h1 className="blog__title">{title}</h1>
           <h2 className="blog__info">{info}</h2>
           <div className="blog__tags">
-            {tags.map(tag => (
+            {tags.map((tag) => (
               <Link key={tag} to={`/tags/${tag}`}>
                 {tag}
               </Link>

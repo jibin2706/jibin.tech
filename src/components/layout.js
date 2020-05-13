@@ -1,19 +1,11 @@
 import React from 'react'
-
+import Helmet from 'react-helmet'
 import Header from './Header'
 import Footer from './Footer'
 
 const Layout = ({ children }) => (
   <>
-    <Header />
-    <div
-      style={{
-        maxWidth: '800px',
-        margin: 'auto',
-        padding: '0 0.75rem',
-        overflow: 'hidden',
-      }}
-    >
+    <Helmet>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -36,6 +28,16 @@ const Layout = ({ children }) => (
         }`,
         }}
       />
+    </Helmet>
+    <Header />
+    <div
+      style={{
+        maxWidth: '800px',
+        margin: 'auto',
+        padding: '0 0.75rem',
+        overflow: 'hidden',
+      }}
+    >
       <div>{children}</div>
     </div>
     <Footer />
