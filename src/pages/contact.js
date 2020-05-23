@@ -1,9 +1,8 @@
 import React from 'react'
+import Layout from '../components/layout'
 import SEO from '../components/SEO'
 
 import '../styles/contact.scss'
-
-import Layout from '../components/layout'
 
 const Contact = () => (
   <Layout>
@@ -14,10 +13,7 @@ const Contact = () => (
 
     <main className="contact">
       <h1>Hello, it’s nice to meet you.</h1>
-      <p>
-        You have any projects that I could help with? Then feel free to reach out to me by filling the form. I’ll get
-        back to you quickly.
-      </p>
+      <p>Whether you'd like to work together, or just want to say hi, I'd love to hear from you</p>
 
       <ContactForm />
     </main>
