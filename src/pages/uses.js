@@ -38,6 +38,9 @@ function index() {
           <li>
             <span className="uses-subheader">Next.js -</span> SSR in React!
           </li>
+          <li>
+            <span className="uses-subheader">Flask -</span> Lately having my fair share of time working in backend
+          </li>
         </section>
 
         <section className="uses-section">
@@ -54,6 +57,13 @@ function index() {
           <h2>Tools</h2>
           <li>
             <span className="uses-subheader">VSCode -</span> The best editor out there
+          </li>
+          <li>
+            <span className="uses-subheader">Notion -</span> All my initial thoughts I write down here. This products
+            keeps getting better and better
+          </li>
+          <li>
+            <span className="uses-subheader">Figma -</span> For light design and tweaking stuff
           </li>
         </section>
       </main>

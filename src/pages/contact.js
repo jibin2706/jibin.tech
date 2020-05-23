@@ -53,7 +53,7 @@ function ContactForm() {
 
       <label>
         <span className="contact-form__label">Message</span>
-        <textarea row="20" cols="50" placeholder="Your message" name="message" required />
+        <textarea row="20" cols="50" name="message" required />
       </label>
 
       <button className="btn btn--hover">SUBMIT</button>
