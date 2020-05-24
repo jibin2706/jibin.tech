@@ -11,7 +11,7 @@ function portfolio() {
       <section className="hero">
         <h1 className="hero__heading">Hi, I'm Jibin Thomas</h1>
         <h2 className="hero__sub-heading">
-          I’m a <Link to="/uses/">front-end developer</Link>, directed towards developing good looking websites with a
+          I’m a <Link to="/uses/">front-end developer</Link>, focused towards developing good looking websites with a
           primary focus on performance and future maintainability.
         </h2>
         <section className="hero__social">

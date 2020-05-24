@@ -12,8 +12,10 @@ const Contact = () => (
     />
 
     <main className="contact">
-      <h1>Hello, it’s nice to meet you.</h1>
-      <p>Whether you'd like to work together, or just want to say hi, I'd love to hear from you</p>
+      <h1 className="contact__heading">Hello, it’s nice to meet you.</h1>
+      <p className="contact__sub-heading">
+        Whether you'd like to work together, or just want to say hi, I'd love to hear from you
+      </p>
 
       <ContactForm />
     </main>
