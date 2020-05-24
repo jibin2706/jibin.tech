@@ -9,6 +9,12 @@
 }
 
 .project-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.project-heading {
   font-size: 1.125rem;
   font-weight: 700;
   margin-bottom: 0;
@@ -18,6 +24,9 @@
   font-weight: 400;
   line-height: 1.5;
   margin: 0.5rem 0 0.25rem;
+  & > span {
+    margin-right: 1rem;
+  }
 }
 
 .project-description {
@@ -28,13 +37,11 @@
 .project-links {
   border-radius: 6px;
   padding: 0.5rem 0.25rem;
-  margin-right: 2rem;
-  margin-left: -0.25rem;
-  transition: background 0.25s ease;
+  margin-left: 1rem;
 }
 
 body.light-mode {
-  .project-header {
+  .project-heading {
     color: $grey-800;
   }
 
@@ -44,25 +51,21 @@ body.light-mode {
 }
 
 body.dark-mode {
-  .project-header {
+  .project-heading {
     color: $grey-300;
   }
 
   .project-stack {
     color: $grey-400;
   }
-
-  .project-links:hover {
-    background: $grey-800;
-  }
 }
 
 @media (min-width: 550px) {
   .project-header {
-    font-size: 1.25rem;
+    justify-content: initial;
   }
 
-  .project-links:hover {
-    background: $grey-200;
+  .project-heading {
+    font-size: 1.25rem;
   }
 }
