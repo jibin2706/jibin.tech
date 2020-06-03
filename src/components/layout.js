@@ -32,10 +32,7 @@ const Layout = ({ children }) => (
     <Header />
     <div
       style={{
-        maxWidth: '800px',
-        margin: 'auto',
         padding: '0 0.75rem',
-        overflow: 'hidden',
       }}
     >
       <div>{children}</div>

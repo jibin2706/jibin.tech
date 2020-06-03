@@ -23,20 +23,13 @@ const BlogList = ({ data, templateTitle }) => {
           let { slug } = fields
 
           return (
-            <Link to={slug} key={id}>
-              <article className="blog__list">
+            <Link to={slug} key={id} className="blog__list">
+              <article>
                 <div className="blog__list__meta">
                   <small>{date}</small>
                 </div>
                 <h2 className="blog__list__title">{title}</h2>
                 <p className="blog__list__info">{info}</p>
-                {/* {templateTitle === 'Articles' && (
-                  <p className="blog__list__tags">
-                    {tags.map(tag => (
-                      <span key={tag}>#{tag}</span>
-                    ))}
-                  </p>
-                )} */}
               </article>
             </Link>
           )

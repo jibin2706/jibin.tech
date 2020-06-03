@@ -1,8 +1,10 @@
 @import '../styles/colors';
 
 .blog {
-  padding: 1rem 0;
   animation: translate-up 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+  padding: 1rem 0;
+  max-width: 800px;
+  margin: auto;
 }
 
 .blog__title {
@@ -25,7 +27,7 @@
   align-items: center;
   font-size: 14px;
   margin-top: 0.5rem;
-  // text-transform: uppercase;
+  text-transform: uppercase;
 
   span:not(:first-child) {
     display: flex;
@@ -160,6 +162,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  max-width: 800px;
+  margin: auto;
   margin-top: 3rem;
   a {
     margin: 0.5rem 0 0 0;
