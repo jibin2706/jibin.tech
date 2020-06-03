@@ -23,13 +23,13 @@ function Navigation() {
   return (
     <>
       <nav id="nav-desktop" className="nav">
-        <Link className="nav__item" to="/">
+        <Link className="nav__item" to="/" activeClassName="nav__item--active">
           Home
         </Link>
-        <Link className="nav__item" to="/blog/">
+        <Link className="nav__item" to="/blog/" activeClassName="nav__item--active">
           Blog
         </Link>
-        <Link className="nav__item" to="/contact/">
+        <Link className="nav__item" to="/contact/" activeClassName="nav__item--active">
           Contact
         </Link>
         <ToggleThemeButton />
@@ -51,13 +51,13 @@ function Navigation() {
       </label>
 
       <nav id="nav-mobile">
-        <Link className="nav__item" to="/">
+        <Link className="nav__item" to="/" activeClassName="nav__item--active">
           Home
         </Link>
-        <Link className="nav__item" to="/blog/">
+        <Link className="nav__item" to="/blog/" activeClassName="nav__item--active">
           Blog
         </Link>
-        <Link className="nav__item" to="/contact/">
+        <Link className="nav__item" to="/contact/" activeClassName="nav__item--active">
           Contact
         </Link>
         <ToggleThemeButton />

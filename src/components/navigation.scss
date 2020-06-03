@@ -38,11 +38,10 @@
 }
 
 .nav__item {
-  font-size: 16px;
   font-weight: 700;
-  margin-left: 1rem;
+  margin-left: 2.5rem;
   text-transform: uppercase;
-  padding: 0.25rem;
+  padding: 0.25rem 0;
 }
 
 #nav-mobile .nav__item {
@@ -52,9 +51,24 @@
 
 .nav__item:focus,
 .nav__item:hover {
-  border-radius: 0.25rem;
   outline: none;
-  transition: background 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.nav__item--active {
+  position: relative;
+
+  &:after {
+    content: '';
+    border-radius: 2px;
+    height: 4px;
+    bottom: 0.25rem;
+    left: 0;
+    opacity: 0.6;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
 }
 
 @media (min-width: 578px) {
@@ -65,10 +79,6 @@
 
   #nav-desktop {
     display: flex;
-  }
-
-  .nav__item {
-    font-size: 18px;
   }
 }
 
@@ -83,12 +93,20 @@ body.light-mode {
   }
 
   .nav__item {
-    color: $grey-700;
+    color: $grey-600;
   }
 
   .nav__item:focus,
   .nav__item:hover {
-    background: $grey-200;
+    color: $grey-900;
+  }
+
+  .nav__item--active {
+    color: $grey-900;
+
+    &::after {
+      background: $primary-darker;
+    }
   }
 }
 
@@ -108,7 +126,11 @@ body.dark-mode {
 
   .nav__item:focus,
   .nav__item:hover {
-    background: $grey-700;
+    color: $grey-100;
+  }
+
+  .nav__item--active::after {
+    background: $primary-lighter;
   }
 }
 
@@ -128,12 +150,13 @@ body.dark-mode {
   cursor: pointer;
   position: absolute;
   z-index: 100;
-  top: 0;
+  top: 50%;
   right: 25px;
+  transform: translateY(-50%);
 }
 
 .hamburger {
-  top: 30px;
+  top: 0;
   width: 12px;
   height: 25px;
   position: relative;
