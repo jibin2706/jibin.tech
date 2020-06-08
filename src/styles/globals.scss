@@ -55,6 +55,10 @@ a:active {
   text-decoration: underline;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .m-auto {
   margin: auto;
 }
@@ -85,6 +89,15 @@ a:active {
 .btn--full {
   font-weight: bold;
   width: 100%;
+}
+
+/* animation classes*/
+.drop-in--1 {
+  animation: drop-in 0.5s ease 200ms backwards;
+}
+
+.drop-in--2 {
+  animation: drop-in 0.8s ease 500ms backwards;
 }
 
 // light mode

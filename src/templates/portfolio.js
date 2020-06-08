@@ -9,12 +9,17 @@ function portfolio() {
   return (
     <main className="portfolio">
       <section className="hero">
-        <h1 className="hero__heading">Hi, I'm Jibin Thomas</h1>
-        <h2 className="hero__sub-heading">
-          I’m a <Link to="/uses/">front-end developer</Link>, focused towards developing good looking websites with a
-          primary focus on performance and future maintainability.
-        </h2>
-        <section className="hero__social">
+        <div className="overflow-hidden">
+          <h1 className="hero__heading drop-in--1">Hi, I'm Jibin Thomas</h1>
+        </div>
+        <div className="overflow-hidden">
+          <h2 className="hero__sub-heading drop-in--2">
+            I’m a <Link to="/uses/">front-end developer</Link>, focused towards developing good looking websites with a
+            primary focus on performance and future maintainability.
+          </h2>
+        </div>
+
+        <section className="hero__social drop-in--2 overflow-hidden">
           <a href="https://github.com/jibin2706">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <title>GitHub</title>
