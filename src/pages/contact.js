@@ -34,28 +34,29 @@ function ContactForm() {
     >
       <p className="hidden">
         <label>
-          Don’t fill this out if you're human: <input name="bot-field" />
+          Don’t fill this out if you're human:{' '}
+          <input name="bot-field" aria-label="Don't fill this out if you're human" />
         </label>
       </p>
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" aria-label="Don't fill this out if you're human" value="contact" />
       <label>
         <span className="contact-form__label">Full Name</span>
-        <input type="text" name="name" required />
+        <input type="text" name="name" aria-label="Full Name" required />
       </label>
 
       <label>
         <span className="contact-form__label">Email Address</span>
-        <input type="email" name="email" required />
+        <input type="email" name="email" aria-label="Email Address" required />
       </label>
 
       <label>
         <span className="contact-form__label">Company / Organization</span>
-        <input type="text" name="company_name" />
+        <input type="text" name="company_name" aria-label="Company name" />
       </label>
 
       <label>
         <span className="contact-form__label">Message</span>
-        <textarea row="20" cols="50" name="message" required />
+        <textarea row="20" cols="50" name="message" aria-label="Message" required />
       </label>
 
       <button className="btn btn--hover">SUBMIT</button>

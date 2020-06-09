@@ -58,6 +58,7 @@ function Navigation() {
       <input
         type="checkbox"
         id="checkbox1"
+        aria-label="Toggle Sidemenu on Mobile"
         className="checkbox1 visuallyHidden"
         onChange={() => toggleSidebar(!isSidebarOpen)}
       />
