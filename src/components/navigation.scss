@@ -160,11 +160,9 @@ body.dark-mode {
 
 #hamburger {
   cursor: pointer;
-  position: absolute;
+  position: relative;
+  padding: 0 1rem;
   z-index: 100;
-  top: 50%;
-  right: 25px;
-  transform: translateY(-50%);
 }
 
 .hamburger {
