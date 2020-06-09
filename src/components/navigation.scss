@@ -9,18 +9,14 @@
 }
 
 #nav-mobile {
-  height: 100vh;
-  display: inline-flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
   opacity: 0;
   transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.5s ease;
   transform: translateX(100vw);
-  width: 100vw;
+  width: 100%;
   z-index: 10;
 
   &.tap {
@@ -28,6 +24,15 @@
     transform: translateX(0px);
     transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.2s;
   }
+}
+
+.nav-mobile__container {
+  align-items: baseline;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin-left: 2.5rem;
 }
 
 .nav {
@@ -45,8 +50,11 @@
 }
 
 #nav-mobile .nav__item {
-  font-size: 1.25rem;
-  margin: 0 0 1rem 0;
+  font-size: 2rem;
+  font-size: calc(4vw + 1em);
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 1px;
+  text-transform: lowercase;
 }
 
 .nav__item:focus,
@@ -60,9 +68,9 @@
 
   &:after {
     content: '';
-    border-radius: 2px;
     height: 4px;
-    bottom: 0.25rem;
+    bottom: 0.5em;
+    bottom: calc(0.5em - 4px);
     left: 0;
     opacity: 0.6;
     position: absolute;
@@ -85,7 +93,7 @@
 // light mode
 body.light-mode {
   #nav-mobile {
-    background: $white;
+    background: $off-white;
   }
 
   .hamburger .bar {
@@ -129,8 +137,12 @@ body.dark-mode {
     color: $grey-100;
   }
 
-  .nav__item--active::after {
-    background: $primary-lighter;
+  .nav__item--active {
+    color: $grey-100;
+
+    &::after {
+      background: $primary-lighter;
+    }
   }
 }
 

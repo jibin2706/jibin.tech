@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'gatsby'
 import ToggleThemeButton from './toggleViewButton'
 
@@ -6,13 +6,33 @@ import './navigation.scss'
 
 function Navigation() {
   const [isSidebarOpen, toggleSidebar] = useState(false)
+  const mobileNavLinks = useRef(null)
+
   useEffect(() => {
     const navbar = document.getElementById('nav-mobile')
     const checkbox = document.getElementById('checkbox1')
+    const links = mobileNavLinks.current.children
+
     if (isSidebarOpen) {
       navbar.classList.add('tap')
       document.documentElement.style.overflow = 'hidden'
       checkbox.checked = true
+      // staggered animation of nav items using js animate api
+      Array.from(links).forEach((link, index) => {
+        link.animate(
+          [
+            { opacity: 0, transform: 'translateX(-100px)' },
+            { opacity: 1, transform: 'translateX(0px)' },
+          ],
+          {
+            delay: 500,
+            duration: (index + 1) * 300,
+            easing: 'cubic-bezier(0.39, 0.575, 0.565, 1)',
+            fill: 'backwards',
+            iterations: 1,
+          }
+        )
+      })
     } else {
       navbar.classList.remove('tap')
       document.documentElement.style.overflow = 'auto'
@@ -51,16 +71,18 @@ function Navigation() {
       </label>
 
       <nav id="nav-mobile">
-        <Link className="nav__item" to="/" activeClassName="nav__item--active">
-          Home
-        </Link>
-        <Link className="nav__item" to="/blog/" activeClassName="nav__item--active">
-          Blog
-        </Link>
-        <Link className="nav__item" to="/contact/" activeClassName="nav__item--active">
-          Contact
-        </Link>
-        <ToggleThemeButton />
+        <div className="nav-mobile__container" ref={mobileNavLinks}>
+          <Link className="nav__item" to="/" activeClassName="nav__item--active">
+            Home
+          </Link>
+          <Link className="nav__item" to="/blog/" activeClassName="nav__item--active">
+            Blog
+          </Link>
+          <Link className="nav__item" to="/contact/" activeClassName="nav__item--active">
+            Contact
+          </Link>
+          <ToggleThemeButton />
+        </div>
       </nav>
     </>
   )
