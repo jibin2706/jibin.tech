@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 3rem 1rem;
-  animation: translate-up 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation: fade 1s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .uses-header {
