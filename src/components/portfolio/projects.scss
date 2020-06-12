@@ -1,11 +1,33 @@
 @import '../../styles/colors';
 
 .project-container {
-  margin-top: 3rem;
+  background: rgba($color: $off-white, $alpha: 0.1);
+  border-radius: 4px;
+  padding: 2rem 1rem;
+  position: relative;
+  margin-top: 1rem;
+  min-height: 300px;
 
-  &:first-of-type {
-    margin-top: 2rem;
+  &:hover > .project-image {
+    filter: grayscale(0);
+    opacity: 0.4;
   }
+}
+
+.project-image {
+  border-radius: 4px;
+  filter: grayscale(100);
+  object-fit: cover;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  transition: filter 0.5s ease, opacity 0.5s ease;
+  z-index: -1;
 }
 
 .project-header {
@@ -37,7 +59,7 @@
 .project-links {
   border-radius: 6px;
   padding: 0.5rem 0.25rem;
-  margin-left: 1rem;
+  margin-left: 0.25rem;
 }
 
 body.light-mode {
@@ -61,11 +83,11 @@ body.dark-mode {
 }
 
 @media (min-width: 550px) {
-  .project-header {
-    justify-content: initial;
-  }
-
   .project-heading {
     font-size: 1.25rem;
+  }
+
+  .project-container {
+    margin-top: 0rem;
   }
 }

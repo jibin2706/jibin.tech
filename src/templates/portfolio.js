@@ -8,7 +8,7 @@ import './portfolio.scss'
 function portfolio() {
   return (
     <main className="portfolio">
-      <section className="hero">
+      <section className="hero mw-800 mx-auto">
         <div className="overflow-hidden">
           <h1 className="hero__heading drop-in--1">Hi, I'm Jibin Thomas</h1>
         </div>

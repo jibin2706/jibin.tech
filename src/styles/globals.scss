@@ -39,6 +39,19 @@ a:active {
   outline: 1px solid $primary;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mw-800 {
+  max-width: 800px;
+}
+
+.mw-1200 {
+  max-width: 1200px;
+}
+
 .hidden {
   visibility: hidden;
   width: 0;

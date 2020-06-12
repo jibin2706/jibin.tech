@@ -25,7 +25,7 @@ function FeaturedPosts() {
   `)
 
   return (
-    <section className="blog">
+    <section className="mw-800 mx-auto">
       <h2 className="portfolio__header">Featured Posts</h2>
       <h3 className="portfolio__sub-header">I write about stuff that I learn</h3>
       {data.allMdx.edges.map((post) => (
