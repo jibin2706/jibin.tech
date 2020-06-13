@@ -17,6 +17,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-netlify`,
     `gatsby-transformer-json`,
+    `gatsby-plugin-twitter`,
     // sitemap generation
     {
       resolve: `gatsby-plugin-sitemap`,
@@ -51,11 +52,12 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMdx } }) => {
-              return allMdx.edges.map(edge => {
+              return allMdx.edges.map((edge) => {
                 const siteUrl = site.siteMetadata.siteUrl
                 const postText = `
-                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at blog.jibin.tech . You can read it online by <a href="${siteUrl +
-                  edge.node.fields.slug}">clicking here</a>.)</div>
+                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at blog.jibin.tech . You can read it online by <a href="${
+                  siteUrl + edge.node.fields.slug
+                }">clicking here</a>.)</div>
               `
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
