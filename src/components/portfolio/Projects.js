@@ -30,7 +30,12 @@ function Projects() {
         {data.allProjectsJson.edges.map((project) => (
           <div className="project-container" key={project.node.title}>
             {project.node.image && (
-              <img className="project-image" src={require(`../../images/projects/${project.node.image}`)} alt="" />
+              <img
+                className="project-image"
+                src={require(`../../images/projects/${project.node.image}`)}
+                alt={project.node.title}
+                loading="lazy"
+              />
             )}
             <div className="project-header">
               <h3 className="project-heading">{project.node.title}</h3>
