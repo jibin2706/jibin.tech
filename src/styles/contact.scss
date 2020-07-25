@@ -1,80 +1,22 @@
-@import '../styles/colors';
+@import './variables';
 @import '../styles/animation';
 
 .contact {
   animation: fade 1s cubic-bezier(0.39, 0.575, 0.565, 1);
   max-width: 800px;
-  margin: 2rem auto;
+  margin: 10rem auto;
+  padding: 0 2rem;
 }
 
 .contact__heading {
   font-weight: 700;
   font-size: 1.75rem;
-  margin-bottom: 0rem;
+  margin-bottom: 0;
 }
 
 .contact__sub-heading {
   font-size: 1.25rem;
   font-weight: 300;
   line-height: 1.5;
-  margin: 0.5rem 0 0;
-}
-
-.contact-form label {
-  display: block;
-  margin: 1.5rem 0;
-}
-
-.contact-form input,
-.contact-form textarea,
-.contact-form select,
-.contact-form button {
-  background: transparent;
-  border-radius: 3px;
-  max-width: 100%;
-  width: 500px;
-  padding: 0.5rem;
-}
-
-.contact-form textarea {
-  resize: none;
-  min-height: 200px;
-}
-
-.contact-form__label {
-  display: block;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.contact-form input,
-.contact-form textarea,
-.contact-form select {
-  border: 2px solid $grey-600;
-}
-
-// light mode
-body.light-mode {
-  .contact-form__label {
-    color: $dark-grey;
-  }
-}
-
-// dark mode
-body.dark-mode {
-  .contact-form__label {
-    color: $light-grey;
-  }
-
-  .contact-form input,
-  .contact-form textarea,
-  .contact-form select {
-    caret-color: $light-grey;
-    color: $light-grey;
-  }
-
-  ::placeholder {
-    color: $grey-600;
-  }
+  margin: 0.5rem 0 2rem;
 }

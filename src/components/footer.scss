@@ -1,40 +1,24 @@
-@import '../styles/colors';
+@import './variables';
 
 .footer {
-  margin: 6rem 0 0 0;
-  padding: 3rem 1rem;
+  padding: 5rem 1rem 2rem;
   text-align: center;
+
+  &__social > a {
+    display: inline-block;
+    width: 1.5rem;
+    margin: 0.75rem;
+  }
+
+  &__copyright {
+    text-align: center;
+    & > * {
+      margin: 0 0 1rem;
+    }
+  }
 }
 
-.footer__social > a {
-  display: inline-block;
-}
-
+// colors
 .footer__social svg {
-  width: 1.5rem;
-  margin: 0 0.5rem;
-  &:hover {
-    fill: currentColor;
-  }
-}
-
-.footer__copyright {
-  margin: 1rem 0 0;
-}
-
-.footer__end {
-  font-size: 0.9rem;
-  margin: 0.5rem 0 0;
-}
-
-body.light-mode {
-  .footer__social svg {
-    fill: $grey-700;
-  }
-}
-
-body.dark-mode {
-  .footer__social svg {
-    fill: $grey-400;
-  }
+  fill: $grey-400;
 }

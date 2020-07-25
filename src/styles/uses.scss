@@ -1,4 +1,9 @@
 .uses {
+  margin-top: 10rem;
+  padding: 0 1.5rem;
+}
+
+.uses__grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 3rem 1rem;
@@ -32,7 +37,7 @@
 }
 
 @media (min-width: 768px) {
-  .uses {
+  .uses__grid {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem 1rem;
   }

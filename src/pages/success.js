@@ -14,10 +14,8 @@ function Success() {
       </Helmet>
       <div className="message-success">
         <img className="message-success__image" src={Mail} alt="message send" />
-        <h1>I got your message!</h1>
         <h2 className="message--secondary">
-          Thank you very much for your message. I will get back to you as soon
-          as possible.
+          Got your message :) <br /> I will get back to you as soon as possible.
         </h2>
       </div>
     </Layout>

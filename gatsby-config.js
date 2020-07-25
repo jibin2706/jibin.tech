@@ -14,10 +14,15 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-netlify`,
     `gatsby-transformer-json`,
     `gatsby-plugin-twitter`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ['src/styles/'],
+      },
+    },
     // sitemap generation
     {
       resolve: `gatsby-plugin-sitemap`,
@@ -52,7 +57,7 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMdx } }) => {
-              return allMdx.edges.map((edge) => {
+              return allMdx.edges.map(edge => {
                 const siteUrl = site.siteMetadata.siteUrl
                 const postText = `
                 <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at blog.jibin.tech . You can read it online by <a href="${
