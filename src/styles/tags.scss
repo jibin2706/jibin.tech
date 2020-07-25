@@ -1,6 +1,8 @@
-@import 'colors';
+@import './variables';
 
 .tag {
+  margin: 10rem auto;
+  max-width: 400px;
   text-align: center;
 }
 
@@ -20,14 +22,7 @@
   border-radius: 4px;
 }
 
-body.light-mode {
-  .tag__item {
-    background: $grey-300;
-  }
-}
-
-body.dark-mode {
-  .tag__item {
-    background: $grey-800;
-  }
+// colors
+.tag__item {
+  background: $grey-800;
 }

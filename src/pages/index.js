@@ -1,7 +1,7 @@
 import React from 'react'
 import SEO from '../components/SEO'
 import Layout from '../components/layout'
-import Portfolio from '../templates/portfolio'
+import Portfolio from '../components/container/portfolio'
 
 function index() {
   return (

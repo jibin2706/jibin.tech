@@ -1,7 +1,7 @@
-@import '../../styles/colors';
+@import './variables';
 
 .project-container {
-  background: rgba($color: $off-white, $alpha: 0.1);
+  background: rgba($color: $grey-200, $alpha: 0.1);
   border-radius: 4px;
   padding: 2rem 1rem;
   position: relative;
@@ -62,26 +62,6 @@
   margin-left: 0.25rem;
 }
 
-body.light-mode {
-  .project-heading {
-    color: $grey-800;
-  }
-
-  .project-stack {
-    color: $grey-700;
-  }
-}
-
-body.dark-mode {
-  .project-heading {
-    color: $grey-300;
-  }
-
-  .project-stack {
-    color: $grey-400;
-  }
-}
-
 @media (min-width: 550px) {
   .project-heading {
     font-size: 1.25rem;
@@ -90,4 +70,13 @@ body.dark-mode {
   .project-container {
     margin-top: 0rem;
   }
+}
+
+// colors
+.project-heading {
+  color: $grey-300;
+}
+
+.project-stack {
+  color: $grey-400;
 }

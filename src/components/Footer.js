@@ -38,12 +38,11 @@ function Footer() {
         </a>
       </section>
 
-      <section>
-        <p className="footer__copyright">&copy; - Coded by hand and headaches</p>
-        <p className="footer__end">
+      <section className="footer__copyright">
+        <p>&copy; - Coded by hand and headaches</p>
+        <p>
           This site is built with <a href="https://gatsbyjs.org/">Gatsby.js </a> and hosted on{' '}
-          <a href="https://netlify.com/">Netlify</a>. The source code is hosted on{' '}
-          <a href="https://github.com/jibin2706/blog.jibin.tech">Github</a>.
+          <a href="https://netlify.com/">Netlify</a>.
         </p>
       </section>
     </footer>

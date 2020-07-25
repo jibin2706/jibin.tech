@@ -1,6 +1,11 @@
-@import '../styles/colors';
-@import '../styles/animation';
-@import url('https://fonts.googleapis.com/css?family=Overpass:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+@import 'variables.scss';
+@import 'animation';
+
+:root {
+  --sans-serif: 'Source Sans Pro', sans-serif;
+  --serif: 'DM Serif Display', serif;
+}
 
 ::selection {
   color: white;
@@ -9,11 +14,13 @@
 
 html {
   -webkit-tap-highlight-color: transparent;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 body {
-  font-family: Overpass, sans-serif;
+  background-color: $grey-900;
+  color: $white;
+  font-family: Source Sans Pro, sans-serif;
   line-height: 1.5;
 }
 
@@ -21,13 +28,18 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: Overpass, sans-serif;
+  font-family: Source Sans Pro, sans-serif;
   font-weight: 600;
   line-height: 1.25;
 }
 
 a {
+  color: inherit;
   text-decoration: none;
+}
+
+hr {
+  background: $grey-700;
 }
 
 strong {
@@ -37,6 +49,24 @@ strong {
 *:focus,
 a:active {
   outline: 1px solid $primary;
+}
+
+ul {
+  padding-left: var(--spacing-5);
+  li {
+    list-style: none;
+    position: relative;
+    &::before {
+      content: '';
+      background-color: $primary-yellow;
+      border-radius: 50%;
+      height: 8px;
+      width: 8px;
+      position: absolute;
+      left: -1.5rem;
+      top: 0.5rem;
+    }
+  }
 }
 
 .mx-auto {
@@ -49,6 +79,10 @@ a:active {
 }
 
 .mw-1200 {
+  max-width: 1200px;
+}
+
+.mw-1800 {
   max-width: 1200px;
 }
 
@@ -91,17 +125,30 @@ a:active {
 .btn {
   text-align: center;
   padding: 12px 20px;
-  border: 2px solid;
+  border: 1px solid $grey-400;
   text-decoration: none;
   background: transparent;
   transition: all 0.1s linear;
-  border-radius: 3px;
   cursor: pointer;
+}
+
+.btn--filled {
+  background: $primary-red;
+  color: white;
 }
 
 .btn--full {
   font-weight: bold;
   width: 100%;
+}
+
+.btn--hover:hover,
+.btn--hover:focus {
+  outline: none;
+
+  background: $primary-red;
+  border-color: $primary-red;
+  transition: all 0.1s linear;
 }
 
 /* animation classes*/
@@ -111,96 +158,4 @@ a:active {
 
 .drop-in--2 {
   animation: drop-in 0.8s ease 200ms backwards;
-}
-
-// light mode
-body.light-mode {
-  background-color: $off-white;
-  color: $darkest-grey;
-  transition: background-color 200ms cubic-bezier(0.39, 0.575, 0.565, 1);
-
-  a {
-    color: $primary;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  strong {
-    color: $grey-900;
-  }
-
-  p,
-  li,
-  td,
-  th,
-  figure {
-    color: $grey-800;
-  }
-
-  .btn {
-    color: $darker-grey;
-    border-color: $darker-grey;
-  }
-
-  .btn--hover:hover,
-  .btn--hover:focus {
-    outline: none;
-    color: $grey-100;
-    border-color: $primary;
-    background: $primary;
-    transition: all 0.3s ease;
-  }
-}
-
-// dark theme
-body.dark-mode {
-  background-color: $darkest-grey;
-  color: $white;
-  transition: background-color 200ms cubic-bezier(0.39, 0.575, 0.565, 1);
-
-  a {
-    color: $primary-lighter;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  strong {
-    color: $grey-200;
-  }
-
-  hr {
-    background: $grey-700;
-  }
-
-  p,
-  li,
-  td,
-  th {
-    color: $grey-400;
-  }
-
-  .btn {
-    color: $light-grey;
-    border-color: $grey-700;
-  }
-
-  .btn--hover:hover,
-  .btn--hover:focus {
-    outline: none;
-    color: $darkest-grey;
-    background: $primary-lighter;
-    border-color: $primary-lighter;
-    transition: all 0.1s linear;
-  }
-}
-
-// media query
-@media screen and (max-width: 550px) {
-  html {
-    font-size: 18px;
-  }
 }

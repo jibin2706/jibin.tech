@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
+import ContactForm from '../components/common/ContactForm'
 
 import '../styles/contact.scss'
 
@@ -12,56 +13,14 @@ const Contact = () => (
     />
 
     <main className="contact">
-      <h1 className="contact__heading">Hello, it’s nice to meet you.</h1>
+      <h1 className="contact__heading">Hello, it’s nice to meet you!</h1>
       <p className="contact__sub-heading">
-        Whether you'd like to work together, or just want to say hi, I'd love to hear from you
+        Whether you'd like to work together, or just want to say hi, I'd love to hear from you.
       </p>
 
       <ContactForm />
     </main>
   </Layout>
 )
-
-function ContactForm() {
-  return (
-    <form
-      className="contact-form"
-      name="contact"
-      method="POST"
-      netlify-honeypot="bot-field"
-      data-netlify="true"
-      action="/success"
-    >
-      <p className="hidden">
-        <label>
-          Don’t fill this out if you're human:{' '}
-          <input name="bot-field" aria-label="Don't fill this out if you're human" />
-        </label>
-      </p>
-      <input type="hidden" name="form-name" aria-label="Don't fill this out if you're human" value="contact" />
-      <label>
-        <span className="contact-form__label">Full Name</span>
-        <input type="text" name="name" aria-label="Full Name" required />
-      </label>
-
-      <label>
-        <span className="contact-form__label">Email Address</span>
-        <input type="email" name="email" aria-label="Email Address" required />
-      </label>
-
-      <label>
-        <span className="contact-form__label">Company / Organization</span>
-        <input type="text" name="company_name" aria-label="Company name" />
-      </label>
-
-      <label>
-        <span className="contact-form__label">Message</span>
-        <textarea row="20" cols="50" name="message" aria-label="Message" required />
-      </label>
-
-      <button className="btn btn--hover">SUBMIT</button>
-    </form>
-  )
-}
 
 export default Contact

@@ -46,7 +46,7 @@ export default ({ data, pageContext }) => {
       </Helmet>
 
       <article className="blog">
-        <header>
+        <header className="blog__header">
           <div className="blog__meta">
             <span>{date} </span>
           </div>

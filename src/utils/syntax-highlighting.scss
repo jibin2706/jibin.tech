@@ -15,7 +15,6 @@ pre[class*='language-'] {
   word-spacing: normal;
   word-break: normal;
   line-height: 1.5rem;
-  font-size: 15px;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -29,7 +28,7 @@ pre[class*='language-'] {
 
 /* Code blocks */
 pre[class*='language-'] {
-  padding: 1em;
+  padding: 1.5rem;
   margin: 0.5em 0;
   overflow: auto;
   border-radius: 0.3em;
