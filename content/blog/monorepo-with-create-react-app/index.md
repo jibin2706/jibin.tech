@@ -88,12 +88,12 @@ It will install all the dependencies across all the packages into the root. You 
 
 ### Transpiling JSX into js from the shared component package
 
-As we are not transpiling (converting JSX into createElements) from our shared components package, we will rely on cra to do the transpilation step. It makes the process a whole lot easier. To do so, we have to customize babel by using `react-app-rewired` and `customized-cra` packages. It allows you to customize webpack configuration without ejecting react-scripts.
+As we are not transpiling (converting JSX into createElements) from our shared components package, we will rely on cra to do the transpilation step. It makes the process a whole lot easier. To do so, we have to customize babel by using `react-app-rewired` and `customize-cra` packages. It allows you to customize webpack configuration without ejecting react-scripts.
 
-### Installing and configuring react-app-rewired and customized-cra
+### Installing and configuring react-app-rewired and customize-cra
 
 ```bash
-yarn workspace @jibin/app add -D react-app-rewired customized-cra
+yarn workspace @jibin/app add -D react-app-rewired customize-cra
 ```
 
 ```json
