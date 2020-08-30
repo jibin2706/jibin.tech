@@ -18,7 +18,7 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: {fields: [frontmatter___date], order: DESC}, filter: {frontmatter: {listing: {ne: false}}}) {
       totalCount
       edges {
         node {
@@ -36,5 +36,5 @@ export const query = graphql`
         }
       }
     }
-  }
+  }  
 `
