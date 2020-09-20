@@ -63,6 +63,9 @@ function Navigation() {
           <Link className="nav__item" to="/contact/" activeClassName="nav__item--active">
             Contact
           </Link>
+          <Link className="nav__item" to="/uses/" activeClassName="nav__item--active">
+            Uses
+          </Link>
         </div>
       </nav>
     </>
