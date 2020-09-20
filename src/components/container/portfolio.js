@@ -42,8 +42,8 @@ function Portfolio() {
           <div className="about-me__description">
             <p>
               I'm a frontend developer based in Mumbai, India. I was born in 1998 and raised in Mumbai. I graduated from
-              Wilson College in Bachelor of Science in Information Technology, tho everything that I know for the web is
-              through self-learning.
+              Mumbai University at Wilson College in, Bachelor of Science in Information Technology. Although,
+              everything that I know about the web is through self-learning.
             </p>
             <p>Currently, I'm working at Pepper Content as a Frontend Developer working on things that I love.</p>
             <p>
