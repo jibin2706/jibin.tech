@@ -117,6 +117,7 @@ pre[class*='language-'] > code[class*='language-'] {
   z-index: 1;
 }
 
+// custom additions
 .gatsby-highlight-code-line {
   background-color: #dddddd;
   display: block;
@@ -125,4 +126,36 @@ pre[class*='language-'] > code[class*='language-'] {
   padding-right: 1em;
   padding-left: 0.75em;
   border-left: 0.25em solid #999999;
+}
+
+.gatsby-code-title {
+  margin-bottom: -0.6rem;
+  padding: 0.25rem 1rem;
+  background-color: #dddddd;
+  color: #5c6e74;
+  font-size: 14px;
+  font-weight: 400;
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+  z-index: 0;
+}
+
+.gatsby-code-title {
+  margin-top: 1.5rem;
+}
+
+.gatsby-highlight {
+  margin-top: 1.5rem;
+}
+
+.gatsby-code-title + .gatsby-highlight {
+  margin-top: 0;
+}
+
+@media (max-width: 800px) {
+  pre[class*='language-'],
+  code[class*='language-'],
+  .gatsby-code-title {
+    border-radius: 0;
+  }
 }

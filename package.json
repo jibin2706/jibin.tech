@@ -22,6 +22,7 @@
     "gatsby-plugin-sitemap": "^2.4.12",
     "gatsby-plugin-twitter": "^2.3.10",
     "gatsby-remark-autolink-headers": "^2.3.11",
+    "gatsby-remark-code-titles": "^1.1.0",
     "gatsby-remark-copy-linked-files": "^2.3.12",
     "gatsby-remark-images": "^3.3.28",
     "gatsby-remark-prismjs": "^3.5.11",

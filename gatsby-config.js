@@ -160,6 +160,7 @@ module.exports = {
           //   },
           // },
           // code highlighting
+          'gatsby-remark-code-titles',
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
