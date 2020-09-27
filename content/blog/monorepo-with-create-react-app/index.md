@@ -24,8 +24,7 @@ For this post, I will be showing you how to set up a project with the create-rea
 
 On the root of the project, create a package.json file with the following config.
 
-```json
-// package.json
+```json:title=package.json
 {
   "name": "Project Name",
   "private": true,
@@ -63,8 +62,7 @@ cd common
 touch package.json
 ```
 
-```json
-// packages/common/package.json
+```json:title=packages/common/package.json
 {
   "name": "@jibin/common",
   "version": "0.0.1",
@@ -96,8 +94,7 @@ As we are not transpiling (converting JSX into createElements) from our shared c
 yarn workspace @jibin/app add -D react-app-rewired customize-cra
 ```
 
-```json
-// packages/app/package.json
+```json:title=packages/app/package.json
 "scripts": {
 -   "start": "react-scripts start",
 +   "start": "react-app-rewired start",
@@ -111,7 +108,7 @@ yarn workspace @jibin/app add -D react-app-rewired customize-cra
 
 Now we can override babel config by creating the config-overrides.js file in the app package.
 
-```js
+```js:title=config-overrides.js
 var path = require('path')
 
 const { override, babelInclude } = require('customize-cra')
@@ -136,7 +133,7 @@ So that's it, now you can create component inside `common/` and import inside ap
 
 Example
 
-```js
+```js:title=packages/common/Component.js
 // import ComponentName from 'package-name/<directory>/<file-name>'
 // In the demo package name is @jibin/common, and file is directly inside the package
 import ComponentName from '@jibin/common/Test'
@@ -146,7 +143,7 @@ import ComponentName from '@jibin/common/Test'
 
 This step is not mandatory, but it makes the developer experience a whole lot better. To enable IntelliSense, create jsconfig.json in the app package with the following configuration.
 
-```json
+```json:title=jsconfig.json
 {
   "compilerOptions": {
     "baseUrl": ".",
