@@ -18,7 +18,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions
   return graphql(`
     {
-      allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+      allMdx(sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { listing: { ne: false } } }) {
         edges {
           node {
             frontmatter {
