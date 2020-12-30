@@ -1,5 +1,3 @@
-@import './variables';
-
 #nav-desktop {
   display: none;
 }
@@ -28,7 +26,7 @@
 
 .nav-mobile__container {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  background: $primary-blue;
+  background: var(--primary-blue);
   border-radius: 8px;
   display: inline-flex;
   flex-direction: column;
@@ -69,7 +67,7 @@
 
   &::before {
     content: '';
-    background-color: $primary-yellow;
+    background-color: var(--primary-yellow);
     height: 3px;
     width: 80%;
     position: absolute;
@@ -170,22 +168,22 @@
 
 // colors
 .hamburger .bar {
-  background-color: $grey-500;
+  background-color: var(--grey-500);
 }
 
 .nav__item {
-  color: $grey-400;
+  color: var(--grey-400);
 }
 
 .nav__item:focus,
 .nav__item:hover {
-  color: $grey-100;
+  color: var(--grey-100);
 }
 
 .nav__item--active {
-  color: $grey-100;
+  color: var(--grey-100);
 
   &::after {
-    background: $primary-lighter;
+    background: var(--primary-lighter);
   }
 }

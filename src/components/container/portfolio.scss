@@ -1,5 +1,3 @@
-@import './variables';
-
 .portfolio > section {
   padding: 5rem 2rem;
 }
@@ -35,7 +33,7 @@
     position: relative;
     &::before {
       content: '';
-      background-color: $primary-yellow;
+      background-color: var(--primary-yellow);
       height: 5px;
       width: 80%;
       position: absolute;
@@ -47,11 +45,11 @@
 
 /* specific section styling */
 .about-me {
-  background: $primary-blue;
+  background: var(--primary-blue);
 }
 
 .work {
-  background: $secondary-blue;
+  background: var(--secondary-blue);
 
   &__details {
     margin-bottom: 2rem;
@@ -71,7 +69,7 @@
 }
 
 .featured-posts {
-  background: $primary-blue;
+  background: var(--primary-blue);
 
   &__grid {
     display: grid;
@@ -81,11 +79,11 @@
 }
 
 .contact-me {
-  background-color: $secondary-blue;
+  background-color: var(--secondary-blue);
 }
 
 /* media queries */
-@media (min-width: $bp-md) {
+@media (min-width: 768px) {
   .portfolio section {
     padding: 10rem 2rem;
   }
@@ -103,7 +101,7 @@
   }
 }
 
-@media (min-width: $bp-lg) {
+@media (min-width: 1024px) {
   .hero {
     &__heading {
       font-size: var(--text-5xl);
@@ -139,9 +137,9 @@
 
 // colors
 .hero__heading {
-  color: $primary-red;
+  color: var(--primary-red);
 }
 
 .hero__sub-heading {
-  color: $grey-200;
+  color: var(--grey-200);
 }

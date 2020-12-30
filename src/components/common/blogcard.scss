@@ -1,8 +1,6 @@
-@import './variables';
-
 .blog-card {
-  background-color: $primary-blue;
-  border: 1px solid $grey-100;
+  background-color: var(--primary-blue);
+  border: 1px solid var(--grey-100);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -13,7 +11,7 @@
 
   &::after {
     content: '';
-    background-color: $primary-red;
+    background-color: var(--primary-red);
     border-radius: 8px;
     width: 80%;
     height: 80%;
@@ -39,7 +37,7 @@
 }
 
 /* media queries */
-@media (min-width: $bp-md) {
+@media (min-width: 768px) {
   .blog-card {
     &__title {
       font-size: var(--text-xl);

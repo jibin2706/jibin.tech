@@ -1,9 +1,7 @@
-@import './variables';
-
 .codeline {
   display: block;
   padding: 0.25rem 1rem;
-  border-left: 4px solid $primary-light;
+  border-left: 4px solid var(--primary-light);
   margin-top: 0.5rem;
   font-family: Consolas, Monaco, 'Ubuntu Mono', monospace;
   font-size: 0.8rem;

@@ -1,7 +1,5 @@
-@import './variables';
-
 .project-container {
-  background: rgba($color: $grey-200, $alpha: 0.1);
+  background: rgba($color: var(--grey-200), $alpha: 0.1);
   border-radius: 4px;
   padding: 2rem 1rem;
   position: relative;
@@ -74,9 +72,9 @@
 
 // colors
 .project-heading {
-  color: $grey-300;
+  color: var(--grey-300);
 }
 
 .project-stack {
-  color: $grey-400;
+  color: var(--grey-400);
 }

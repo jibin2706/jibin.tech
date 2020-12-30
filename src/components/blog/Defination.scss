@@ -1,7 +1,5 @@
-@import './variables';
-
 .defination {
-  border-left: 4px solid $primary-light;
+  border-left: 4px solid var(--primary-light);
   display: block;
   font-weight: 600;
   margin-top: 1rem;

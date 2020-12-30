@@ -6,7 +6,7 @@
 }
 
 .uses a {
-  color: $secondary-red;
+  color: var(--secondary-red);
   text-decoration: underline;
 }
 

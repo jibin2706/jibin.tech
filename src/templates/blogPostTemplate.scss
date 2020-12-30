@@ -1,5 +1,3 @@
-@import './variables';
-
 .blog {
   animation: fade 1s cubic-bezier(0.39, 0.575, 0.565, 1);
   padding: 1rem 0;
@@ -141,7 +139,7 @@
   .info-bar {
     display: block;
     padding: 1rem;
-    border-left: 3px solid $primary-light;
+    border-left: 3px solid var(--primary-light);
     margin: 1rem 0;
   }
 
@@ -235,37 +233,37 @@
 
 // colors
 .blog__title {
-  color: $grey-100;
+  color: var(--grey-100);
 }
 
 .blog__info {
-  color: $grey-400;
+  color: var(--grey-400);
 }
 
 .blog__meta {
-  color: $grey-400;
+  color: var(--grey-400);
 }
 
 .blog__tags > a {
-  background: $grey-800;
-  color: $grey-500;
+  background: var(--grey-800);
+  color: var(--grey-500);
 }
 
 .anchor svg {
   visibility: visible;
-  fill: $dark-grey;
+  fill: var(--dark-grey);
 }
 
 .blog__divider {
-  background: $grey-600;
+  background: var(--grey-600);
 }
 
 .info-bar {
-  background: $dark-grey;
+  background: var(--dark-grey);
 }
 
 .blog-body {
   a {
-    color: $primary-yellow;
+    color: var(--primary-yellow);
   }
 }

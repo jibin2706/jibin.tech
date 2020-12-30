@@ -9,7 +9,7 @@
 
 ::selection {
   color: white;
-  background: $primary;
+  background: var(--primary);
 }
 
 html {
@@ -18,8 +18,8 @@ html {
 }
 
 body {
-  background-color: $grey-900;
-  color: $white;
+  background-color: var(--grey-900);
+  color: var(--white);
   font-family: Source Sans Pro, sans-serif;
   line-height: 1.5;
 }
@@ -39,7 +39,7 @@ a {
 }
 
 hr {
-  background: $grey-700;
+  background: var(--grey-700);
 }
 
 strong {
@@ -48,7 +48,7 @@ strong {
 
 *:focus,
 a:active {
-  outline: 1px solid $primary;
+  outline: 1px solid var(--primary);
 }
 
 ul {
@@ -58,7 +58,7 @@ ul {
     position: relative;
     &::before {
       content: '';
-      background-color: $primary-yellow;
+      background-color: var(--primary-yellow);
       border-radius: 50%;
       height: 8px;
       width: 8px;
@@ -125,7 +125,7 @@ ul {
 .btn {
   text-align: center;
   padding: 12px 20px;
-  border: 1px solid $grey-400;
+  border: 1px solid var(--grey-400);
   text-decoration: none;
   background: transparent;
   transition: all 0.1s linear;
@@ -133,7 +133,7 @@ ul {
 }
 
 .btn--filled {
-  background: $primary-red;
+  background: var(--primary-red);
   color: white;
 }
 
@@ -146,8 +146,8 @@ ul {
 .btn--hover:focus {
   outline: none;
 
-  background: $primary-red;
-  border-color: $primary-red;
+  background: var(--primary-red);
+  border-color: var(--primary-red);
   transition: all 0.1s linear;
 }
 

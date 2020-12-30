@@ -1,5 +1,3 @@
-@import './variables';
-
 .quote {
   font-family: 'Georgia', serif;
   font-size: 1.25rem;
@@ -33,13 +31,13 @@
 
 // colors
 .quote {
-  color: $grey-300;
+  color: var(--grey-300);
 
   .cite {
-    color: $grey-500;
+    color: var(--grey-500);
   }
 
   &:after {
-    color: $grey-500;
+    color: var(--grey-500);
   }
 }

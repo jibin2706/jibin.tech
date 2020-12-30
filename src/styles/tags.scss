@@ -1,5 +1,3 @@
-@import './variables';
-
 .tag {
   margin: 10rem auto;
   max-width: 400px;
@@ -24,5 +22,5 @@
 
 // colors
 .tag__item {
-  background: $grey-800;
+  background: var(--grey-800);
 }

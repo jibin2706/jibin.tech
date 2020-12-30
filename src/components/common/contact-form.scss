@@ -1,5 +1,3 @@
-@import './variables';
-
 .contact-form {
   max-width: 500px;
 }
@@ -32,21 +30,21 @@
 .contact-form input,
 .contact-form textarea,
 .contact-form select {
-  border: 1.5px solid $grey-200;
+  border: 1.5px solid var(--grey-200);
 }
 
 // colors
 .contact-form__label {
-  color: $white;
+  color: var(--white);
 }
 
 .contact-form input,
 .contact-form textarea,
 .contact-form select {
-  caret-color: $grey-200;
-  color: $grey-200;
+  caret-color: var(--grey-200);
+  color: var(--grey-200);
 }
 
 ::placeholder {
-  color: $grey-600;
+  color: var(--grey-600);
 }
