@@ -8,7 +8,7 @@ import SEO from '../components/SEO'
 
 import './blogPostTemplate.scss'
 
-export default ({ data, pageContext }) => {
+const BlogPostTemplate = ({ data, pageContext }) => {
   // const GITHUB_USERNAME = 'jibin2706'
   // const GITHUB_REPO_NAME = 'blog.jibin.tech'
   // const GITHUB_BRANCH = 'develop'
@@ -53,7 +53,7 @@ export default ({ data, pageContext }) => {
           <h1 className="blog__title">{title}</h1>
           <h2 className="blog__info">{info}</h2>
           <div className="blog__tags">
-            {tags.map((tag) => (
+            {tags.map(tag => (
               <Link key={tag} to={`/tags/${tag}`}>
                 {tag}
               </Link>
@@ -105,3 +105,5 @@ export const query = graphql`
     }
   }
 `
+
+export default BlogPostTemplate
