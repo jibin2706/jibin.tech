@@ -1,13 +1,13 @@
 import React from 'react'
 import Layout from '../components/layout'
-import SEO from '../components/SEO'
+import Seo from '../components/SEO'
 import ContactForm from '../components/common/ContactForm'
 
 import '../styles/contact.scss'
 
 const Contact = () => (
   <Layout>
-    <SEO
+    <Seo
       title="Contact Jibin Thomas - Front-End Web Developer"
       description="He is available for freelancing contract work. You can reach out to him at jibin.thomas2706@gmail.com"
     />

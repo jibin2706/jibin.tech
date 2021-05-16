@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from '../components/layout'
-import SEO from '../components/SEO'
+import Seo from '../components/SEO'
 
 import './blogPostTemplate.scss'
 
@@ -14,7 +14,7 @@ const TilPostTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={title} description={info} type="article" slug={slug} />
+      <Seo title={title} description={info} type="article" slug={slug} />
       <Helmet>
         <script
           type="application/ld+json"

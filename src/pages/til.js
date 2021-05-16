@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import SEO from '../components/SEO'
+import Seo from '../components/SEO'
 import Layout from '../components/layout'
 import TilList from '../components/container/tilList'
 
@@ -9,7 +9,7 @@ const TILPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Today I Learned by Jibin Thomas" description="Byte sized information on things I learned today" />
+      <Seo title="Today I Learned by Jibin Thomas" description="Byte sized information on things I learned today" />
       <TilList posts={data.posts.nodes} />
     </Layout>
   )

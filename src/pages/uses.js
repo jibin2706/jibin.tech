@@ -1,5 +1,5 @@
 import React from 'react'
-import SEO from '../components/SEO'
+import Seo from '../components/SEO'
 import Layout from '../components/layout'
 import System from '../images/overall.jpg'
 import '../styles/uses.scss'
@@ -8,7 +8,7 @@ import { Link } from 'gatsby'
 function index() {
   return (
     <Layout>
-      <SEO title="Uses" description="A page dedicated to the language/framework/tools and other stuff I use daily" />
+      <Seo title="Uses" description="A page dedicated to the language/framework/tools and other stuff I use daily" />
 
       <main className="uses mw-1200 mx-auto">
         <h1 className="uses-header">Things I use to get stuff done</h1>
