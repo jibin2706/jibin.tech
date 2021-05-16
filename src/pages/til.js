@@ -5,8 +5,6 @@ import Layout from '../components/layout'
 import TilList from '../components/container/tilList'
 
 const TILPage = ({ data }) => {
-  console.log(data.posts.nodes)
-
   return (
     <Layout>
       <Seo title="Today I Learned by Jibin Thomas" description="Byte sized information on things I learned today" />
