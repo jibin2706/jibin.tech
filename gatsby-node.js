@@ -18,33 +18,50 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions
   return graphql(`
     {
-      allMdx(sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { listing: { ne: false } } }) {
-        edges {
-          node {
-            frontmatter {
-              title
-              tags
-            }
-            fields {
-              slug
-            }
-          }
+      blogPosts: allMdx(
+        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { frontmatter: { listing: { ne: false } }, fileAbsolutePath: { regex: "/^((?!til).)*$/" } }
+      ) {
+        ...postContent
+      }
+      tilPosts: allMdx(
+        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { frontmatter: { listing: { ne: false } }, fileAbsolutePath: { regex: "//til//" } }
+      ) {
+        ...postContent
+        nodes {
+          body
+        }
+      }
+    }
+
+    fragment postContent on MdxConnection {
+      nodes {
+        frontmatter {
+          title
+          tags
+          slug
+        }
+        fields {
+          slug
         }
       }
     }
   `).then(result => {
-    const posts = result.data.allMdx.edges
+    const blogPosts = result.data.blogPosts.nodes
+    const tilPosts = result.data.tilPosts.nodes
 
-    createBlogPages(posts, createPage)
-    createTagPages(posts, createPage)
+    createBlogPages(blogPosts, createPage)
+    createTagPages(blogPosts, createPage)
+    createTILPages(tilPosts, createPage)
     createRedirectFile(createRedirect)
   })
 }
 
 function createBlogPages(posts, createPage) {
-  posts.forEach(({ node }, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1].node
-    const next = index === 0 ? null : posts[index - 1].node
+  posts.forEach((node, index) => {
+    const previous = index === posts.length - 1 ? null : posts[index + 1]
+    const next = index === 0 ? null : posts[index - 1]
 
     createPage({
       path: node.fields.slug,
@@ -61,15 +78,30 @@ function createBlogPages(posts, createPage) {
   })
 }
 
+function createTILPages(posts, createPage) {
+  posts.forEach(node => {
+    createPage({
+      path: `/til/${node.frontmatter.slug}`,
+      component: path.resolve(`./src/templates/tilPostTemplate.js`),
+      context: {
+        // Data passed to context is available
+        // in page queries as GraphQL variables.
+        slug: node.frontmatter.slug,
+      },
+    })
+    return posts
+  })
+}
+
 function createTagPages(posts, createPage) {
   const tagTemplate = path.resolve(`./src/templates/tagsTemplate.js`)
 
   // Tag pages:
   let tags = []
   // Iterate through each post, putting all found tags into `tags`
-  _.each(posts, edge => {
-    if (_.get(edge, 'node.frontmatter.tags')) {
-      tags = tags.concat(edge.node.frontmatter.tags)
+  _.each(posts, node => {
+    if (_.get(node, 'frontmatter.tags')) {
+      tags = tags.concat(node.frontmatter.tags)
     }
   })
   // Eliminate duplicate tags

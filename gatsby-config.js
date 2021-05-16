@@ -102,10 +102,15 @@ module.exports = {
         ],
       },
     },
-    // markdown file are in that directory (/content/)
+    // blog posts are in `/content/blog/`
     {
       resolve: `gatsby-source-filesystem`,
       options: { name: `blog`, path: `${__dirname}/content/blog` },
+    },
+    // til markdown are in `/content/til/`
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: { name: `blog`, path: `${__dirname}/content/til` },
     },
     // json data
     {
