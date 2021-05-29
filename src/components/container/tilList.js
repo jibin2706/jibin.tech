@@ -13,7 +13,9 @@ const TilList = ({ posts }) => {
             <Link to={`/til/${node.frontmatter.slug}`} key={node.id}>
               <article className="til__list__card">
                 <h2 className="til__list__title">{node.frontmatter.title}</h2>
-                <MDXRenderer className="til-body">{node.body}</MDXRenderer>
+                <section className="til-body">
+                  <MDXRenderer>{node.body}</MDXRenderer>
+                </section>
               </article>
             </Link>
           )

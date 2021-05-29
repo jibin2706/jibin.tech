@@ -8,6 +8,15 @@
 .til__list__card {
   border-bottom: 1px solid var(--grey-500);
   margin-bottom: 2rem;
+  max-width: 750px;
+}
+
+.til__list__title {
+  font-size: 2rem;
+}
+
+.til-body {
+  font-size: 1.2rem;
 }
 
 .til-list main {
