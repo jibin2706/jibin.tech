@@ -7,7 +7,7 @@ function ContactForm() {
       className="contact-form"
       name="contact"
       method="POST"
-      action="https://formsubmit.co/jibin.thomas2706@gmail.com"
+      action="https://formsubmit.co/bb54bfeb342468815598de8c1efcb901"
     >
       <input type="text" name="_honey" style={{ display: 'none' }} />
       <input type="hidden" name="_captcha" value="false" />
