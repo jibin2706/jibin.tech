@@ -7,17 +7,11 @@ function ContactForm() {
       className="contact-form"
       name="contact"
       method="POST"
-      netlify-honeypot="bot-field"
-      data-netlify="true"
-      action="/success"
+      action="https://formsubmit.co/jibin.thomas2706@gmail.com"
     >
-      <p className="hidden">
-        <label>
-          Don’t fill this out if you're human:{' '}
-          <input name="bot-field" aria-label="Don't fill this out if you're human" />
-        </label>
-      </p>
-      <input type="hidden" name="form-name" aria-label="Don't fill this out if you're human" value="contact" />
+      <input type="text" name="_honey" style={{ display: 'none' }} />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_subject" value="Contact Form - jibin.tech" />
       <label>
         <span className="contact-form__label">Name</span>
         <input type="text" name="name" aria-label="Name" required />
