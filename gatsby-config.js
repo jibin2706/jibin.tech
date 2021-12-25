@@ -14,7 +14,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-netlify`,
     `gatsby-transformer-json`,
     `gatsby-plugin-twitter`,
     {
@@ -41,9 +40,8 @@ module.exports = {
     },
     // rss feed at /rss.xml
     {
-      resolve: `gatsby-plugin-feed-mdx`,
+      resolve: `gatsby-plugin-feed`,
       options: {
-        // this base query will be merged with any queries in each feed
         query: `
           {
             site {
@@ -71,20 +69,18 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html + postText }],
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
                 })
               })
             },
             query: `
               {
-                allMdx(
-                  limit: 1000,
+              allMdx(
                   sort: { order: DESC, fields: [frontmatter___date] },
-                  
-                ) {
+              ) {
                   edges {
                     node {
-                      excerpt(pruneLength: 50)
+                      excerpt
                       html
                       fields { slug }
                       frontmatter {
