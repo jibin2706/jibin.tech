@@ -1,7 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './contact-form.scss'
 
 function ContactForm() {
+  const [formValues, setFormValues] = useState({
+    name: '',
+  })
+
+  const handleFormChange = event => {
+    setFormValues({
+      ...formValues,
+      [event.target.name]: event.target.value,
+    })
+  }
+
   return (
     <form
       className="contact-form"
@@ -11,10 +22,10 @@ function ContactForm() {
     >
       <input type="text" name="_honey" style={{ display: 'none' }} />
       <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_subject" value="Contact Form - jibin.tech" />
+      <input type="hidden" name="_subject" value={`Contact Form - jibin.tech - ${formValues.name}`} />
       <label>
         <span className="contact-form__label">Name</span>
-        <input type="text" name="name" aria-label="Name" required />
+        <input type="text" name="name" aria-label="Name" onChange={handleFormChange} required />
       </label>
 
       <label>
