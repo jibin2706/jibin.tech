@@ -4,7 +4,7 @@ date: 2020-12-31
 info: 'As 2021 around the corner, I wanted to review what happened in my life this year and what I want to achieve in 2021.'
 image: 'featured_image.jpg'
 tags: ['general']
-featured: true
+featured: false
 ---
 
 It has been the kind of year that you never forget. If you would have told me people don't be allowed to go outside their home (at least for a while) and everyone will be wearing masks, then I would have laughed at you. This year was unpredictable on another level and showed me that the worst things are always around the corner, and you have to gather strength and move through them.
