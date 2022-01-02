@@ -21,8 +21,9 @@ function ContactForm() {
       action="https://formsubmit.co/bb54bfeb342468815598de8c1efcb901"
     >
       <input type="text" name="_honey" style={{ display: 'none' }} />
-      <input type="hidden" name="_captcha" value="false" />
+      {/* <input type="hidden" name="_captcha" value="false" /> */}
       <input type="hidden" name="_subject" value={`Contact Form - jibin.tech - ${formValues.name}`} />
+      <input type="hidden" name="_next" value="https://jibin.tech/success" />
       <label>
         <span className="contact-form__label">Name</span>
         <input type="text" name="name" aria-label="Name" onChange={handleFormChange} required />
