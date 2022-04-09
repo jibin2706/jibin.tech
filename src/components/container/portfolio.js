@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
+
 import BlogCard from '../common/BlogCard'
 import ContactForm from '../common/ContactForm'
+import { workDetails } from './work'
 
 import './portfolio.scss'
 
@@ -29,10 +31,10 @@ function Portfolio() {
   return (
     <main className="portfolio">
       <section className="hero mw-800 mx-auto">
-        <h1 className="hero__heading">Hi I'm Jibin Thomas</h1>
+        <h1 className="hero__heading">Hi, I'm Jibin Thomas</h1>
         <h2 className="hero__sub-heading">
-          I’m a front-end developer, focused towards developing good looking websites with a primary focus on
-          performance and future maintainability.
+          I'm a Frontend Developer who loves to build Web sites & applications with a strong focus on responsive
+          designs, performance & future maintainability using the latest frontend technologies & best practices.
         </h2>
       </section>
 
@@ -41,14 +43,14 @@ function Portfolio() {
           <h2 className="portfolio__header">About Me</h2>
           <div className="about-me__description">
             <p>
-              I'm a frontend developer based in Mumbai, India. I was born in 1998 and raised in Mumbai. I graduated from
-              Mumbai University at Wilson College in, Bachelor of Science in Information Technology. Although,
-              everything that I know about the web is through self-learning.
+              Hi, I'm Jibin Thomas. I'm a frontend developer based in Mumbai, India. Currently, I'm working as a Senior
+              Frontend Developer at Pepper Content building Peppertype & marketing pages. Previously I worked at The
+              Souled Store as a UI Developer.
             </p>
-            <p>Currently, I'm working at Pepper Content as a Frontend Developer working on things that I love.</p>
             <p>
-              While I'm not coding, you can find me playing chess or cricketing, reading fictional books, or binging on
-              Netflix.
+              I'm passionate about web development and love to stay updated about the latest technology trends. Apart
+              from programming, I love to play FPS games like Counter-Strike: Global Offensive & Valorant with my
+              friends, read fictional books, and binge on TV series.
             </p>
           </div>
         </div>
@@ -57,35 +59,23 @@ function Portfolio() {
       <section className="work">
         <div className="mw-800 mx-auto">
           <h2 className="portfolio__header">Work</h2>
-          <div className="work__details">
-            <h3>Pepper Content</h3>
-            <div className="work__info">
-              <h4>Frontend Developer</h4>
-            </div>
-          </div>
-          <div className="work__details">
-            <h3>The Souled Store</h3>
-            <div className="work__info">
-              <h4>Jr. Frontend Developer</h4>
-            </div>
-            <div>
-              <ul className="work__responsibilites">
-                <li>
-                  Migrating the site from SPA into SSR using Next.js for boosting SEO and decreasing the first load
-                  time.
-                </li>
-                <li>
-                  Transformed the transactional and marketing email templates into improved designs, keeping in line
-                  with the brand identity.
-                </li>
-                <li>Collaborated with the SEO team to remodel on-page SEO using best practices.</li>
-                <li>
-                  Created new APIs on Falcon (Python) and automate sitemap generation and order health status updates on
-                  slack.
-                </li>
-              </ul>
-            </div>
-          </div>
+          {workDetails.map(details => {
+            return (
+              <div className="work__details">
+                <h3>{details.companyName}</h3>
+                <div className="work__info">
+                  <h4>{details.jobTitle}</h4>
+                </div>
+                <div>
+                  <ul>
+                    {details.contributions.map((contribution, index) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: contribution }} />
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            )
+          })}
         </div>
       </section>
 
