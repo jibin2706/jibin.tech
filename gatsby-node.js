@@ -15,7 +15,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 }
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage, createRedirect } = actions
+  const { createPage } = actions
   return graphql(`
     {
       blogPosts: allMdx(
@@ -54,7 +54,6 @@ exports.createPages = ({ graphql, actions }) => {
     createBlogPages(blogPosts, createPage)
     createTagPages(blogPosts, createPage)
     createTILPages(tilPosts, createPage)
-    createRedirectFile(createRedirect)
   })
 }
 
@@ -64,7 +63,7 @@ function createBlogPages(posts, createPage) {
     const next = index === 0 ? null : posts[index - 1]
 
     createPage({
-      path: node.fields.slug,
+      path: `/blog${node.fields.slug}`,
       component: path.resolve(`./src/templates/blogPostTemplate.js`),
       context: {
         // Data passed to context is available
@@ -116,35 +115,5 @@ function createTagPages(posts, createPage) {
         tag,
       },
     })
-  })
-}
-
-function createRedirectFile(createRedirect) {
-  createRedirect({
-    fromPath: 'https://blog.jibin.tech/',
-    toPath: 'https://jibin.tech/blog',
-    isPermanent: true,
-    force: true,
-  })
-
-  createRedirect({
-    fromPath: 'https://blog.jibin.tech/contact/',
-    toPath: 'https://jibin.tech/contact/',
-    isPermanent: true,
-    force: true,
-  })
-
-  createRedirect({
-    fromPath: 'https://blog.jibin.tech/tags/',
-    toPath: 'https://jibin.tech/tags/',
-    isPermanent: true,
-    force: true,
-  })
-
-  createRedirect({
-    fromPath: 'https://blog.jibin.tech/*',
-    toPath: 'https://jibin.tech/:splat',
-    isPermanent: true,
-    force: true,
   })
 }

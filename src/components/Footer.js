@@ -41,8 +41,15 @@ function Footer() {
       <section className="footer__copyright">
         <p>&copy; - Coded by hand and headaches</p>
         <p>
-          This site is built with <a href="https://gatsbyjs.org/">Gatsby.js </a> and hosted on{' '}
-          <a href="https://netlify.com/">Netlify</a>.
+          This site is built with{' '}
+          <a href="https://gatsbyjs.org/" target="_blank" rel="noreferrer noopener">
+            Gatsby.js{' '}
+          </a>{' '}
+          and hosted on{' '}
+          <a href="https://vercel.com/" target="_blank" rel="noreferrer noopener">
+            Vercel
+          </a>
+          .
         </p>
       </section>
     </footer>

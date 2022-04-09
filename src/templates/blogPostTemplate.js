@@ -25,7 +25,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <Seo title={title} description={info} type="article" imagePath={imageURL} slug={slug} />
+      <Seo title={title} description={info} type="article" imagePath={imageURL} slug={`/blog${slug}`} />
       <Helmet>
         <script
           type="application/ld+json"
@@ -70,13 +70,13 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
       <section className="read-more">
         {previous && (
-          <Link className="btn btn--full btn--hover" to={previous.fields.slug}>
+          <Link className="btn btn--full btn--hover" to={`/blog${previous.fields.slug}`}>
             « &nbsp;
             {previous.frontmatter.title}
           </Link>
         )}
         {next && (
-          <Link className="btn btn--full btn--hover" to={next.fields.slug}>
+          <Link className="btn btn--full btn--hover" to={`/blog${next.fields.slug}`}>
             {next.frontmatter.title}
             &nbsp; »
           </Link>
@@ -87,7 +87,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       body
       fields {

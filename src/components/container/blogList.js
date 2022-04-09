@@ -23,7 +23,7 @@ const BlogList = ({ data, templateTitle }) => {
           let { slug } = fields
 
           return (
-            <Link to={slug} key={id}>
+            <Link to={`/blog${slug}`} key={id}>
               <article className="blog__list__card">
                 <h2 className="blog__list__title">{title}</h2>
                 <p className="blog__list__info">{info}</p>

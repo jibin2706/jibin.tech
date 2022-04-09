@@ -1,0 +1,139 @@
+{
+  "redirects": [
+    {
+      "source": "/masonry-layout-using-css/",
+      "destination": "/blog/masonry-layout-using-css/",
+      "permanent": true
+    },
+    {
+      "source": "/2021-in-review/",
+      "destination": "/blog/2021-in-review/",
+      "permanent": true
+    },
+    {
+      "source": "/automating-performance-monitoring-using-pagespeed-insights/",
+      "destination": "/blog/automating-performance-monitoring-using-pagespeed-insights/",
+      "permanent": true
+    },
+    {
+      "source": "/2020-in-review/",
+      "destination": "/blog/2020-in-review/",
+      "permanent": true
+    },
+    {
+      "source": "/indexable-object-in-typescript/",
+      "destination": "/blog/indexable-object-in-typescript/",
+      "permanent": true
+    },
+    {
+      "source": "/monorepo-with-create-react-app/",
+      "destination": "/blog/monorepo-with-create-react-app/",
+      "permanent": true
+    },
+    {
+      "source": "/joining-pepper-content/",
+      "destination": "/blog/joining-pepper-content/",
+      "permanent": true
+    },
+    {
+      "source": "/udacity-full-stack-nanodegree/",
+      "destination": "/blog/udacity-full-stack-nanodegree/",
+      "permanent": true
+    },
+    {
+      "source": "/scheduled-deployments-using-github-action/",
+      "destination": "/blog/scheduled-deployments-using-github-action/",
+      "permanent": true
+    },
+    {
+      "source": "/preserve-prerendering-in-nextjs-when-using-redux/",
+      "destination": "/blog/preserve-prerendering-in-nextjs-when-using-redux/",
+      "permanent": true
+    },
+    {
+      "source": "/2019-in-review/",
+      "destination": "/blog/2019-in-review/",
+      "permanent": true
+    },
+    {
+      "source": "/controlled-components-in-react/",
+      "destination": "/blog/controlled-components-in-react/",
+      "permanent": true
+    },
+    {
+      "source": "/detecting-dark-mode-in-your-web-apps/",
+      "destination": "/blog/detecting-dark-mode-in-your-web-apps/",
+      "permanent": true
+    },
+    {
+      "source": "/dispatching-redux-actions-from-getInitialProps/",
+      "destination": "/blog/dispatching-redux-actions-from-getInitialProps/",
+      "permanent": true
+    },
+    {
+      "source": "/destructuring-assignment-of-objects-in-javascipt/",
+      "destination": "/blog/destructuring-assignment-of-objects-in-javascipt/",
+      "permanent": true
+    },
+    {
+      "source": "/getting-started-with-git-part-1/",
+      "destination": "/blog/getting-started-with-git-part-1/",
+      "permanent": true
+    },
+    {
+      "source": "/ways-to-get-your-react-project-started/",
+      "destination": "/blog/ways-to-get-your-react-project-started/",
+      "permanent": true
+    },
+    {
+      "source": "/difference-between-forEach-and-map-in-javascript/",
+      "destination": "/blog/difference-between-forEach-and-map-in-javascript/",
+      "permanent": true
+    },
+    {
+      "source": "/nextjs\\+redux/",
+      "destination": "/blog/nextjs+redux/",
+      "permanent": true
+    },
+    {
+      "source": "/getting-my-first-dev-job/",
+      "destination": "/blog/getting-my-first-dev-job/",
+      "permanent": true
+    },
+    {
+      "source": "/hosting-font-locally-for-your-website/",
+      "destination": "/blog/hosting-font-locally-for-your-website/",
+      "permanent": true
+    },
+    {
+      "source": "/nifty-javascript-methods-that-will-make-your-life-easier/",
+      "destination": "/blog/nifty-javascript-methods-that-will-make-your-life-easier/",
+      "permanent": true
+    },
+    {
+      "source": "/vs-code-extensions-to-make-you-more-productive/",
+      "destination": "/blog/vs-code-extensions-to-make-you-more-productive/",
+      "permanent": true
+    },
+    {
+      "source": "/integrating-payment-in-android-app/",
+      "destination": "/blog/integrating-payment-in-android-app/",
+      "permanent": true
+    },
+    {
+      "source": "/connecting-nodemcu-to-firebase/",
+      "destination": "/blog/connecting-nodemcu-to-firebase/",
+      "permanent": true
+    },
+    {
+      "source": "/custom-domain-with-github-pages/",
+      "destination": "/blog/custom-domain-with-github-pages/",
+      "permanent": true
+    },
+    {
+      "source": "/new-beginnings/",
+      "destination": "/blog/new-beginnings/",
+      "permanent": true
+    }
+  ]
+}
