@@ -94,7 +94,7 @@ function Portfolio() {
           <h2 className="portfolio__header">Featured Posts</h2>
           <div className="featured-posts__grid">
             {data.allMdx.edges.map(post => (
-              <Link key={post.node.id} to={post.node.fields.slug}>
+              <Link key={post.node.id} to={`/blog${post.node.fields.slug}`}>
                 <BlogCard
                   title={post.node.frontmatter.title}
                   description={post.node.frontmatter.info}
