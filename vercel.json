@@ -1,137 +1,137 @@
 {
   "redirects": [
     {
-      "source": "/masonry-layout-using-css/",
+      "source": "/masonry-layout-using-css",
       "destination": "https://jibin.tech/blog/masonry-layout-using-css/",
       "permanent": true
     },
     {
-      "source": "/2021-in-review/",
+      "source": "/2021-in-review",
       "destination": "https://jibin.tech/blog/2021-in-review/",
       "permanent": true
     },
     {
-      "source": "/automating-performance-monitoring-using-pagespeed-insights/",
+      "source": "/automating-performance-monitoring-using-pagespeed-insights",
       "destination": "https://jibin.tech/blog/automating-performance-monitoring-using-pagespeed-insights/",
       "permanent": true
     },
     {
-      "source": "/2020-in-review/",
+      "source": "/2020-in-review",
       "destination": "https://jibin.tech/blog/2020-in-review/",
       "permanent": true
     },
     {
-      "source": "/indexable-object-in-typescript/",
+      "source": "/indexable-object-in-typescript",
       "destination": "https://jibin.tech/blog/indexable-object-in-typescript/",
       "permanent": true
     },
     {
-      "source": "/monorepo-with-create-react-app/",
+      "source": "/monorepo-with-create-react-app",
       "destination": "https://jibin.tech/blog/monorepo-with-create-react-app/",
       "permanent": true
     },
     {
-      "source": "/joining-pepper-content/",
+      "source": "/joining-pepper-content",
       "destination": "https://jibin.tech/blog/joining-pepper-content/",
       "permanent": true
     },
     {
-      "source": "/udacity-full-stack-nanodegree/",
+      "source": "/udacity-full-stack-nanodegree",
       "destination": "https://jibin.tech/blog/udacity-full-stack-nanodegree/",
       "permanent": true
     },
     {
-      "source": "/scheduled-deployments-using-github-action/",
+      "source": "/scheduled-deployments-using-github-action",
       "destination": "https://jibin.tech/blog/scheduled-deployments-using-github-action/",
       "permanent": true
     },
     {
-      "source": "/preserve-prerendering-in-nextjs-when-using-redux/",
+      "source": "/preserve-prerendering-in-nextjs-when-using-redux",
       "destination": "https://jibin.tech/blog/preserve-prerendering-in-nextjs-when-using-redux/",
       "permanent": true
     },
     {
-      "source": "/2019-in-review/",
+      "source": "/2019-in-review",
       "destination": "https://jibin.tech/blog/2019-in-review/",
       "permanent": true
     },
     {
-      "source": "/controlled-components-in-react/",
+      "source": "/controlled-components-in-react",
       "destination": "https://jibin.tech/blog/controlled-components-in-react/",
       "permanent": true
     },
     {
-      "source": "/detecting-dark-mode-in-your-web-apps/",
+      "source": "/detecting-dark-mode-in-your-web-apps",
       "destination": "https://jibin.tech/blog/detecting-dark-mode-in-your-web-apps/",
       "permanent": true
     },
     {
-      "source": "/dispatching-redux-actions-from-getInitialProps/",
+      "source": "/dispatching-redux-actions-from-getInitialProps",
       "destination": "https://jibin.tech/blog/dispatching-redux-actions-from-getInitialProps/",
       "permanent": true
     },
     {
-      "source": "/destructuring-assignment-of-objects-in-javascipt/",
+      "source": "/destructuring-assignment-of-objects-in-javascipt",
       "destination": "https://jibin.tech/blog/destructuring-assignment-of-objects-in-javascipt/",
       "permanent": true
     },
     {
-      "source": "/getting-started-with-git-part-1/",
+      "source": "/getting-started-with-git-part-1",
       "destination": "https://jibin.tech/blog/getting-started-with-git-part-1/",
       "permanent": true
     },
     {
-      "source": "/ways-to-get-your-react-project-started/",
+      "source": "/ways-to-get-your-react-project-started",
       "destination": "https://jibin.tech/blog/ways-to-get-your-react-project-started/",
       "permanent": true
     },
     {
-      "source": "/difference-between-forEach-and-map-in-javascript/",
+      "source": "/difference-between-forEach-and-map-in-javascript",
       "destination": "https://jibin.tech/blog/difference-between-forEach-and-map-in-javascript/",
       "permanent": true
     },
     {
-      "source": "/nextjs+redux/",
+      "source": "/nextjs+redux",
       "destination": "https://jibin.tech/blog/nextjs+redux/",
       "permanent": true
     },
     {
-      "source": "/getting-my-first-dev-job/",
+      "source": "/getting-my-first-dev-job",
       "destination": "https://jibin.tech/blog/getting-my-first-dev-job/",
       "permanent": true
     },
     {
-      "source": "/hosting-font-locally-for-your-website/",
+      "source": "/hosting-font-locally-for-your-website",
       "destination": "https://jibin.tech/blog/hosting-font-locally-for-your-website/",
       "permanent": true
     },
     {
-      "source": "/nifty-javascript-methods-that-will-make-your-life-easier/",
+      "source": "/nifty-javascript-methods-that-will-make-your-life-easier",
       "destination": "https://jibin.tech/blog/nifty-javascript-methods-that-will-make-your-life-easier/",
       "permanent": true
     },
     {
-      "source": "/vs-code-extensions-to-make-you-more-productive/",
+      "source": "/vs-code-extensions-to-make-you-more-productive",
       "destination": "https://jibin.tech/blog/vs-code-extensions-to-make-you-more-productive/",
       "permanent": true
     },
     {
-      "source": "/integrating-payment-in-android-app/",
+      "source": "/integrating-payment-in-android-app",
       "destination": "https://jibin.tech/blog/integrating-payment-in-android-app/",
       "permanent": true
     },
     {
-      "source": "/connecting-nodemcu-to-firebase/",
+      "source": "/connecting-nodemcu-to-firebase",
       "destination": "https://jibin.tech/blog/connecting-nodemcu-to-firebase/",
       "permanent": true
     },
     {
-      "source": "/custom-domain-with-github-pages/",
+      "source": "/custom-domain-with-github-pages",
       "destination": "https://jibin.tech/blog/custom-domain-with-github-pages/",
       "permanent": true
     },
     {
-      "source": "/new-beginnings/",
+      "source": "/new-beginnings",
       "destination": "https://jibin.tech/blog/new-beginnings/",
       "permanent": true
     }
