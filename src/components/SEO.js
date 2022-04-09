@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-function SEO({ description, lang, keywords, title, type, imagePath, slug }) {
+function SEO({ description, lang, keywords, title, type, imagePath, slug, jsonSchema = [] }) {
   const { site, allFile } = useStaticQuery(
     graphql`
       query {
@@ -75,6 +75,13 @@ function SEO({ description, lang, keywords, title, type, imagePath, slug }) {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={siteUrl + metaImagePath} />
+
+      {/* JSON ld schema */}
+      {jsonSchema.map((item, index) => (
+        <script type="application/ld+json" key={index}>
+          {JSON.stringify(item)}
+        </script>
+      ))}
     </Helmet>
   )
 }

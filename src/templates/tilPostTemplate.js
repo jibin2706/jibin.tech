@@ -1,5 +1,4 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
@@ -15,23 +14,6 @@ const TilPostTemplate = ({ data }) => {
   return (
     <Layout>
       <Seo title={title} description={info} type="article" slug={slug} />
-      <Helmet>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: `{
-            "@context": "http://schema.org",
-            "@type": "blog",
-            "headline": "${title}",
-            "datePublished": "${date}",
-            "author": {
-              "@type": "Person",
-              "name": "Jibin Thomas"
-            },
-          }`,
-          }}
-        />
-      </Helmet>
 
       <article className="blog">
         <header className="blog__header">
@@ -51,7 +33,7 @@ const TilPostTemplate = ({ data }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     post: mdx(frontmatter: { slug: { eq: $slug } }) {
       body
       frontmatter {

@@ -1,0 +1,6 @@
+export const TWITTER_URL = 'https://twitter.com/real_jibin'
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/jibin2706/'
+export const STACKOVERFLOW_URL = 'https://stackoverflow.com/users/8102492/jibin-thomas'
+export const INSTAGRAM_URL = 'https://www.instagram.com/jibin2706/'
+export const GITHUB_URL = 'https://github.com/jibin2706'
+export const BLOG_RSS_URL = 'https://jibin.tech/rss.xml'

@@ -1,5 +1,4 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
@@ -22,28 +21,42 @@ const BlogPostTemplate = ({ data, pageContext }) => {
   // const githubEditUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/${GITHUB_BRANCH}/src/pages${slug}index.md`
 
   const imageURL = (image && image.publicURL) || ''
+  const dateObj = new Date(date)
+
+  const articleSchema = {
+    '@context': 'http://schema.org',
+    '@type': 'BlogPosting',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://jibin.tech/blog${slug}`,
+    },
+    headline: title,
+    description: info,
+    image: `https://jibin.tech${imageURL}`,
+    author: {
+      '@type': 'Person',
+      name: 'Jibin Thomas',
+      url: 'https://jibin.tech',
+    },
+    publisher: {
+      '@type': 'Person',
+      name: 'Jibin Thomas',
+      url: 'https://jibin.tech',
+    },
+    // prettier-ignore
+    datePublished: `${dateObj.getFullYear()}-${(dateObj.getMonth() + 1).toString().padStart(2, 0)}-${dateObj.getDate().toString().padStart(2, 0)}`,
+  }
 
   return (
     <Layout>
-      <Seo title={title} description={info} type="article" imagePath={imageURL} slug={`/blog${slug}`} />
-      <Helmet>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: `{
-            "@context": "http://schema.org",
-            "@type": "Article",
-            "headline": "${title}",
-            "datePublished": "${date}",
-            "author": {
-              "@type": "Person",
-              "name": "Jibin Thomas"
-            },
-            "image": "${'https://blog.jibin.tech' + imageURL}"
-          }`,
-          }}
-        />
-      </Helmet>
+      <Seo
+        title={title}
+        description={info}
+        type="article"
+        imagePath={imageURL}
+        slug={`/blog${slug}`}
+        jsonSchema={[articleSchema]}
+      />
 
       <article className="blog">
         <header className="blog__header">
