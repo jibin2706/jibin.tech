@@ -1,10 +1,9 @@
 import React from 'react'
+import { Link, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import kebabCase from 'lodash/kebabCase'
-import { Link, graphql } from 'gatsby'
-import Layout from '../components/layout'
 
-import '../styles/tags.scss'
+import Layout from '../components/layout'
 
 const TagsPage = ({
   data: {
@@ -12,15 +11,20 @@ const TagsPage = ({
   },
 }) => (
   <Layout>
-    <div className="tag">
-      <h1 className="tag__header">#Tags</h1>
-      {group.map(tag => (
-        <li className="tag__item" key={tag.fieldValue}>
-          <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-            {tag.fieldValue} | {tag.totalCount}
-          </Link>
-        </li>
-      ))}
+    <div className="max-w-md | mt-40 mx-auto">
+      <h1 className="text-4xl uppercase text-center | mb-8">#Tags</h1>
+      <section className="flex flex-wrap gap-4 justify-center">
+        {group.map(tag => (
+          <li
+            className="inline-block before:content | break-all | bg-gray-800 | rounded | px-1 py-2 | list-none"
+            key={tag.fieldValue}
+          >
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              {tag.fieldValue} | {tag.totalCount}
+            </Link>
+          </li>
+        ))}
+      </section>
     </div>
   </Layout>
 )

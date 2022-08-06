@@ -1,9 +1,55 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, Fragment } from 'react'
 import { Link } from 'gatsby'
 
-import './navigation.scss'
+import './navigation.css'
+import * as styles from './navigation.module.css'
+
+const navItems = [
+  {
+    name: 'Home',
+    slug: '/',
+  },
+  {
+    name: 'Blog',
+    slug: '/blog/',
+  },
+  {
+    name: 'Contact',
+    slug: '/contact/',
+  },
+]
 
 function Navigation() {
+  return (
+    <Fragment>
+      <DesktopNavigation />
+      <MobileNavigation />
+    </Fragment>
+  )
+}
+
+function DesktopNavigation() {
+  return (
+    <nav id="nav-desktop" className="hidden sm:flex">
+      {navItems.map(item => (
+        <Link
+          key={item.slug}
+          to={item.slug}
+          className="relative | font-bold text-xl text-gray-400 | px-1 ml-12"
+          activeClassName={`${styles.activeNav} | text-gray-100`}
+        >
+          <span>{item.name}</span>
+          <span
+            className="decorator hidden absolute left-1 -bottom-1 | bg-primary-yellow | w-[75%] h-0.5"
+            aria-hidden="true"
+          />
+        </Link>
+      ))}
+    </nav>
+  )
+}
+
+function MobileNavigation() {
   const [isSidebarOpen, toggleSidebar] = useState(false)
   const mobileNavLinks = useRef(null)
 
@@ -23,19 +69,7 @@ function Navigation() {
   }, [isSidebarOpen])
 
   return (
-    <>
-      <nav id="nav-desktop" className="nav">
-        <Link className="nav__item" to="/" activeClassName="nav__item--active">
-          Home
-        </Link>
-        <Link className="nav__item" to="/blog/" activeClassName="nav__item--active">
-          Blog
-        </Link>
-        <Link className="nav__item" to="/contact/" activeClassName="nav__item--active">
-          Contact
-        </Link>
-      </nav>
-
+    <Fragment>
       <input
         type="checkbox"
         id="checkbox1"
@@ -43,7 +77,13 @@ function Navigation() {
         className="checkbox1 visuallyHidden"
         onChange={() => toggleSidebar(!isSidebarOpen)}
       />
-      <label htmlFor="checkbox1" aria-labelledby="checkbox1" aria-label="toggle navigation" id="hamburger">
+      <label
+        htmlFor="checkbox1"
+        aria-labelledby="checkbox1"
+        aria-label="toggle navigation"
+        id="hamburger"
+        className="sm:hidden"
+      >
         <div className="hamburger">
           <span className="bar bar1" />
           <span className="bar bar2" />
@@ -52,20 +92,25 @@ function Navigation() {
         </div>
       </label>
 
-      <nav id="nav-mobile">
-        <div className="nav-mobile__container" ref={mobileNavLinks}>
-          <Link className="nav__item" to="/" activeClassName="nav__item--active">
-            Home
-          </Link>
-          <Link className="nav__item" to="/blog/" activeClassName="nav__item--active">
-            Blog
-          </Link>
-          <Link className="nav__item" to="/contact/" activeClassName="nav__item--active">
-            Contact
-          </Link>
+      <nav id="nav-mobile" className="sm:hidden">
+        <div className="flex flex-col | bg-primary-blue | rounded-lg shadow-xl | p-4 pt-20" ref={mobileNavLinks}>
+          {navItems.map(item => (
+            <Link
+              key={item.slug}
+              to={item.slug}
+              className="inline-block relative | font-bold text-2xl text-gray-400 | w-fit | px-1 mb-6"
+              activeClassName={`${styles.activeNav} | text-gray-100`}
+            >
+              {item.name}
+              <span
+                className="decorator absolute left-1 bottom-0 hidden | bg-primary-yellow | w-[80%] h-1"
+                aria-hidden="true"
+              />
+            </Link>
+          ))}
         </div>
       </nav>
-    </>
+    </Fragment>
   )
 }
 

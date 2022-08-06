@@ -1,0 +1,7 @@
+.activeNav > span {
+  display: block;
+}
+
+.activeNav :global(.nav-active) {
+  display: block;
+}

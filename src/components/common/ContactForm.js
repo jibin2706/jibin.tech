@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './contact-form.scss'
 
 function ContactForm() {
   const [formValues, setFormValues] = useState({
@@ -15,34 +14,72 @@ function ContactForm() {
 
   return (
     <form
-      className="contact-form"
+      className="max-w-lg | space-y-6"
       name="contact"
       method="POST"
       action="https://formsubmit.co/bb54bfeb342468815598de8c1efcb901"
     >
-      <input type="text" name="_honey" style={{ display: 'none' }} />
+      <input type="text" name="_honey" className="hidden" />
       {/* <input type="hidden" name="_captcha" value="false" /> */}
       <input type="hidden" name="_subject" value={`Contact Form - jibin.tech - ${formValues.name}`} />
       <input type="hidden" name="_next" value="https://jibin.tech/success" />
-      <label>
-        <span className="contact-form__label">Name</span>
-        <input type="text" name="name" aria-label="Name" onChange={handleFormChange} required />
-      </label>
 
-      <label>
-        <span className="contact-form__label">Email Address</span>
-        <input type="email" name="email" aria-label="Email Address" required />
-      </label>
+      <div>
+        <label htmlFor="name" className="text-sm font-semibold | block | mb-0.5">
+          Name
+        </label>
+        <input
+          id="name"
+          type="text"
+          name="name"
+          aria-label="Name"
+          onChange={handleFormChange}
+          className="text-gray-200 bg-transparent | border border-gray-200 rounded | w-full | p-2"
+          required
+        />
+      </div>
 
-      <label>
-        <span className="contact-form__label">Company / Organization</span>
-        <input type="text" name="company_name" aria-label="Company name" />
-      </label>
+      <div>
+        <label htmlFor="email" className="text-sm font-semibold | block | mb-0.5">
+          Email Address
+        </label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          aria-label="Email Address"
+          className="text-gray-200 bg-transparent | border border-gray-200 rounded | w-full | p-2"
+          required
+        />
+      </div>
 
-      <label>
-        <span className="contact-form__label">Message</span>
-        <textarea row="20" cols="50" name="message" aria-label="Message" required />
-      </label>
+      <div>
+        <label htmlFor="company_name" className="text-sm font-semibold | block | mb-0.5">
+          Company / Organization
+        </label>
+        <input
+          id="company_name"
+          type="text"
+          name="company_name"
+          aria-label="Company name"
+          className="text-gray-200 bg-transparent | border border-gray-200 rounded | w-full | p-2"
+        />
+      </div>
+
+      <div>
+        <label htmlFor="message" className="text-sm font-semibold | block | mb-0.5">
+          Message
+        </label>
+        <textarea
+          id="message"
+          row="20"
+          cols="50"
+          name="message"
+          aria-label="Message"
+          className="text-gray-200 bg-transparent | border border-gray-200 rounded | w-full min-h-[200px] | p-2"
+          required
+        />
+      </div>
 
       <button className="btn btn--filled btn--full">Reach out to me</button>
     </form>

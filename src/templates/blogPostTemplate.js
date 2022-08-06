@@ -5,7 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../components/layout'
 import Seo from '../components/SEO'
 
-import './blogPostTemplate.scss'
+import './blogPostTemplate.css'
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   // const GITHUB_USERNAME = 'jibin2706'
@@ -58,30 +58,34 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         jsonSchema={[articleSchema]}
       />
 
-      <article className="blog">
-        <header className="blog__header">
-          <div className="blog__meta">
-            <span>{date} </span>
+      <article className="max-w-3xl | mt-20 md:mt-40 mx-auto px-4">
+        <header className="mb-12">
+          <div className="flex flex-wrap items-center | text-gray-400 text-sm md:text-base uppercase | space-x-4 | mb-1">
+            <span>{date}</span>
           </div>
-          <h1 className="blog__title">{title}</h1>
-          <h2 className="blog__info">{info}</h2>
-          <div className="blog__tags">
+          <h1 className="text-gray-100 text-2xl md:text-3xl font-bold tracking-wide | mb-4">{title}</h1>
+          <h2 className="text-gray-400 text-lg md:text-xl font-light | mb-4">{info}</h2>
+          <div className="space-x-4">
             {tags.map(tag => (
-              <Link key={tag} to={`/tags/${tag}`}>
+              <Link
+                key={tag}
+                to={`/tags/${tag}`}
+                className="text-gray-400 tracking-widest bg-neutral-700 | rounded | px-2 py-1"
+              >
                 {tag}
               </Link>
             ))}
           </div>
         </header>
 
-        <main className="blog-body" style={{ maxWidth: '800px', margin: 'auto' }}>
-          <MDXRenderer className="blog-body">{post.body}</MDXRenderer>
+        <main className="prose prose-invert sm:prose-lg lg:prose-xl | blog-body">
+          <MDXRenderer>{post.body}</MDXRenderer>
         </main>
       </article>
 
-      <hr className="blog__divider" />
+      <hr className="bg-gray-600 | h-0.5 w-[20%] | my-12 mx-auto" />
 
-      <section className="read-more">
+      <section className="flex flex-wrap justify-between | max-w-3xl | mx-auto px-4 space-y-4">
         {previous && (
           <Link className="btn btn--full btn--hover" to={`/blog${previous.fields.slug}`}>
             « &nbsp;

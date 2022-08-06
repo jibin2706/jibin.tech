@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react'
 import useDarkMode from 'use-dark-mode'
 
-import './toggleButton.scss'
-
 function ToggleThemeButton() {
   const darkMode = useDarkMode(false)
   useEffect(() => {
@@ -17,7 +15,7 @@ function ToggleThemeButton() {
       onClick={darkMode.toggle}
       aria-hidden="true"
       aria-checked={darkMode.value}
-      className="toggle-button"
+      className="cursor-pointer | border-none | w-6 h-6 | p-0 ml-10"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

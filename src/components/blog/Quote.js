@@ -1,5 +1,5 @@
 import React from 'react'
-import './quote.scss'
+import './quote.css'
 
 function Quote({ phase, cite }) {
   return (

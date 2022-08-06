@@ -14,16 +14,9 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-postcss`,
     `gatsby-transformer-json`,
     `gatsby-plugin-twitter`,
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        sassOptions: {
-          includePaths: ['src/styles/'],
-        },
-      },
-    },
     // sitemap generation
     {
       resolve: `gatsby-plugin-sitemap`,

@@ -1,5 +1,5 @@
 import React from 'react'
-import './Codeline.scss'
+import './Codeline.css'
 
 function Codeline({ children }) {
   return <div className="codeline">{children}</div>

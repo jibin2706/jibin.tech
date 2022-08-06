@@ -1,22 +1,24 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import './blogList.scss'
-
 const BlogList = ({ data, templateTitle }) => {
   let blog = data.allMdx.edges
   return (
-    <div className="blog-list">
-      {templateTitle === 'Articles' ? (
-        <h1 className="main__list__header">
-          Articles
-          <span>I write about random stuff that I come across while developing for the web.</span>
-        </h1>
-      ) : (
-        <h1 className="main__list__header">{templateTitle}</h1>
-      )}
+    <div className="max-w-6xl | mx-auto md:mt-40">
+      <section className="text-gray-100 text-center | mb-8">
+        {templateTitle === 'Articles' ? (
+          <h1 className="text-xl tracking-wider sm:text-2xl">
+            Articles
+            <span className="block | text-base tracking-normal sm:text-lg | mt-1">
+              I write about random stuff that I come across while developing for the web.
+            </span>
+          </h1>
+        ) : (
+          <h1 className="text-xl tracking-wider sm:text-2xl">{templateTitle}</h1>
+        )}
+      </section>
 
-      <main className="main__list">
+      <main className="grid md:grid-cols-2 gap-8 | p-4">
         {blog.map(({ node }) => {
           let { id, frontmatter, fields } = node
           let { title, date, info } = frontmatter
@@ -24,10 +26,10 @@ const BlogList = ({ data, templateTitle }) => {
 
           return (
             <Link to={`/blog${slug}`} key={id}>
-              <article className="blog__list__card">
-                <h2 className="blog__list__title">{title}</h2>
-                <p className="blog__list__info">{info}</p>
-                <div className="blog__list__meta">{date}</div>
+              <article className="border border-gray-500 rounded-lg | h-full | px-5 py-8">
+                <h2 className="inline-block | text-xl font-bold | mb-4">{title}</h2>
+                <p className="text-lg text-gray-400 | mb-4">{info}</p>
+                <div className="text-sm text-gray-400 uppercase">{date}</div>
               </article>
             </Link>
           )
