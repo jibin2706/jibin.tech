@@ -24,15 +24,6 @@ exports.createPages = ({ graphql, actions }) => {
       ) {
         ...postContent
       }
-      tilPosts: allMdx(
-        sort: { fields: [frontmatter___date], order: DESC }
-        filter: { frontmatter: { listing: { ne: false } }, fileAbsolutePath: { regex: "//til//" } }
-      ) {
-        ...postContent
-        nodes {
-          body
-        }
-      }
     }
 
     fragment postContent on MdxConnection {
@@ -40,7 +31,6 @@ exports.createPages = ({ graphql, actions }) => {
         frontmatter {
           title
           tags
-          slug
         }
         fields {
           slug
@@ -49,11 +39,9 @@ exports.createPages = ({ graphql, actions }) => {
     }
   `).then(result => {
     const blogPosts = result.data.blogPosts.nodes
-    const tilPosts = result.data.tilPosts.nodes
 
     createBlogPages(blogPosts, createPage)
     createTagPages(blogPosts, createPage)
-    createTILPages(tilPosts, createPage)
   })
 }
 
@@ -71,21 +59,6 @@ function createBlogPages(posts, createPage) {
         slug: node.fields.slug,
         previous,
         next,
-      },
-    })
-    return posts
-  })
-}
-
-function createTILPages(posts, createPage) {
-  posts.forEach(node => {
-    createPage({
-      path: `/til/${node.frontmatter.slug}`,
-      component: path.resolve(`./src/templates/tilPostTemplate.js`),
-      context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
-        slug: node.frontmatter.slug,
       },
     })
     return posts
