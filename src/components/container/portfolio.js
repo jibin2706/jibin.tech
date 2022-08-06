@@ -28,8 +28,8 @@ function Portfolio() {
 
   return (
     <main className="portfolio">
-      <section className="flex flex-col justify-center | min-h-screen max-w-3xl | px-8 py-20 md:py-40 mx-auto">
-        <h1 className="font-serif font-normal text-primary-red text-3xl tracking-wider md:text-4xl | mb-2">
+      <section className="flex flex-col justify-center | min-h-screen max-w-3xl | px-6 py-20 md:py-40 mx-auto">
+        <h1 className="font-serif font-normal text-primary-red text-3xl tracking-wide md:text-4xl | mb-2">
           Hi, I'm Jibin Thomas
         </h1>
         <h2 className="text-gray-200 text-xl !leading-snug md:text-2xl">
@@ -38,10 +38,10 @@ function Portfolio() {
         </h2>
       </section>
 
-      <section className="bg-primary-blue | px-8 py-20 md:py-40">
+      <section className="bg-primary-blue | px-6 py-20 md:py-40">
         <div className="max-w-3xl | mx-auto">
           <SectionHeader text="About Me" />
-          <div className="text-xl !leading-normal | space-y-8">
+          <div className="text-lg md:text-xl !leading-normal | space-y-8">
             <p>
               Hi, I'm Jibin Thomas. I'm a frontend developer based in Mumbai, India. Currently, I'm working as a Senior
               Frontend Developer at Pepper Content building Peppertype & marketing pages. Previously I worked at The
@@ -56,7 +56,7 @@ function Portfolio() {
         </div>
       </section>
 
-      <section className="bg-secondary-blue | px-8 py-20 md:py-40">
+      <section className="bg-secondary-blue | px-6 py-20 md:py-40">
         <div className="max-w-3xl | mx-auto">
           <SectionHeader text="Work" />
           {workDetails.map(details => {
@@ -77,7 +77,7 @@ function Portfolio() {
         </div>
       </section>
 
-      <section className="bg-primary-blue | px-8 py-20 md:py-40">
+      <section className="bg-primary-blue | px-6 py-20 md:py-40">
         <div className="max-w-7xl | mx-auto">
           <SectionHeader text="Featured Posts" />
           <div className="grid gap-12 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
@@ -94,7 +94,7 @@ function Portfolio() {
         </div>
       </section>
 
-      <section className="bg-secondary-blue | px-8 py-20 md:py-40">
+      <section className="bg-secondary-blue | px-6 py-20 md:py-40">
         <div className="max-w-3xl | mx-auto">
           <SectionHeader text="Contact Me" />
           <ContactForm />

@@ -83,6 +83,7 @@ function MobileNavigation() {
         aria-label="toggle navigation"
         id="hamburger"
         className="sm:hidden"
+        style={{ '-webkit-tap-highlight-color': 'transparent' }}
       >
         <div className="hamburger">
           <span className="bar bar1" />

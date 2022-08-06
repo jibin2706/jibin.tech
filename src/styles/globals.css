@@ -75,6 +75,7 @@ ul {
 li {
   list-style: none;
   position: relative;
+  padding-left: 1rem;
 }
 
 li::before {
@@ -84,7 +85,7 @@ li::before {
   height: 8px;
   width: 8px;
   position: absolute;
-  left: -1.5rem;
+  left: -.5rem;
   top: 8px;
 }
 
