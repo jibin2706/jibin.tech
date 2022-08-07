@@ -117,7 +117,7 @@ pre[class*='language-'] > code[class*='language-'] {
   z-index: 1;
 }
 
-// custom additions
+/* custom additions */
 .gatsby-highlight-code-line {
   background-color: #dddddd;
   display: block;
