@@ -7,12 +7,10 @@ tags: ['general']
 featured: false
 ---
 
-import Quote from '../../../src/components/blog/Quote.js'
-
-<Quote
-  phase="When faced with a choice, always choose the one that pushes you the most, increases your growth and personal prowess."
-  cite="The 5 A.M Club"
-/>
+<blockquote class="blockquote not-prose">
+  When faced with a choice, always choose the one that pushes you the most, increases your growth and personal prowess.
+  <cite class="cite">The 5 A.M Club</cite>
+</blockquote>
 
 A lot of things changed this year from studying to transitioning to a professional career as a Front-End Developer. Overall this year had a lot of positives for me.
 
@@ -101,8 +99,7 @@ I got an opportunity from Udacity to explore on Edge AI. I will be completing th
 
 Thanks for reading, hope 2020 brings you all the success in your life.
 
-<Quote
-  phase="Today’s accomplishments were yesterday’s impossibilities."
-  cite="Robert H. Schuller"
-/>
-
+<blockquote class="blockquote not-prose">
+  Today’s accomplishments were yesterday’s impossibilities.
+  <cite class="cite">Robert H. Schuller</cite>
+</blockquote>

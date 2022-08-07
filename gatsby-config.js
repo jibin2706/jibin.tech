@@ -48,8 +48,8 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMdx } }) => {
-              return allMdx.edges.map(edge => {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
                 const siteUrl = site.siteMetadata.siteUrl
                 const postText = `
                 <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at blog.jibin.tech . You can read it online by <a href="${
@@ -67,7 +67,7 @@ module.exports = {
             },
             query: `
               {
-              allMdx(
+                allMarkdownRemark(
                   sort: { order: DESC, fields: [frontmatter___date] },
               ) {
                   edges {
@@ -123,12 +123,11 @@ module.exports = {
         },
       },
     },
-    // transforming mdx to html
+    // transforming markdown to html
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        extensions: [`.mdx`, `.md`],
-        gatsbyRemarkPlugins: [
+        plugins: [
           // using images in markdown file
           {
             resolve: `gatsby-remark-images`,

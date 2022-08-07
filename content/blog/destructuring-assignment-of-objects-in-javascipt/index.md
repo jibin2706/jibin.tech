@@ -6,15 +6,13 @@ image: 'featured-image.png'
 tags: ['web', 'js']
 ---
 
-import Defination from '../../../src/components/blog/Defination.js'
-
 ![Javascript Object destructuring](featured-image.png)
 
 ES6 provides a lot of new features like classes, arrow functions, string interpolation, promises, and many more. But one of my more liked features in ES6 specification is the array and object destructuring assignment.
 
-<Defination>
+<div class="defination not-prose">
 Destructuring assignment syntax is where you unpack values from arrays or properties of object into variables names.
-</Defination>
+</div>
 
 Assigning variables from array/object properties can be done in ES5, but it would take more lines of code to achieve the same. Also, a bit difficult to read when you want many properties from an object.
 

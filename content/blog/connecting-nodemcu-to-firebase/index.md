@@ -7,16 +7,12 @@ tags: ['firebase', 'iot']
 featured: true
 ---
 
-import Quote from '../../../src/components/blog/Quote.js'
-import Codeline from '../../../src/components/blog/Codeline.js'
-
-
 ![NodeMCU connected to breadboard](featured-image.jpg)
 
-<Quote
-  phase="The Internet will disappear. There will be so many IP addresses, so many devices, sensors, things that you are wearing, things that you are interacting with, that you won't even sense it. It will be part of your presence all the time. Imagine you walk into a room, and the room is dynamic. And with your permission and all of that, you are interacting with the things going on in the room."
-  cite="Eric Schmidt"
-/>
+<blockquote class="blockquote not-prose">
+  The Internet will disappear. There will be so many IP addresses, so many devices, sensors, things that you are wearing, things that you are interacting with, that you won't even sense it. It will be part of your presence all the time. Imagine you walk into a room, and the room is dynamic. And with your permission and all of that, you are interacting with the things going on in the room."
+  <cite class="cite">Eric Schmidt</cite>
+</blockquote>
 
 Nowadays many devices that we use day to day are connected to the internet like Television, smart speakers, refrigerators, etc. These devices extend their primary functions and allow it to interact with other devices on the internet and allow them to be controlled remotely.
 
@@ -29,31 +25,31 @@ In this post, we will be using NodeMCU devkit and Firebase for turning on and of
 1. We will be using Arduino IDE for writing code and flash the code to the device. Download the latest version of the IDE [here](https://www.arduino.cc/en/main/software).
 
 2. Since we are using NodeMCU which is not officially supported by Arduino IDE, we have to add the JSON file of the device. In Arduino IDE add this URL in
-   <Codeline>
+   <div class="codeline not-prose">
       Open File > Preferences > Additional Board Manager URLs
       <div class="text-underline">http://arduino.esp8266.com/stable/package_esp8266com_index.json</div>
-   </Codeline>
+   </div>
 
 3. Select your Board from
-   <Codeline>
+   <div class="codeline not-prose">
       Tools > Board > NodeMCU 1.o
-   </Codeline>
+   </div>
 
 
 4. To use firebase database in NodeMCU you need to download the firebase-arduino library which abstracts the REST API of the firebase. [Download firebase-arduino](https://github.com/FirebaseExtended/firebase-arduino.git)
 
 5. Include the downloaded zip file on Arduino IDE.
-   <Codeline>
+   <div class="codeline not-prose">
       Sketch > Include library > Add .zip > Select zip file
-   </Codeline>
+   </div>
    
 
 6. You also need to install the ArduinoJson library which can be downloaded from Arduino IDE itself.
 
    **Note: The library version should not be 6.x.x use the latest 5.x.x**
-   <Codeline>
+   <div class="codeline not-prose">
       Sketch > Include library > Manage Libraries > Search for ArduinoJson by Benoit Blanchon
-   </Codeline>
+   </div>
 
 ### Setting up Firebase Database
 
@@ -71,10 +67,10 @@ In this post, we will be using NodeMCU devkit and Firebase for turning on and of
 
 10. Now all the setup procedures are done let's start coding. <br />
     You need to create a macro for your database URL and firebase secret which you had copied in Step 8.
-   <Codeline>
+   <div class="codeline not-prose">
       #define FIREBASE_HOST "yourfirebasedatabase.firebaseio.com" <br />
       #define FIREBASE_AUTH "*****"
-   </Codeline>
+   </div>
 
 For simplicity, we will write a simple code for turning on and off led remotely
 
@@ -130,9 +126,9 @@ void loop()
 
 12. Upload your code from Arduino IDE.
 
-    <Codeline>
+    <div class="codeline not-prose">
       Sketch > Upload
-    </Codeline>
+    </div>
 
 13. Now try changing the database value to true and false the led should now start turn on and off. Additionally, you can extend this project by creating a web app that will toggle the LED instead of manually changing the value in the database.
 

@@ -4,11 +4,16 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 import BlogCard from '../common/BlogCard'
 import ContactForm from '../common/ContactForm'
 import { workDetails } from './work'
+import { useEffect } from 'react'
+import { useRef } from 'react'
 
 function Portfolio() {
   const data = useStaticQuery(graphql`
     query {
-      allMdx(filter: { frontmatter: { featured: { eq: true } } }, sort: { fields: [frontmatter___date], order: DESC }) {
+      allMarkdownRemark(
+        filter: { frontmatter: { featured: { eq: true } } }
+        sort: { fields: [frontmatter___date], order: DESC }
+      ) {
         edges {
           node {
             id
@@ -81,7 +86,7 @@ function Portfolio() {
         <div className="max-w-7xl | mx-auto">
           <SectionHeader text="Featured Posts" />
           <div className="grid gap-12 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-            {data.allMdx.edges.map(post => (
+            {data.allMarkdownRemark.edges.map(post => (
               <Link key={post.node.id} to={`/blog${post.node.fields.slug}`}>
                 <BlogCard
                   title={post.node.frontmatter.title}
@@ -105,10 +110,31 @@ function Portfolio() {
 }
 
 function SectionHeader({ text }) {
+  const textDecoratorRef = useRef(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.width = '80%'
+        } else {
+          entry.target.style.width = '0%'
+        }
+      })
+    })
+
+    observer.observe(textDecoratorRef.current)
+  }, [])
+
   return (
     <div className="inline-block relative | mb-8">
       <h2 className="text-3xl md:text-2xl lg:text-5xl font-serif">{text}</h2>
-      <span className="absolute right-0 -bottom-1 | bg-primary-yellow | w-[80%] h-1" aria-hidden="true" />
+      <span
+        ref={textDecoratorRef}
+        className="absolute right-0 -bottom-1 | bg-primary-yellow | w-[0px] h-1"
+        style={{ transition: 'all 800ms cubic-bezier(0.215, 0.610, 0.355, 1) 200ms' }}
+        aria-hidden="true"
+      />
     </div>
   )
 }

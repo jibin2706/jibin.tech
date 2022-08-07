@@ -131,6 +131,60 @@ li::before {
   transition: all 0.1s linear;
 }
 
+/* quote component */
+.blockquote {
+  color: var(--grey-300);
+  font-family: 'Georgia', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  margin: 3rem 0 3rem;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+.blockquote::after {
+  content: '\201D';
+  color: var(--grey-500);
+  opacity: 0.5;
+  font-size: 6em;
+  font-style: italic;
+  position: absolute;
+  top: -3rem;
+  right: 1rem;
+  z-index: -1;
+}
+
+.blockquote .cite {
+  color: var(--grey-500);
+  font-family: 'Overpass', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  float: right;
+}
+
+.blockquote .cite::before {
+  content: '\2015';
+}
+
+/* codeline component */
+.codeline {
+  display: block;
+  padding: 0.25rem 1rem;
+  border-left: 4px solid var(--primary-light);
+  margin-top: 0.5rem;
+  font-family: Consolas, Monaco, 'Ubuntu Mono', monospace;
+  font-size: 0.8rem;
+}
+
+/* defination component */
+.defination {
+  border-left: 4px solid var(--primary-light);
+  display: block;
+  font-weight: 600;
+  margin-top: 1rem;
+  padding: 0.25rem 1rem;
+}
+
 /* animation classes*/
 .drop-in--1 {
   animation: drop-in 0.5s ease 0ms backwards;

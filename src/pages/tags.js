@@ -7,7 +7,7 @@ import Layout from '../components/layout'
 
 const TagsPage = ({
   data: {
-    allMdx: { group },
+    allMarkdownRemark: { group },
   },
 }) => (
   <Layout>
@@ -31,7 +31,7 @@ const TagsPage = ({
 
 TagsPage.propTypes = {
   data: PropTypes.shape({
-    allMdx: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
       group: PropTypes.arrayOf(
         PropTypes.shape({
           fieldValue: PropTypes.string.isRequired,
@@ -56,7 +56,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(limit: 2000) {
+    allMarkdownRemark(limit: 2000) {
       group(field: frontmatter___tags) {
         fieldValue
         totalCount

@@ -18,7 +18,7 @@ export default IndexPage
 
 export const query = graphql`
   {
-    allMdx(
+    allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { listing: { ne: false } }, fileAbsolutePath: { regex: "/^((?!til).)*$/" } }
     ) {

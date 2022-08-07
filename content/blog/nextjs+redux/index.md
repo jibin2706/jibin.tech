@@ -7,8 +7,6 @@ tags: ['web', 'javascript']
 featured: true
 ---
 
-import Codeline from '../../../src/components/blog/Codeline.js'
-
 **NOTE: A updated version of this post is [available here.](/preserve-prerendering-in-nextjs-when-using-redux/)**
 
 ![Next.js + Redux](featured-image.png)
@@ -164,9 +162,9 @@ index.getInitialProps = ({ reduxStore }) => {
 
 Here's the source code if you want to try it out in your machine.
 
-<Codeline>
+<div class="codeline not-prose">
   git clone https://github.com/jibin2706/nextjs-redux.git<br />
   cd next-redux-example <br />
   npm install <br />
   npm run dev<br />
-</Codeline>
+</div>

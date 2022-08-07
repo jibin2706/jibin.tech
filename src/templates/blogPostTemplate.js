@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from '../components/layout'
 import Seo from '../components/SEO'
@@ -12,7 +11,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
   // const GITHUB_REPO_NAME = 'blog.jibin.tech'
   // const GITHUB_BRANCH = 'develop'
 
-  const post = data.mdx
+  const post = data.markdownRemark
   let { frontmatter } = post
   let { slug } = post.fields
   let { title, date, info, tags, image } = frontmatter
@@ -78,9 +77,10 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           </div>
         </header>
 
-        <main className="prose prose-invert sm:prose-lg lg:prose-xl | blog-body">
-          <MDXRenderer>{post.body}</MDXRenderer>
-        </main>
+        <main
+          className="prose prose-invert sm:prose-lg lg:prose-xl | blog-body"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
       </article>
 
       <hr className="bg-gray-600 | h-0.5 w-[20%] | my-12 mx-auto" />
@@ -105,8 +105,8 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
 export const query = graphql`
   query ($slug: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
-      body
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
       fields {
         slug
       }

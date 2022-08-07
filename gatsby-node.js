@@ -4,7 +4,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
-  if (node.internal.type === `Mdx`) {
+  if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode, basePath: `pages` })
     createNodeField({
       node,
@@ -18,22 +18,18 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return graphql(`
     {
-      blogPosts: allMdx(
+      blogPosts: allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
         filter: { frontmatter: { listing: { ne: false } }, fileAbsolutePath: { regex: "/^((?!til).)*$/" } }
       ) {
-        ...postContent
-      }
-    }
-
-    fragment postContent on MdxConnection {
-      nodes {
-        frontmatter {
-          title
-          tags
-        }
-        fields {
-          slug
+        nodes {
+          frontmatter {
+            title
+            tags
+          }
+          fields {
+            slug
+          }
         }
       }
     }

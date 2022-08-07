@@ -7,8 +7,6 @@ tags: ['web', 'javascript', 'react']
 featured: true
 ---
 
-import Codeline from '../../../src/components/blog/Codeline.js'
-
 ![Next.js + Redux](featured-image.png)
 
 I had written a post about integrating Nextjs with Redux a few months back, but it had one downside. Static prerendering was not possible using that method even though you didn't use getInitialProps in the page components.
@@ -181,9 +179,9 @@ From the above snippet, you can see that we were able to generate static pages o
 
 Here's the source code if you want to try it out in your machine.
 
-<Codeline>
+<div class="codeline not-prose">
  git clone https://github.com/jibin2706/nextjs-redux.git<br />
  cd next-redux-example <br />
  npm install <br />
  npm run dev<br />
-</Codeline>
+</div>

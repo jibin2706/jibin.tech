@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 const BlogList = ({ data, templateTitle }) => {
-  let blog = data.allMdx.edges
+  let blog = data.allMarkdownRemark.edges
   return (
     <div className="max-w-6xl | mx-auto md:mt-40">
       <section className="text-gray-100 text-center | mb-8">

@@ -6,8 +6,6 @@ image: 'featured-image.jpg'
 tags: ['workflow']
 ---
 
-import Defination from '../../../src/components/blog/Defination.js'
-
 ![git history](featured-image.jpg)
 
 _This post is for total beginners who haven't heard or used any version control system or git._
@@ -16,9 +14,9 @@ Git is the most popular version control system out there. And there is a high ch
 
 For those, you don't know what git is <br />
 
-<Defination>
+<div class="defination not-prose">
     Git is a free and open-source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
-</Defination>
+</div>
 
 In simpler terms, it helps to manage different versions of your code efficiently and also improves collaboration when working with many people efficiently.
 
