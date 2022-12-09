@@ -87,13 +87,13 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
       <section className="flex flex-wrap justify-between | max-w-3xl | mx-auto px-4 space-y-4">
         {previous && (
-          <Link className="btn btn--full btn--hover" to={`/blog${previous.fields.slug}`}>
+          <Link className="btn btn-secondary | w-full" to={`/blog${previous.fields.slug}`}>
             « &nbsp;
             {previous.frontmatter.title}
           </Link>
         )}
         {next && (
-          <Link className="btn btn--full btn--hover" to={`/blog${next.fields.slug}`}>
+          <Link className="btn btn-secondary | w-full" to={`/blog${next.fields.slug}`}>
             {next.frontmatter.title}
             &nbsp; »
           </Link>

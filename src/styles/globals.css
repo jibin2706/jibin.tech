@@ -2,11 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .btn {
+    @apply text-center;
+    @apply border border-gray-400 rounded;
+    @apply px-5 py-3;
+  }
+
+  .btn-primary {
+    @apply bg-primary-red hover:bg-primary-red/80;
+    @apply transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent hover:bg-primary-red;
+    @apply hover:border-primary-red;
+    @apply transition-colors;
+  }
+}
 
 :root {
   --sans-serif: 'Source Sans Pro', sans-serif;
   --serif: 'DM Serif Display', serif;
-
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
@@ -48,7 +65,6 @@
   /* neutral - grey */
   --dark-grey: #3e4c59;
   --darker-grey: #323f4b;
-
 }
 
 ::selection {
@@ -67,7 +83,6 @@ body {
   line-height: 1.5;
 }
 
-
 ul {
   padding-left: var(--spacing-5);
 }
@@ -85,7 +100,7 @@ li::before {
   height: 8px;
   width: 8px;
   position: absolute;
-  left: -.5rem;
+  left: -0.5rem;
   top: 8px;
 }
 
@@ -99,36 +114,6 @@ li::before {
 
 .w-25 {
   width: 25%;
-}
-
-/* button styles */
-.btn {
-  text-align: center;
-  padding: 12px 20px;
-  border: 1px solid var(--grey-400);
-  text-decoration: none;
-  background: transparent;
-  transition: all 0.1s linear;
-  cursor: pointer;
-}
-
-.btn--filled {
-  background: var(--primary-red);
-  color: white;
-}
-
-.btn--full {
-  font-weight: bold;
-  width: 100%;
-}
-
-.btn--hover:hover,
-.btn--hover:focus {
-  outline: none;
-
-  background: var(--primary-red);
-  border-color: var(--primary-red);
-  transition: all 0.1s linear;
 }
 
 /* quote component */

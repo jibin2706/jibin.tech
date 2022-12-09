@@ -81,7 +81,7 @@ function ContactForm() {
         />
       </div>
 
-      <button className="btn btn--filled btn--full">Reach out to me</button>
+      <button className="btn btn-primary | w-full">Reach out to me</button>
     </form>
   )
 }
