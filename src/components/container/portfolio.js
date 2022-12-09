@@ -10,10 +10,7 @@ import { useRef } from 'react'
 function Portfolio() {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(
-        filter: { frontmatter: { featured: { eq: true } } }
-        sort: { fields: [frontmatter___date], order: DESC }
-      ) {
+      allMarkdownRemark(filter: { frontmatter: { featured: { eq: true } } }, sort: { frontmatter: { date: DESC } }) {
         edges {
           node {
             id
