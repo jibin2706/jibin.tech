@@ -1,59 +1,11 @@
 {
   "name": "jibin.tech",
-  "private": true,
   "description": "Portfolio and Blog of Jibin Thomas",
   "version": "0.1.0",
   "author": "Jibin Thomas <jibin.thomas2706@gmail.com>",
-  "dependencies": {
-    "gatsby": "^5.2.0",
-    "gatsby-plugin-feed": "^5.2.0",
-    "gatsby-plugin-google-gtag": "^5.2.0",
-    "gatsby-plugin-manifest": "^5.2.0",
-    "gatsby-plugin-nprogress": "^5.2.0",
-    "gatsby-plugin-react-helmet": "^6.2.0",
-    "gatsby-plugin-sharp": "^5.2.0",
-    "gatsby-plugin-sitemap": "^6.2.0",
-    "gatsby-plugin-twitter": "^5.2.0",
-    "gatsby-remark-code-titles": "^1.1.0",
-    "gatsby-remark-copy-linked-files": "^6.2.0",
-    "gatsby-remark-images": "^7.2.0",
-    "gatsby-remark-prismjs": "^7.2.0",
-    "gatsby-source-filesystem": "^5.2.0",
-    "gatsby-transformer-remark": "^6.2.0",
-    "gatsby-transformer-sharp": "^5.2.0",
-    "lodash": "^4.17.21",
-    "prismjs": "^1.29.0",
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "use-dark-mode": "^2.3.1"
-  },
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.8",
-    "autoprefixer": "^10.4.13",
-    "gatsby-plugin-postcss": "^6.2.0",
-    "postcss": "^8.4.19",
-    "prettier": "^2.8.1",
-    "tailwindcss": "^3.2.4"
-  },
-  "keywords": [
-    "gatsby",
-    "blog"
-  ],
-  "engines": {
-    "node": ">=18"
-  },
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build --log-pages",
-    "clean": "gatsby clean",
-    "develop": "gatsby develop -H 0.0.0.0 -p 8000",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "yarn run develop",
-    "dev": "yarn run develop",
-    "serve": "gatsby serve -H 0.0.0.0"
-  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/jibin2706/jibin.tech"
