@@ -1,0 +1,65 @@
+<button
+	id="theme-toggle"
+	class="hover:bg-foreground-primary hover:text-surface-primary border p-2 transition-colors lg:p-3"
+	aria-label="Toggle theme"
+>
+	<!-- Sun icon (show in dark mode, click to go light) -->
+	<svg
+		class="theme-toggle-dark hidden h-5 w-5 stroke-current"
+		fill="none"
+		viewBox="0 0 24 24"
+		stroke-width="1.5"
+		aria-hidden="true"
+	>
+		<circle cx="12" cy="12" r="4"></circle>
+		<path
+			d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+		></path>
+	</svg>
+
+	<!-- Moon icon (show in light mode, click to go dark) -->
+	<svg
+		class="theme-toggle-light h-5 w-5 stroke-current"
+		fill="none"
+		viewBox="0 0 24 24"
+		stroke-width="1.5"
+		aria-hidden="true"
+	>
+		<path
+			d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+		></path>
+	</svg>
+</button>
+
+<script>
+	const themeToggle = document.getElementById('theme-toggle')
+	const html = document.documentElement
+	const lightIcon = document.querySelector('.theme-toggle-light')
+	const darkIcon = document.querySelector('.theme-toggle-dark')
+
+	// Update button icon based on current theme
+	function updateIcon() {
+		if (html.classList.contains('dark')) {
+			lightIcon?.classList.add('hidden')
+			darkIcon?.classList.remove('hidden')
+		} else {
+			lightIcon?.classList.remove('hidden')
+			darkIcon?.classList.add('hidden')
+		}
+	}
+
+	// Initialize icon state on page load
+	updateIcon()
+
+	themeToggle?.addEventListener('click', () => {
+		html.classList.toggle('dark')
+
+		if (html.classList.contains('dark')) {
+			localStorage.setItem('theme', 'dark')
+		} else {
+			localStorage.setItem('theme', 'light')
+		}
+
+		updateIcon()
+	})
+</script>

@@ -1,2 +1,36 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
+@theme {
+	--font-cormorant: 'Cormorant', serif;
+	--font-sans: 'Work Sans', sans-serif;
+
+	/* Surface colors - for backgrounds */
+	--color-surface-primary: #f9f9f9;
+	--color-surface-secondary: #ffffff;
+
+	/* Foreground colors - for text */
+	--color-foreground-primary: #0d0d0d;
+	--color-foreground-secondary: #666666;
+	--color-foreground-tertiary: #999999;
+
+	/* Border colors */
+	--color-border-subtle: #e0e0e0;
+	--color-border-strong: #0d0d0d;
+}
+
+:root.dark {
+	--color-surface-primary: #0d0d0d;
+	--color-surface-secondary: #1a1a1a;
+	--color-foreground-primary: #f9f9f9;
+	--color-foreground-secondary: #cccccc;
+	--color-foreground-tertiary: #888888;
+	--color-border-subtle: #333333;
+	--color-border-strong: #f9f9f9;
+}
+
+body {
+	background-color: var(--color-surface-primary);
+	color: var(--color-foreground-primary);
+	transition: all 0.3s ease;
+}

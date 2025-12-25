@@ -1,7 +1,31 @@
 ---
 import PageLayout from '../components/layout/page-layout.astro'
+
+const title = [
+	'Developer creating practical solutions for modern problems',
+	'Creating quality web experiences with thoughtful design and clean code',
+] as const
+
+const focus = [
+	'Working across the stack with React, Next.js, Node.js, and TypeScript',
+	'Specializing in building production applications with modern web stack',
+] as const
 ---
 
-<PageLayout>
-	<h1>Jibin Thomas</h1>
+<PageLayout currentPath="/">
+	<main class="mx-auto mt-20 mb-40 max-w-300 px-5">
+		<section class="text-left lg:text-center">
+			<h2 class="font-cormorant mb-12 text-4xl leading-tight font-light text-balance lg:mb-16 lg:text-6xl">
+				{title[1]}
+			</h2>
+			<h3 class="text-foreground-secondary mb-16 text-xs tracking-widest uppercase lg:mb-20 lg:text-sm">
+				Currently Pepper Content, Mumbai
+			</h3>
+			<p
+				class="text-foreground-secondary font-cormorant mx-auto max-w-3xl text-2xl leading-relaxed font-light text-balance lg:text-3xl"
+			>
+				{focus[1]}
+			</p>
+		</section>
+	</main>
 </PageLayout>
