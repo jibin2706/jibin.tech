@@ -1,13 +1,32 @@
 {
-  "name": "jibin.tech",
-  "description": "Portfolio and Blog of Jibin Thomas",
-  "version": "0.1.0",
-  "author": "Jibin Thomas <jibin.thomas2706@gmail.com>",
-  "dependencies": {},
-  "devDependencies": {},
-  "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jibin2706/jibin.tech"
-  }
+	"name": "jibin.tech",
+	"description": "Portfolio and Blog of Jibin Thomas",
+	"version": "4.0.0",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"format": "prettier --write .",
+		"typecheck": "tsc --noEmit"
+	},
+	"author": "Jibin Thomas <jibin.thomas2706@gmail.com>",
+	"dependencies": {
+		"@tailwindcss/vite": "^4.1.18",
+		"astro": "^5.16.5",
+		"tailwindcss": "^4.1.18"
+	},
+	"devDependencies": {
+		"@tailwindcss/typography": "^0.5.19",
+		"@types/bun": "1.3.5",
+		"prettier": "^3.7.4",
+		"prettier-plugin-astro": "^0.14.1",
+		"prettier-plugin-tailwindcss": "^0.7.2"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jibin2706/jibin.tech"
+	}
 }
