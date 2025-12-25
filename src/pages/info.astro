@@ -1,0 +1,54 @@
+---
+import PageLayout from '../components/layout/page-layout.astro'
+
+const socialLinks = [
+	{ label: 'GitHub', href: 'https://github.com/jibin2706', display: 'jibin2706' },
+	{ label: 'Twitter', href: 'https://x.com/real_jibin', display: 'real_jibin' },
+	{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/jibin2706/', display: 'jibin2706' },
+	{ label: 'Email', href: 'mailto:me@jibin.tech', display: 'me@jibin.tech' },
+]
+---
+
+<PageLayout currentPath="/info">
+	<main class="mx-auto mt-20 mb-40 max-w-300 px-5">
+		<div class="flex flex-col gap-16">
+			<section>
+				<h2 class="text-foreground-tertiary mb-8 text-xs font-medium tracking-widest uppercase">About</h2>
+				<div class="font-cormorant mb-12 space-y-4 text-xl leading-relaxed font-light lg:text-2xl">
+					<p>
+						I'm a frontend developer with 6+ years of experience building web applications. My passion for
+						technology grew from an early love of gaming, what started as playing video games evolved into a
+						genuine fascination with how they're built and the tech behind them.
+					</p>
+					<p>
+						While my core expertise lies in frontend development, I believe in being a well-rounded
+						engineer. I don't shy away from backend challenges and enjoy the full spectrum of web
+						development. Most of my professional experience has been with Pepper, where I worked on
+						countless projects, honing my skills in both frontend and backend technologies.
+					</p>
+					<p>
+						I'm always curious about emerging technologies and love experimenting with new tools and
+						frameworks. Whether it's optimizing performance, crafting intuitive user experiences, or diving
+						into a new stack, I'm driven by a genuine enthusiasm for building great software.
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="text-foreground-tertiary mb-8 text-xs font-medium tracking-widest uppercase">Contact</h2>
+				<div class="grid gap-8">
+					{
+						socialLinks.map((link) => (
+							<div class="font-cormorant border-border-subtle hover:border-border-strong grid grid-cols-[120px_1fr] gap-8 border-b pb-4 text-xl transition-colors lg:text-2xl">
+								<span>{link.label}</span>
+								<a href={link.href} target="_blank" rel="noopener noreferrer">
+									{link.display}
+								</a>
+							</div>
+						))
+					}
+				</div>
+			</section>
+		</div>
+	</main>
+</PageLayout>
