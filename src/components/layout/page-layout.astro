@@ -1,13 +1,37 @@
 ---
 import '../../styles/global.css'
+import Footer from '../ui/footer.astro'
+import Header from '../ui/header.astro'
+
+interface Props {
+	currentPath: string
+}
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Prevent flash of wrong theme -->
+		<script is:inline>
+			const theme = localStorage.getItem('theme')
+			if (theme === 'dark') {
+				document.documentElement.classList.add('dark')
+			}
+		</script>
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:wght@300;400;500&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body class="min-h-screen">
+		<Header currentPath={Astro.props.currentPath} />
 		<slot />
+		<Footer />
 	</body>
 </html>

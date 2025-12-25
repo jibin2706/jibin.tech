@@ -1,0 +1,43 @@
+---
+import ThemeToggle from './theme-toggle.astro'
+
+interface Props {
+	currentPath: string
+}
+
+const { currentPath } = Astro.props
+
+const navItems = [
+	{ href: '/', label: 'Home' },
+	{ href: '/work', label: 'Work' },
+	{ href: '/writing', label: 'Writing' },
+	{ href: '/info', label: 'Info' },
+]
+---
+
+<header
+	class="bg-surface-secondary grid grid-cols-[auto_1fr_auto] items-center gap-4 border-b px-5 py-8 md:grid-cols-3 lg:px-20 lg:py-16"
+>
+	<div class="hidden md:block"></div>
+	<h1 class="font-cormorant text-center text-3xl font-light tracking-wide md:text-4xl lg:text-5xl">
+		<a href="/">Jibin Thomas</a>
+	</h1>
+	<div class="flex justify-end">
+		<ThemeToggle />
+	</div>
+</header>
+
+<nav class="bg-surface-secondary flex border-b">
+	{
+		navItems.map((item, index) => (
+			<a
+				href={item.href}
+				class={`flex-1 px-2 py-4 text-center text-[0.65rem] tracking-widest uppercase md:px-4 md:py-6 md:text-xs ${index < navItems.length - 1 ? 'border-r' : ''} transition-colors duration-300 ${
+					currentPath === item.href ? 'bg-surface-primary' : 'hover:bg-surface-primary'
+				}`}
+			>
+				{item.label}
+			</a>
+		))
+	}
+</nav>
