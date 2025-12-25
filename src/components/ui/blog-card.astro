@@ -1,4 +1,6 @@
 ---
+import { formatDate } from '../../utils/date'
+
 interface Props {
 	date: Date
 	slug: string
@@ -8,10 +10,6 @@ interface Props {
 }
 
 const { slug, date, title, summary, tags } = Astro.props
-
-function formatDate(date: Date) {
-	return date.toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' })
-}
 ---
 
 <article class="border-border-subtle border-t pt-16">

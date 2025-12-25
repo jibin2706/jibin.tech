@@ -1,0 +1,70 @@
+---
+import { getCollection } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
+import PageLayout from '../../components/layout/page-layout.astro'
+import { formatDate } from '../../utils/date'
+
+export async function getStaticPaths() {
+	const blogPosts = await getCollection('blog')
+	return blogPosts.map((post) => ({ params: { slug: post.slug }, props: { post } }))
+}
+
+interface Props {
+	post: CollectionEntry<'blog'>
+}
+
+const { post } = Astro.props
+const { Content } = await post.render()
+---
+
+<PageLayout currentPath="/blog">
+	<style>
+		:root.dark .prose {
+			--tw-prose-body: var(--color-foreground-secondary);
+			--tw-prose-links: var(--color-foreground-primary);
+			--tw-prose-headings: var(--color-foreground-primary);
+			--tw-prose-code: var(--color-foreground-primary);
+			--tw-prose-quotes: var(--color-foreground-secondary);
+			--tw-prose-bold: var(--color-foreground-primary);
+		}
+	</style>
+	<main class="mx-auto mt-20 mb-40 max-w-300 px-5">
+		<article>
+			<header class="mb-16 border-b pb-16">
+				<p class="text-foreground-tertiary mb-4 text-xs tracking-widest uppercase lg:mb-8">
+					{formatDate(post.data.date)}
+				</p>
+				<h1 class="font-cormorant mb-4 text-4xl leading-tight font-light lg:mb-8 lg:text-6xl">
+					{post.data.title}
+				</h1>
+				<p class="font-cormorant text-foreground-secondary text-xl font-light lg:text-2xl">
+					{post.data.summary}
+				</p>
+				{
+					post.data.tags && post.data.tags.length > 0 && (
+						<div class="mt-6 flex flex-wrap gap-4 lg:mt-12">
+							{post.data.tags.map((tag) => (
+								<span class="border-border-subtle text-foreground-tertiary rounded-sm border px-4 py-2 text-[0.65rem] tracking-wider uppercase lg:px-6 lg:py-3">
+									{tag}
+								</span>
+							))}
+						</div>
+					)
+				}
+			</header>
+
+			<div class="prose">
+				<Content />
+			</div>
+		</article>
+
+		<div class="border-border-subtle mt-24 border-t pt-16">
+			<a
+				href="/blog"
+				class="text-foreground-tertiary hover:text-foreground-primary text-sm tracking-widest uppercase transition-colors"
+			>
+				← Back to Writing
+			</a>
+		</div>
+	</main>
+</PageLayout>
