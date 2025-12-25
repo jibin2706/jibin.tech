@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content'
+import BlogCard from '../components/ui/blog-card.astro'
+import PageLayout from '../components/layout/page-layout.astro'
+
+const blogPosts = await getCollection('blog')
+const posts = blogPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+---
+
+<PageLayout currentPath="/blog">
+	<main class="mx-auto mt-20 mb-40 max-w-300 px-5">
+		<section>
+			<div class="grid gap-32">
+				{
+					posts.map((post) => (
+						<BlogCard
+							date={post.data.date}
+							slug={post.slug}
+							summary={post.data.summary}
+							tags={post.data.tags}
+							title={post.data.title}
+						/>
+					))
+				}
+			</div>
+		</section>
+	</main>
+</PageLayout>
