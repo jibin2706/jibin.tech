@@ -4,12 +4,12 @@ import { formatDate } from '../../utils/date'
 interface Props {
 	date: Date
 	slug: string
-	summary: string
+	info: string
 	tags: string[]
 	title: string
 }
 
-const { slug, date, title, summary, tags } = Astro.props
+const { slug, date, title, info, tags } = Astro.props
 ---
 
 <article class="border-border-subtle border-t pt-16">
@@ -21,7 +21,7 @@ const { slug, date, title, summary, tags } = Astro.props
 			{title}
 		</h2>
 		<p class="font-cormorant text-foreground-secondary text-xl leading-relaxed font-light lg:text-2xl">
-			{summary}
+			{info}
 		</p>
 		{
 			tags.length > 0 && (
