@@ -1,0 +1,42 @@
+---
+import { SITE_URL } from '../../utils/constant'
+
+interface Props {
+	title: string
+	description: string
+	publishedTime: string
+	modifiedTime?: string
+	author?: string
+	url: string
+	image?: string
+}
+
+const { title, description, publishedTime, modifiedTime, author = 'Jibin Thomas', url, image } = Astro.props
+
+const schema = {
+	'@context': 'https://schema.org',
+	'@type': 'Article',
+	headline: title,
+	description,
+	datePublished: publishedTime,
+	dateModified: modifiedTime || publishedTime,
+	author: {
+		'@type': 'Person',
+		name: author,
+		url: SITE_URL,
+	},
+	publisher: {
+		'@type': 'Person',
+		name: 'Jibin Thomas',
+		url: SITE_URL,
+	},
+	url,
+	image,
+	mainEntityOfPage: {
+		'@type': 'WebPage',
+		'@id': url,
+	},
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

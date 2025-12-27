@@ -1,0 +1,73 @@
+---
+import {
+	SITE_URL,
+	SITE_NAME,
+	SITE_LOCALE,
+	META_DESCRIPTION,
+	TWITTER_HANDLE,
+	THEME_COLOR_LIGHT,
+	THEME_COLOR_DARK,
+} from '../../utils/constant'
+
+interface Props {
+	title?: string
+	description?: string
+	image?: string
+	type?: 'website' | 'article'
+	canonicalUrl?: string
+}
+
+const { title = SITE_NAME, description = META_DESCRIPTION, image, type = 'website', canonicalUrl } = Astro.props
+
+// Build canonical URL
+const canonical = canonicalUrl || new URL(Astro.url.pathname, SITE_URL).href
+
+// Build full image URL
+const ogImage = image ? (image.startsWith('http') ? image : new URL(image, SITE_URL).href) : null
+---
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="author" content={SITE_NAME} />
+<link rel="canonical" href={canonical} />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonical} />
+<meta property="og:site_name" content={SITE_NAME} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+{ogImage && <meta property="og:image" content={ogImage} />}
+<meta property="og:image:alt" content={title} />
+<meta property="og:locale" content={SITE_LOCALE} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonical} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+{ogImage && <meta name="twitter:image" content={ogImage} />}
+<meta name="twitter:image:alt" content={title} />
+<meta name="twitter:creator" content={TWITTER_HANDLE} />
+<meta name="twitter:site" content={TWITTER_HANDLE} />
+
+<!-- Theme Color -->
+<meta name="theme-color" content={THEME_COLOR_LIGHT} media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content={THEME_COLOR_DARK} media="(prefers-color-scheme: dark)" />
+<meta name="color-scheme" content="light dark" />
+
+<!-- Prevent flash of wrong theme -->
+<script is:inline>
+	const theme = localStorage.getItem('theme')
+	if (theme === 'dark') {
+		document.documentElement.classList.add('dark')
+	}
+</script>
+
+<!-- other metadata -->
+<slot />

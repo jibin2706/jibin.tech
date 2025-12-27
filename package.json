@@ -11,6 +11,7 @@
 	},
 	"author": "Jibin Thomas <jibin.thomas2706@gmail.com>",
 	"dependencies": {
+		"@astrojs/sitemap": "^3.6.0",
 		"@tailwindcss/vite": "^4.1.18",
 		"astro": "^5.16.5",
 		"tailwindcss": "^4.1.18"

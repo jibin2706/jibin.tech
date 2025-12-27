@@ -1,5 +1,6 @@
 ---
 import '../../styles/global.css'
+import { GA_MEASUREMENT_ID } from '../../utils/constant'
 import Footer from '../ui/footer.astro'
 import Header from '../ui/header.astro'
 
@@ -12,16 +13,28 @@ interface Props {
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
 
-		<!-- Prevent flash of wrong theme -->
-		<script is:inline>
-			const theme = localStorage.getItem('theme')
-			if (theme === 'dark') {
-				document.documentElement.classList.add('dark')
+		<!-- analytics -->
+		<script is:inline src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
+		<script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
+			window.dataLayer = window.dataLayer || []
+			function gtag() {
+				dataLayer.push(arguments)
 			}
+			gtag('js', new Date())
+			gtag('config', GA_MEASUREMENT_ID, {
+				page_path: window.location.pathname,
+			})
+
+			document.addEventListener('astro:page-load', () => {
+				gtag('event', 'page_view', {
+					page_path: window.location.pathname,
+				})
+			})
 		</script>
 
-		<!-- Fonts -->
+		<!-- fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link

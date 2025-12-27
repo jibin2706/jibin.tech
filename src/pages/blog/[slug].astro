@@ -2,7 +2,10 @@
 import { getCollection } from 'astro:content'
 import type { CollectionEntry } from 'astro:content'
 import PageLayout from '../../components/layout/page-layout.astro'
+import ArticleSchema from '../../components/schema/article-schema.astro'
 import { formatDate } from '../../utils/date'
+import Head from '../../components/layout/head.astro'
+import { SITE_URL } from '../../utils/constant'
 
 export async function getStaticPaths() {
 	const blogPosts = await getCollection('blog')
@@ -15,9 +18,18 @@ interface Props {
 
 const { post } = Astro.props
 const { Content } = await post.render()
+
+const title = post.data.title
+const description = post.data.info
+const publishedTime = post.data.date.toISOString()
+const articleUrl = `${SITE_URL}/blog/${post.slug}`
 ---
 
-<PageLayout currentPath="/blog">
+<Head title={title} description={description} type="article">
+	<ArticleSchema title={title} description={description} publishedTime={publishedTime} url={articleUrl} />
+</Head>
+
+<PageLayout currentPath={`/blog/${post.slug}`}>
 	<style>
 		:root.dark .prose {
 			--tw-prose-body: var(--color-foreground-secondary);

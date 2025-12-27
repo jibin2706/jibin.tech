@@ -1,0 +1,30 @@
+---
+import Head from '../components/layout/head.astro'
+import PageLayout from '../components/layout/page-layout.astro'
+---
+
+<Head title="Page Not Found - Jibin Thomas" description="The page you're looking for doesn't exist." />
+
+<PageLayout currentPath="/404">
+	<main class="mx-auto mt-20 mb-40 max-w-300 px-5">
+		<section class="text-center">
+			<h1 class="font-cormorant mb-12 text-6xl leading-tight font-light text-balance lg:mb-16 lg:text-8xl">
+				404
+			</h1>
+			<h2 class="text-foreground-secondary mb-16 text-xl tracking-wide lg:mb-20 lg:text-2xl">Page Not Found</h2>
+			<p
+				class="text-foreground-secondary font-cormorant mx-auto mb-12 max-w-2xl text-xl leading-relaxed font-light text-balance lg:mb-16 lg:text-2xl"
+			>
+				The page you're looking for doesn't exist or has been moved.
+			</p>
+			<div class="flex flex-col items-center gap-6 sm:flex-row sm:justify-center lg:gap-8">
+				<a
+					href="/"
+					class="border-border-strong text-foreground-primary hover:bg-foreground-primary hover:text-surface-primary min-w-40 border px-8 py-4 text-center text-sm tracking-widest uppercase transition-colors lg:px-12 lg:py-5"
+				>
+					Go Home
+				</a>
+			</div>
+		</section>
+	</main>
+</PageLayout>
