@@ -36,15 +36,18 @@
 	const html = document.documentElement
 	const lightIcon = document.querySelector('.theme-toggle-light')
 	const darkIcon = document.querySelector('.theme-toggle-dark')
+	const themeTag = document.querySelector('meta[name="theme-color"]')
 
 	// Update button icon based on current theme
 	function updateIcon() {
 		if (html.classList.contains('dark')) {
 			lightIcon?.classList.add('hidden')
 			darkIcon?.classList.remove('hidden')
+			themeTag?.setAttribute('content', '#1a1a1a')
 		} else {
 			lightIcon?.classList.remove('hidden')
 			darkIcon?.classList.add('hidden')
+			themeTag?.setAttribute('content', '#f9f9f9')
 		}
 	}
 
@@ -54,10 +57,13 @@
 	themeToggle?.addEventListener('click', () => {
 		html.classList.toggle('dark')
 
-		if (html.classList.contains('dark')) {
+		const isDark = html.classList.contains('dark')
+		if (isDark) {
 			localStorage.setItem('theme', 'dark')
+			themeTag?.setAttribute('content', '#1a1a1a')
 		} else {
 			localStorage.setItem('theme', 'light')
+			themeTag?.setAttribute('content', '#f9f9f9')
 		}
 
 		updateIcon()

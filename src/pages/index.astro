@@ -1,4 +1,5 @@
 ---
+import Head from '../components/layout/head.astro'
 import PageLayout from '../components/layout/page-layout.astro'
 
 const title = [
@@ -11,6 +12,8 @@ const focus = [
 	'Specializing in building production applications with modern web stack',
 ] as const
 ---
+
+<Head title="Jibin Thomas" />
 
 <PageLayout currentPath="/">
 	<main class="mx-auto mt-20 mb-40 max-w-300 px-5">

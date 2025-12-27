@@ -1,0 +1,34 @@
+---
+import { META_DESCRIPTION, SITE_URL, SOCIAL_LINKS } from '../../utils/constant'
+
+const schema = {
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name: 'Jibin Thomas',
+	gender: 'male',
+	jobTitle: 'SDE III (Frontend)',
+	description: META_DESCRIPTION,
+	url: SITE_URL,
+	email: SOCIAL_LINKS.email.display,
+	worksFor: {
+		'@type': 'Organization',
+		name: 'Pepper Content',
+	},
+	aluminiOf: {
+		'@type': 'CollegeOrUniversity',
+		name: 'Wilson College',
+	},
+	address: {
+		'@type': 'PostalAddress',
+		addressLocality: 'Mumbai, India',
+	},
+	sameAs: [
+		SOCIAL_LINKS.github.url,
+		SOCIAL_LINKS.twitter.url,
+		SOCIAL_LINKS.linkedin.url,
+		SOCIAL_LINKS.stackoverflow.url,
+	],
+}
+---
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />

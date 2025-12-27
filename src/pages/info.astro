@@ -1,13 +1,20 @@
 ---
+import Head from '../components/layout/head.astro'
 import PageLayout from '../components/layout/page-layout.astro'
+import PersonSchema from '../components/schema/person-schema.astro'
+import { SOCIAL_LINKS } from '../utils/constant'
 
 const socialLinks = [
-	{ label: 'GitHub', href: 'https://github.com/jibin2706', display: 'jibin2706' },
-	{ label: 'Twitter', href: 'https://x.com/real_jibin', display: 'real_jibin' },
-	{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/jibin2706/', display: 'jibin2706' },
-	{ label: 'Email', href: 'mailto:me@jibin.tech', display: 'me@jibin.tech' },
+	{ label: 'GitHub', href: SOCIAL_LINKS.github.url, display: SOCIAL_LINKS.github.username },
+	{ label: 'Twitter', href: SOCIAL_LINKS.twitter.url, display: SOCIAL_LINKS.twitter.username },
+	{ label: 'LinkedIn', href: SOCIAL_LINKS.linkedin.url, display: SOCIAL_LINKS.linkedin.username },
+	{ label: 'Email', href: SOCIAL_LINKS.email.url, display: SOCIAL_LINKS.email.display },
 ]
 ---
+
+<Head title="About">
+	<PersonSchema />
+</Head>
 
 <PageLayout currentPath="/info">
 	<main class="mx-auto mt-20 mb-40 max-w-300 px-5">
