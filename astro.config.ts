@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config'
 import tailwindcss from '@tailwindcss/vite'
 import sitemap from '@astrojs/sitemap'
+import cloudflare from '@astrojs/cloudflare'
 import { SITE_URL } from './src/utils/constant'
 
 export default defineConfig({
@@ -14,4 +15,5 @@ export default defineConfig({
 		'/uses': '/info',
 		'/tags': '/blog',
 	},
+	adapter: cloudflare(),
 })
