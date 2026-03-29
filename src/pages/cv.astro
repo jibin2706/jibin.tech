@@ -1,0 +1,271 @@
+---
+import PageLayout from '../components/layout/page-layout.astro'
+import { SOCIAL_LINKS } from '../utils/constant'
+
+function md(text: string): string {
+	return text
+		.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+		.replace(/\*([^*]+)\*/g, '<em>$1</em>')
+		.replace(
+			/\[([^\]]+)\]\(([^)]+)\)/g,
+			'<a href="$2" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 decoration-foreground-secondary/40 hover:decoration-foreground-secondary transition-colors inline-flex items-baseline gap-0.5">$1<img src="/icons/external-link.svg" class="inline-block w-3 h-3 self-center opacity-50 shrink-0" aria-hidden="true" /></a>',
+		)
+}
+
+const links = [
+	{ label: 'LINKEDIN', href: SOCIAL_LINKS.linkedin.url },
+	{ label: 'GITHUB', href: SOCIAL_LINKS.github.url },
+	{ label: SOCIAL_LINKS.email.display, href: SOCIAL_LINKS.email.url },
+]
+
+const summary =
+	'Full-stack engineer with 7 years of experience, specialised in React, TypeScript, and Node.js ecosystem. Currently SDE III at Pepper Content, having grown from frontend-focused to owning backend services, system architecture, and end-to-end product delivery.'
+
+const experience = [
+	{
+		company: 'Pepper Content',
+		website: 'https://www.pepper.inc/',
+		location: 'Mumbai, India',
+		title: 'SDE III',
+		period: 'June 2020 – Present',
+		roles: [
+			{ title: 'SDE III', period: 'Apr 2023 – Present' },
+			{ title: 'SDE II', period: 'Aug 2021 – Mar 2023' },
+			{ title: 'Frontend Developer', period: 'Jun 2020 – Jul 2021' },
+		],
+		projects: [
+			{
+				name: 'Atlas – GEO (AI Visibility & Analytics)',
+				period: 'Jul 2025 – Present',
+				points: [
+					'**Architected the Atlas platform from scratch** — designed data models, BFF access patterns, and tech stack; built the full-stack app covering workspace management, onboarding, and a GEO analytics dashboard tracking domain coverage, brand visibility, and domain share across AI search engines.',
+					'Built the **Prompt Automation Service** to automate prompt execution across AI search engines (ChatGPT, Gemini, Perplexity, Google AI Overview) — async job queues, dynamic proxy selection, multi-region support, and spot-instance auto-scaling.',
+				],
+			},
+			{
+				name: 'Nymbus – AI Workflow Builder',
+				period: 'Apr 2024 – Jul 2025',
+				points: [
+					"**Turned a POC into a production-grade** canvas-based workflow editor — replacing Retool as the company's internal platform for building AI apps for different use cases",
+					'Built a lightweight **auth proxy on Cloudflare Workers** between the frontend and backend services.',
+					'Expanded step types across releases (LLM, image generation, transform, knowledge base, video & audio), added a **simulation environment** for end-to-end workflow testing, and implemented role-based ACL.',
+					'Migrated auth from Clerk to an internal user service with full role management.',
+				],
+			},
+			{
+				name: 'Pepper Docs – Editor & AI Features',
+				period: 'Dec 2022 – Jul 2025',
+				points: [
+					'**Led Docs v2** — eliminated duplicated editor code spread across the platform by consolidating it into a shared monorepo package, unifying the architecture across YJS and non-YJS document types.',
+					'Built **Pepper AI**, an in-document AI assistant with a chat widget, quick actions, and streaming output.',
+					'Built a **Content Audit** document widget to improve content quality — async pipeline with audits for readability, grammar, citations, plagiarism, and fact-checking.',
+					'Developed custom ProseMirror extensions; published a typed [htmldiff-js fork on npm](https://github.com/jibin2706/htmldiff-javascript); patched y-prosemirror upstream to fix image-mark sync in YJS documents; created [upstream fixes](https://github.com/remirror/remirror/pull/2339) for Remirror & y-prosemirror incompatibility.',
+					'Maintained the NestJS editor service and debugged critical YJS issues including **data corruption, multi-client race conditions, IndexedDB persistence, and WebSocket reconnection**.',
+				],
+			},
+			{
+				name: 'Other Projects',
+				period: 'Jun 2020 – Sep 2022',
+				points: [
+					'**Redesigned the monorepo deployment strategy** — consolidated fragmented deployments (AWS Amplify, Cloudflare Pages, multiple GitHub Actions workflows) into a single unified Cloudflare Pages pipeline across staging and production.',
+					'Incrementally **migrated the marketing site from Gatsby to Next.js** with ISR/SSR; integrated Strapi CMS for custom pages and headless WordPress for the blog.',
+					'Built the PepperType Chrome extension.',
+				],
+			},
+		],
+	},
+	{
+		company: 'The Souled Store',
+		website: 'https://www.thesouledstore.com/',
+		location: 'Mumbai, India',
+		title: 'Frontend Developer',
+		period: 'Jul 2019 – Jun 2020',
+		roles: [{ title: 'Junior Frontend Developer', period: 'Jul 2019 – Jun 2020' }],
+		summary: '',
+		points: [
+			'**Migrated the site from SPA to SSR** using Next.js, improving SEO and reducing initial load time.',
+			'Redesigned transactional and marketing email templates aligned with brand identity.',
+			'Collaborated with the SEO team on on-page SEO optimizations.',
+			'Created new APIs using Falcon (Python) and automated sitemap generation and order health updates on Slack.',
+		],
+		projects: [],
+	},
+]
+
+const skills = {
+	frontend: [
+		'React.js',
+		'TypeScript',
+		'Vite',
+		'Tanstack Router/Start',
+		'Next.js',
+		'Tailwind CSS',
+		'Remirror/ProseMirror',
+		'ReactFlow',
+	],
+	backend: ['Node.js/Bun', 'NestJS', 'Express', 'Hono', 'BullMQ'],
+	'state management': ['Tanstack Query', 'Zustand', 'XState'],
+	data: ['PostgreSQL', 'MySQL', 'Redis'],
+	'cloud and devops': [
+		'GitHub Actions',
+		'AWS (S3, CloudFront, ECS, Lambda)',
+		'Cloudflare (Pages, Workers, DNS)',
+		'Docker',
+	],
+	observability: ['ELK Stack', 'Elastic APM', 'Kibana Dashboards'],
+}
+
+const education = [
+	{ degree: 'Master of Computer Applications', institution: 'LPU', year: '2022–2024' },
+	{ degree: "Bachelor's in Information Technology", institution: 'Wilson College', year: '2018–2020' },
+]
+---
+
+<PageLayout currentPath="/cv">
+	<main class="mx-auto mt-20 mb-40 max-w-300 px-5 print:my-0 print:max-w-full print:px-4">
+		<div class="flex flex-col gap-16 print:gap-5">
+			<section
+				class="border-border-subtle hover:border-border-strong space-y-4 border-b pb-8 transition-colors print:space-y-2 print:pb-3"
+			>
+				<div class="flex items-center justify-between">
+					<h1 class="font-cormorant text-5xl print:text-3xl">Jibin Thomas</h1>
+				</div>
+				<p class="text-xl leading-relaxed font-light print:text-xs">{summary}</p>
+				<div class="flex items-center gap-3">
+					{
+						links.map((link, i) => (
+							<>
+								{i > 0 && <span class="text-foreground-secondary">·</span>}
+								<a
+									href={link.href}
+									target='_blank'
+									rel='noopener noreferrer'
+									class="sub-heading hover:text-foreground inline-flex items-center gap-1 transition-colors normal-case!"
+								>
+									{link.label}
+									<img src="/icons/external-link.svg" class="h-3 w-3 shrink-0 opacity-50" aria-hidden="true" />
+								</a>
+							</>
+						))
+					}
+				</div>
+			</section>
+
+			<section>
+				<h2 class="sub-heading mb-1">Experience</h2>
+				<div class="grid gap-8 print:gap-2">
+					{
+						experience.map((job) => (
+							<div class="border-border-subtle hover:border-border-strong border-b pb-6 transition-colors print:pb-2">
+								<div class="mb-2">
+									<div class="flex items-center justify-between gap-4">
+										<p class="font-cormorant text-2xl print:text-xl">
+											<a href={job.website} target="_blank" rel="noopener noreferrer">
+												{job.company}
+											</a>
+											- {job.title}
+										</p>
+										<p class="sub-heading">({job.period})</p>
+									</div>
+									{job.summary && (
+										<p class="text-foreground-secondary mt-3 text-base leading-relaxed font-light print:text-xs">
+											{job.summary}
+										</p>
+									)}
+								</div>
+
+								{job.points && job.points.length > 0 && (
+									<ul class="list-disc space-y-1 pl-5 print:space-y-0">
+										{job.points.map((point) => (
+											<li
+												class="text-foreground-secondary text-lg leading-relaxed font-light print:text-xs"
+												set:html={md(point)}
+											/>
+										))}
+									</ul>
+								)}
+
+								{job.projects.length > 0 && (
+									<div class="mt-2 space-y-4 print:mt-2 print:space-y-2">
+										<div class="space-y-4 print:space-y-2">
+											{job.projects.map((project) => (
+												<div>
+													<div class="mb-1.5 flex flex-wrap items-center gap-2">
+														<p class="text-lg font-medium print:text-xs">{project.name}</p>
+													</div>
+													<ul class="list-disc space-y-1 pl-5 print:space-y-0">
+														{project.points.map((point) => (
+															<li
+																class="text-foreground-secondary text-lg leading-relaxed font-light print:text-xs"
+																set:html={md(point)}
+															/>
+														))}
+													</ul>
+												</div>
+											))}
+										</div>
+									</div>
+								)}
+							</div>
+						))
+					}
+				</div>
+			</section>
+
+			<section>
+				<h2 class="sub-heading mb-1 print:mb-1">Technical Skills</h2>
+				<div class="grid gap-0">
+					{
+						Object.entries(skills).map(([category, items]) => (
+							<div class="border-border-subtle hover:border-border-strong gap-2 border-b py-4 text-xl transition-colors print:py-1 print:text-xs">
+								<span class="font-cormorant text-foreground-secondary capitalize">{category}:</span>
+								<span class="font-light">{items.join(', ')}</span>
+							</div>
+						))
+					}
+				</div>
+			</section>
+
+			<section>
+				<h2 class="sub-heading mb-1 print:mb-1">Education</h2>
+				<div class="grid gap-0">
+					{
+						education.map((edu) => (
+							<div class="border-border-subtle hover:border-border-strong flex flex-wrap items-baseline justify-between gap-2 border-b py-4 transition-colors print:py-0.5">
+								<div>
+									<p class="font-cormorant text-2xl print:text-base">{edu.degree}</p>
+									<p class="text-foreground-secondary print:text-xs">{edu.institution}</p>
+								</div>
+								<span class="sub-heading">({edu.year})</span>
+							</div>
+						))
+					}
+				</div>
+			</section>
+
+			<section>
+				<button
+					onclick="window.print()"
+					class="text-foreground-secondary hover:text-foreground border-border-subtle hover:border-border-strong border px-4 py-2 uppercase transition-colors print:hidden"
+					>Download CV</button
+				>
+			</section>
+		</div>
+	</main>
+</PageLayout>
+
+<style is:global>
+	@reference '../styles/global.css';
+
+	.sub-heading {
+		@apply text-foreground-secondary text-sm tracking-widest uppercase print:text-[10px];
+	}
+
+	@media print {
+		header,
+		nav,
+		footer {
+			display: none;
+		}
+	}
+</style>
