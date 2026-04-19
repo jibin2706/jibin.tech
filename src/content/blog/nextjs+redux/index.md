@@ -1,5 +1,6 @@
 ---
 title: 'Next.js + Redux'
+slug: 'nextjs+redux'
 date: 2019-08-11
 info: 'Integrating redux to your server side rendered application in nextjs'
 image: 'featured-image.png'
