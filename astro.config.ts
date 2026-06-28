@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config'
 import tailwindcss from '@tailwindcss/vite'
 import sitemap from '@astrojs/sitemap'
-import cloudflare from '@astrojs/cloudflare'
 import { SITE_URL } from './src/utils/constant'
 
 export default defineConfig({
@@ -40,5 +39,4 @@ export default defineConfig({
 		'/blog/vs-code-extensions-to-make-you-more-productive/*':
 			'/blog/vs-code-extensions-to-make-you-more-productive',
 	},
-	adapter: cloudflare(),
 })

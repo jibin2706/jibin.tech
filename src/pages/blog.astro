@@ -18,7 +18,7 @@ const posts = blogPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTi
 					posts.map((post) => (
 						<BlogCard
 							date={post.data.date}
-							slug={post.slug}
+							slug={post.id}
 							info={post.data.info}
 							tags={post.data.tags}
 							title={post.data.title}
