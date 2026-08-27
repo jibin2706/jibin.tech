@@ -1,4 +1,5 @@
 ---
+import Head from '../components/layout/head.astro'
 import PageLayout from '../components/layout/page-layout.astro'
 import { SOCIAL_LINKS } from '../utils/constant'
 
@@ -122,6 +123,7 @@ const education = [
 ---
 
 <PageLayout currentPath="/cv">
+	<Head slot="head" title="CV - Jibin Thomas" description={summary} />
 	<main class="mx-auto mt-20 mb-40 max-w-300 px-5 print:my-0 print:max-w-full print:px-4">
 		<div class="flex flex-col gap-16 print:gap-5">
 			<section
@@ -138,12 +140,16 @@ const education = [
 								{i > 0 && <span class="text-foreground-secondary">·</span>}
 								<a
 									href={link.href}
-									target='_blank'
-									rel='noopener noreferrer'
-									class="sub-heading hover:text-foreground inline-flex items-center gap-1 transition-colors normal-case!"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="sub-heading hover:text-foreground inline-flex items-center gap-1 normal-case! transition-colors"
 								>
 									{link.label}
-									<img src="/icons/external-link.svg" class="h-3 w-3 shrink-0 opacity-50" aria-hidden="true" />
+									<img
+										src="/icons/external-link.svg"
+										class="h-3 w-3 shrink-0 opacity-50"
+										aria-hidden="true"
+									/>
 								</a>
 							</>
 						))

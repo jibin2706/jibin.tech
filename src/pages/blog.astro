@@ -8,9 +8,8 @@ const blogPosts = await getCollection('blog')
 const posts = blogPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
 ---
 
-<Head title="Writing" />
-
 <PageLayout currentPath="/blog">
+	<Head slot="head" title="Writing" />
 	<main class="mx-auto mt-20 mb-40 max-w-300 px-5">
 		<section>
 			<div class="grid gap-32">

@@ -3,9 +3,8 @@ import Head from '../components/layout/head.astro'
 import PageLayout from '../components/layout/page-layout.astro'
 ---
 
-<Head title="Page Not Found - Jibin Thomas" description="The page you're looking for doesn't exist." />
-
 <PageLayout currentPath="/404">
+	<Head slot="head" title="Page Not Found - Jibin Thomas" description="The page you're looking for doesn't exist." />
 	<main class="mx-auto mt-20 mb-40 max-w-300 px-5">
 		<section class="text-center">
 			<h1 class="font-cormorant mb-12 text-6xl leading-tight font-light text-balance lg:mb-16 lg:text-8xl">

@@ -16,7 +16,7 @@ interface Props {
 		<meta name="generator" content={Astro.generator} />
 
 		<!-- analytics -->
-		<script is:inline src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
+		<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
 		<script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
 			window.dataLayer = window.dataLayer || []
 			function gtag() {
@@ -25,12 +25,6 @@ interface Props {
 			gtag('js', new Date())
 			gtag('config', GA_MEASUREMENT_ID, {
 				page_path: window.location.pathname,
-			})
-
-			document.addEventListener('astro:page-load', () => {
-				gtag('event', 'page_view', {
-					page_path: window.location.pathname,
-				})
 			})
 		</script>
 
@@ -41,6 +35,8 @@ interface Props {
 			href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:wght@300;400;500&display=swap"
 			rel="stylesheet"
 		/>
+
+		<slot name="head" />
 	</head>
 	<body class="min-h-screen">
 		<Header currentPath={Astro.props.currentPath} />
