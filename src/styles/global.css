@@ -1,10 +1,12 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
-@theme {
-	--font-cormorant: 'Cormorant', serif;
-	--font-sans: 'Work Sans', sans-serif;
+@theme inline {
+	--font-cormorant: var(--font-cormorant-astro);
+	--font-sans: var(--font-work-sans-astro);
+}
 
+@theme {
 	/* Surface colors - for backgrounds */
 	--color-surface-primary: #f9f9f9;
 	--color-surface-secondary: #ffffff;

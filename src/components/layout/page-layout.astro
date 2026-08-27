@@ -1,4 +1,5 @@
 ---
+import { Font } from 'astro:assets'
 import '../../styles/global.css'
 import { GA_MEASUREMENT_ID } from '../../utils/constant'
 import Footer from '../ui/footer.astro'
@@ -37,13 +38,9 @@ interface Props {
 			})
 		</script>
 
-		<!-- fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:wght@300;400;500&display=swap"
-			rel="stylesheet"
-		/>
+		<!-- fonts (self-hosted via Astro Fonts API) -->
+		<Font cssVariable="--font-cormorant-astro" preload />
+		<Font cssVariable="--font-work-sans-astro" />
 
 		<slot name="head" />
 	</head>
