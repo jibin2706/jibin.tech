@@ -1,7 +1,13 @@
+---
+import { THEME_COLOR_LIGHT, THEME_COLOR_DARK } from '../../utils/constant'
+---
+
 <button
 	id="theme-toggle"
 	class="hover:bg-foreground-primary hover:text-surface-primary border p-2 transition-colors lg:p-3"
 	aria-label="Toggle theme"
+	data-color-light={THEME_COLOR_LIGHT}
+	data-color-dark={THEME_COLOR_DARK}
 >
 	<!-- Sun icon (show in dark mode, click to go light) -->
 	<svg
@@ -37,17 +43,19 @@
 	const lightIcon = document.querySelector('.theme-toggle-light')
 	const darkIcon = document.querySelector('.theme-toggle-dark')
 	const themeTag = document.querySelector('meta[name="theme-color"]')
+	const colorLight = themeToggle?.dataset.colorLight ?? ''
+	const colorDark = themeToggle?.dataset.colorDark ?? ''
 
 	// Update button icon based on current theme
 	function updateIcon() {
 		if (html.classList.contains('dark')) {
 			lightIcon?.classList.add('hidden')
 			darkIcon?.classList.remove('hidden')
-			themeTag?.setAttribute('content', '#1a1a1a')
+			themeTag?.setAttribute('content', colorDark)
 		} else {
 			lightIcon?.classList.remove('hidden')
 			darkIcon?.classList.add('hidden')
-			themeTag?.setAttribute('content', '#f9f9f9')
+			themeTag?.setAttribute('content', colorLight)
 		}
 	}
 
@@ -60,10 +68,10 @@
 		const isDark = html.classList.contains('dark')
 		if (isDark) {
 			localStorage.setItem('theme', 'dark')
-			themeTag?.setAttribute('content', '#1a1a1a')
+			themeTag?.setAttribute('content', colorDark)
 		} else {
 			localStorage.setItem('theme', 'light')
-			themeTag?.setAttribute('content', '#f9f9f9')
+			themeTag?.setAttribute('content', colorLight)
 		}
 
 		updateIcon()

@@ -61,13 +61,5 @@ const ogImage = image ? (image.startsWith('http') ? image : new URL(image, SITE_
 <meta name="theme-color" content={THEME_COLOR_DARK} media="(prefers-color-scheme: dark)" />
 <meta name="color-scheme" content="light dark" />
 
-<!-- Prevent flash of wrong theme -->
-<script is:inline>
-	const theme = localStorage.getItem('theme')
-	if (theme === 'dark') {
-		document.documentElement.classList.add('dark')
-	}
-</script>
-
 <!-- other metadata -->
 <slot />

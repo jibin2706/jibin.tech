@@ -15,6 +15,15 @@ interface Props {
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
 
+		<!-- Apply theme before first paint: stored preference, else OS preference -->
+		<script is:inline>
+			const stored = localStorage.getItem('theme')
+			const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+			if (stored === 'dark' || (stored === null && prefersDark)) {
+				document.documentElement.classList.add('dark')
+			}
+		</script>
+
 		<!-- analytics -->
 		<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
 		<script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
