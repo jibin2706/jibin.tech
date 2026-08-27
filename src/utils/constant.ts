@@ -5,7 +5,7 @@ export const SITE_LOCALE = 'en_US'
 
 // Meta Descriptions
 export const META_DESCRIPTION =
-	'Software engineer with 6+ years of experience building web applications. Specializing in React, Node.js, and TypeScript.'
+	'Software engineer with 7 years of experience building web applications. Specializing in React, Node.js, and TypeScript.'
 
 // Social Media
 export const SOCIAL_LINKS = {
