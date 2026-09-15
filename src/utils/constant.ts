@@ -5,7 +5,7 @@ export const SITE_LOCALE = 'en_US'
 
 // Meta Descriptions
 export const META_DESCRIPTION =
-	'Software engineer with 7 years of experience building web applications. Specializing in React, Node.js, and TypeScript.'
+	'Senior full-stack engineer architecting AI products, distributed backend services, workflow platforms, and collaborative editing systems with React, TypeScript, Node.js, and cloud infrastructure.'
 
 // Social Media
 export const SOCIAL_LINKS = {
