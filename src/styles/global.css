@@ -15,6 +15,7 @@
 	--color-foreground-primary: #0d0d0d;
 	--color-foreground-secondary: #666666;
 	--color-foreground-tertiary: #999999;
+	--color-foreground-accent: #365f73;
 
 	/* Border colors */
 	--color-border-subtle: #e0e0e0;
@@ -27,6 +28,7 @@
 	--color-foreground-primary: #f9f9f9;
 	--color-foreground-secondary: #cccccc;
 	--color-foreground-tertiary: #888888;
+	--color-foreground-accent: #9fc3d4;
 	--color-border-subtle: #333333;
 	--color-border-strong: #f9f9f9;
 }
